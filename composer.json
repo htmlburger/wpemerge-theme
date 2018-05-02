@@ -1,8 +1,8 @@
 {
     "name": "htmlburger/wpemerge-theme",
-    "description": "A modern WordPress theme",
+    "description": "A modern WordPress starter theme which uses the WP Emerge framework",
     "type": "wordpress-theme",
-    "keywords": [],
+    "keywords": ["wordpress", "theme", "starter theme", "wpemerge"],
     "homepage": "https://wpemerge.com/",
     "license": "GPL-2.0-only",
     "authors": [
