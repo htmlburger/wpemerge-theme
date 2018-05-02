@@ -1,0 +1,122 @@
+/* ------------------------------------------------------------ *\
+    Base WordPress CSS
+\* ------------------------------------------------------------ */
+
+.alignnone,
+.alignleft,
+.alignright,
+.aligncenter { margin: 5px 15px 10px; }
+.alignleft { margin-left: 0; }
+.alignright { margin-right: 0; }
+.alignnone { display: block; margin-left: 0; margin-right: 0; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+.wp-caption { position: relative; }
+.wp-caption img { width: 100%; }
+.wp-caption-text { position: absolute; bottom: 0; left: 0; right: 0; padding: 5px 10px; background: rgba(0, 0, 0, 0.5); color: #fff; }
+
+/* ------------------------------------------------------------ *\
+    Gallery
+\* ------------------------------------------------------------ */
+
+.gallery { position: relative; overflow: hidden; padding-bottom: 20px; }
+.gallery .wp-caption-text { right: 10px; bottom: 10px; left: 10px; text-align: left; }
+.gallery-item { float: left; position: relative; padding: 10px; }
+.gallery-item img { width: 100%; }
+
+.gallery-columns-1 .gallery-item { width: 100%; }
+.gallery-columns-2 .gallery-item { width: 50%; }
+.gallery-columns-3 .gallery-item { width: 33.33%; }
+.gallery-columns-4 .gallery-item { width: 25%; }
+.gallery-columns-5 .gallery-item { width: 20%; }
+.gallery-columns-6 .gallery-item { width: 16.67%; }
+.gallery-columns-7 .gallery-item { width: 14.29%; }
+.gallery-columns-8 .gallery-item { width: 12.5%; }
+.gallery-columns-9 .gallery-item { width: 11.11%; }
+
+.gallery-columns-7 .wp-caption,
+.gallery-columns-8 .wp-caption,
+.gallery-columns-9 .wp-caption { display: none; }
+
+/* ------------------------------------------------------------ *\
+    Pagination
+\* ------------------------------------------------------------ */
+
+.paging { padding: 0 0 20px; text-align: center; }
+.paging ul { list-style: none outside none; }
+.paging ul,
+.paging li { display: inline-block; vertical-align: top; }
+.paging a { display: inline-block; padding: 4px 10px; border: 1px solid #000; margin: 0 2px; text-decoration: none; border-radius: 4px; }
+.paging .current a,
+.paging a:hover { text-decoration: none; background: #000; color: #fff; }
+
+.paging-label { padding-right: 10px; }
+
+/* ------------------------------------------------------------ *\
+    Comments
+\* ------------------------------------------------------------ */
+
+.section-comments { padding-top: 15px; }
+.section-comments a { text-decoration: none; }
+.section-comments p { padding-bottom: 18.2px; }
+.section-comments ol,
+.section-comments ul { padding: 0; margin: 0; list-style: none outside none; }
+.section-comments h3 { position: relative; padding: 0 0 10px; }
+.section-comments h3 small { position: absolute; top: 0; right: 0; }
+
+.comments,
+.comments .children { position: relative; }
+.comments .children:before,
+.comments .children:after { content: ''; position: absolute; display: block; }
+.comments .children:before { top: 33px; left: 23px; width: 32px; height: 27px; border-left: 8px solid #c3c3c3; border-bottom: 8px solid #c3c3c3; border-radius: 0 0 0 8px; }
+.comments .children:after { top: -5px; left: 8px; border: 20px solid transparent; border-width: 20px 19px; border-bottom-color: #c3c3c3;  }
+
+.comments .comment { position: relative; border-top: 1px dashed #363636; }
+.comments .children { padding-left: 70px; }
+.comments .avatar { position: absolute; top: 28px; left: 0; width: 48px; height: 48px; border-radius: 50%; border: 1px solid #ccc; }
+.comments .says { padding-left: 5px; }
+.comments .moderation-notice { display: inline-block; margin: 3px 0 8px; color: #999; }
+
+.comments .comment-entry { position: relative; padding: 30px 0 30px 65px; }
+
+.comments .comment-text p:last-child { padding-bottom: 0; margin-bottom: 0; }
+
+.comments .comment-meta { padding-bottom: 12px; }
+.comments .comment-meta a { color: #363636; }
+
+.comments .comment-reply { padding-top: 10px; text-align: right; }
+.comments .comment-reply a { display: inline-block; padding: 5px 10px; background: #363636; color: #fff; border-radius: 6px; }
+.comments .comment-reply a:hover { text-decoration: none; opacity: .8; }
+
+.comment-respond { width: 100%; padding-top: 30px; border-top: 1px solid #363636; }
+.comment-respond h3 { position: relative; }
+.comment-respond small { position: absolute; top: 0; right: 0; }
+.comment-respond label { display: block; padding-bottom: 4px; }
+.comment-respond input[type="text"],
+.comment-respond textarea { display: block; width: 80%; padding: 10px; border: 1px solid #ccc; background: #f7f7f7;  }
+.comment-respond textarea { width: 100%; height: 100px; }
+.comment-respond input[type="text"]:focus { background-color: #fff; }
+.comment-respond input[type="text"]::-webkit-input-placeholder { color: #777; }
+.comment-respond input[type="text"]::-moz-placeholder { color: #777; }
+.comment-respond input[type="text"]:-ms-input-placeholder { color: #777; }
+.comment-respond input[type="text"]::placeholder { color: #777; }
+.comment-respond textarea { width: 100%; }
+
+.comment-respond .required { color: #e40000; }
+.comment-respond .comment-notes { padding-top: 15px; }
+.comment-respond .form-submit input { display: block; width: 160px; height: 40px; border: 0; font-size: 14px; font-weight: bold; color: #fff; background: #363636; cursor: pointer; border-radius: 4px; }
+
+.nocomments { padding-top: 12px; font-weight: bold; font-size: 18px; }
+
+/* ------------------------------------------------------------ *\
+    Search Form
+\* ------------------------------------------------------------ */
+
+.search-form { position: relative; overflow: hidden; }
+.search-form .search-form__field { display: block; width: 100%; padding: 10px; border: 1px solid #ccc; background: #f7f7f7; }
+.search-form .search-form__field:focus { background-color: #fff; }
+.search-form .search-form__field::-webkit-input-placeholder { color: #777; }
+.search-form .search-form__field::-moz-placeholder { color: #777; }
+.search-form .search-form__field:-ms-input-placeholder { color: #777; }
+.search-form .search-form__field::placeholder { color: #777; }
+.search-form .screen-reader-text { position: absolute; top: 0; left: 0; width: 0; height: 0; opacity: 0.5; visibility: hidden; }

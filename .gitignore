@@ -1,0 +1,27 @@
+# Build files
+dist/
+
+# Build modules
+node_modules/
+
+# Composer packages
+vendor/
+
+# WordPress Coding Standards
+wpcs/
+
+# NPM lockfile as it causes more problems than it solves
+package-lock.json
+
+# CLI tools
+drone.json
+
+# Common
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea

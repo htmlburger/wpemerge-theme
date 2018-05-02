@@ -1,0 +1,212 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Emerge Theme\n"
+"POT-Creation-Date: 2018-01-05 17:23+0200\n"
+"PO-Revision-Date: 2017-12-12 11:16+0200\n"
+"Last-Translator: \n"
+"Language-Team: info@htmlburger.com\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.5\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en_US\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: app\n"
+"X-Poedit-SearchPath-1: theme\n"
+
+#: app/helpers/title.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: app/helpers/title.php:21
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: app/helpers/title.php:24
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: app/helpers/title.php:27
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: app/helpers/title.php:30
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: app/helpers/title.php:33
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: app/helpers/title.php:36
+#, php-format
+msgid "Posts by %s"
+msgstr ""
+
+#: app/helpers/title.php:38
+msgid "Archives"
+msgstr ""
+
+#: app/helpers/title.php:40
+msgid "Error 404 - Not Found"
+msgstr ""
+
+#: app/setup/menus.php:9
+msgid "Main Menu"
+msgstr ""
+
+#: app/setup/sidebars.php:26
+msgid "Default Sidebar"
+msgstr ""
+
+#: theme/404.php:7 theme/error.php:12
+#, php-format
+msgid ""
+"<p>Please check the URL for proper spelling and capitalization.<br />If "
+"you're having trouble locating a destination, try visiting the <a href="
+"\"%1$s\">home page</a>.</p>"
+msgstr ""
+
+#: theme/comments.php:20
+msgid "No Responses"
+msgstr ""
+
+#: theme/comments.php:20
+msgid "One Response"
+msgstr ""
+
+#: theme/comments.php:20
+msgid "% Responses"
+msgstr ""
+
+#: theme/comments.php:39
+msgid "« Older Comments"
+msgstr ""
+
+#: theme/comments.php:42
+msgid "Newer Comments »"
+msgstr ""
+
+#: theme/comments.php:49
+msgid "Comments are closed."
+msgstr ""
+
+#: theme/comments.php:56
+msgid "Leave a Reply"
+msgstr ""
+
+#: theme/page.php:22
+msgid "Edit this entry."
+msgstr ""
+
+#: theme/partials/comment-single.php:6
+msgid "says:"
+msgstr ""
+
+#: theme/partials/comment-single.php:10
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: theme/partials/comment-single.php:17
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: theme/partials/comment-single.php:21
+msgid "(Edit)"
+msgstr ""
+
+#: theme/partials/loop-single.php:22
+msgid "« Previous Entry"
+msgstr ""
+
+#: theme/partials/loop-single.php:23
+msgid "Next Entry »"
+msgstr ""
+
+#: theme/partials/loop.php:6
+#, php-format
+msgid "Permanent Link to %s"
+msgstr ""
+
+#: theme/partials/loop.php:21
+msgid "Read the rest of this entry &raquo;"
+msgstr ""
+
+#: theme/partials/loop.php:30
+msgid "« Previous Entries"
+msgstr ""
+
+#: theme/partials/loop.php:31
+msgid "Next Entries »"
+msgstr ""
+
+#: theme/partials/loop.php:47
+#, php-format
+msgid "Sorry, but there aren't any posts in the %s category yet."
+msgstr ""
+
+#: theme/partials/loop.php:49
+msgid "Sorry, but there aren't any posts with this date."
+msgstr ""
+
+#: theme/partials/loop.php:53
+#, php-format
+msgid "Sorry, but there aren't any posts by %s yet."
+msgstr ""
+
+#: theme/partials/loop.php:55
+msgid "No posts found. Try a different search?"
+msgstr ""
+
+#: theme/partials/loop.php:57
+msgid "No posts found."
+msgstr ""
+
+#: theme/partials/post-meta.php:20
+#, php-format
+msgid "by %s"
+msgstr ""
+
+#: theme/partials/post-meta.php:25
+msgid "Posted in "
+msgstr ""
+
+#: theme/partials/post-meta.php:29
+msgid "No Comments"
+msgstr ""
+
+#: theme/partials/post-meta.php:29
+msgid "1 Comment"
+msgstr ""
+
+#: theme/partials/post-meta.php:29
+msgid "% Comments"
+msgstr ""
+
+#: theme/partials/post-meta.php:34
+msgid "Tags:"
+msgstr ""
+
+#: theme/searchform.php:3 theme/searchform.php:5
+msgid "Search for:"
+msgstr ""
+
+#: theme/searchform.php:5
+msgid "Search &hellip;"
+msgstr ""
+
+#: theme/searchform.php:8
+msgid "Search"
+msgstr ""

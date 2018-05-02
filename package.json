@@ -1,0 +1,36 @@
+{
+    "engines": {
+        "node": ">=6.9.1"
+    },
+    "scripts": {
+        "start": "webpack --config resources/build/webpack.js",
+        "dev": "cross-env NODE_ENV=development npm run start --",
+        "build": "cross-env NODE_ENV=production npm run start --"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "autoprefixer": "^8.4.1",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.4",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "browser-sync": "^2.23.7",
+        "browser-sync-webpack-plugin": "^2.2.2",
+        "copy-webpack-plugin": "^4.5.1",
+        "cross-env": "^5.1.4",
+        "css-loader": "^0.28.11",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "file-loader": "^1.1.11",
+        "imagemin-mozjpeg": "^7.0.0",
+        "imagemin-webpack-plugin": "^2.1.1",
+        "import-glob": "^1.5.0",
+        "node-sass": "^4.9.0",
+        "postcss-loader": "^2.1.4",
+        "sass-loader": "^7.0.1",
+        "style-loader": "^0.21.0",
+        "webpack": "^4.6.0",
+        "webpack-cli": "^2.0.15",
+        "webpack-spritesmith": "^0.4.1",
+        "yargs": "^11.0.0"
+    }
+}
