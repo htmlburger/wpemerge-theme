@@ -30,12 +30,13 @@ The webpack configuration supports a number of resolve aliases and module direct
 
 | Alias in JavaScript | Alias in SASS | Resolve |
 | --- | --- |--- |
-| `@scripts` | `~@scripts` | `resources/scripts` |
-| `@styles` | `~@styles` | `resources/styles` |
-| `@images` | `~@images` | `resources/images` |
-| `@fonts` | `~@fonts` | `resources/fonts` |
-| `@vendor` | `~@vendor` | `resources/vendor` |
-| `@build` | `~@build` | `dist` |
+| `~/` | `~` | `node_modules` |
+| `@scripts/` | `~@scripts/` | `resources/scripts` |
+| `@styles/` | `~@styles/` | `resources/styles` |
+| `@images/` | `~@images/` | `resources/images` |
+| `@fonts/` | `~@fonts/` | `resources/fonts` |
+| `@vendor/` | `~@vendor/` | `resources/vendor` |
+| `@build/` | `~@build/` | `dist` |
 
 _Note: All aliases resolve to absolute paths so you can use them in any file, regardless of its location._
 

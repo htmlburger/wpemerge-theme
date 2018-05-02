@@ -9,7 +9,10 @@ Call `./vendor/bin/wpemerge list` to get a list of all commands and options.
 ## WordPress Unit Testing
 
 ### `install:php-tests`
+
 This command will scaffold a WordPress-enabled unit testing directory called `tests` inside your theme root directory.
+
+Refer to the generated `tests/php/README.md` file for further instructions.
 
 ## Boilerplate
 
