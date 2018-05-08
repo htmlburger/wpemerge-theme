@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4617de519da488a5306715280076bc12",
+    "content-hash": "106a345ee7b11327bfdc7fd236678152",
     "packages": [
         {
             "name": "composer/installers",
@@ -243,16 +243,16 @@
         },
         {
             "name": "htmlburger/wpemerge",
-            "version": "0.8.4",
+            "version": "0.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/wpemerge.git",
-                "reference": "c5dc052d17962310c798fc47dcde58d4777e6ffa"
+                "reference": "c8666838a03ac28dae7026fa918748e41f9e8f98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/wpemerge/zipball/c5dc052d17962310c798fc47dcde58d4777e6ffa",
-                "reference": "c5dc052d17962310c798fc47dcde58d4777e6ffa",
+                "url": "https://api.github.com/repos/htmlburger/wpemerge/zipball/c8666838a03ac28dae7026fa918748e41f9e8f98",
+                "reference": "c8666838a03ac28dae7026fa918748e41f9e8f98",
                 "shasum": ""
             },
             "require": {
@@ -307,24 +307,24 @@
                 "wordpress",
                 "wpemerge"
             ],
-            "time": "2018-02-13T16:12:59+00:00"
+            "time": "2018-03-16T15:23:53+00:00"
         },
         {
             "name": "htmlburger/wpemerge-theme-core",
-            "version": "0.8.3",
+            "version": "0.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/wpemerge-theme-core.git",
-                "reference": "53cd17799e6e841a383384763e63aa29ff9342e2"
+                "reference": "64e11c26d92dfc756e37c8333e8b4e3106a6d6da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/wpemerge-theme-core/zipball/53cd17799e6e841a383384763e63aa29ff9342e2",
-                "reference": "53cd17799e6e841a383384763e63aa29ff9342e2",
+                "url": "https://api.github.com/repos/htmlburger/wpemerge-theme-core/zipball/64e11c26d92dfc756e37c8333e8b4e3106a6d6da",
+                "reference": "64e11c26d92dfc756e37c8333e8b4e3106a6d6da",
                 "shasum": ""
             },
             "require": {
-                "htmlburger/wpemerge": "^0.8.2"
+                "htmlburger/wpemerge": "^0.8.4"
             },
             "type": "library",
             "autoload": {
@@ -356,7 +356,7 @@
             ],
             "description": "Core tools for the WP Emerge Theme.",
             "homepage": "https://wpemerge.com/",
-            "time": "2018-02-11T01:22:12+00:00"
+            "time": "2018-02-13T16:23:53+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -649,16 +649,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.4.4",
+            "version": "v3.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "26b6f419edda16c19775211987651cb27baea7f1"
+                "reference": "5b1fdfa8eb93464bcc36c34da39cedffef822cdf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/26b6f419edda16c19775211987651cb27baea7f1",
-                "reference": "26b6f419edda16c19775211987651cb27baea7f1",
+                "url": "https://api.github.com/repos/symfony/console/zipball/5b1fdfa8eb93464bcc36c34da39cedffef822cdf",
+                "reference": "5b1fdfa8eb93464bcc36c34da39cedffef822cdf",
                 "shasum": ""
             },
             "require": {
@@ -679,7 +679,7 @@
                 "symfony/process": "~3.3|~4.0"
             },
             "suggest": {
-                "psr/log": "For using the console logger",
+                "psr/log-implementation": "For using the console logger",
                 "symfony/event-dispatcher": "",
                 "symfony/lock": "",
                 "symfony/process": ""
@@ -714,20 +714,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-29T09:03:43+00:00"
+            "time": "2018-04-30T01:22:56+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v4.0.4",
+            "version": "v4.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "c77bb31d0f6310a2ac11e657475d396a92e5dc54"
+                "reference": "e1d57cdb357e5b10f5fdacbb0b86689c0a435e6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/c77bb31d0f6310a2ac11e657475d396a92e5dc54",
-                "reference": "c77bb31d0f6310a2ac11e657475d396a92e5dc54",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/e1d57cdb357e5b10f5fdacbb0b86689c0a435e6e",
+                "reference": "e1d57cdb357e5b10f5fdacbb0b86689c0a435e6e",
                 "shasum": ""
             },
             "require": {
@@ -770,20 +770,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-18T22:19:33+00:00"
+            "time": "2018-04-30T16:59:37+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b"
+                "reference": "3296adf6a6454a050679cde90f95350ad604b171"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/78be803ce01e55d3491c1397cf1c64beb9c1b63b",
-                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/3296adf6a6454a050679cde90f95350ad604b171",
+                "reference": "3296adf6a6454a050679cde90f95350ad604b171",
                 "shasum": ""
             },
             "require": {
@@ -795,7 +795,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -829,20 +829,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-01-30T19:27:44+00:00"
+            "time": "2018-04-26T10:06:28+00:00"
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.4",
+            "version": "v3.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "09a5172057be8fc677840e591b17f385e58c7c0d"
+                "reference": "4b7d64e852886319e93ddfdecff0d744ab87658b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/09a5172057be8fc677840e591b17f385e58c7c0d",
-                "reference": "09a5172057be8fc677840e591b17f385e58c7c0d",
+                "url": "https://api.github.com/repos/symfony/process/zipball/4b7d64e852886319e93ddfdecff0d744ab87658b",
+                "reference": "4b7d64e852886319e93ddfdecff0d744ab87658b",
                 "shasum": ""
             },
             "require": {
@@ -878,7 +878,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-29T09:03:43+00:00"
+            "time": "2018-04-03T05:22:50+00:00"
         }
     ],
     "aliases": [],
