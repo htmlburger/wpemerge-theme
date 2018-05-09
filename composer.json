@@ -3,19 +3,19 @@
     "description": "A modern WordPress starter theme which uses the WP Emerge framework",
     "type": "wordpress-theme",
     "keywords": ["wordpress", "theme", "starter theme", "wpemerge"],
-    "homepage": "https://wpemerge.com/",
     "license": "GPL-2.0-only",
+    "homepage": "https://wpemerge.com/",
     "authors": [
-        {
-            "name": "htmlBurger",
-            "email": "info@htmlburger.com",
-            "homepage": "http://htmlburger.com/",
-            "role": "Developer"
-        },
         {
             "name": "Atanas Angelov",
             "email": "atanas.angelov.dev@gmail.com",
             "homepage": "https://github.com/atanas-angelov-dev/",
+            "role": "Developer"
+        },
+        {
+            "name": "htmlBurger",
+            "email": "info@htmlburger.com",
+            "homepage": "http://htmlburger.com/",
             "role": "Developer"
         }
     ],

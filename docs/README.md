@@ -20,7 +20,7 @@ https://wpemerge.com/
 
 ## Development Team
 
-Brought to you by the lovely folks at [htmlBurger](http://htmlburger.com)
+Brought to you by [Atanas Angelov](https://github.com/atanas-angelov-dev) and the lovely folks at [htmlBurger](http://htmlburger.com).
 
 ## Comparison Table
 
@@ -30,14 +30,18 @@ Brought to you by the lovely folks at [htmlBurger](http://htmlburger.com)
 | Routing           | ✔                | ✖          | ✖      |
 | MVC               | ✖✔✔              | ✖✔✖¹      | ✖✔✖    |
 | Middleware        | ✔                | ✖         | ✖      |
-| View Composers    | ✔                | ✖         | ✖      |
+| View Composers    | ✔                | ✔/✖²         | ✖      |
 | Service Container | ✔                | ✖         | ✖      |
-| Stylesheets       | SASS + PostCSS   | SASS      | N/A²   |
-| JavaScript        | ES6              | ES6       | N/A²   |
+| Stylesheets       | SASS + PostCSS   | SASS + PostCSS | N/A³   |
+| JavaScript        | ES6              | ES6       | N/A³   |
 
 _¹ Sage's Controller is more a View Model than a Controller._
 
-_² Timber does not provide a front-end build process so you can implement whatever you prefer._
+_² Sage's Controller provides similar functionality but is limited to 1 composer (controller) per view and vice versa._
+
+_³ Timber does not provide a front-end build process so you can implement whatever you prefer._
+
+_Feel free to email [atanas.angelov.dev@gmail.com](mailto:atanas.angelov.dev@gmail.com) with any factual inaccuracies so that they can be corrected._ 
 
 ## Features
 - All features from [WP Emerge](https://docs.wpemerge.com/):
@@ -59,7 +63,7 @@ _² Timber does not provide a front-end build process so you can implement whate
     - Foundation
     - Tachyons
     - FontAwesome
-- WordPress-enabled PHP Unit Test scaffolding
+- PHP unit testing scaffolding
 
 ## Requirements
 
@@ -158,9 +162,9 @@ Add views in this, the `theme/partials/` or the `theme/templates/` directories a
 
 WP Emerge Theme is completely open source and we encourage everybody to participate by:
 
-- `Star`-ing the project on GitHub (https://github.com/htmlburger/wpemerge-theme)
+- ⭐ the project on GitHub (https://github.com/htmlburger/wpemerge-theme)
 - Posting bug reports (https://github.com/htmlburger/wpemerge-theme/issues)
-- (Emailing security issues to [info@htmlburger.com](mailto:info@htmlburger.com) instead)
+- (Emailing security issues to [atanas.angelov.dev@gmail.com](mailto:atanas.angelov.dev@gmail.com) instead)
 - Posting feature suggestions (https://github.com/htmlburger/wpemerge-theme/issues)
 - Posting and/or answering questions (https://github.com/htmlburger/wpemerge-theme/issues)
 - Submitting pull requests (https://github.com/htmlburger/wpemerge-theme/pulls)
