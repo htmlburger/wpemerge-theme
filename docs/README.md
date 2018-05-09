@@ -1,5 +1,8 @@
 # WP Emerge Theme
 
+[![Packagist](https://img.shields.io/packagist/vpre/htmlburger/wpemerge-theme.svg?style=flat-square&colorB=0366d6)](https://packagist.org/packages/htmlburger/wpemerge-theme) [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square&colorB=7d07d1)](https://gitter.im/wpemerge/Lobby)
+
+
 A modern WordPress starter theme which uses the [WP Emerge](https://github.com/htmlburger/wpemerge) framework.
 
 _This is the WP Emerge Theme project - for the WP Emerge framework please check out https://github.com/htmlburger/wpemerge._
