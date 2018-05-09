@@ -41,7 +41,7 @@ _² Sage's Controller provides similar functionality but is limited to 1 compose
 
 _³ Timber does not provide a front-end build process so you can implement whatever you prefer._
 
-_Feel free to email [atanas.angelov.dev@gmail.com](mailto:atanas.angelov.dev@gmail.com) with any factual inaccuracies so that they can be corrected._ 
+_Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.angelov.dev@gmail.com) so they can be corrected._ 
 
 ## Features
 - All features from [WP Emerge](https://docs.wpemerge.com/):
