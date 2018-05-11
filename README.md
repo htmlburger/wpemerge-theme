@@ -19,7 +19,9 @@ _This is the WP Emerge Theme project - for the WP Emerge framework please check 
 
 ## Documentation
 
-https://wpemerge.com/
+https://docs.theme.wpemerge.com/
+
+https://docs.theme.wpemerge.com/quickstart.html
 
 ## Development Team
 
