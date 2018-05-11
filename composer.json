@@ -22,8 +22,8 @@
     "require": {
         "php": ">=5.5",
         "composer/installers": "^1.4",
-        "htmlburger/wpemerge": "^0.8.6",
-        "htmlburger/wpemerge-theme-core": "^0.8.4",
+        "htmlburger/wpemerge": "0.9.*",
+        "htmlburger/wpemerge-theme-core": "0.9.*",
         "htmlburger/carbon-pagination": "^1.1",
         "symfony/debug": "~3.0"
     },

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3978ccdd24481d1349ad51f756dead3f",
+    "content-hash": "26fac5629fbc4152aac3b085db8359c7",
     "packages": [
         {
             "name": "composer/installers",
@@ -243,16 +243,16 @@
         },
         {
             "name": "htmlburger/wpemerge",
-            "version": "0.8.6",
+            "version": "0.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/wpemerge.git",
-                "reference": "c8666838a03ac28dae7026fa918748e41f9e8f98"
+                "reference": "cf59c609ec2740fcdf2496e60c83b20f4126cc9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/wpemerge/zipball/c8666838a03ac28dae7026fa918748e41f9e8f98",
-                "reference": "c8666838a03ac28dae7026fa918748e41f9e8f98",
+                "url": "https://api.github.com/repos/htmlburger/wpemerge/zipball/cf59c609ec2740fcdf2496e60c83b20f4126cc9e",
+                "reference": "cf59c609ec2740fcdf2496e60c83b20f4126cc9e",
                 "shasum": ""
             },
             "require": {
@@ -283,13 +283,14 @@
             "authors": [
                 {
                     "name": "htmlBurger",
-                    "email": "wordpress@htmlburger.com",
-                    "homepage": "https://htmlburger.com/",
+                    "email": "info@htmlburger.com",
+                    "homepage": "http://htmlburger.com/",
                     "role": "Developer"
                 },
                 {
                     "name": "Atanas Angelov",
                     "email": "atanas.angelov.dev@gmail.com",
+                    "homepage": "https://github.com/atanas-angelov-dev/",
                     "role": "Developer"
                 }
             ],
@@ -307,24 +308,24 @@
                 "wordpress",
                 "wpemerge"
             ],
-            "time": "2018-03-16T15:23:53+00:00"
+            "time": "2018-05-11T22:39:49+00:00"
         },
         {
             "name": "htmlburger/wpemerge-theme-core",
-            "version": "0.8.4",
+            "version": "0.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/wpemerge-theme-core.git",
-                "reference": "64e11c26d92dfc756e37c8333e8b4e3106a6d6da"
+                "reference": "d71ef013df4ba41ac2f4ca9f70e9daf3e943ca84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/wpemerge-theme-core/zipball/64e11c26d92dfc756e37c8333e8b4e3106a6d6da",
-                "reference": "64e11c26d92dfc756e37c8333e8b4e3106a6d6da",
+                "url": "https://api.github.com/repos/htmlburger/wpemerge-theme-core/zipball/d71ef013df4ba41ac2f4ca9f70e9daf3e943ca84",
+                "reference": "d71ef013df4ba41ac2f4ca9f70e9daf3e943ca84",
                 "shasum": ""
             },
             "require": {
-                "htmlburger/wpemerge": "^0.8.4"
+                "htmlburger/wpemerge": "0.9.*"
             },
             "type": "library",
             "autoload": {
@@ -342,21 +343,21 @@
             ],
             "authors": [
                 {
-                    "name": "Atanas Angelov",
-                    "email": "atanas.angelov.dev@gmail.com",
-                    "homepage": "https://github.com/atanas-angelov-dev/",
+                    "name": "htmlBurger",
+                    "email": "info@htmlburger.com",
+                    "homepage": "http://htmlburger.com/",
                     "role": "Developer"
                 },
                 {
-                    "name": "htmlBurger",
-                    "email": "wordpress@htmlburger.com",
-                    "homepage": "http://htmlburger.com/",
+                    "name": "Atanas Angelov",
+                    "email": "atanas.angelov.dev@gmail.com",
+                    "homepage": "https://github.com/atanas-angelov-dev/",
                     "role": "Developer"
                 }
             ],
             "description": "Core tools for the WP Emerge Theme.",
             "homepage": "https://wpemerge.com/",
-            "time": "2018-02-13T16:23:53+00:00"
+            "time": "2018-05-11T22:59:25+00:00"
         },
         {
             "name": "pimple/pimple",
