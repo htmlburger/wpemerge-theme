@@ -1,4 +1,4 @@
-# WP Emerge Theme
+# <a href="http://wpemerge.com"><img src="https://raw.githubusercontent.com/htmlburger/wpemerge-theme/master/docs/assets/logo-bar.png" height="60" alt="WP Emerge Theme Logo" aria-label='WPEmerge.com' /></a>
 
 [![Packagist](https://img.shields.io/packagist/vpre/htmlburger/wpemerge-theme.svg?style=flat-square&colorB=0366d6)](https://packagist.org/packages/htmlburger/wpemerge-theme) [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square&colorB=7d07d1)](https://gitter.im/wpemerge/Lobby)
 
