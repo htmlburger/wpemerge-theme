@@ -32,7 +32,9 @@ define( 'APP_VENDOR_DIR', APP_DIR . APP_VENDOR_DIR_NAME . DIRECTORY_SEPARATOR );
 /**
  * Load composer dependencies.
  */
-require_once APP_VENDOR_DIR . 'autoload.php';
+if ( file_exists( APP_VENDOR_DIR . 'autoload.php' ) ) {
+	require_once APP_VENDOR_DIR . 'autoload.php';
+}
 
 /**
  * Enable the global Theme:: shortcut so we don't have to type WPEmergeTheme:: instead.
