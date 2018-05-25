@@ -213,7 +213,7 @@ module.exports = {
                 }),
             },
             {
-                test: /images[\\\/].*\.(jpg|jpeg|png|svg)$/,
+                test: /images[\\\/].*\.(ico|jpg|jpeg|png|svg|gif)$/,
                 loader: 'file-loader?name=../images/[name].[ext]',
             },
             {
