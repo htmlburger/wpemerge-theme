@@ -2,7 +2,6 @@
  * The external dependencies.
  */
 const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const SpritesmithPlugin = require('webpack-spritesmith');
@@ -82,12 +81,6 @@ const plugins = [
     }),
     extractSass,
     spriteSmith,
-    new CopyWebpackPlugin([
-        {
-            from: utils.srcImagesPath('favicon.ico'),
-            to: utils.buildImagesPath('favicon.ico'),
-        },
-    ]),
 ];
 
 if (isDev) {
