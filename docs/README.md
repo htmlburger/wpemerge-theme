@@ -135,11 +135,11 @@ Modify files here according to your needs. These files should contain __registra
 
 #### `app/src/`
 
-Add PHP class files here. All clases in the `App\` namespace are autoloaded according to the [PSR-4](http://www.php-fig.org/psr/psr-4/) standard.
+Add PHP class files here. All clases in the `App\` namespace are autoloaded in accordance with the [PSR-4](http://www.php-fig.org/psr/psr-4/) standard.
 
 #### `resources/styles/`
 
-Add .css and .scss files here. Don't forget to `@import` them in `index.scss`. Note that you are not requird to use SASS at all if you do not wish to do so, the only requirement is that `index.scss` file remains with an .scss extension.
+Add .css and .scss files here. Don't forget to `@import` them in `index.scss`.
 
 #### `resources/styles/admin` and `resources/styles/login`
 
