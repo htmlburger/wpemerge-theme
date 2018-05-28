@@ -21,6 +21,6 @@ trim_trailing_whitespace = false
 indent_style = space
 indent_size = 2
 
-[*.{js,json}]
+[*.{js,jsx,json}]
 indent_style = space
 indent_size = 2
