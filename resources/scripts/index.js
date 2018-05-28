@@ -1,8 +1,4 @@
-import '@styles';
-import '@images/favicon.ico';
-
-const $win = $(window);
-const $doc = $(document);
+import '@styles'
+import '@images/favicon.ico'
 
 // Your code goes here...
-

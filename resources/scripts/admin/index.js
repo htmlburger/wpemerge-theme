@@ -1,1 +1,1 @@
-import '@styles/admin';
+import '@styles/admin'
