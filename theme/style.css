@@ -1,17 +1,15 @@
 /*
-Theme name: WP Emerge Theme
+Theme name: WP Emerge Starter Theme
 Description:
 Version: 1.0
 */
 
 /*
-Source PostCSS styles are located in the resources/css directory.
-The compiled bundle is in dist/css/bundle-{xyz}.css.
-The DEVELOPMENT.md file contains instructions how
-to get the build process up & running.
+Source SASS styles are located in resources/styles/.
+The compiled bundles are in dist/styles/{xyz}-bundle.css.
+The README.md file contains instructions on
+how to get the build process up & running.
 
 If you need to make a quick fix, feel free to add CSS
-below this comment - it will override bundle.css styles.
+below this comment - it will override the bundled styles.
 */
-
-p {  }
