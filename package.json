@@ -5,7 +5,8 @@
     "scripts": {
         "start": "webpack --config resources/build/webpack.js",
         "dev": "cross-env NODE_ENV=development npm run start --",
-        "build": "cross-env NODE_ENV=production npm run start --"
+        "build": "cross-env NODE_ENV=production npm run start --",
+        "lint": "eslint ./resources/scripts/**"
     },
     "dependencies": {},
     "devDependencies": {
