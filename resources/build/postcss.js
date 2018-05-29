@@ -1,20 +1,20 @@
 /**
  * The external dependencies.
  */
-const autoprefixer = require('autoprefixer')
+const autoprefixer = require('autoprefixer');
 
 /**
  * Setup the plugins for different environments.
  */
 const plugins = [
-  autoprefixer
-]
+  autoprefixer,
+];
 
 /**
  * Prepare the configuration.
  */
 const config = {
-  plugins
-}
+  plugins,
+};
 
-module.exports = config
+module.exports = config;

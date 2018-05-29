@@ -1,24 +1,24 @@
 /**
  * The external dependencies.
  */
-const { ProvidePlugin, WatchIgnorePlugin } = require('webpack')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const SpritesmithPlugin = require('webpack-spritesmith')
-const ImageminPlugin = require('imagemin-webpack-plugin').default
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const SpritesmithPlugin = require('webpack-spritesmith');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 /**
  * The internal dependencies.
  */
-const utils = require('./utils')
-const postcssConfig = require('./postcss')
-const browsersyncConfig = require('./browsersync')
+const utils = require('./utils');
+const postcssConfig = require('./postcss');
+const browsersyncConfig = require('./browsersync');
 
 /**
  * Setup the env.
  */
-const { env: envName, isProduction, isDev } = utils.detectEnv()
+const { env: envName, isProduction, isDev } = utils.detectEnv();
 
 /**
  * Setup babel loader.
@@ -33,21 +33,22 @@ const babelLoader = {
         'env',
         {
           targets: {
-            browsers: ['last 3 versions']
-          }
-        }
+            browsers: ['last 3 versions'],
+          },
+        },
       ],
-      'stage-2'
-    ]
-  }
-}
+      // airbnb not included as stage-2 already covers it
+      'stage-2',
+    ],
+  },
+};
 
 /**
  * Setup extract text plugin.
  */
 const extractSass = new ExtractTextPlugin({
-  filename: '../styles/[name].css'
-})
+  filename: '../styles/[name].css',
+});
 
 /**
  * Setup spritesmith plugin.
@@ -55,17 +56,17 @@ const extractSass = new ExtractTextPlugin({
 const spriteSmith = new SpritesmithPlugin({
   src: {
     cwd: utils.srcImagesPath('sprite'),
-    glob: '*.{jpg,jpeg,png}'
+    glob: '*.{jpg,jpeg,png}',
   },
   target: {
     image: utils.buildImagesPath('sprite.png'),
-    css: utils.srcStylesPath('_sprite.scss')
+    css: utils.srcStylesPath('_sprite.scss'),
   },
   apiOptions: {
-    cssImageRef: '~@build/images/sprite.png'
-  }
+    cssImageRef: '~@build/images/sprite.png',
+  },
   // retina: '@2x', // Uncomment this line to enable retina spritesheets.
-})
+});
 
 /**
  * Setup the plugins for different environments.
@@ -73,36 +74,36 @@ const spriteSmith = new SpritesmithPlugin({
 const plugins = [
   new WatchIgnorePlugin([
     utils.buildImagesPath('sprite.png'),
-    utils.buildImagesPath('sprite@2x.png')
+    utils.buildImagesPath('sprite@2x.png'),
   ]),
   new ProvidePlugin({
     $: 'jquery',
-    jQuery: 'jquery'
+    jQuery: 'jquery',
   }),
   extractSass,
-  spriteSmith
-]
+  spriteSmith,
+];
 
 if (isDev) {
   plugins.push(
     new BrowserSyncPlugin(browsersyncConfig, {
-      injectCss: true
+      injectCss: true,
     })
-  )
+  );
 }
 
 if (isProduction) {
   plugins.push(
     new UglifyJSPlugin()
-  )
+  );
 
   plugins.push(
     new ImageminPlugin({
       optipng: {
-        optimizationLevel: 7
+        optimizationLevel: 7,
       },
       gifsicle: {
-        optimizationLevel: 3
+        optimizationLevel: 3,
       },
       svgo: {
         plugins: [
@@ -120,16 +121,16 @@ if (isProduction) {
           { cleanupEnableBackground: true },
           { removeViewBox: true },
           { cleanupIDs: false },
-          { convertStyleToAttrs: true }
+          { convertStyleToAttrs: true },
         ]
       },
       plugins: [
         require('imagemin-mozjpeg')({
-          quality: 100
-        })
-      ]
+          quality: 100,
+        }),
+      ],
     })
-  )
+  );
 }
 
 /**
@@ -142,14 +143,14 @@ module.exports = {
   entry: {
     'bundle': utils.srcScriptsPath('index.js'),
     'admin-bundle': utils.srcScriptsPath('admin/index.js'),
-    'login-bundle': utils.srcScriptsPath('login/index.js')
+    'login-bundle': utils.srcScriptsPath('login/index.js'),
   },
 
   /**
      * The output.
      */
   output: {
-    path: utils.buildPath('scripts')
+    path: utils.buildPath('scripts'),
   },
 
   /**
@@ -168,15 +169,15 @@ module.exports = {
       '~': utils.themeRootPath('node_modules'),
       'isotope': 'isotope-layout',
       'jquery-ui': 'jquery-ui-dist/jquery-ui.js',
-      'masonry': 'masonry-layout'
-    }
+      'masonry': 'masonry-layout',
+    },
   },
 
   /**
      * Resolve the dependencies that are available in the global scope.
      */
   externals: {
-    jquery: 'jQuery'
+    jquery: 'jQuery',
   },
 
   /**
@@ -187,12 +188,12 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.(js|jsx|css|scss)$/,
-        loader: 'import-glob'
+        loader: 'import-glob',
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: [babelLoader]
+        use: [babelLoader],
       },
       {
         test: /\.(css|scss)$/,
@@ -201,26 +202,26 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                minimize: isProduction
-              }
+                minimize: isProduction,
+              },
             },
             'sass-loader',
             {
               loader: 'postcss-loader',
-              options: postcssConfig
-            }
-          ]
-        })
+              options: postcssConfig,
+            },
+          ],
+        }),
       },
       {
         test: /images[\\/].*\.(ico|jpg|jpeg|png|svg|gif)$/,
-        loader: 'file-loader?name=../images/[name].[ext]'
+        loader: 'file-loader?name=../images/[name].[ext]',
       },
       {
         test: /fonts[\\/].*\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=../fonts/[name].[ext]'
-      }
-    ]
+        loader: 'file-loader?name=../fonts/[name].[ext]',
+      },
+    ],
   },
 
   /**
@@ -235,5 +236,5 @@ module.exports = {
   cache: isDev,
   bail: false,
   watch: isDev,
-  devtool: isDev ? 'source-map' : false
-}
+  devtool: isDev ? 'source-map' : false,
+};
