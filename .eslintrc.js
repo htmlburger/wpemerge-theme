@@ -1,4 +1,4 @@
-{
+module.exports = {
   "extends": "airbnb",
   "rules":{
     // Prevent warnings for webpack resolve aliases.
@@ -6,4 +6,4 @@
     // Prevent warnings for webpack extension resolution.
     "import/extensions": "off"
   }
-}
+};
