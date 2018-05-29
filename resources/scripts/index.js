@@ -1,8 +1,5 @@
 import '@styles';
 import '@images/favicon.ico';
-
-const $win = $(window);
-const $doc = $(document);
+import 'airbnb-browser-shims';
 
 // Your code goes here...
-
