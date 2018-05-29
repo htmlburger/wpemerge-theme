@@ -138,8 +138,8 @@ if (isProduction) {
  */
 module.exports = {
   /**
-     * The input.
-     */
+   * The input.
+   */
   entry: {
     'bundle': utils.srcScriptsPath('index.js'),
     'admin-bundle': utils.srcScriptsPath('admin/index.js'),
@@ -147,15 +147,15 @@ module.exports = {
   },
 
   /**
-     * The output.
-     */
+   * The output.
+   */
   output: {
     path: utils.buildPath('scripts'),
   },
 
   /**
-     * Resolve utilities.
-     */
+   * Resolve utilities.
+   */
   resolve: {
     modules: [utils.srcScriptsPath(), 'node_modules'],
     extensions: ['.js', '.jsx', '.json', '.css', '.scss'],
@@ -174,15 +174,15 @@ module.exports = {
   },
 
   /**
-     * Resolve the dependencies that are available in the global scope.
-     */
+   * Resolve the dependencies that are available in the global scope.
+   */
   externals: {
     jquery: 'jQuery',
   },
 
   /**
-     * Setup the transformations.
-     */
+   * Setup the transformations.
+   */
   module: {
     rules: [
       {
@@ -225,13 +225,13 @@ module.exports = {
   },
 
   /**
-     * Setup the transformations.
-     */
+   * Setup the transformations.
+   */
   plugins,
 
   /**
-     * Setup the development tools.
-     */
+   * Setup the development tools.
+   */
   mode: envName,
   cache: isDev,
   bail: false,

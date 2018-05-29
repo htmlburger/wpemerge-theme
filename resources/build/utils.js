@@ -1,5 +1,5 @@
 /**
- * The module dependencies.
+ * The external dependencies.
  */
 const path = require('path');
 
