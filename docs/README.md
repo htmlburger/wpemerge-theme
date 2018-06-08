@@ -60,6 +60,7 @@ _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.
 - ES6 for JavaScript. Separate bundles are created for front-end, administration and login pages.
 - [Webpack](https://webpack.js.org/) to transpile and bundle assets, create sprites, optimize images etc.
 - [Browsersync](https://www.browsersync.io/) for synchronized browser development.
+- Autoloading for all classes in the `App\` namespace.
 - Automatic, fool-proof style and script cache breaker.
 - Optional CSS packages:
     - Boostrap 4
