@@ -21,4 +21,5 @@
 ## CLI
 
 * [Overview](cli/overview.md)
+* [WPCS Integration](cli/wpcs-integration.md)
 
