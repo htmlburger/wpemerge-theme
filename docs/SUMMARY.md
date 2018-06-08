@@ -5,10 +5,14 @@
 * [WP Emerge Theme](README.md)
 * [Quickstart](quickstart.md)
 
-## Asset pipeline
+## Assets
 
 * [Overview](asset-pipeline/overview.md)
 * [Sprite Mixins](asset-pipeline/sprite-mixins.md)
+
+## Utilities
+
+* [Theme](utilities/theme.md)
 
 ## CLI
 

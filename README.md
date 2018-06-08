@@ -40,7 +40,7 @@ Brought to you by [Atanas Angelov](https://github.com/atanas-angelov-dev) and th
 | Stylesheets       | SASS + PostCSS   | SASS + PostCSS | N/A³   |
 | JavaScript        | ES6              | ES6       | N/A³   |
 
-_¹ Sage's Controller is more a View Model than a Controller._
+_¹ Sage's Controller is more of a View Composer than a Controller._
 
 _² Sage's Controller provides similar functionality but is limited to 1 composer (controller) per view and vice versa._
 
