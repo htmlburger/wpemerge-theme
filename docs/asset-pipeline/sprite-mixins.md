@@ -3,7 +3,7 @@
 Adding images inside the `resources/images/sprite/` directory will prepare them for sprite usage. To use a sprite image in your styles you can employ one of the automatically generated SASS mixins in `resources/styles/_sprite.scss`.
 In addition, a variable will be defined for every sprite image which you will use as a reference in mixins (e.g. `birds.jpg` becomes `$birds`).
 
-__Note: `resources/styles/_sprite.scss` is an automatically generated file - never change it manually.__
+__Note: `resources/styles/_sprite.scss` is an automatically generated file - never modify it manually.__
 
 ## Examples
 1. Add a sprite image as a background:
