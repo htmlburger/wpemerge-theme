@@ -1,6 +1,6 @@
 # Theme
 
-The `Theme` class (it's actually a facade) provides a couple tools to help out with common tasks.
+This class (it's actually a facade) provides a couple tools to help out with common tasks.
 
 ## Theme::partial( $partial, $child = '', $context = [] )
 
@@ -13,4 +13,4 @@ Include a partial view file in a very similar fashion to how `get_template_part(
 ## Theme::uri()
 
 Return the public URI of the theme root directory.
-This is useful since `get_template_directory_uri()` will return the URI to the nested `theme/` directory, instead of the root since this is where the theme's `style.css` file is.
+This method is an alias of `Theme\Assets::getThemeUri()`.

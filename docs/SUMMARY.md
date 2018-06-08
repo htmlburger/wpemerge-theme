@@ -13,6 +13,10 @@
 ## Utilities
 
 * [Theme](utilities/theme.md)
+* [Theme\Assets](utilities/themeassets.md)
+* [Theme\Avatar](utilities/themeavatar.md)
+* [Theme\Image](utilities/themeimage.md)
+* [Theme\Sidebar](utilities/themesidebar.md)
 
 ## CLI
 
