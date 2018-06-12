@@ -61,7 +61,6 @@ function app_get_title() {
  * @return void
  */
 function app_the_title( $before = '', $after = '' ) {
-
 	/**
 	 * Filter the HTML that is displayed before the title
 	 *
