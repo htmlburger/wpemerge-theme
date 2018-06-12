@@ -17,8 +17,8 @@ trim_trailing_whitespace = true
 [*.md]
 trim_trailing_whitespace = false
 
-[*.{scss,less,css}]
-indent_style = tab
+[*.{css,less,scss}]
+indent_style = space
 indent_size = 2
 
 [*.yml]
