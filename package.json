@@ -1,47 +1,53 @@
 {
-    "engines": {
-        "node": ">=6.9.1"
-    },
-    "scripts": {
-        "start": "webpack --config resources/build/webpack.js",
-        "dev": "cross-env NODE_ENV=development npm run start --",
-        "build": "cross-env NODE_ENV=production npm run start --",
-        "lint": "eslint ./resources/scripts/**"
-    },
-    "dependencies": {
-        "airbnb-browser-shims": "^2.1.0"
-    },
-    "devDependencies": {
-        "autoprefixer": "^8.4.1",
-        "babel-core": "^6.26.3",
-        "babel-loader": "^7.1.4",
-        "babel-preset-env": "^1.6.1",
-        "babel-preset-stage-2": "^6.24.1",
-        "browser-sync": "^2.23.7",
-        "browser-sync-webpack-plugin": "^2.2.2",
-        "cross-env": "^5.1.4",
-        "css-loader": "^0.28.11",
-        "eslint": "^4.19.1",
-        "eslint-config-airbnb": "^16.1.0",
-        "eslint-plugin-import": "^2.12.0",
-        "eslint-plugin-jsx-a11y": "^6.0.3",
-        "eslint-plugin-react": "^7.8.2",
-        "extract-text-webpack-plugin": "^4.0.0-beta.0",
-        "file-loader": "^1.1.11",
-        "imagemin-mozjpeg": "^7.0.0",
-        "imagemin-webpack-plugin": "^2.1.1",
-        "import-glob": "^1.5.0",
-        "node-sass": "^4.9.0",
-        "postcss-loader": "^2.1.4",
-        "sass-loader": "^7.0.1",
-        "style-loader": "^0.21.0",
-        "stylefmt": "^6.0.0",
-        "stylefmt-loader": "^1.2.3",
-        "stylelint-order": "^0.8.1",
-        "stylelint-z-index-value-constraint": "^1.0.0",
-        "webpack": "^4.6.0",
-        "webpack-cli": "^2.0.15",
-        "webpack-spritesmith": "^0.4.1",
-        "yargs": "^11.0.0"
-    }
+  "engines": {
+    "node": ">=6.9.1"
+  },
+  "scripts": {
+    "start": "webpack --config resources/build/webpack.js",
+    "dev": "cross-env NODE_ENV=development npm run start --",
+    "build": "cross-env NODE_ENV=production npm run start --",
+    "lint": "run-s -cl lint:scripts lint:styles",
+    "lint-fix": "run-s -cl lint-fix:scripts lint-fix:styles",
+    "lint:scripts": "eslint ./resources/scripts/**",
+    "lint:styles": "stylelint ./resources/styles/**",
+    "lint-fix:scripts": "eslint --fix ./resources/scripts/**",
+    "lint-fix:styles": "stylelint --fix ./resources/styles/**"
+  },
+  "dependencies": {
+    "airbnb-browser-shims": "^2.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.4.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "browser-sync": "^2.23.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "cross-env": "^5.1.4",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-webpack-plugin": "^2.1.1",
+    "import-glob": "^1.5.0",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.3",
+    "postcss-loader": "^2.1.4",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "stylelint": "^9.2.1",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^3.1.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15",
+    "webpack-spritesmith": "^0.4.1",
+    "yargs": "^11.0.0"
+  }
 }

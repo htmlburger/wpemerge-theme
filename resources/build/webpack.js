@@ -210,12 +210,6 @@ module.exports = {
               loader: 'postcss-loader',
               options: postcssConfig,
             },
-            {
-              loader: 'stylefmt-loader',
-              options: {
-                codeFilename: utils.srcPath('.stylelintrc.json'),
-              },
-            },
           ],
         }),
       },
