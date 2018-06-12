@@ -1,0 +1,20 @@
+{
+  "plugins": [
+    "stylelint-order",
+    "stylelint-z-index-value-constraint"
+  ],
+  "rules": {
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      "declarations",
+      "rules",
+      "at-rules"
+    ],
+    "order/properties-alphabetical-order": true,
+    "plugin/z-index-value-constraint": {
+      "min": 1,
+      "max": 10
+    }
+  }
+}
