@@ -64,6 +64,7 @@ _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.
 - [Browsersync](https://www.browsersync.io/) for synchronized browser development.
 - Autoloading for all classes in the `App\` namespace.
 - Automatic, fool-proof style and script cache breaker.
+- Script and style linting.
 - Optional CSS packages:
     - Boostrap 4
     - Bulma

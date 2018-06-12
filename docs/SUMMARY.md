@@ -5,6 +5,10 @@
 * [WP Emerge Theme](README.md)
 * [Quickstart](quickstart.md)
 
+## Yarn Scripts
+
+* [Overview](yarn-scripts/overview.md)
+
 ## Assets
 
 * [Overview](asset-pipeline/overview.md)
