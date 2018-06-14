@@ -28,7 +28,8 @@
         "symfony/debug": "~3.0"
     },
     "require-dev": {
-        "htmlburger/wpemerge-cli": "^0.8.3"
+        "htmlburger/wpemerge-cli": "^0.8.3",
+        "filp/whoops": "^2.2"
     },
     "autoload": {
         "psr-4": {
