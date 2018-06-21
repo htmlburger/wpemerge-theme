@@ -146,7 +146,7 @@ Add .css and .scss files here. Don't forget to `@import` them in `index.scss`.
 
 #### `resources/styles/admin` and `resources/styles/login`
 
-These directories are for the admin and login bundles, respectively. They work identically to the main `resources/css` directory.
+These directories are for the admin and login bundles, respectively. They work identically to the main `resources/styles` directory.
 
 #### `resources/images/`
 
