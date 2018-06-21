@@ -43,7 +43,7 @@ _Note: All aliases resolve to absolute paths so you can use them in any file, re
 | `resources/scripts/foo/foo.js` | `import foo from '@scripts/foo/foo';` |
 | `resources/scripts/foo.js` | `import foo from '@scripts/foo';` |
 
-In the last two examples you can even omit the `@scripts/` portion as your `scripts/` directory is considered a module root:
+In the last two examples you can even omit the `@scripts/` portion as your `resources/scripts/` directory is considered a module root:
 
 | File | Import |
 | --- | --- |
