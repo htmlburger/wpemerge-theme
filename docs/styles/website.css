@@ -5,4 +5,5 @@
 .book-header h1 a { color: #EEE; }
 
 /* Fix theme-api causing vertical scroll on page load. */
-.page-inner { margin-top: 0; padding-top: 0; }
+.page-inner { margin-top: 0; }
+#book-search-results section > h1:first-child { padding-top: 50px; }
