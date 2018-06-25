@@ -19,7 +19,9 @@ _This is the WP Emerge Theme project - for the WP Emerge framework please check 
 
 ## Documentation
 
-https://wpemerge.com/
+https://docs.theme.wpemerge.com/
+
+https://docs.theme.wpemerge.com/quickstart.html
 
 ## Development Team
 
@@ -38,7 +40,7 @@ Brought to you by [Atanas Angelov](https://github.com/atanas-angelov-dev) and th
 | Stylesheets       | SASS + PostCSS   | SASS + PostCSS | N/A³   |
 | JavaScript        | ES6              | ES6       | N/A³   |
 
-_¹ Sage's Controller is more a View Model than a Controller._
+_¹ Sage's Controller is more of a View Composer than a Controller._
 
 _² Sage's Controller provides similar functionality but is limited to 1 composer (controller) per view and vice versa._
 
@@ -62,7 +64,7 @@ _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.
 - [Browsersync](https://www.browsersync.io/) for synchronized browser development.
 - Autoloading for all classes in the `App\` namespace.
 - Automatic, fool-proof style and script cache breaker.
-- Script and style linting.
+- PHP, JavaScript and SASS linting using single yarn commands.
 - Optional CSS packages:
     - Boostrap 4
     - Bulma
