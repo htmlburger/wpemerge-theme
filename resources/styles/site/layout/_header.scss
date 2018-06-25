@@ -1,0 +1,5 @@
+.articles {
+  // background: red;
+  @include border-shadow(right, 3px, red);
+}
+

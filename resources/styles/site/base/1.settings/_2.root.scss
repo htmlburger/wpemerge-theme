@@ -1,0 +1,29 @@
+// create a css var
+@mixin css-var($name, $value) { #{--$name} : $value; }
+
+// create css vars from a map data.
+@mixin css-vars($data, $prefix: prefix) {
+  @if (type-of($data) == map) {
+    @each $key, $value in $data {
+      @if (type-of($value) != map) {
+        @include css-var(#{$prefix}-#{$key}, $value);
+      }
+      @include css-vars($value, #{$prefix}-#{$key});
+    }
+  }
+}
+
+/* global vars */
+:root {
+  /* grid */
+  @include css-vars($grid, grid);
+
+  /* fonts */
+  @include css-vars($fonts, font);
+
+  /* sizes */
+  @include css-vars($sizes, size);
+
+  /* colors */
+  @include css-vars($colors, color);
+}

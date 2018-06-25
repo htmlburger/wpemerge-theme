@@ -1,0 +1,7 @@
+@mixin border-shadow($position, $width, $color) {
+  @if ($position == top) { box-shadow: inset 0 $width 0 0 $color; }
+  // @if ($position == bottom) { box-shadow: inset #{-$width} 0 0 $color; }
+  @if ($position == right) { box-shadow: inset 0 -$width 0 0 $color; }
+  @if ($position == left) { box-shadow: inset $width 0 0 $color; }
+  @if ($position == '') { box-shadow: inset 0 0 0 -$width $color ;}
+}

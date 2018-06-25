@@ -1,0 +1,20 @@
+$colors: (
+  common: (
+    darken: #000,
+    lighten: #fff
+  ),
+
+  palette: (
+    primary: #FFBB00,
+    secondary: (
+      base: #0969A2,
+      darken: darken(#0969A2, 20%)
+    )
+  ),
+
+  text: (
+    base: #353535,
+    title: #07a,
+    link: green
+  ),
+);

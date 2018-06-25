@@ -1,0 +1,46 @@
+@mixin list-grid($params: ()) {
+  @if(length($params) == 0) {
+    @error 'Error: missing params in `@include list-grid($params);` $params was passed empty';
+  }
+
+  // ::media-queries and first breakpoint attributes-map
+  $_breakpoints: map-keys($params);
+  $_params     : map-get($params, nth($_breakpoints, 1));
+
+  // ::extract attribute from first breakpoint
+  $_columns   : map-get($_params, columns);
+
+  @if($_columns <= 1) {
+    @error 'Error: the minimum columns value must be 2.';
+  }
+
+  // ::default props
+  display: flex;
+  flex-wrap: wrap;
+
+  // ::any directly child must have width 100%
+  > * { width: 100%; }
+
+  // ::magic
+  @each $breakpoint in $_breakpoints {
+    // ::attributes-map from a breakpoint
+    $break-params: map-get($params, $breakpoint);
+
+    // ::extract attributes from breakpoint
+    $break-columns: map-get($break-params, columns);
+    $break-gap    : map-get($break-params, column-gap);
+
+    // ::setting media-query
+    @media not all and (max-width: #{$breakpoint}) {
+      $_gap: if($break-gap, $break-gap, $_column-gap);
+
+      > * {
+        // ::defining item width based on columns quantity
+        width: calc((100% / #{$break-columns} + #{$_gap / $break-columns}) - #{$_gap});
+
+        &:nth-child(#{$break-columns}n) { margin-right: auto; }
+        &:not(:nth-child(#{$break-columns}n)) { margin-right: $_gap; }
+      }
+    }
+  }
+}
