@@ -1,29 +1,96 @@
-// // ::functions to get values from css variables
-// @function get-value-var($key, $value, $callback, $prefix, $obj) {
-//   $item: map-get($obj, $key);
+@function get($key, $value, $obj) {
+  $item: map-get($obj, $key);
 
-//   @if type-of($item) == map {
-//     @return get-value-var($value, null, $callback, #{$prefix}-#{$key}, $item);
-//   }
+  @if type-of($item) == map {
+    @return get($value, null, $item);
+  }
 
-//   @return var(--#{$prefix}-#{$key}, $callback);
-// }
+  @return $item;
+}
 
-// @function grid-var($grid-size, $attr: base, $callback: 2000px, $prefix: grid, $_grid: $grid) {
-//   @return get-value-var($grid-size, $attr, $callback, $prefix, $_grid);
-// }
+@function font($font, $attr: base, $_fonts: $fonts) {
+  @return get($font, $attr, $_fonts);
+}
 
-// @function color-var($color, $attr : base, $callback: red, $prefix: color, $_colors : $colors) {
-// 	@return get-value-var($color, $attr, $callback, $prefix, $_colors);
-// }
+@function size($size, $attr: base, $_sizes: $sizes) {
+  @return get($size, $attr, $_sizes);
+}
 
-// @function font-var($font, $attr : base, $callback: Calibri, $prefix: font, $_fonts : $fonts) {
-// 	@return get-value-var($font, $attr, $callback, $prefix, $_fonts);
-// }
+@function color($color, $attr: base, $_colors: $colors) {
+  @return get($color, $attr, $_colors);
+}
 
-// @function size-var($size, $attr : base, $callback: 200px, $prefix: size, $_sizes : $sizes) {
-// 	@return get-value-var($size, $attr, $callback, $prefix, $_sizes);
-// }
+@function grid($grid-size, $attr: container, $_grid: $grid) {
+  @return get($grid-size, $attr, $_grid);
+}
+
+// css vars
+@function get-var($key, $value, $cb, $prefix, $obj) {
+  $item: map-get($obj, $key);
+
+  @if (type-of($item) == map) {
+    @return get-var($value, null, $cb, #{$prefix}-#{$key}, $item);
+  }
+
+  @return var(--#{$prefix}-#{$key}, $cb);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // // ::functions to get values from css variables
+// // @function get-value-var($key, $value, $callback, $prefix, $obj) {
+// //   $item: map-get($obj, $key);
+
+// //   @if type-of($item) == map {
+// //     @return get-value-var($value, null, $callback, #{$prefix}-#{$key}, $item);
+// //   }
+
+// //   @return var(--#{$prefix}-#{$key}, $callback);
+// // }
+
+// // @function grid-var($grid-size, $attr: base, $callback: 2000px, $prefix: grid, $_grid: $grid) {
+// //   @return get-value-var($grid-size, $attr, $callback, $prefix, $_grid);
+// // }
+
+// // @function color-var($color, $attr : base, $callback: red, $prefix: color, $_colors : $colors) {
+// // 	@return get-value-var($color, $attr, $callback, $prefix, $_colors);
+// // }
+
+// // @function font-var($font, $attr : base, $callback: Calibri, $prefix: font, $_fonts : $fonts) {
+// // 	@return get-value-var($font, $attr, $callback, $prefix, $_fonts);
+// // }
+
+// // @function size-var($size, $attr : base, $callback: 200px, $prefix: size, $_sizes : $sizes) {
+// // 	@return get-value-var($size, $attr, $callback, $prefix, $_sizes);
+// // }
 
 // // ::functions to get values from sass variables
 // @function get-value( $key, $value, $obj ) {

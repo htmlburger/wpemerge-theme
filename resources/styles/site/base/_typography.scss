@@ -1,10 +1,5 @@
-@mixin font-face(
-  $name,
-  $path: '../assets/fonts',
-  $ext: eot woff2 woff ttf svg,
-  $weight: normal,
-  $style: normal
-) {
+@mixin font-face($name, $path: '', $exts: woff2 woff, $weight: normal, $style: normal) {
+  $path: #{'~@fonts'}/#{$path};
   $_source: null;
   $_exts  : (
     eot: '#iefix',
@@ -15,15 +10,25 @@
     eot: 'embedded-opentype'
   );
 
+  @each $ext in $exts {
+    $font-ext: if(map-has-key($_exts, $exts), $ext + map-get($_exts, $ext), $ext);
+    $font-format: if(map-has-key($_formats, $ext), map-get($_formats, $ext), $ext);
+    $_source: append($_source, url($path + '.' + $font-ext) format(quote($font-format), comma));
+  }
+
   @font-face {
     font-family: quote($name);
     font-weight: $weight;
     font-style: $style;
     font-display: swap;
-    src: $source;
+    src: $_source;
   }
 }
 
+/*
+ * Fonts
+ * --------------------------------------------------------------------------- */
+@include font-face(Icomoon, icon/icomoon, eot svg ttf woff);
 
 
 
