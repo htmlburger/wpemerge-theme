@@ -1,3 +1,0 @@
-- Testar os mixins e helpers criados
-- Inserir um arquivo 0.config.scss para ter a opção de gerar variáveis css a partir das scss vars
-- Realizar testes no front...

@@ -35,90 +35,18 @@
   @return var(--#{$prefix}-#{$key}, $cb);
 }
 
+@function font-var($font, $attr: base, $prefix: font, $cb: '', $_fonts: $fonts) {
+	@return get-var($font, $attr, $cb, $prefix, $_fonts);
+}
 
+@function size-var($size, $attr: base, $prefix: size, $cb: 500px, $_sizes: $sizes) {
+	@return get-var($size, $attr, $cb, $prefix, $_sizes);
+}
 
+@function color-var($color, $attr: base, $prefix: color, $cb: red, $_colors: $colors) {
+  @return get-var($color, $attr, $cb, $prefix, $_colors);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // // ::functions to get values from css variables
-// // @function get-value-var($key, $value, $callback, $prefix, $obj) {
-// //   $item: map-get($obj, $key);
-
-// //   @if type-of($item) == map {
-// //     @return get-value-var($value, null, $callback, #{$prefix}-#{$key}, $item);
-// //   }
-
-// //   @return var(--#{$prefix}-#{$key}, $callback);
-// // }
-
-// // @function grid-var($grid-size, $attr: base, $callback: 2000px, $prefix: grid, $_grid: $grid) {
-// //   @return get-value-var($grid-size, $attr, $callback, $prefix, $_grid);
-// // }
-
-// // @function color-var($color, $attr : base, $callback: red, $prefix: color, $_colors : $colors) {
-// // 	@return get-value-var($color, $attr, $callback, $prefix, $_colors);
-// // }
-
-// // @function font-var($font, $attr : base, $callback: Calibri, $prefix: font, $_fonts : $fonts) {
-// // 	@return get-value-var($font, $attr, $callback, $prefix, $_fonts);
-// // }
-
-// // @function size-var($size, $attr : base, $callback: 200px, $prefix: size, $_sizes : $sizes) {
-// // 	@return get-value-var($size, $attr, $callback, $prefix, $_sizes);
-// // }
-
-// // ::functions to get values from sass variables
-// @function get-value( $key, $value, $obj ) {
-// 	$item : map-get( $obj, $key );
-
-// 	@if type-of( $item ) == map {
-// 		@return get-value( $value, null, $item );
-// 	}
-
-// 	@return $item;
-// }
-
-// @function font( $font-family, $attr : base, $_font-family : $fonts ) {
-// 	@return get-value( $font-family, $attr, $_font-family );
-// }
-
-// // @function weight( $font-weight, $attr : regular, $_font-weight : $weights ) {
-// // 	@return get-value( $font-weight, $attr, $_font-weight );
-// // }
-
-// @function color( $color, $attr : base, $_color : $colors ) {
-// 	@return get-value( $color, $attr, $_color );
-// }
-
-// @function grid( $grid-size, $attr : base, $_grid : $grid ) {
-// 	@return get-value( $grid-size, $attr, $_grid );
-// }
-
-// @function font-size( $font-size, $attr : base, $_font-size : $sizes ) {
-// 	@return get-value( $font-size, $attr, $_font-size );
-// }
+@function grid-var($grid-size, $attr: container, $prefix: grid, $cb: 4000px, $_grid: $grid) {
+  @return get-var($grid-size, $attr, $cb, $prefix, $_grid);
+}
