@@ -29,16 +29,21 @@ Brought to you by [Atanas Angelov](https://github.com/atanas-angelov-dev) and th
 
 ## Comparison Table
 
-|                   | WP Emerge Theme  | Sage       | Timber |
-|-------------------|----------------- |-------     |--------|
-| View Engine       | PHP, Blade, Twig | PHP, Blade | Twig   |
-| Routing           | ✔                | ✖          | ✖      |
-| MVC               | ✖✔✔              | ✖✔✖¹      | ✖✔✖    |
-| Middleware        | ✔                | ✖         | ✖      |
-| View Composers    | ✔                | ✔/✖²         | ✖      |
-| Service Container | ✔                | ✖         | ✖      |
-| Stylesheets       | SASS + PostCSS   | SASS + PostCSS | N/A³   |
-| JavaScript        | ES6              | ES6       | N/A³   |
+|                                | WP Emerge Theme  | Sage           | Timber   |
+|--------------------------------|------------------|----------------|----------|
+| View Engine                    | PHP, Blade, Twig | PHP, Blade     | Twig     |
+| Routing                        | ✔                | ✖              | ✖        |
+| MVC                            | ✖✔✔              | ✖✔✖¹           | ✖✔✖      |
+| Middleware                     | ✔                | ✖              | ✖        |
+| View Composers                 | ✔                | ✔/✖²           | ✖        |
+| Service Container              | ✔                | ✖              | ✖        |
+| Stylesheets                    | SASS + PostCSS   | SASS + PostCSS | N/A³     |
+| JavaScript                     | ES6              | ES6            | N/A³     |
+| FE, Admin and Login Bundles    | ✔                | ✖              | N/A³     |
+| Automatic Sprite Generation    | ✔                | ✖              | ✖        |
+| Cache Breaker                  | ✔                | ✖              | ✖        |
+| WPCS Linting                   | ✔                | ✖              | ✖        |
+| WP Unit Tests for your classes | ✔                | ✖              | ✖        |
 
 _¹ Sage's Controller is more of a View Composer than a Controller._
 
@@ -62,16 +67,16 @@ _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.
 - ES6 for JavaScript. Separate bundles are created for front-end, administration and login pages.
 - [Webpack](https://webpack.js.org/) to transpile and bundle assets, create sprites, optimize images etc.
 - [Browsersync](https://www.browsersync.io/) for synchronized browser development.
-- Autoloading for all classes in the `App\` namespace.
+- Autoloading for all classes in your `App\` namespace.
 - Automatic, fool-proof style and script cache breaker.
-- PHP, JavaScript and SASS linting using single yarn commands.
-- Optional CSS packages:
+- WPCS, JavaScript and SASS linting using single yarn commands.
+- Single-command optional CSS package installation:
     - Boostrap 4
     - Bulma
     - Foundation
     - Tachyons
     - FontAwesome
-- PHP unit testing scaffolding
+- WP Unit Test scaffolding for your own classes.
 
 ## Requirements
 
