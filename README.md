@@ -40,7 +40,7 @@ Brought to you by [Atanas Angelov](https://github.com/atanas-angelov-dev) and th
 | Stylesheets                    | SASS + PostCSS   | SASS + PostCSS | N/A³     |
 | JavaScript                     | ES6              | ES6            | N/A³     |
 | FE, Admin and Login Bundles    | ✔                | ✖              | N/A³     |
-| Automatic Sprite Generation    | ✔                | ✖              | ✖        |
+| Automatic Sprite Generation    | ✔                | ✖              | N/A³     |
 | Cache Breaker                  | ✔                | ✖              | ✖        |
 | WPCS Linting                   | ✔                | ✖              | ✖        |
 | [Advanced Error Reporting](https://docs.wpemerge.com/routing/exceptions.html) | ✔ | ✖ | ✖ |
