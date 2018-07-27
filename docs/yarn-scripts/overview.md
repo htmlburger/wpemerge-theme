@@ -16,6 +16,10 @@ Run the scripts and styles linters (`eslint` and `stylelint` respectively), repo
 
 Run the scripts and styles linters (`eslint` and `stylelint` respectively), fixing any fixable lint rule violations.
 
+## `yarn wpcs`
+
+Run the WPCS linter, reporting any lint rule violations.
+
 ## Browsersync
 
 By default, Browsersync will setup a simple web server and serve your files through a custom port in order to establish a communication channel between the build process and your browser like this:
