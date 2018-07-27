@@ -11,7 +11,8 @@
     "lint:scripts": "eslint ./resources/scripts/**",
     "lint:styles": "stylelint ./resources/styles/**",
     "lint-fix:scripts": "eslint --fix ./resources/scripts/**",
-    "lint-fix:styles": "stylelint --fix ./resources/styles/**"
+    "lint-fix:styles": "stylelint --fix ./resources/styles/**",
+    "wpcs": "./wpcs/vendor/bin/phpcs app/ theme/"
   },
   "dependencies": {
     "airbnb-browser-shims": "^2.1.0"
