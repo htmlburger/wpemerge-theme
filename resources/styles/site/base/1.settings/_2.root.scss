@@ -1,0 +1,57 @@
+/* stylelint-disable */
+/*
+ * Mixins to create CSS Vars.
+ *
+ * If $generate-css-vars, will create css vars from $colors, $fonts, $grid
+ * and $sizes vars map.
+ * --------------------------------------------------------------------------- */
+@mixin css-var($name, $value) {
+  #{--$name} : $value;
+}
+
+@mixin css-vars($data, $prefix) {
+  @each $key, $value in $data {
+    $css-var: #{$prefix}-#{$key};
+
+    @if(type-of($value) == map) {
+      @include css-vars($value, $css-var);
+
+    } @else {
+      --#{$css-var}: #{$value};
+    }
+  }
+}
+
+@mixin font-vars($_fonts: $fonts, $_prefix: font) {
+  @include css-vars($_fonts, $_prefix);
+}
+
+@mixin color-vars($_colors: $colors, $_prefix: color) {
+  @include css-vars($_colors, $_prefix);
+}
+
+@mixin size-vars($_sizes: $sizes, $_prefix: size) {
+  @include css-vars($_sizes, $_prefix);
+}
+
+@mixin grid-vars($_grid: $grid, $_prefix: grid) {
+  @include css-vars($_grid, $_prefix);
+}
+
+/* --------------------------------------------------------------------------- */
+@if($generate-css-vars) {
+  /* global vars */
+  :root {
+    /* fonts */
+    @include font-vars;
+
+    /* sizes */
+    @include size-vars;
+
+    /* grid */
+    @include grid-vars;
+
+    /* colors */
+    @include color-vars;
+  }
+}

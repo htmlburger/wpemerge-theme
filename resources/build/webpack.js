@@ -60,7 +60,7 @@ const spriteSmith = new SpritesmithPlugin({
   },
   target: {
     image: utils.buildImagesPath('sprite.png'),
-    css: utils.srcStylesPath('_sprite.scss'),
+    css: utils.srcStylesPath('site/base/_sprite.scss'),
   },
   apiOptions: {
     cssImageRef: '~@build/images/sprite.png',

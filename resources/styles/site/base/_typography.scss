@@ -1,0 +1,31 @@
+@mixin font-face($name, $path: '', $exts: woff2 woff, $weight: normal, $style: normal) {
+  $path: #{'~@fonts'}/#{$path};
+  $_source: null;
+  $_exts  : (
+    eot: '#iefix',
+    svg: '##{$name}'
+  );
+  $_formats: (
+    ttf: 'truetype',
+    eot: 'embedded-opentype'
+  );
+
+  @each $ext in $exts {
+    $font-ext: if(map-has-key($_exts, $exts), $ext + map-get($_exts, $ext), $ext);
+    $font-format: if(map-has-key($_formats, $ext), map-get($_formats, $ext), $ext);
+    $_source: append($_source, url($path + '.' + $font-ext) format(quote($font-format), comma));
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+    src: $_source;
+  }
+}
+
+/*
+ * Fonts
+ * ex: @include font-face(Icomoon, icomoon, eot svg ttf woff);
+ * --------------------------------------------------------------------------- */

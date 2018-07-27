@@ -1,0 +1,52 @@
+@function get($key, $value, $obj) {
+  $item: map-get($obj, $key);
+
+  @if type-of($item) == map {
+    @return get($value, null, $item);
+  }
+
+  @return $item;
+}
+
+@function font($font, $attr: base, $_fonts: $fonts) {
+  @return get($font, $attr, $_fonts);
+}
+
+@function size($size, $attr: base, $_sizes: $sizes) {
+  @return get($size, $attr, $_sizes);
+}
+
+@function color($color, $attr: base, $_colors: $colors) {
+  @return get($color, $attr, $_colors);
+}
+
+@function grid($grid-size, $attr: container, $_grid: $grid) {
+  @return get($grid-size, $attr, $_grid);
+}
+
+// css vars
+@function get-var($key, $value, $cb, $prefix, $obj) {
+  $item: map-get($obj, $key);
+
+  @if (type-of($item) == map) {
+    @return get-var($value, null, $cb, #{$prefix}-#{$key}, $item);
+  }
+
+  @return var(--#{$prefix}-#{$key}, $cb);
+}
+
+@function font-var($font, $attr: base, $prefix: font, $cb: '', $_fonts: $fonts) {
+	@return get-var($font, $attr, $cb, $prefix, $_fonts);
+}
+
+@function size-var($size, $attr: base, $prefix: size, $cb: 500px, $_sizes: $sizes) {
+	@return get-var($size, $attr, $cb, $prefix, $_sizes);
+}
+
+@function color-var($color, $attr: base, $prefix: color, $cb: red, $_colors: $colors) {
+  @return get-var($color, $attr, $cb, $prefix, $_colors);
+}
+
+@function grid-var($grid-size, $attr: container, $prefix: grid, $cb: 4000px, $_grid: $grid) {
+  @return get-var($grid-size, $attr, $cb, $prefix, $_grid);
+}

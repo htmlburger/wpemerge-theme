@@ -1,0 +1,20 @@
+/*
+ * -- :: BASE
+ * -- The site configuration
+ * ex: colors, fonts, variables...
+ * --------------------------------------------------------------------------- */
+@import './base/**/**/*.scss';
+
+/*
+ * :: COMPONENTS
+ * -- Groups of elements with the intention of building standards in components
+ * -- ex: form, card, block news...
+ * --------------------------------------------------------------------------- */
+@import './components/**/**/*.scss';
+
+/*
+ * :: LAYOUT
+ * -- Structure of a template part
+ * -- ex: header, footer, sidebar...
+ * --------------------------------------------------------------------------- */
+@import './layout/**/*.scss';

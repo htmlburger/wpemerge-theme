@@ -1,0 +1,16 @@
+@mixin resp($breakpoint) {
+  $_media-query: if(type-of($breakpoint) != string, $breakpoint, grid($breakpoint));
+  @media (min-width: $_media-query) { @content; }
+}
+
+@mixin resp-max($breakpoint) {
+  $_media-query: if(type-of($breakpoint) != string, $breakpoint, grid($breakpoint));
+  @media (max-width: $_media-query - 1px) { @content; }
+}
+
+@mixin resp-and($min, $max) {
+  $min: if(type-of( $min ) != string, $min, grid( $min ));
+  $max: if(type-of( $max ) != string, $max, grid( $max ));
+
+  @media (min-width: $min) and (max-width: $max - 1px) { @content; }
+}
