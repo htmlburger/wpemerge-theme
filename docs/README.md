@@ -43,6 +43,7 @@ Brought to you by [Atanas Angelov](https://github.com/atanas-angelov-dev) and th
 | Automatic Sprite Generation    | ✔                | ✖              | ✖        |
 | Cache Breaker                  | ✔                | ✖              | ✖        |
 | WPCS Linting                   | ✔                | ✖              | ✖        |
+| [Advanced Error Reporting](https://docs.wpemerge.com/routing/exceptions.html) | ✔ | ✖ | ✖ |
 | WP Unit Tests for your classes | ✔                | ✖              | ✖        |
 
 _¹ Sage's Controller is more of a View Composer than a Controller._
