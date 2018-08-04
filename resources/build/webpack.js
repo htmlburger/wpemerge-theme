@@ -60,7 +60,7 @@ const spriteSmith = new SpritesmithPlugin({
   },
   target: {
     image: utils.buildImagesPath('sprite.png'),
-    css: utils.srcStylesPath('_sprite.scss'),
+    css: utils.srcStylesPath('theme/_sprite.scss'),
   },
   apiOptions: {
     cssImageRef: '~@build/images/sprite.png',
@@ -141,7 +141,7 @@ module.exports = {
    * The input.
    */
   entry: {
-    'bundle': utils.srcScriptsPath('index.js'),
+    'bundle': utils.srcScriptsPath('theme/index.js'),
     'admin-bundle': utils.srcScriptsPath('admin/index.js'),
     'login-bundle': utils.srcScriptsPath('login/index.js'),
   },
