@@ -21,7 +21,7 @@ if ( post_password_required() ) {
 
 		<ol class="comments">
 			<?php
-			wp_list_comments( array(
+			wp_list_comments( [
 				'callback' => function( $comment, $args, $depth ) {
 					Theme::partial( 'comment-single', [
 						'comment' => $comment,
@@ -29,7 +29,7 @@ if ( post_password_required() ) {
 						'depth'   => $depth,
 					] );
 				},
-			) );
+			] );
 			?>
 		</ol>
 
@@ -52,10 +52,10 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 
 	<?php
-	comment_form( array(
+	comment_form( [
 		'title_reply'         => __( 'Leave a Reply', 'app' ),
 		'comment_notes_after' => '',
-	) );
+	] );
 	?>
 
 </section>
