@@ -159,3 +159,28 @@
 .has-material-blue-grey-background-color {
   background-color: $material-blue-grey;
 }
+
+/**
+ * Font sizes.
+ *
+ * @see resources/styles/shared/_variables.scss
+ */
+.has-extra-small-font-size {
+  font-size: $font-size-extra-small;
+}
+
+.has-small-font-size {
+  font-size: $font-size-small;
+}
+
+.has-regular-font-size {
+  font-size: $font-size-regular;
+}
+
+.has-large-font-size {
+  font-size: $font-size-large;
+}
+
+.has-extra-large-font-size {
+  font-size: $font-size-extra-large;
+}

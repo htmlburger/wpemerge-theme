@@ -137,3 +137,41 @@ add_theme_support( 'editor-color-palette', [
  * @see https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
  */
 // add_theme_support( 'disable-custom-colors' );
+
+/**
+ * Support custom editor block font sizes.
+ *
+ * @see https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
+ */
+add_theme_support( 'editor-font-sizes', [
+	[
+		'name' => __( 'extra small', 'app' ),
+		'shortName' => __( 'XS', 'app' ),
+		'size' => 12,
+		'slug' => 'extra-small'
+	],
+	[
+		'name' => __( 'small', 'app' ),
+		'shortName' => __( 'S', 'app' ),
+		'size' => 16,
+		'slug' => 'small'
+	],
+	[
+		'name' => __( 'regular', 'app' ),
+		'shortName' => __( 'M', 'app' ),
+		'size' => 20,
+		'slug' => 'regular'
+	],
+	[
+		'name' => __( 'large', 'app' ),
+		'shortName' => __( 'L', 'app' ),
+		'size' => 28,
+		'slug' => 'large'
+	],
+	[
+		'name' => __( 'extra large', 'app' ),
+		'shortName' => __( 'XL', 'app' ),
+		'size' => 36,
+		'slug' => 'extra-large'
+	],
+] );
