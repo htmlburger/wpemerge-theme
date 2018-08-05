@@ -12,9 +12,10 @@
 /**
  * Assets
  */
-add_action( 'wp_enqueue_scripts', 'app_action_enqueue_scripts' );
-add_action( 'admin_enqueue_scripts', 'app_action_admin_enqueue_scripts' );
-add_action( 'login_enqueue_scripts', 'app_action_login_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'app_action_theme_enqueue_assets' );
+add_action( 'admin_enqueue_scripts', 'app_action_admin_enqueue_assets' );
+add_action( 'login_enqueue_scripts', 'app_action_login_enqueue_assets' );
+add_action( 'enqueue_block_editor_assets', 'app_action_editor_enqueue_assets' );
 
 add_action( 'wp_head', 'app_action_add_favicon', 5 );
 add_action( 'login_head', 'app_action_add_favicon', 5 );

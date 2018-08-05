@@ -4,7 +4,7 @@
  *
  * @return void
  */
-function app_action_enqueue_scripts() {
+function app_action_theme_enqueue_assets() {
 	$template_dir = Theme::uri();
 
 	/**
@@ -43,7 +43,7 @@ function app_action_enqueue_scripts() {
  *
  * @return void
  */
-function app_action_admin_enqueue_scripts() {
+function app_action_admin_enqueue_assets() {
 	$template_dir = Theme::uri();
 
 	/**
@@ -70,7 +70,7 @@ function app_action_admin_enqueue_scripts() {
  *
  * @return void
  */
-function app_action_login_enqueue_scripts() {
+function app_action_login_enqueue_assets() {
 	$template_dir = Theme::uri();
 
 	/**
@@ -89,6 +89,33 @@ function app_action_login_enqueue_scripts() {
 	Theme\Assets::enqueueStyle(
 		'theme-login-css-bundle',
 		$template_dir . '/dist/styles/login-bundle.css'
+	);
+}
+
+/**
+ * Enqueue editor assets.
+ *
+ * @return void
+ */
+function app_action_editor_enqueue_assets() {
+	$template_dir = Theme::uri();
+
+	/**
+	 * Enqueue scripts.
+	 */
+	Theme\Assets::enqueueScript(
+		'theme-editor-js-bundle',
+		$template_dir . '/dist/scripts/editor-bundle.js',
+		[ 'jquery' ],
+		true
+	);
+
+	/**
+	 * Enqueue styles.
+	 */
+	Theme\Assets::enqueueStyle(
+		'theme-editor-css-bundle',
+		$template_dir . '/dist/styles/editor-bundle.css'
 	);
 }
 
