@@ -153,25 +153,25 @@ Modify files here according to your needs. These files should contain __registra
 
 Add PHP class files here. All clases in the `App\` namespace are autoloaded in accordance with the [PSR-4](http://www.php-fig.org/psr/psr-4/) standard.
 
-#### `resources/styles/`
-
-Add .css and .scss files here. Don't forget to `@import` them in `index.scss`.
-
-#### `resources/styles/admin` and `resources/styles/login`
-
-These directories are for the admin and login bundles, respectively. They work identically to the main `resources/styles` directory.
-
 #### `resources/images/`
 
 Add images for styling here. Optimized copies will be placed in `dist/images/` when running the build process.
 
-#### `resources/scripts/`
+#### `resources/styles/theme/`
 
-Add JavaScript files here. The entry point is `resources/scripts/index.js`.
+Add .css and .scss files to add them to the front-end bundle. Don't forget to `@import` them in `index.scss`.
 
-#### `resources/scripts/admin` and `resources/scripts/login`
+#### `resources/styles/[admin,editor,login]/`
 
-These directories are for the admin and login bundles, respectively. They work identically to the main `resources/scripts` directory.
+These directories are for the admin, editor and login bundles, respectively. They work identically to the main `resources/styles/theme/` directory.
+
+#### `resources/scripts/theme/`
+
+Add JavaScript files here to add them to the front-end bundle. The entry point is `index.js`.
+
+#### `resources/scripts/[admin,editor,login]/`
+
+These directories are for the admin, editor and login bundles, respectively. They work identically to the main `resources/scripts/theme/` directory.
 
 #### `theme/`
 
