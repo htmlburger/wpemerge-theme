@@ -64,8 +64,8 @@ _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.
   - Service Container
   - Service Providers
   - Support for Php, [Blade 5.4](https://laravel.com/docs/5.4/blade) and/or [Twig 2](https://twig.symfony.com/doc/2.x/api.html) for views
-- [SASS](https://sass-lang.com/) + [PostCSS](https://github.com/postcss/postcss) for stylesheets. Separate bundles are created for front-end, administration and login pages.
-- ES6 for JavaScript. Separate bundles are created for front-end, administration and login pages.
+- [SASS](https://sass-lang.com/) + [PostCSS](https://github.com/postcss/postcss) for stylesheets. Separate bundles are created for front-end, administration, editor and login pages.
+- ES6 for JavaScript. Separate bundles are created for front-end, administration, editor and login pages.
 - [Webpack](https://webpack.js.org/) to transpile and bundle assets, create sprites, optimize images etc.
 - [Browsersync](https://www.browsersync.io/) for synchronized browser development.
 - Autoloading for all classes in your `App\` namespace.
