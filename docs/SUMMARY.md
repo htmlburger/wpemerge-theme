@@ -13,6 +13,7 @@
 
 * [Overview](asset-pipeline/overview.md)
 * [Sprite Mixins](asset-pipeline/sprite-mixins.md)
+* [Gutenberg](asset-pipeline/gutenberg.md)
 
 ## Utilities
 
