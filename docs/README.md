@@ -64,8 +64,9 @@ _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.
   - Service Container
   - Service Providers
   - Support for Php, [Blade 5.4](https://laravel.com/docs/5.4/blade) and/or [Twig 2](https://twig.symfony.com/doc/2.x/api.html) for views
-- [SASS](https://sass-lang.com/) + [PostCSS](https://github.com/postcss/postcss) for stylesheets. Separate bundles are created for front-end, administration, editor and login pages.
-- ES6 for JavaScript. Separate bundles are created for front-end, administration, editor and login pages.
+- Gutenberg support.
+- [SASS](https://sass-lang.com/) + [PostCSS](https://github.com/postcss/postcss) for stylesheets. Separate bundles are created for **front-end**, **administration**, **Gutenberg** and **login** pages.
+- ES6 for JavaScript. Separate bundles are created for **front-end**, **administration**, **Gutenberg** and **login** pages.
 - [Webpack](https://webpack.js.org/) to transpile and bundle assets, create sprites, optimize images etc.
 - [Browsersync](https://www.browsersync.io/) for synchronized browser development.
 - Autoloading for all classes in your `App\` namespace.
@@ -92,7 +93,7 @@ _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.
 ```
 wp-content/themes/your-theme
 ├── app/
-│   ├── helpers/              # Helper files, add your own here as well
+│   ├── helpers/              # Helper files, add your own here as well.
 │   ├── setup/                # Register WordPress menus, post types etc.
 │   │   ├── menus.php
 │   │   ├── post-types.php
@@ -100,37 +101,41 @@ wp-content/themes/your-theme
 │   │   ├── taxonomies.php
 │   │   ├── theme-support.php
 │   │   └── widgets.php
-│   ├── src/                  # PSR-4 autoloaded classes
-│   │   ├── Controllers/      # Controller classes for WP Emerge routes
-│   │   ├── Widgets/          # Widget classes
+│   ├── src/                  # PSR-4 autoloaded classes.
+│   │   ├── Controllers/      # Controller classes for WP Emerge routes.
+│   │   ├── Widgets/          # Widget classes.
 │   │   └── ...
-│   ├── config.php            # WP Emerge configuration
-│   ├── helpers.php           # Require your helper files here
-│   ├── hooks.php             # Register your actions and filters here
+│   ├── config.php            # WP Emerge configuration.
+│   ├── helpers.php           # Require your helper files here.
+│   ├── hooks.php             # Register your actions and filters here.
 │   └── framework.php         # Register your WP Emerge routes, globals etc.
 ├── dist/                     # Bundles, optimized images etc.
-├── languages/                # Language files
+├── languages/                # Language files.
 ├── resources/
-│   ├── build/                # Build process configuration
-│   ├── styles/
-│   │   ├── admin/            # Administration styles
-│   │   ├── login/            # Login styles
-│   │   └── index.scss        # Front-end entry point SCSS file
+│   ├── build/                # Build process configuration.
 │   ├── fonts/
 │   ├── images/
-│   └── scripts/
-│   │   ├── admin/            # Administration scipts
-│   │   ├── login/            # Login scripts
-│       └── index.js          # Front-end entry point JavaScript file
+│   ├── scripts/
+│   │   ├── admin/            # Administration scipts.
+│   │   ├── editor/           # Gutenberg editor styles.
+│   │   ├── login/            # Login scripts.
+│   │   └── theme/            # Front-end scripts.
+│   ├── styles/
+│   │   ├── admin/            # Administration styles.
+│   │   ├── editor/           # Gutenberg editor styles.
+│   │   ├── login/            # Login styles.
+│   │   ├── shared/           # Shared styles.
+│   │   └── theme/            # Front-end styles.
+│   └── vendor/               # Any third-party, non-npm assets.
 ├── theme/                    # Required theme files and views
-│   ├── partials/             # View partials
-│   ├── templates/            # Page templates
-│   ├── functions.php         # Bootstrap theme
-│   ├── screenshot.png        # Theme screenshot
-│   ├── style.css             # Theme stylesheet (avoid adding css here)
+│   ├── partials/             # View partials.
+│   ├── templates/            # Page templates.
+│   ├── functions.php         # Bootstrap theme.
+│   ├── screenshot.png        # Theme screenshot.
+│   ├── style.css             # Theme stylesheet (avoid adding css here).
 │   └── [index.php ...]
-├── vendor/                   # Composer packages
-├── README.md                 # Your theme README
+├── vendor/                   # Composer packages.
+├── README.md                 # Your theme README.
 └── ...
 ```
 
