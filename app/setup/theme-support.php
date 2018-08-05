@@ -130,3 +130,10 @@ add_theme_support( 'editor-color-palette', [
 		'color' => '#607d8b',
 	],
 ] );
+
+/**
+ * Support color pallette enforcement.
+ *
+ * @see https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
+ */
+// add_theme_support( 'disable-custom-colors' );
