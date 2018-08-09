@@ -31,12 +31,12 @@ Brought to you by [Atanas Angelov](https://github.com/atanas-angelov-dev) and th
 
 |                                | WP Emerge Theme  | Sage           | Timber   |
 |--------------------------------|------------------|----------------|----------|
-| View Engine                    | PHP, Blade, Twig | PHP, Blade     | Twig     |
+| View Engine                    | PHP, Blade, Twig, any | Blade          | Twig     |
 | Routing                        | ✔                | ✖              | ✖        |
 | MVC                            | ✖✔✔              | ✖✔✖¹           | ✖✔✖      |
 | Middleware                     | ✔                | ✖              | ✖        |
 | View Composers                 | ✔                | ✔/✖²           | ✖        |
-| Service Container              | ✔                | ✖              | ✖        |
+| Service Container              | ✔                | ✔              | ✖        |
 | Stylesheets                    | SASS + PostCSS   | SASS + PostCSS | N/A³     |
 | JavaScript                     | ES6              | ES6            | N/A³     |
 | Front end, Admin, Editor and Login Bundles | ✔                | ✖              | N/A³     |
@@ -117,7 +117,7 @@ wp-content/themes/your-theme
 │   ├── images/
 │   ├── scripts/
 │   │   ├── admin/            # Administration scipts.
-│   │   ├── editor/           # Gutenberg editor styles.
+│   │   ├── editor/           # Gutenberg editor scripts.
 │   │   ├── login/            # Login scripts.
 │   │   └── theme/            # Front-end scripts.
 │   ├── styles/
