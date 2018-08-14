@@ -63,7 +63,8 @@ _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.
   - View Composers
   - Service Container
   - Service Providers
-  - Support for Php, [Blade 5.4](https://laravel.com/docs/5.4/blade) and/or [Twig 2](https://twig.symfony.com/doc/2.x/api.html) for views
+  - PHP view layouts (a.k.a. automatic wrapping)
+  - Support for PHP, [Blade 5.4](https://laravel.com/docs/5.4/blade) and/or [Twig 2](https://twig.symfony.com/doc/2.x/api.html) for views
 - Gutenberg support.
 - [SASS](https://sass-lang.com/) + [PostCSS](https://github.com/postcss/postcss) for stylesheets. Separate bundles are created for **front-end**, **administration**, **Gutenberg** and **login** pages.
 - ES6 for JavaScript. Separate bundles are created for **front-end**, **administration**, **Gutenberg** and **login** pages.
