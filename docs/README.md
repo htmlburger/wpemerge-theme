@@ -116,7 +116,7 @@ wp-content/themes/your-theme
 │   ├── fonts/
 │   ├── images/
 │   ├── scripts/
-│   │   ├── admin/            # Administration scipts.
+│   │   ├── admin/            # Administration scripts.
 │   │   ├── editor/           # Gutenberg editor scripts.
 │   │   ├── login/            # Login scripts.
 │   │   └── theme/            # Front-end scripts.
