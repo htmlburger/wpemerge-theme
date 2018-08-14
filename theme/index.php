@@ -1,6 +1,8 @@
 <?php
 /**
- * The main template file
+ * App Layout: layouts/app.php
+ *
+ * The main template file.
  *
  * This is the template that is used for displaying:
  * - posts
@@ -15,16 +17,8 @@
  * @version 1.0
  */
 
-get_header();
-
-app_the_title( '<h2 class="pagetitle">', '</h2>' );
-
 if ( is_single() ) {
 	Theme::partial( 'loop', 'single' );
 } else {
 	Theme::partial( 'loop' );
 }
-
-get_sidebar();
-
-get_footer();
