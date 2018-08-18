@@ -14,7 +14,7 @@
     "lint-fix:styles": "stylelint --fix ./resources/styles/**",
     "i18n": "run-s -cl i18n:textdomain i18n:pot",
     "i18n:textdomain": "wpi18n addtextdomain --exclude=dist,docs,node_modules,resources,vendor,wpcs --textdomain=app",
-    "i18n:pot": "wpi18n makepot --exclude=dist,docs,node_modules,resources,vendor,wpcs --main-file=theme/style.css --domain-path=languages/ --pot-file=app.pot --type=wp-theme --textdomain=app)",
+    "i18n:pot": "wpi18n makepot --exclude=dist,docs,node_modules,resources,vendor,wpcs --main-file=theme/style.css --domain-path=languages/ --pot-file=app.pot --type=wp-theme --textdomain=app",
     "wpcs": "./wpcs/vendor/bin/phpcs app/ theme/"
   },
   "dependencies": {
