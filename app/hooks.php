@@ -33,14 +33,14 @@ add_filter( 'excerpt_length', 'app_filter_excerpt_length', 999 );
 add_filter( 'the_content', 'app_filter_fix_shortcode_empty_paragraphs' );
 
 // Attach all suitable hooks from `the_content` on `app_content`.
-add_filter( 'app_content', 'do_shortcode',                               9 );
+add_filter( 'app_content', 'do_shortcode', 9 );
 add_filter( 'app_content', 'app_filter_fix_shortcode_empty_paragraphs', 10 );
-add_filter( 'app_content', 'wptexturize',                               10 );
-add_filter( 'app_content', 'wpautop',                                   10 );
-add_filter( 'app_content', 'shortcode_unautop',                         10 );
-add_filter( 'app_content', 'prepend_attachment',                        10 );
-add_filter( 'app_content', 'wp_make_content_images_responsive',         10 );
-add_filter( 'app_content', 'convert_smilies',                           20 );
+add_filter( 'app_content', 'wptexturize', 10 );
+add_filter( 'app_content', 'wpautop', 10 );
+add_filter( 'app_content', 'shortcode_unautop', 10 );
+add_filter( 'app_content', 'prepend_attachment', 10 );
+add_filter( 'app_content', 'wp_make_content_images_responsive', 10 );
+add_filter( 'app_content', 'convert_smilies', 20 );
 
 /**
  * Login

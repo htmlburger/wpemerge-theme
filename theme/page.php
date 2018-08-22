@@ -6,8 +6,10 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  */
+
 ?>
-<?php while ( have_posts() ) : the_post(); ?>
+<?php while ( have_posts() ) : ?>
+	<?php the_post(); ?>
 	<div <?php post_class( 'page' ); ?>>
 		<?php app_the_title( '<h2 class="page__title pagetitle">', '</h2>' ); ?>
 

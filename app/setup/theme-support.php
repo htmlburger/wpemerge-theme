@@ -45,6 +45,7 @@ add_theme_support( 'html5', [ 'search-form', 'comment-form', 'comment-list', 'ga
  *
  * @see http://codex.wordpress.org/Post_Formats
  */
+// phpcs:ignore
 // add_theme_support( 'post-formats', [ 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ] );
 
 /**
@@ -164,6 +165,7 @@ add_theme_support( 'editor-color-palette', [
  *
  * @see https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
  */
+// phpcs:ignore
 // add_theme_support( 'disable-custom-colors' );
 
 /**
@@ -174,33 +176,33 @@ add_theme_support( 'editor-color-palette', [
  */
 add_theme_support( 'editor-font-sizes', [
 	[
-		'name' => __( 'extra small', 'app' ),
+		'name'      => __( 'extra small', 'app' ),
 		'shortName' => __( 'XS', 'app' ),
-		'size' => 12,
-		'slug' => 'extra-small'
+		'size'      => 12,
+		'slug'      => 'extra-small',
 	],
 	[
-		'name' => __( 'small', 'app' ),
+		'name'      => __( 'small', 'app' ),
 		'shortName' => __( 'S', 'app' ),
-		'size' => 16,
-		'slug' => 'small'
+		'size'      => 16,
+		'slug'      => 'small',
 	],
 	[
-		'name' => __( 'regular', 'app' ),
+		'name'      => __( 'regular', 'app' ),
 		'shortName' => __( 'M', 'app' ),
-		'size' => 20,
-		'slug' => 'regular'
+		'size'      => 20,
+		'slug'      => 'regular',
 	],
 	[
-		'name' => __( 'large', 'app' ),
+		'name'      => __( 'large', 'app' ),
 		'shortName' => __( 'L', 'app' ),
-		'size' => 28,
-		'slug' => 'large'
+		'size'      => 28,
+		'slug'      => 'large',
 	],
 	[
-		'name' => __( 'extra large', 'app' ),
+		'name'      => __( 'extra large', 'app' ),
 		'shortName' => __( 'XL', 'app' ),
-		'size' => 36,
-		'slug' => 'extra-large'
+		'size'      => 36,
+		'slug'      => 'extra-large',
 	],
 ] );

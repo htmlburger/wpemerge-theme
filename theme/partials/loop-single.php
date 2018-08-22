@@ -1,4 +1,5 @@
-<?php while ( have_posts() ) : the_post(); ?>
+<?php while ( have_posts() ) : ?>
+	<?php the_post(); ?>
 	<article <?php post_class( 'article article--single' ); ?>>
 		<header class="article__head">
 			<h2 class="article__title">

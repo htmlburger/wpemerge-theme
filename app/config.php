@@ -17,7 +17,7 @@ return [
 	 * Array of global middleware to apply to all requests.
 	 */
 	'global_middleware' => [
-
+		// phpcs:ignore
 	],
 
 	/**

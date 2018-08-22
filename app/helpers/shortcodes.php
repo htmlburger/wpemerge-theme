@@ -16,6 +16,7 @@ function app_shortcode_year() {
 	return date( 'Y' );
 }
 
+// phpcs:disable
 /**
  * Example Shortcode.
  */
@@ -40,3 +41,4 @@ function app_shortcode_example( $atts, $content ) {
 	return $html;
 }
 */
+// phpcs:enable

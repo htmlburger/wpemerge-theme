@@ -1,6 +1,7 @@
 <?php if ( have_posts() ) : ?>
 	<ol class="articles">
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php while ( have_posts() ) : ?>
+			<?php the_post(); ?>
 			<?php
 			/* translators: post link title attribute */
 			$link_title = sprintf( __( 'Permanent Link to %s', 'app' ), get_the_title() );

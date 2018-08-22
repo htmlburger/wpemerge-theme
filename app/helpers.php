@@ -13,6 +13,7 @@ require_once APP_APP_HELPERS_DIR . 'title.php';
  * Require more helper files here.
  */
 
+// phpcs:disable
 /**
  * Annoyed that you have to constantly add helper file require statements? Uncomment the bellow snippet!
  *
@@ -28,3 +29,4 @@ foreach ( $helpers as $helper ) {
 	require_once $helper;
 }
 */
+// phpcs:enable
