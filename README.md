@@ -74,6 +74,7 @@ _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.
 - Automatic, fool-proof style and script cache breaker.
 - WPCS, JavaScript and SASS linting using single yarn commands.
 - Single-command optional CSS package installation:
+    - Normalize.css
     - Boostrap 4
     - Bulma
     - Foundation

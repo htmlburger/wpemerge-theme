@@ -8,5 +8,5 @@ During the installation process you will have the option to:
 
 1. Remove author information from `composer.json`.
 1. Install Carbon Fields.
-1. Install a CSS framework (Bootstrap, Bulma, Foundation or Tachyons).
+1. Install a CSS framework (Normalize.css, Bootstrap, Bulma, Foundation or Tachyons).
 1. Install Font Awesome.
