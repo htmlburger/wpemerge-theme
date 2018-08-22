@@ -59,11 +59,11 @@ const spriteSmith = new SpritesmithPlugin({
     glob: '*.{jpg,jpeg,png}',
   },
   target: {
-    image: utils.buildImagesPath('sprite.png'),
+    image: utils.distImagesPath('sprite.png'),
     css: utils.srcStylesPath('theme/_sprite.scss'),
   },
   apiOptions: {
-    cssImageRef: '~@build/images/sprite.png',
+    cssImageRef: '~@dist/images/sprite.png',
   },
   // retina: '@2x', // Uncomment this line to enable retina spritesheets.
 });
@@ -73,8 +73,8 @@ const spriteSmith = new SpritesmithPlugin({
  */
 const plugins = [
   new WatchIgnorePlugin([
-    utils.buildImagesPath('sprite.png'),
-    utils.buildImagesPath('sprite@2x.png'),
+    utils.distImagesPath('sprite.png'),
+    utils.distImagesPath('sprite@2x.png'),
   ]),
   new ProvidePlugin({
     $: 'jquery',
@@ -151,7 +151,7 @@ module.exports = {
    * The output.
    */
   output: {
-    path: utils.buildPath('scripts'),
+    path: utils.distPath('scripts'),
   },
 
   /**
@@ -166,7 +166,7 @@ module.exports = {
       '@images': utils.srcImagesPath(),
       '@fonts': utils.srcFontsPath(),
       '@vendor': utils.srcVendorPath(),
-      '@build': utils.buildPath(),
+      '@dist': utils.distPath(),
       '~': utils.themeRootPath('node_modules'),
       'isotope': 'isotope-layout',
       'jquery-ui': 'jquery-ui-dist/jquery-ui.js',

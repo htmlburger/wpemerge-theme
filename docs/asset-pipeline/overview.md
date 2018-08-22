@@ -29,7 +29,7 @@ The webpack configuration supports a number of resolve aliases and module direct
 | `@images/` | `~@images/` | `resources/images` |
 | `@fonts/` | `~@fonts/` | `resources/fonts` |
 | `@vendor/` | `~@vendor/` | `resources/vendor` |
-| `@build/` | `~@build/` | `dist` |
+| `@dist/` | `~@dist/` | `dist` |
 
 _Note: All aliases resolve to absolute paths so you can use them in any file, regardless of its location._
 

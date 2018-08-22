@@ -9,7 +9,7 @@ module.exports.themeRootPath = (basePath = '', destPath = '') =>
 module.exports.srcPath = (basePath = '', destPath = '') =>
   path.resolve(__dirname, '../', basePath, destPath);
 
-module.exports.buildPath = (basePath = '', destPath = '') =>
+module.exports.distPath = (basePath = '', destPath = '') =>
   path.resolve(__dirname, '../../dist', basePath, destPath);
 
 module.exports.srcScriptsPath = destPath =>
@@ -27,17 +27,17 @@ module.exports.srcFontsPath = destPath =>
 module.exports.srcVendorPath = destPath =>
   exports.srcPath('vendor', destPath);
 
-module.exports.buildScriptsPath = destPath =>
-  exports.buildPath('scripts', destPath);
+module.exports.distScriptsPath = destPath =>
+  exports.distPath('scripts', destPath);
 
-module.exports.buildStylesPath = destPath =>
-  exports.buildPath('styles', destPath);
+module.exports.distStylesPath = destPath =>
+  exports.distPath('styles', destPath);
 
-module.exports.buildImagesPath = destPath =>
-  exports.buildPath('images', destPath);
+module.exports.distImagesPath = destPath =>
+  exports.distPath('images', destPath);
 
-module.exports.buildFontsPath = destPath =>
-  exports.buildPath('fonts', destPath);
+module.exports.distFontsPath = destPath =>
+  exports.distPath('fonts', destPath);
 
 module.exports.detectEnv = () => {
   const env = process.env.NODE_ENV || 'development';
