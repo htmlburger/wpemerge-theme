@@ -79,6 +79,7 @@ _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.
     - Bulma
     - Foundation
     - Tachyons
+    - Tailwind CSS
     - FontAwesome
 - WP Unit Test scaffolding for your own classes.
 
