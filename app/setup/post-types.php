@@ -5,7 +5,9 @@
  * @see https://developer.wordpress.org/reference/functions/register_post_type/
  */
 
-/*register_post_type( 'app_custom_post_type', array(
+// phpcs:disable
+/*
+register_post_type( 'app_custom_post_type', array(
 	'labels' => array(
 		'name'               => __( 'Custom Types', 'app' ),
 		'singular_name'      => __( 'Custom Type', 'app' ),
@@ -32,4 +34,6 @@
 		'slug'       => 'custom-post-type',
 		'with_front' => false,
 	),
-));*/
+));
+*/
+// phpcs:enable

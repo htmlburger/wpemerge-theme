@@ -9,19 +9,18 @@
  */
 
 /**
- * Returns the current year.
+ * Render the current year.
  */
-add_shortcode( 'year', 'app_shortcode_year' );
 function app_shortcode_year() {
 	return date( 'Y' );
 }
+add_shortcode( 'year', 'app_shortcode_year' );
 
 // phpcs:disable
 /**
  * Example Shortcode.
  */
 /*
-add_shortcode( 'example', 'app_shortcode_example' );
 function app_shortcode_example( $atts, $content ) {
 	$atts = shortcode_atts(
 		array(
@@ -40,5 +39,6 @@ function app_shortcode_example( $atts, $content ) {
 
 	return $html;
 }
+add_shortcode( 'example', 'app_shortcode_example' );
 */
 // phpcs:enable

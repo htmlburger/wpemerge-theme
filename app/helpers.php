@@ -1,8 +1,11 @@
 <?php
 /**
- * Load all helpers.
+ * Load helpers.
  */
 
+/**
+ * Load base helpers.
+ */
 require_once APP_APP_HELPERS_DIR . 'assets.php';
 require_once APP_APP_HELPERS_DIR . 'content.php';
 require_once APP_APP_HELPERS_DIR . 'login.php';
@@ -10,7 +13,7 @@ require_once APP_APP_HELPERS_DIR . 'shortcodes.php';
 require_once APP_APP_HELPERS_DIR . 'title.php';
 
 /**
- * Require more helper files here.
+ * Require custom helper files here.
  */
 
 // phpcs:disable

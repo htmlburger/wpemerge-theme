@@ -46,7 +46,7 @@ if ( post_password_required() ) {
 	<?php else : ?>
 
 		<?php if ( ! comments_open() ) : ?>
-			<p class="nocomments"><?php _e( 'Comments are closed.', 'app' ); ?></p>
+			<p class="nocomments"><?php esc_html_e( 'Comments are closed.', 'app' ); ?></p>
 		<?php endif; ?>
 
 	<?php endif; ?>

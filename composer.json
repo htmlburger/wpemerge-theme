@@ -38,6 +38,9 @@
     },
     "scripts": {
         "install-wpcs": "composer create-project wp-coding-standards/wpcs --no-dev",
-        "post-create-project-cmd": "WPEmerge\\Cli\\App::install"
+        "post-create-project-cmd": [
+          "@install-wpcs",
+          "WPEmerge\\Cli\\App::install"
+        ]
     }
 }

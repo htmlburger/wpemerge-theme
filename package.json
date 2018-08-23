@@ -6,13 +6,14 @@
     "start": "webpack --config resources/build/webpack.js",
     "dev": "cross-env NODE_ENV=development npm run start --",
     "build": "cross-env NODE_ENV=production npm run start --",
-    "lint": "run-s -cl lint:scripts lint:styles",
-    "lint-fix": "run-s -cl lint-fix:scripts lint-fix:styles",
+    "lint": "run-s -cl lint:wpcs lint:scripts lint:styles",
+    "lint-fix": "run-s -cl lint-fix:wpcs lint-fix:scripts lint-fix:styles",
     "lint:scripts": "eslint ./resources/scripts/**",
     "lint:styles": "stylelint ./resources/styles/**",
     "lint-fix:scripts": "eslint --fix ./resources/scripts/**",
     "lint-fix:styles": "stylelint --fix ./resources/styles/**",
-    "wpcs": "./wpcs/vendor/bin/phpcs app/ theme/"
+    "lint:wpcs": "./wpcs/vendor/bin/phpcs --standard=WordPress --ignore=app/src/* app/ theme/",
+    "lint-fix:wpcs": "./wpcs/vendor/bin/phpcbf --standard=WordPress --ignore=app/src/* app/ theme/"
   },
   "dependencies": {
     "airbnb-browser-shims": "^2.1.0"

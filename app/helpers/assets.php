@@ -1,5 +1,9 @@
 <?php
 /**
+ * Asset helpers.
+ */
+
+/**
  * Enqueue front-end assets.
  *
  * @return void

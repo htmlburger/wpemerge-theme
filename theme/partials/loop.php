@@ -1,3 +1,9 @@
+<?php
+/**
+ * "The Loop" partial.
+ */
+
+?>
 <?php if ( have_posts() ) : ?>
 	<ol class="articles">
 		<?php while ( have_posts() ) : ?>
@@ -45,21 +51,20 @@
 						<?php
 						if ( is_category() ) {
 							/* translators: no posts found for category */
-							printf( __( "Sorry, but there aren't any posts in the %s category yet.", 'app' ), single_cat_title( '', false ) );
+							echo esc_html( sprintf( __( 'Sorry, but there aren\'t any posts in the %s category yet.', 'app' ), single_cat_title( '', false ) ) );
 						} elseif ( is_date() ) {
-							_e( "Sorry, but there aren't any posts with this date.", 'app' );
+							esc_html_e( 'Sorry, but there aren\'t any posts with this date.', 'app' );
 						} elseif ( is_author() ) {
 							$userdata = get_user_by( 'id', get_queried_object_id() );
 							/* translators: no posts found for author */
-							printf( __( "Sorry, but there aren't any posts by %s yet.", 'app' ), $userdata->display_name );
+							echo esc_html( sprintf( __( 'Sorry, but there aren\'t any posts by %s yet.', 'app' ), $userdata->display_name ) );
 						} elseif ( is_search() ) {
-							_e( 'No posts found. Try a different search?', 'app' );
+							esc_html_e( 'No posts found. Try a different search?', 'app' );
 						} else {
-							_e( 'No posts found.', 'app' );
+							esc_html_e( 'No posts found.', 'app' );
 						}
 						?>
 					</p>
-
 					<?php get_search_form(); ?>
 				</div><!-- /.article__entry -->
 			</div><!-- /.article__body -->

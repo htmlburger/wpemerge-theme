@@ -1,3 +1,9 @@
+<?php
+/**
+ * Single post partial.
+ */
+
+?>
 <?php while ( have_posts() ) : ?>
 	<?php the_post(); ?>
 	<article <?php post_class( 'article article--single' ); ?>>

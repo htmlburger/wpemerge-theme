@@ -1,9 +1,17 @@
-<form action="<?php echo home_url( '/' ); ?>" class="search-form" method="get" role="search">
-	<label>
-		<span class="screen-reader-text"><?php _e( 'Search for:', 'app' ); ?></span>
+<?php
+/**
+ * Search form partial.
+ *
+ * @link https://codex.wordpress.org/Styling_Theme_Forms#The_Search_Form
+ */
 
-		<input type="text" title="<?php _e( 'Search for:', 'app' ); ?>" name="s" value="" id="s" placeholder="<?php _e( 'Search &hellip;', 'app' ); ?>" class="search-form__field" />
+?>
+<form action="<?php echo esc_url( home_url( '/' ) ); ?>" class="search-form" method="get" role="search">
+	<label>
+		<span class="screen-reader-text"><?php esc_html_e( 'Search for:', 'app' ); ?></span>
+
+		<input type="text" title="<?php esc_attr_e( 'Search for:', 'app' ); ?>" name="s" value="" id="s" placeholder="<?php esc_attr_e( 'Search &hellip;', 'app' ); ?>" class="search-form__field" />
 	</label>
 
-	<input type="submit" value="<?php echo esc_attr( __( 'Search', 'app' ) ); ?>" class="search-form__submit-button screen-reader-text" />
+	<input type="submit" value="<?php esc_attr_e( 'Search', 'app' ); ?>" class="search-form__submit-button screen-reader-text" />
 </form>

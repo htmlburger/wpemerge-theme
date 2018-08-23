@@ -1,5 +1,9 @@
 <?php
 /**
+ * Login helpers.
+ */
+
+/**
  * Changes the URL of the Logo on the Login screen.
  *
  * @return string Link to the Homepage.

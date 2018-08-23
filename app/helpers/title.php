@@ -1,5 +1,9 @@
 <?php
 /**
+ * Post title helpers.
+ */
+
+/**
  * Get the main title, based on the current view.
  *
  * @return string The current title.
@@ -10,6 +14,7 @@ function app_get_title() {
 	if ( is_home() || ( is_single() && get_post_type() === 'post' ) ) {
 		$blog_page_id = get_option( 'page_for_posts' );
 		$blog_page    = get_post( $blog_page_id );
+
 		if ( $blog_page_id && $blog_page ) {
 			$title = $blog_page->post_title;
 		}
@@ -91,6 +96,7 @@ function app_the_title( $before = '', $after = '' ) {
 	 * If we have a title, display it along with its wrappers
 	 */
 	if ( $title ) {
-		echo $before . $title . $after;
+		// phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+		echo $before . esc_html( $title ) . $after;
 	}
 }

@@ -5,5 +5,14 @@
  * This is the template that is used for displaying 404 errors.
  */
 
-/* translators: 404 page content; placeholder represents homepage url */
-printf( __( '<p>Please check the URL for proper spelling and capitalization.<br />If you\'re having trouble locating a destination, try visiting the <a href="%1$s">home page</a>.</p>', 'app' ), home_url( '/' ) );
+?>
+<p>
+	<?php
+	printf(
+		/* translators: 404 page content; placeholders represents homepage opening and closing anchor tags */
+		esc_html__( 'Please check the URL for proper spelling and capitalization. If you\'re having trouble locating a destination, try visiting the %1$shome page%2$s.', 'app' ),
+		'<a href="' . esc_url( home_url( '/' ) ) . '">',
+		'</a>'
+	);
+	?>
+</p>

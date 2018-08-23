@@ -1,4 +1,10 @@
 <?php
+/**
+ * Base app layout.
+ *
+ * @link https://docs.wpemerge.com/view/layouts.html
+ */
+
 get_header();
 
 if ( ! is_singular() ) {

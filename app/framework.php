@@ -31,9 +31,8 @@ Router::handleAll();
  * ------------------------------------------------------------------------
  */
 
-/*
-View::addGlobal( 'foo', 'bar' );
- */
+// phpcs:ignore
+// View::addGlobal( 'foo', 'bar' );
 
 /**
  * ------------------------------------------------------------------------
@@ -43,6 +42,5 @@ View::addGlobal( 'foo', 'bar' );
  * ------------------------------------------------------------------------
  */
 
-/*
-View::addComposer( 'partials/foo', \App\ViewComposers\FooPartialViewComposer::class );
- */
+// phpcs:ignore
+// View::addComposer( 'partials/foo', \App\ViewComposers\FooPartialViewComposer::class );

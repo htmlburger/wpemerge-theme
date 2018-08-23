@@ -1,5 +1,9 @@
 <?php
 /**
+ * Content helpers.
+ */
+
+/**
  * Filter excerpt more.
  *
  * @see https://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_more/
