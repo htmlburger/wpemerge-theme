@@ -11,7 +11,7 @@ const utils = require('./utils');
 const plugins = [
   require('autoprefixer'),
   /* @preset-begin(Tailwind CSS)
-  require('tailwindcss')(utils.srcPath('build/tailwind.js')),
+  require('tailwindcss')(utils.srcPath('build/tailwindcss.js')),
   @preset-end(Tailwind CSS) */
 ];
 
