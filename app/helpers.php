@@ -1,6 +1,8 @@
 <?php
 /**
  * Load helpers.
+ *
+ * @package WPEmergeTheme
  */
 
 /**

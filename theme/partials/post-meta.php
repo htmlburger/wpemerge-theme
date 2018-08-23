@@ -5,6 +5,8 @@
  * Should be called only within The Loop.
  *
  * It will be displayed only for post type "post".
+ *
+ * @package WPEmergeTheme
  */
 
 if ( get_post_type() !== 'post' ) {

@@ -7,6 +7,8 @@
  * YOU SHOULD NORMALLY NOT NEED TO ADD ANYTHING HERE - any custom functionality unreleated
  * to boostrapping the theme should go into a separate helper file.
  * (refer to the directory structure in README.md)
+ *
+ * @package WPEmergeTheme
  */
 
 /**

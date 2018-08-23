@@ -1,5 +1,13 @@
 <?php
 /**
+ * Configure and use WP Emerge features.
+ *
+ * @link https://docs.wpemerge.com/
+ *
+ * @package WPEmergeTheme
+ */
+
+/**
  * ------------------------------------------------------------------------
  * Routes
  *

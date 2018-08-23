@@ -3,6 +3,8 @@
  * Register sidebars.
  *
  * @see https://developer.wordpress.org/reference/functions/register_sidebar/
+ *
+ * @package WPEmergeTheme
  */
 
 /**

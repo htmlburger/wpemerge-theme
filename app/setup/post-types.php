@@ -3,6 +3,8 @@
  * Register post types.
  *
  * @see https://developer.wordpress.org/reference/functions/register_post_type/
+ *
+ * @package WPEmergeTheme
  */
 
 // phpcs:disable

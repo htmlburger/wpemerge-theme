@@ -1,6 +1,8 @@
 <?php
 /**
  * "The Loop" partial.
+ *
+ * @package WPEmergeTheme
  */
 
 ?>

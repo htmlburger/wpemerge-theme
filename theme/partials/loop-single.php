@@ -1,6 +1,8 @@
 <?php
 /**
  * Single post partial.
+ *
+ * @package WPEmergeTheme
  */
 
 ?>

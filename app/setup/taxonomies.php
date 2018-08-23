@@ -2,9 +2,9 @@
 /**
  * Register custom taxonomies.
  *
- * Here, you can register the custom taxonomies for use in the theme.
- *
  * @see https://developer.wordpress.org/reference/functions/register_taxonomy/
+ *
+ * @package WPEmergeTheme
  */
 
 // Custom hierarchical taxonomy (like categories).

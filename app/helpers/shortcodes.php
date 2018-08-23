@@ -6,6 +6,8 @@
  *
  * @see https://developer.wordpress.org/reference/functions/add_shortcode/
  * @see https://developer.wordpress.org/reference/functions/shortcode_atts/
+ *
+ * @package WPEmergeTheme
  */
 
 /**

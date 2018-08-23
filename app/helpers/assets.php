@@ -1,6 +1,8 @@
 <?php
 /**
  * Asset helpers.
+ *
+ * @package WPEmergeTheme
  */
 
 /**

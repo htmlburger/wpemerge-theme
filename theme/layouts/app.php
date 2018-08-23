@@ -3,6 +3,8 @@
  * Base app layout.
  *
  * @link https://docs.wpemerge.com/view/layouts.html
+ *
+ * @package WPEmergeTheme
  */
 
 get_header();

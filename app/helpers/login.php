@@ -1,6 +1,8 @@
 <?php
 /**
  * Login helpers.
+ *
+ * @package WPEmergeTheme
  */
 
 /**

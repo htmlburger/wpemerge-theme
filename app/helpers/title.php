@@ -1,6 +1,8 @@
 <?php
 /**
  * Post title helpers.
+ *
+ * @package WPEmergeTheme
  */
 
 /**

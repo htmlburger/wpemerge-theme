@@ -3,6 +3,8 @@
  * Declare theme functionality support.
  *
  * @see https://developer.wordpress.org/reference/functions/add_theme_support/
+ *
+ * @package WPEmergeTheme
  */
 
 /**

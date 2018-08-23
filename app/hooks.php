@@ -1,6 +1,8 @@
 <?php
 /**
  * Declare all your actions and filters here.
+ *
+ * @package WPEmergeTheme
  */
 
 /**
