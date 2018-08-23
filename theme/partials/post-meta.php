@@ -7,7 +7,7 @@
  * It will be displayed only for post type "post".
  */
 
-if ( empty( $post ) || get_post_type() !== 'post' ) {
+if ( get_post_type() !== 'post' ) {
 	return;
 }
 ?>
@@ -17,16 +17,16 @@ if ( empty( $post ) || get_post_type() !== 'post' ) {
 		<?php
 		the_time( 'F jS, Y ' );
 		/* translators: post author attribution */
-		printf( __( 'by %s', 'app' ), get_the_author() );
+		esc_html( sprintf( __( 'by %s', 'app' ), get_the_author() ) );
 		?>
 	</p>
 
 	<p>
 		<?php
-		_e( 'Posted in ', 'app' );
+		esc_html_e( 'Posted in ', 'app' );
 		the_category( ', ' );
 		if ( comments_open() ) {
-			echo ' | ';
+			echo '<span> | </span>';
 			comments_popup_link( __( 'No Comments', 'app' ), __( '1 Comment', 'app' ), __( '% Comments', 'app' ) );
 		}
 		?>
