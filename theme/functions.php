@@ -51,8 +51,7 @@ require_once APP_APP_DIR . 'helpers.php';
 /**
  * Boostrap Theme after all dependencies and helpers are loaded.
  */
-$config = require_once APP_APP_DIR . 'config.php';
-Theme::boot( $config );
+Theme::boot( require APP_APP_DIR . 'config.php' );
 
 /**
  * Register hooks.
@@ -64,43 +63,52 @@ require_once APP_APP_DIR . 'hooks.php';
  */
 require_once APP_APP_DIR . 'framework.php';
 
-add_action( 'after_setup_theme', function() {
-	/**
-	 * Load textdomain.
-	 */
-	load_theme_textdomain( 'app', APP_DIR . 'languages' );
+add_action(
+	'after_setup_theme',
+	function() {
+		/**
+		 * Load textdomain.
+		 */
+		load_theme_textdomain( 'app', APP_DIR . 'languages' );
 
-	/**
-	 * Register theme support.
-	 */
-	require_once APP_APP_SETUP_DIR . 'theme-support.php';
+		/**
+		 * Register theme support.
+		 */
+		require_once APP_APP_SETUP_DIR . 'theme-support.php';
 
-	/**
-	 * Register menu locations.
-	 */
-	require_once APP_APP_SETUP_DIR . 'menus.php';
-} );
+		/**
+		 * Register menu locations.
+		 */
+		require_once APP_APP_SETUP_DIR . 'menus.php';
+	}
+);
 
-add_action( 'init', function() {
-	/**
-	 * Register post types.
-	 */
-	require_once APP_APP_SETUP_DIR . 'post-types.php';
+add_action(
+	'init',
+	function() {
+		/**
+		 * Register post types.
+		 */
+		require_once APP_APP_SETUP_DIR . 'post-types.php';
 
-	/**
-	 * Register taxonomies.
-	 */
-	require_once APP_APP_SETUP_DIR . 'taxonomies.php';
-} );
+		/**
+		 * Register taxonomies.
+		 */
+		require_once APP_APP_SETUP_DIR . 'taxonomies.php';
+	}
+);
 
-add_action( 'widgets_init', function() {
-	/**
-	 * Register widgets.
-	 */
-	require_once APP_APP_SETUP_DIR . 'widgets.php';
+add_action(
+	'widgets_init',
+	function() {
+		/**
+		 * Register widgets.
+		 */
+		require_once APP_APP_SETUP_DIR . 'widgets.php';
 
-	/**
-	 * Register sidebars.
-	 */
-	require_once APP_APP_SETUP_DIR . 'sidebars.php';
-} );
+		/**
+		 * Register sidebars.
+		 */
+		require_once APP_APP_SETUP_DIR . 'sidebars.php';
+	}
+);

@@ -35,14 +35,17 @@
 	</ol><!-- /.articles -->
 
 	<?php
-	carbon_pagination( 'posts', [
-		'prev_html'         => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Previous Entries', 'app' ) . '</a>',
-		'next_html'         => '<a href="{URL}" class="paging__next">' . esc_html__( 'Next Entries »', 'app' ) . '</a>',
-		'first_html'        => '<a href="{URL}" class="paging__first"></a>',
-		'last_html'         => '<a href="{URL}" class="paging__last"></a>',
-		'limiter_html'      => '<li class="paging__spacer">...</li>',
-		'current_page_html' => '<span class="paging__label">Page {CURRENT_PAGE} of {TOTAL_PAGES}</span>',
-	] );
+	carbon_pagination(
+		'posts',
+		[
+			'prev_html'         => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Previous Entries', 'app' ) . '</a>',
+			'next_html'         => '<a href="{URL}" class="paging__next">' . esc_html__( 'Next Entries »', 'app' ) . '</a>',
+			'first_html'        => '<a href="{URL}" class="paging__first"></a>',
+			'last_html'         => '<a href="{URL}" class="paging__last"></a>',
+			'limiter_html'      => '<li class="paging__spacer">...</li>',
+			'current_page_html' => '<span class="paging__label">Page {CURRENT_PAGE} of {TOTAL_PAGES}</span>',
+		]
+	);
 	?>
 <?php else : ?>
 	<ol class="articles">

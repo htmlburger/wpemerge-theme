@@ -7,6 +7,8 @@
  * @package WPEmergeTheme
  */
 
-register_nav_menus( [
-	'main-menu' => __( 'Main Menu', 'app' ),
-] );
+register_nav_menus(
+	[
+		'main-menu' => __( 'Main Menu', 'app' ),
+	]
+);

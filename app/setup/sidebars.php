@@ -22,10 +22,12 @@ $default_options = [
 /**
  * Default sidebar.
  */
-register_sidebar( array_merge(
-	$default_options,
-	[
-		'name' => __( 'Default Sidebar', 'app' ),
-		'id'   => 'default-sidebar',
-	]
-) );
+register_sidebar(
+	array_merge(
+		$default_options,
+		[
+			'name' => __( 'Default Sidebar', 'app' ),
+			'id'   => 'default-sidebar',
+		]
+	)
+);

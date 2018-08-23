@@ -23,26 +23,34 @@ if ( post_password_required() ) {
 
 		<ol class="comments">
 			<?php
-			wp_list_comments( [
-				'callback' => function( $comment, $args, $depth ) {
-					Theme::partial( 'comment-single', [
-						'comment' => $comment,
-						'args'    => $args,
-						'depth'   => $depth,
-					] );
-				},
-			] );
+			wp_list_comments(
+				[
+					'callback' => function( $comment, $args, $depth ) {
+						Theme::partial(
+							'comment-single',
+							[
+								'comment' => $comment,
+								'args'    => $args,
+								'depth'   => $depth,
+							]
+						);
+					},
+				]
+			);
 			?>
 		</ol>
 
 		<?php
-		carbon_pagination( 'comments', [
-			// modify the text of the previous page link.
-			'prev_html' => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Older Comments', 'app' ) . '</a>',
+		carbon_pagination(
+			'comments',
+			[
+				// modify the text of the previous page link.
+				'prev_html' => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Older Comments', 'app' ) . '</a>',
 
-			// modify the text of the next page link.
-			'next_html' => '<a href="{URL}" class="paging__next">' . esc_html__( 'Newer Comments »', 'app' ) . '</a>',
-		] );
+				// modify the text of the next page link.
+				'next_html' => '<a href="{URL}" class="paging__next">' . esc_html__( 'Newer Comments »', 'app' ) . '</a>',
+			]
+		);
 		?>
 
 	<?php else : ?>
@@ -54,10 +62,12 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 
 	<?php
-	comment_form( [
-		'title_reply'         => __( 'Leave a Reply', 'app' ),
-		'comment_notes_after' => '',
-	] );
+	comment_form(
+		[
+			'title_reply'         => __( 'Leave a Reply', 'app' ),
+			'comment_notes_after' => '',
+		]
+	);
 	?>
 
 </section>

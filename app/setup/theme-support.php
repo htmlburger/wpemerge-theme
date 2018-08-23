@@ -64,103 +64,106 @@ add_theme_support( 'align-wide' );
  *
  * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
  */
-add_theme_support( 'editor-color-palette', [
+add_theme_support(
+	'editor-color-palette',
 	[
-		'name'  => __( 'Red', 'app' ),
-		'slug'  => 'material-red',
-		'color' => '#f44336',
-	],
-	[
-		'name'  => __( 'Pink', 'app' ),
-		'slug'  => 'material-pink',
-		'color' => '#e91e63',
-	],
-	[
-		'name'  => __( 'Purple', 'app' ),
-		'slug'  => 'material-purple',
-		'color' => '#9c27b0',
-	],
-	[
-		'name'  => __( 'Deep Purple', 'app' ),
-		'slug'  => 'material-deep-purple',
-		'color' => '#673ab7',
-	],
-	[
-		'name'  => __( 'Indigo', 'app' ),
-		'slug'  => 'material-indigo',
-		'color' => '#3f51b5',
-	],
-	[
-		'name'  => __( 'Blue', 'app' ),
-		'slug'  => 'material-blue',
-		'color' => '#2196f3',
-	],
-	[
-		'name'  => __( 'Light Blue', 'app' ),
-		'slug'  => 'material-light-blue',
-		'color' => '#03a9f4',
-	],
-	[
-		'name'  => __( 'Cyan', 'app' ),
-		'slug'  => 'material-cyan	',
-		'color' => '#00bcd4',
-	],
-	[
-		'name'  => __( 'Teal', 'app' ),
-		'slug'  => 'material-teal',
-		'color' => '#009688',
-	],
-	[
-		'name'  => __( 'Green', 'app' ),
-		'slug'  => 'material-green',
-		'color' => '#4caf50',
-	],
-	[
-		'name'  => __( 'Light Green', 'app' ),
-		'slug'  => 'material-light-green',
-		'color' => '#8bc34a',
-	],
-	[
-		'name'  => __( 'Lime', 'app' ),
-		'slug'  => 'material-lime',
-		'color' => '#cddc39',
-	],
-	[
-		'name'  => __( 'Yellow', 'app' ),
-		'slug'  => 'material-yellow',
-		'color' => '#ffeb3b',
-	],
-	[
-		'name'  => __( 'Amber', 'app' ),
-		'slug'  => 'material-amber',
-		'color' => '#ffc107',
-	],
-	[
-		'name'  => __( 'Orange', 'app' ),
-		'slug'  => 'material-orange',
-		'color' => '#ff9800',
-	],
-	[
-		'name'  => __( 'Deep Orange', 'app' ),
-		'slug'  => 'material-deep-orange',
-		'color' => '#ff5722',
-	],
-	[
-		'name'  => __( 'Brown', 'app' ),
-		'slug'  => 'material-brown',
-		'color' => '#795548',
-	],
-	[
-		'name'  => __( 'Grey', 'app' ),
-		'slug'  => 'material-grey',
-		'color' => '#9e9e9e',
-	],
-	[
-		'name'  => __( 'Blue Grey', 'app' ),
-		'slug'  => 'material-blue-grey',
-		'color' => '#607d8b',
-	],
-] );
+		[
+			'name'  => __( 'Red', 'app' ),
+			'slug'  => 'material-red',
+			'color' => '#f44336',
+		],
+		[
+			'name'  => __( 'Pink', 'app' ),
+			'slug'  => 'material-pink',
+			'color' => '#e91e63',
+		],
+		[
+			'name'  => __( 'Purple', 'app' ),
+			'slug'  => 'material-purple',
+			'color' => '#9c27b0',
+		],
+		[
+			'name'  => __( 'Deep Purple', 'app' ),
+			'slug'  => 'material-deep-purple',
+			'color' => '#673ab7',
+		],
+		[
+			'name'  => __( 'Indigo', 'app' ),
+			'slug'  => 'material-indigo',
+			'color' => '#3f51b5',
+		],
+		[
+			'name'  => __( 'Blue', 'app' ),
+			'slug'  => 'material-blue',
+			'color' => '#2196f3',
+		],
+		[
+			'name'  => __( 'Light Blue', 'app' ),
+			'slug'  => 'material-light-blue',
+			'color' => '#03a9f4',
+		],
+		[
+			'name'  => __( 'Cyan', 'app' ),
+			'slug'  => 'material-cyan	',
+			'color' => '#00bcd4',
+		],
+		[
+			'name'  => __( 'Teal', 'app' ),
+			'slug'  => 'material-teal',
+			'color' => '#009688',
+		],
+		[
+			'name'  => __( 'Green', 'app' ),
+			'slug'  => 'material-green',
+			'color' => '#4caf50',
+		],
+		[
+			'name'  => __( 'Light Green', 'app' ),
+			'slug'  => 'material-light-green',
+			'color' => '#8bc34a',
+		],
+		[
+			'name'  => __( 'Lime', 'app' ),
+			'slug'  => 'material-lime',
+			'color' => '#cddc39',
+		],
+		[
+			'name'  => __( 'Yellow', 'app' ),
+			'slug'  => 'material-yellow',
+			'color' => '#ffeb3b',
+		],
+		[
+			'name'  => __( 'Amber', 'app' ),
+			'slug'  => 'material-amber',
+			'color' => '#ffc107',
+		],
+		[
+			'name'  => __( 'Orange', 'app' ),
+			'slug'  => 'material-orange',
+			'color' => '#ff9800',
+		],
+		[
+			'name'  => __( 'Deep Orange', 'app' ),
+			'slug'  => 'material-deep-orange',
+			'color' => '#ff5722',
+		],
+		[
+			'name'  => __( 'Brown', 'app' ),
+			'slug'  => 'material-brown',
+			'color' => '#795548',
+		],
+		[
+			'name'  => __( 'Grey', 'app' ),
+			'slug'  => 'material-grey',
+			'color' => '#9e9e9e',
+		],
+		[
+			'name'  => __( 'Blue Grey', 'app' ),
+			'slug'  => 'material-blue-grey',
+			'color' => '#607d8b',
+		],
+	]
+);
 
 /**
  * Support color pallette enforcement.
@@ -176,35 +179,38 @@ add_theme_support( 'editor-color-palette', [
  *
  * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
  */
-add_theme_support( 'editor-font-sizes', [
+add_theme_support(
+	'editor-font-sizes',
 	[
-		'name'      => __( 'extra small', 'app' ),
-		'shortName' => __( 'XS', 'app' ),
-		'size'      => 12,
-		'slug'      => 'extra-small',
-	],
-	[
-		'name'      => __( 'small', 'app' ),
-		'shortName' => __( 'S', 'app' ),
-		'size'      => 16,
-		'slug'      => 'small',
-	],
-	[
-		'name'      => __( 'regular', 'app' ),
-		'shortName' => __( 'M', 'app' ),
-		'size'      => 20,
-		'slug'      => 'regular',
-	],
-	[
-		'name'      => __( 'large', 'app' ),
-		'shortName' => __( 'L', 'app' ),
-		'size'      => 28,
-		'slug'      => 'large',
-	],
-	[
-		'name'      => __( 'extra large', 'app' ),
-		'shortName' => __( 'XL', 'app' ),
-		'size'      => 36,
-		'slug'      => 'extra-large',
-	],
-] );
+		[
+			'name'      => __( 'extra small', 'app' ),
+			'shortName' => __( 'XS', 'app' ),
+			'size'      => 12,
+			'slug'      => 'extra-small',
+		],
+		[
+			'name'      => __( 'small', 'app' ),
+			'shortName' => __( 'S', 'app' ),
+			'size'      => 16,
+			'slug'      => 'small',
+		],
+		[
+			'name'      => __( 'regular', 'app' ),
+			'shortName' => __( 'M', 'app' ),
+			'size'      => 20,
+			'slug'      => 'regular',
+		],
+		[
+			'name'      => __( 'large', 'app' ),
+			'shortName' => __( 'L', 'app' ),
+			'size'      => 28,
+			'slug'      => 'large',
+		],
+		[
+			'name'      => __( 'extra large', 'app' ),
+			'shortName' => __( 'XL', 'app' ),
+			'size'      => 36,
+			'slug'      => 'extra-large',
+		],
+	]
+);

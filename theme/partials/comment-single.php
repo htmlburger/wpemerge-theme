@@ -35,10 +35,15 @@
 
 		<div class="comment-reply">
 			<?php
-			comment_reply_link( array_merge( $args, [
-				'depth'     => $depth,
-				'max_depth' => $args['max_depth'],
-			] ) );
+			comment_reply_link(
+				array_merge(
+					$args,
+					[
+						'depth'     => $depth,
+						'max_depth' => $args['max_depth'],
+					]
+				)
+			);
 			?>
 		</div>
 	</div>
