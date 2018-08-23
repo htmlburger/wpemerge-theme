@@ -98,7 +98,7 @@ function app_the_title( $before = '', $after = '' ) {
 	 * If we have a title, display it along with its wrappers
 	 */
 	if ( $title ) {
-		// phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo $before . esc_html( $title ) . $after;
 	}
 }
