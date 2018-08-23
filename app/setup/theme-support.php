@@ -2,7 +2,7 @@
 /**
  * Declare theme functionality support.
  *
- * @see https://developer.wordpress.org/reference/functions/add_theme_support/
+ * @link https://developer.wordpress.org/reference/functions/add_theme_support/
  *
  * @package WPEmergeTheme
  */
@@ -10,42 +10,42 @@
 /**
  * Support automatic feed links.
  *
- * @see https://codex.wordpress.org/Automatic_Feed_Links
+ * @link https://codex.wordpress.org/Automatic_Feed_Links
  */
 add_theme_support( 'automatic-feed-links' );
 
 /**
  * Support post thumbnails.
  *
- * @see https://codex.wordpress.org/Post_Thumbnails
+ * @link https://codex.wordpress.org/Post_Thumbnails
  */
 add_theme_support( 'post-thumbnails' );
 
 /**
  * Support document title tag.
  *
- * @see https://codex.wordpress.org/Title_Tag
+ * @link https://codex.wordpress.org/Title_Tag
  */
 add_theme_support( 'title-tag' );
 
 /**
  * Support menus.
  *
- * @see https://developer.wordpress.org/reference/functions/add_theme_support/
+ * @link https://developer.wordpress.org/reference/functions/add_theme_support/
  */
 add_theme_support( 'menus' );
 
 /**
  * Support HTML5 markup.
  *
- * @see https://codex.wordpress.org/Theme_Markup
+ * @link https://codex.wordpress.org/Theme_Markup
  */
 add_theme_support( 'html5', [ 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ] );
 
 /**
  * Manually select Post Formats to be supported.
  *
- * @see http://codex.wordpress.org/Post_Formats
+ * @link http://codex.wordpress.org/Post_Formats
  */
 // phpcs:ignore
 // add_theme_support( 'post-formats', [ 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ] );
@@ -53,7 +53,7 @@ add_theme_support( 'html5', [ 'search-form', 'comment-form', 'comment-list', 'ga
 /**
  * Support wide alignment for editor blocks.
  *
- * @see https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
+ * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
  */
 add_theme_support( 'align-wide' );
 
@@ -62,7 +62,7 @@ add_theme_support( 'align-wide' );
  * Don't forget to edit resources/styles/shared/variables.scss when you update these.
  * Uses Material Design colors.
  *
- * @see https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
+ * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
  */
 add_theme_support( 'editor-color-palette', [
 	[
@@ -165,7 +165,7 @@ add_theme_support( 'editor-color-palette', [
 /**
  * Support color pallette enforcement.
  *
- * @see https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
+ * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
  */
 // phpcs:ignore
 // add_theme_support( 'disable-custom-colors' );
@@ -174,7 +174,7 @@ add_theme_support( 'editor-color-palette', [
  * Support custom editor block font sizes.
  * Don't forget to edit resources/styles/shared/variables.scss when you update these.
  *
- * @see https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
+ * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
  */
 add_theme_support( 'editor-font-sizes', [
 	[

@@ -8,7 +8,7 @@
 /**
  * Filter excerpt more.
  *
- * @see https://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_more/
+ * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_more/
  * @return string
  */
 function app_filter_excerpt_more() {
@@ -18,7 +18,7 @@ function app_filter_excerpt_more() {
 /**
  * Filter excerpt length.
  *
- * @see https://developer.wordpress.org/reference/hooks/excerpt_length/
+ * @link https://developer.wordpress.org/reference/hooks/excerpt_length/
  * @return integer
  */
 function app_filter_excerpt_length() {
@@ -50,7 +50,7 @@ function app_filter_fix_shortcode_empty_paragraphs( $content ) {
  * The wp_upload_dir() function urls' schema depends on the site_url option which
  * can cause issues when HTTPS is forced using a plugin, for example.
  *
- * @see    https://core.trac.wordpress.org/ticket/25449
+ * @link https://core.trac.wordpress.org/ticket/25449
  * @param  array $upload_dir Array containing the current upload directory’s path and url.
  * @return array Filtered array.
  */

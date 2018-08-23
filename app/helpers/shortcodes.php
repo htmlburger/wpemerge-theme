@@ -4,8 +4,8 @@
  *
  * Here, you can register Custom Shortcode for use in the Theme.
  *
- * @see https://developer.wordpress.org/reference/functions/add_shortcode/
- * @see https://developer.wordpress.org/reference/functions/shortcode_atts/
+ * @link https://developer.wordpress.org/reference/functions/add_shortcode/
+ * @link https://developer.wordpress.org/reference/functions/shortcode_atts/
  *
  * @package WPEmergeTheme
  */

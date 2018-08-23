@@ -2,7 +2,7 @@
 /**
  * Register sidebars.
  *
- * @see https://developer.wordpress.org/reference/functions/register_sidebar/
+ * @link https://developer.wordpress.org/reference/functions/register_sidebar/
  *
  * @package WPEmergeTheme
  */

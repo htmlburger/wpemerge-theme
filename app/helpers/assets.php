@@ -128,7 +128,7 @@ function app_action_editor_enqueue_assets() {
 /**
  * Add favicon proxy.
  *
- * @see    WPEmergeTheme\Assets\Assets::addFavicon()
+ * @link WPEmergeTheme\Assets\Assets::addFavicon()
  * @return void
  */
 function app_action_add_favicon() {

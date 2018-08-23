@@ -2,7 +2,7 @@
 /**
  * Register widgets.
  *
- * @see https://developer.wordpress.org/reference/functions/register_widget/
+ * @link https://developer.wordpress.org/reference/functions/register_widget/
  *
  * @package WPEmergeTheme
  */

@@ -11,7 +11,7 @@
  * ------------------------------------------------------------------------
  * Routes
  *
- * @see https://docs.wpemerge.com/routing/methods.html
+ * @link https://docs.wpemerge.com/routing/methods.html
  * ------------------------------------------------------------------------
  */
 
@@ -27,7 +27,7 @@
  * Pass all front-end requests through WPEmerge.
  * WARNING: Do not add routes after this - they will be ignored.
  *
- * @see https://docs.wpemerge.com/routing/methods.html#handling-all-requests
+ * @link https://docs.wpemerge.com/routing/methods.html#handling-all-requests
  */
 Router::handleAll();
 
@@ -35,7 +35,7 @@ Router::handleAll();
  * ------------------------------------------------------------------------
  * Globals
  *
- * @see https://docs.wpemerge.com/view/global-context.html
+ * @link https://docs.wpemerge.com/view/global-context.html
  * ------------------------------------------------------------------------
  */
 
@@ -46,7 +46,7 @@ Router::handleAll();
  * ------------------------------------------------------------------------
  * View composers
  *
- * @see https://docs.wpemerge.com/view/view-composers.html
+ * @link https://docs.wpemerge.com/view/view-composers.html
  * ------------------------------------------------------------------------
  */
 

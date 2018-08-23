@@ -2,7 +2,7 @@
 /**
  * Register custom taxonomies.
  *
- * @see https://developer.wordpress.org/reference/functions/register_taxonomy/
+ * @link https://developer.wordpress.org/reference/functions/register_taxonomy/
  *
  * @package WPEmergeTheme
  */
