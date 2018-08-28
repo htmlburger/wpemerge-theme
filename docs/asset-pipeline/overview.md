@@ -40,8 +40,8 @@ _Note: All aliases resolve to absolute paths so you can use them in any file, re
 | `node_modules/foo/foo.js` | `import foo from '~/foo/foo';` |
 | `node_modules/foo/index.js` | `import foo from '~/foo';` |
 | `resources/vendor/foo/foo.js` | `import foo from '@vendor/foo/foo';` |
-| `resources/scripts/foo/foo.js` | `import foo from '@scripts/foo/foo';` |
-| `resources/scripts/foo.js` | `import foo from '@scripts/foo';` |
+| `resources/scripts/theme/foo/foo.js` | `import foo from '@scripts/theme/foo/foo';` |
+| `resources/scripts/theme/foo.js` | `import foo from '@scripts/theme/foo';` |
 
 In the last two examples you can even omit the `@scripts/` portion as your `resources/scripts/` directory is considered a module root:
 
