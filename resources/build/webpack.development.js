@@ -2,10 +2,8 @@
  * The external dependencies.
  */
 const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SpritesmithPlugin = require('webpack-spritesmith');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 /**
@@ -18,7 +16,7 @@ const browsersyncConfig = require('./browsersync');
 /**
  * Setup the env.
  */
-const { env: envName, isProduction, isDev } = utils.detectEnv();
+const { env: envName } = utils.detectEnv();
 
 /**
  * Setup babel loader.
@@ -26,7 +24,7 @@ const { env: envName, isProduction, isDev } = utils.detectEnv();
 const babelLoader = {
   loader: 'babel-loader',
   options: {
-    cacheDirectory: isDev,
+    cacheDirectory: true,
     comments: false,
     presets: [
       [
@@ -82,56 +80,10 @@ const plugins = [
   }),
   extractSass,
   spriteSmith,
+  new BrowserSyncPlugin(browsersyncConfig, {
+    injectCss: true,
+  }),
 ];
-
-if (isDev) {
-  plugins.push(
-    new BrowserSyncPlugin(browsersyncConfig, {
-      injectCss: true,
-    })
-  );
-}
-
-if (isProduction) {
-  plugins.push(
-    new UglifyJSPlugin()
-  );
-
-  plugins.push(
-    new ImageminPlugin({
-      optipng: {
-        optimizationLevel: 7,
-      },
-      gifsicle: {
-        optimizationLevel: 3,
-      },
-      svgo: {
-        plugins: [
-          { cleanupAttrs: true },
-          { removeDoctype: true },
-          { removeXMLProcInst: true },
-          { removeComments: true },
-          { removeMetadata: true },
-          { removeUselessDefs: true },
-          { removeEditorsNSData: true },
-          { removeEmptyAttrs: true },
-          { removeHiddenElems: false },
-          { removeEmptyText: true },
-          { removeEmptyContainers: true },
-          { cleanupEnableBackground: true },
-          { removeViewBox: true },
-          { cleanupIDs: false },
-          { convertStyleToAttrs: true },
-        ]
-      },
-      plugins: [
-        require('imagemin-mozjpeg')({
-          quality: 100,
-        }),
-      ],
-    })
-  );
-}
 
 /**
  * Export the configuration.
@@ -203,7 +155,7 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                minimize: isProduction,
+                minimize: false,
               },
             },
             'sass-loader',
@@ -234,8 +186,8 @@ module.exports = {
    * Setup the development tools.
    */
   mode: envName,
-  cache: isDev,
+  cache: true,
   bail: false,
-  watch: isDev,
-  devtool: isDev ? 'source-map' : false,
+  watch: true,
+  devtool: 'source-map',
 };
