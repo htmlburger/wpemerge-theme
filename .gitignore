@@ -2,6 +2,9 @@
 dist/
 resources/styles/theme/_sprite.scss
 
+# Development files
+config.json
+
 # Build modules
 node_modules/
 

@@ -1,8 +1,17 @@
 /**
  * The external dependencies.
  */
+const fs = require('fs');
 const path = require('path');
 
+/**
+ * User config cache.
+ */
+let userConfig = null;
+
+/**
+ * API.
+ */
 module.exports.themeRootPath = (basePath = '', destPath = '') =>
   path.resolve(__dirname, '../../', basePath, destPath);
 
@@ -49,4 +58,26 @@ module.exports.detectEnv = () => {
     isDev,
     isProduction,
   };
+};
+
+module.exports.getUserConfig = () => {
+  const userConfigPath = path.join(process.cwd(), 'config.json');
+
+  if (userConfig !== null) {
+    return userConfig;
+  }
+
+  if (!fs.existsSync(userConfigPath)) {
+    console.log('\x1B[31mCould not find your config.json file. Please make a copy of config.json.dist and adjust as needed.\x1B[0m');
+    process.exit(1);
+  }
+
+  try {
+    userConfig = JSON.parse(fs.readFileSync(userConfigPath));
+  } catch (e) {
+    console.log('\x1B[31mCould not parse your config.json file. Please make sure it is a valid JSON file.\x1B[0m');
+    process.exit(1);
+  }
+
+  return userConfig;
 };

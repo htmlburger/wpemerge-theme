@@ -10,15 +10,11 @@ Run the build process in production mode with all optimizations enabled.
 
 ## `yarn lint`
 
-Run the scripts and styles linters (`eslint` and `stylelint` respectively), reporting any lint rule violations.
+Run the php, scripts and styles linters (`WPCS`, `eslint` and `stylelint` respectively), reporting any lint rule violations.
 
 ## `yarn lint-fix`
 
-Run the scripts and styles linters (`eslint` and `stylelint` respectively), fixing any fixable lint rule violations.
-
-## `yarn wpcs`
-
-Run the WPCS linter, reporting any lint rule violations.
+Run the php, scripts and styles linters (`WPCS`, `eslint` and `stylelint` respectively), fixing any fixable lint rule violations.
 
 ## Browsersync
 
@@ -26,5 +22,14 @@ By default, Browsersync will setup a simple web server and serve your files thro
 `http://localhost:3000/`
 
 This is not ideal when working on WordPress projects that are setup in a subdirectory, for example.
-To let Browsersync know your site's url simply pass it as a parameter when running the dev task:
-`yarn dev --dev-url=http://localhost/my/nested/subdirectory/wordpress/`
+To let Browsersync know your site's url, open up `config.json` from the root theme directory and edit the `development.url` key like this:
+```json
+{
+    "development": {
+        "url": "http://localhost/my/nested/subdirectory/wordpress/"
+        // ...
+    }
+    // ...
+}
+```
+Save the file and restart your development build process by running `yarn dev`.

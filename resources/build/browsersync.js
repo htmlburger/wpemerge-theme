@@ -2,20 +2,20 @@
  * The external dependencies.
  */
 const url = require('url');
-const argv = require('yargs').argv;
 
 /**
  * The internal dependencies.
  */
 const utils = require('./utils');
+const userConfig = utils.getUserConfig();
 
 /**
- * Prepare the configuration.
+ * Prepare the final configuration.
  */
 const config = {
-  host: 'localhost',
+  host: typeof userConfig.development.url !== 'undefined' ? url.parse(userConfig.development.url).hostname : 'localhost',
+  proxy: typeof userConfig.development.url !== 'undefined' ? userConfig.development.url : 'localhost',
   port: 3000,
-  proxy: 'localhost',
   open: 'external',
   files: [
     utils.themeRootPath('./theme/**/*.php'),
@@ -28,13 +28,5 @@ const config = {
   },
   reloadThrottle: 100,
 };
-
-/**
- * Load the proxy configuration from cli arguments
- */
-if (argv.devUrl !== undefined) {
-  config.host = url.parse(argv.devUrl).hostname;
-  config.proxy = argv.devUrl;
-}
 
 module.exports = config;
