@@ -16,6 +16,18 @@ Run the php, scripts and styles linters (`WPCS`, `eslint` and `stylelint` respec
 
 Run the php, scripts and styles linters (`WPCS`, `eslint` and `stylelint` respectively), fixing any fixable lint rule violations.
 
+## `yarn i18n`
+
+Runs both `yarn i18n:textdomain` and `i18n:pot`.
+
+#### `yarn i18n:textdomain`
+
+Runs the `textdomain` command of the [node-wp-i18n](https://www.npmjs.com/package/node-wp-i18n) package, adding a text domain to all gettext function calls throughout your code.
+
+#### `yarn i18n:pot`
+
+Runs the `makepot` command of the [node-wp-i18n](https://www.npmjs.com/package/node-wp-i18n) package, generating your `languages/app.pot` file based on all gettext function calls throughout your code.
+
 ## Browsersync
 
 By default, Browsersync will setup a simple web server and serve your files through a custom port in order to establish a communication channel between the build process and your browser like this:
