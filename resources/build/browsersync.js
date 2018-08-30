@@ -2,11 +2,12 @@
  * The external dependencies.
  */
 const url = require('url');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 /**
  * The internal dependencies.
  */
-const utils = require('./utils');
+const utils = require('./lib/utils');
 const userConfig = utils.getUserConfig();
 
 /**
@@ -29,4 +30,6 @@ const config = {
   reloadThrottle: 100,
 };
 
-module.exports = config;
+module.exports = new BrowserSyncPlugin(config, {
+  injectCss: true,
+});

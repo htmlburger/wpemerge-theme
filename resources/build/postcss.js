@@ -2,7 +2,7 @@
  * The internal dependencies.
  */
 /* @preset-begin(Tailwind CSS)
-const utils = require('./utils');
+const utils = require('./lib/utils');
 @preset-end(Tailwind CSS) */
 
 /**

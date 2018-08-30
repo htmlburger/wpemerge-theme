@@ -13,13 +13,13 @@ let userConfig = null;
  * API.
  */
 module.exports.themeRootPath = (basePath = '', destPath = '') =>
-  path.resolve(__dirname, '../../', basePath, destPath);
+  path.resolve(path.dirname(__dirname), '../../', basePath, destPath);
 
 module.exports.srcPath = (basePath = '', destPath = '') =>
-  path.resolve(__dirname, '../', basePath, destPath);
+  path.resolve(path.dirname(__dirname), '../', basePath, destPath);
 
 module.exports.distPath = (basePath = '', destPath = '') =>
-  path.resolve(__dirname, '../../dist', basePath, destPath);
+  path.resolve(path.dirname(__dirname), '../../dist', basePath, destPath);
 
 module.exports.srcScriptsPath = destPath =>
   exports.srcPath('scripts', destPath);
