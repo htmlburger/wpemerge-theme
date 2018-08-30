@@ -1,19 +1,19 @@
 # Build files
-dist/
-resources/styles/theme/_sprite.scss
-resources/styles/shared/_config.scss
+/dist/
+/resources/styles/theme/_sprite.scss
+/resources/styles/shared/_config.scss
 
 # Development files
-config.json
+/config.json
 
 # Build modules
-node_modules/
+/node_modules/
 
 # Composer packages
-vendor/
+/vendor/
 
 # WordPress Coding Standards
-wpcs/
+/wpcs/
 
 # NPM lockfile as it causes more problems than it solves
 package-lock.json
