@@ -1,6 +1,7 @@
 /**
  * The external dependencies.
  */
+const path = require('path');
 const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SpritesmithPlugin = require('webpack-spritesmith');
@@ -17,6 +18,16 @@ const browsersyncConfig = require('./browsersync');
  * Setup the env.
  */
 const { env: envName } = utils.detectEnv();
+
+/**
+ * Setup config loader.
+ */
+const configLoader = {
+  loader: path.join(__dirname, 'config-loader.js'),
+  options: {
+    sassOutput: utils.srcStylesPath('shared/_config.scss'),
+  },
+};
 
 /**
  * Setup babel loader.
@@ -112,18 +123,7 @@ module.exports = {
   resolve: {
     modules: [utils.srcScriptsPath(), 'node_modules'],
     extensions: ['.js', '.jsx', '.json', '.css', '.scss'],
-    alias: {
-      '@scripts': utils.srcScriptsPath(),
-      '@styles': utils.srcStylesPath(),
-      '@images': utils.srcImagesPath(),
-      '@fonts': utils.srcFontsPath(),
-      '@vendor': utils.srcVendorPath(),
-      '@dist': utils.distPath(),
-      '~': utils.themeRootPath('node_modules'),
-      'isotope': 'isotope-layout',
-      'jquery-ui': 'jquery-ui-dist/jquery-ui.js',
-      'masonry': 'masonry-layout',
-    },
+    alias: require('./aliases.js'),
   },
 
   /**
@@ -141,16 +141,21 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.(js|jsx|css|scss)$/,
-        loader: 'import-glob',
+        use: 'import-glob',
+      },
+      {
+        test: utils.themeRootPath('config.json'),
+        type: 'javascript/auto',
+        use: configLoader,
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: [babelLoader],
+        use: babelLoader,
       },
       {
         test: /\.(css|scss)$/,
-        loader: extractSass.extract({
+        use: extractSass.extract({
           use: [
             {
               loader: 'css-loader',
@@ -168,11 +173,11 @@ module.exports = {
       },
       {
         test: /images[\\/].*\.(ico|jpg|jpeg|png|svg|gif)$/,
-        loader: 'file-loader?name=../images/[name].[ext]',
+        use: 'file-loader?name=../images/[name].[ext]',
       },
       {
         test: /fonts[\\/].*\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=../fonts/[name].[ext]',
+        use: 'file-loader?name=../fonts/[name].[ext]',
       },
     ],
   },
