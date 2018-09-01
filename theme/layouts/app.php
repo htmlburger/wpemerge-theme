@@ -7,7 +7,8 @@
  * @package WPEmergeTheme
  */
 
-get_header();
+do_action( 'get_header', null );
+app_partial( 'header' );
 
 if ( ! is_singular() ) {
 	app_the_title( '<h2 class="pagetitle">', '</h2>' );
@@ -15,6 +16,8 @@ if ( ! is_singular() ) {
 
 app_layout_content();
 
-get_sidebar();
+do_action( 'get_sidebar', null );
+app_partial( 'sidebar' );
 
-get_footer();
+do_action( 'get_footer', null );
+app_partial( 'footer' );
