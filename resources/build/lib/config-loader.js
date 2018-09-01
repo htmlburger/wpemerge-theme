@@ -56,12 +56,9 @@ module.exports = function(rawConfig) {
   const options = loaderUtils.getOptions(this);
   const config = JSON.parse(rawConfig);
 
-  if (typeof options.sassOutput === 'undefined') {
-    throw new Error('The sassOutput option of config-loader is required.');
+  if (typeof options.sassOutput !== 'undefined') {
+    fs.writeFileSync(options.sassOutput, getSass(config));
   }
 
-  fs.writeFileSync(options.sassOutput, getSass(config));
-
-  // Return an empty string as no JavaScript is generated from the config, yet.
-  return '';
+  return rawConfig;
 };

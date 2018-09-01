@@ -103,7 +103,6 @@ module.exports = {
       },
       {
         test: utils.themeRootPath('config.json'),
-        type: 'javascript/auto',
         use: configLoader,
       },
       {

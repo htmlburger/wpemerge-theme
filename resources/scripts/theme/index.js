@@ -1,4 +1,4 @@
-import '@config';
+import config from '@config';
 import '@styles/theme';
 import '@images/favicon.ico';
 import './vendor/*.js';
