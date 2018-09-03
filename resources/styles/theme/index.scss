@@ -2,7 +2,7 @@
     Vendor
 \* ------------------------------------------------------------ */
 
-@import 'vendor/*.scss';
+@import './vendor/*.scss';
 
 /* ------------------------------------------------------------ *\
     Settings
@@ -11,11 +11,11 @@
 @import '~@styles/shared/_config.scss';
 @import '~@styles/shared/_variables.scss';
 @import '~@styles/shared/_editor.scss';
-@import '_variables.scss';
-@import '_sprite.scss';
+@import './_variables.scss';
+@import './_sprite.scss';
 
 /* ------------------------------------------------------------ *\
     Theme
 \* ------------------------------------------------------------ */
 
-@import '_generic*.scss';
+@import './_generic*.scss';
