@@ -20,8 +20,12 @@ const flattenVariables = (variables, prefix) => {
 
     if (typeof value === 'string') {
       flattenned[prefix + name] = value;
-    } else {
+      continue;
+    }
+
+    if (typeof value === 'object' && value.constructor === Object) {
       flattenned = Object.assign(flattenned, flattenVariables(value, prefix + name));
+      continue;
     }
   }
 
