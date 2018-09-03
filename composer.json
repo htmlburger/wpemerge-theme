@@ -24,7 +24,7 @@
         "composer/installers": "^1.4",
         "htmlburger/wpemerge": "^0.9.3",
         "htmlburger/wpemerge-theme-core": "^0.9.3",
-        "htmlburger/carbon-pagination": "^1.1",
+        "htmlburger/carbon-pagination": "^1.1.6",
         "symfony/debug": "~3.0"
     },
     "require-dev": {
