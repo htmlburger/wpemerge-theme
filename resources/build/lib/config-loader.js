@@ -13,10 +13,10 @@ const loaderUtils = require('loader-utils');
  */
 const flattenVariables = (variables, prefix) => {
   prefix = typeof prefix !== 'undefined' ? prefix + '-' : '';
-  var flattenned = {};
+  let flattenned = {};
 
-  for (var name in variables) {
-    var value = variables[name];
+  for (let name in variables) {
+    let value = variables[name];
 
     if (typeof value === 'string') {
       flattenned[prefix + name] = value;
@@ -42,8 +42,8 @@ const getSass = (config) => {
   const sass = ['/**', '* Config.', '*', '* This is an automatically generated file - DO NOT edit manually.', '*/', ''];
   const sassVariables = flattenVariables(config.variables);
 
-  for (var name in sassVariables) {
-    var value = sassVariables[name];
+  for (let name in sassVariables) {
+    let value = sassVariables[name];
     sass.push(`$${name}: ${value};`);
   }
 
