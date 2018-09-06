@@ -1,0 +1,362 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Emerge Starter Theme\n"
+"POT-Creation-Date: 2018-09-06 11:05+0300\n"
+"PO-Revision-Date: 2018-09-06 11:06+0300\n"
+"Last-Translator: DieGOs <9585999@gmail.com>\n"
+"Language-Team: atanas.angelov.dev@gmail.com\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: app\n"
+"X-Poedit-SearchPath-1: theme\n"
+
+#: app/helpers/title.php:25
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Результаты поиска для: %s"
+
+#: app/helpers/title.php:28
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Архивы категорий: %s"
+
+#: app/helpers/title.php:31
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Архив тегов: %s"
+
+#: app/helpers/title.php:34
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Ежедневные архивы: %s"
+
+#: app/helpers/title.php:37
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Ежемесячные архивы: %s"
+
+#: app/helpers/title.php:40
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Ежегодные архивы: %s"
+
+#: app/helpers/title.php:43
+#, php-format
+msgid "Posts by %s"
+msgstr "Сообщения от %s"
+
+#: app/helpers/title.php:45
+msgid "Archives"
+msgstr "Архивы"
+
+#: app/helpers/title.php:47
+msgid "Error 404 - Not Found"
+msgstr "Ошибка 404 - Не найдено"
+
+#: app/setup/carbon-fields/theme-options.php:15
+msgid "Theme Options"
+msgstr "Опции темы"
+
+#: app/setup/carbon-fields/theme-options.php:18
+msgid "Google Maps API Key"
+msgstr "Ключ API Карт Google"
+
+#: app/setup/carbon-fields/theme-options.php:19
+msgid "Header Script"
+msgstr "Скрипты в Header"
+
+#: app/setup/carbon-fields/theme-options.php:20
+msgid "Footer Script"
+msgstr "Скрипты в Footer"
+
+#: app/setup/menus.php:12
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: app/setup/sidebars.php:29
+msgid "Default Sidebar"
+msgstr "Сайдбар по умолчанию"
+
+#: app/setup/theme-support.php:71
+msgid "Red"
+msgstr "Красный"
+
+#: app/setup/theme-support.php:76
+msgid "Pink"
+msgstr "Розовый"
+
+#: app/setup/theme-support.php:81
+msgid "Purple"
+msgstr "Фиолетовый"
+
+#: app/setup/theme-support.php:86
+msgid "Deep Purple"
+msgstr "Темно-фиолетовый"
+
+#: app/setup/theme-support.php:91
+msgid "Indigo"
+msgstr "Индиго"
+
+#: app/setup/theme-support.php:96
+msgid "Blue"
+msgstr "Синий"
+
+#: app/setup/theme-support.php:101
+msgid "Light Blue"
+msgstr "Светло-синий"
+
+#: app/setup/theme-support.php:106
+msgid "Cyan"
+msgstr "Бирюзовый"
+
+#: app/setup/theme-support.php:111
+msgid "Teal"
+msgstr "Морская волна"
+
+#: app/setup/theme-support.php:116
+msgid "Green"
+msgstr "Зеленый"
+
+#: app/setup/theme-support.php:121
+msgid "Light Green"
+msgstr "Светло-зеленый"
+
+#: app/setup/theme-support.php:126
+msgid "Lime"
+msgstr "Лайм"
+
+#: app/setup/theme-support.php:131
+msgid "Yellow"
+msgstr "Желтый"
+
+#: app/setup/theme-support.php:136
+msgid "Amber"
+msgstr "Янтарный"
+
+#: app/setup/theme-support.php:141
+msgid "Orange"
+msgstr "Оранжевый"
+
+#: app/setup/theme-support.php:146
+msgid "Deep Orange"
+msgstr "Глубокий оранжевый"
+
+#: app/setup/theme-support.php:151
+msgid "Brown"
+msgstr "Коричневый"
+
+#: app/setup/theme-support.php:156
+msgid "Grey"
+msgstr "Серый"
+
+#: app/setup/theme-support.php:161
+msgid "Blue Grey"
+msgstr "Серо-голубой"
+
+#: app/setup/theme-support.php:186
+msgid "extra small"
+msgstr "очень маленький"
+
+#: app/setup/theme-support.php:187
+msgid "XS"
+msgstr "XS"
+
+#: app/setup/theme-support.php:192
+msgid "small"
+msgstr "маленький"
+
+#: app/setup/theme-support.php:193
+msgid "S"
+msgstr "S"
+
+#: app/setup/theme-support.php:198
+msgid "regular"
+msgstr "стандартный"
+
+#: app/setup/theme-support.php:199
+msgid "M"
+msgstr "M"
+
+#: app/setup/theme-support.php:204
+msgid "large"
+msgstr "большой"
+
+#: app/setup/theme-support.php:205
+msgid "L"
+msgstr "L"
+
+#: app/setup/theme-support.php:210
+msgid "extra large"
+msgstr "очень большой"
+
+#: app/setup/theme-support.php:211
+msgid "XL"
+msgstr "XL"
+
+#: app/src/Widgets/Carbon_Rich_Text_Widget.php:18
+msgid "Rich Text"
+msgstr "Форматированный текст"
+
+#: app/src/Widgets/Carbon_Rich_Text_Widget.php:19
+msgid "Displays a block with title and WYSIWYG content."
+msgstr "Отображает блок с заголовком и WYSIWYG-содержимым."
+
+#: app/src/Widgets/Carbon_Rich_Text_Widget.php:21
+msgid "Title"
+msgstr "Заголовок"
+
+#: app/src/Widgets/Carbon_Rich_Text_Widget.php:22
+msgid "Content"
+msgstr "Содержание"
+
+#: theme/404.php:15 theme/error.php:16
+#, php-format
+msgid ""
+"Please check the URL for proper spelling and capitalization. If you're "
+"having trouble locating a destination, try visiting the %1$shome page%2$s."
+msgstr ""
+"Пожалуйста, проверьте URL для правильного написания и капитализации. Если у "
+"вас возникли проблемы с поиском места назначения, попробуйте посетите "
+"страницу %1$sДомашнюю страницу%2$s."
+
+#: theme/comments.php:22
+msgid "No Responses"
+msgstr "Нет ответов"
+
+#: theme/comments.php:22
+msgid "One Response"
+msgstr "Один ответ"
+
+#: theme/comments.php:22
+msgid "% Responses"
+msgstr "% Ответов"
+
+#: theme/comments.php:48
+msgid "« Older Comments"
+msgstr "«Старые комментарии"
+
+#: theme/comments.php:51
+msgid "Newer Comments »"
+msgstr "Новые комментарии»"
+
+#: theme/comments.php:59
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: theme/comments.php:67
+msgid "Leave a Reply"
+msgstr "Оставить комментарий"
+
+#: theme/page.php:24
+msgid "Edit this entry."
+msgstr "Изменить эту запись."
+
+#: theme/partials/comment-single.php:14
+msgid "says:"
+msgstr "сказал:"
+
+#: theme/partials/comment-single.php:18
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш комментарий ожидает модерации."
+
+#: theme/partials/comment-single.php:25
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s в %2$s"
+
+#: theme/partials/comment-single.php:29
+msgid "(Edit)"
+msgstr "(Редактировать)"
+
+#: theme/partials/loop-single.php:33
+msgid "« Previous Entry"
+msgstr "«Предыдущая запись"
+
+#: theme/partials/loop-single.php:34
+msgid "Next Entry »"
+msgstr "Следующая запись»"
+
+#: theme/partials/loop.php:15
+#, php-format
+msgid "Permanent Link to %s"
+msgstr "Постоянная ссылка на %s"
+
+#: theme/partials/loop.php:30
+msgid "Read the rest of this entry &raquo;"
+msgstr "Читайте на остальной части этой записи &raquo;"
+
+#: theme/partials/loop.php:41
+msgid "« Previous Entries"
+msgstr "«Предыдущие записи"
+
+#: theme/partials/loop.php:42
+msgid "Next Entries »"
+msgstr "Следующие записи»"
+
+#: theme/partials/loop.php:59
+#, php-format
+msgid "Sorry, but there aren't any posts in the %s category yet."
+msgstr "Извините, но пока нет никаких записей в рубрике %s."
+
+#: theme/partials/loop.php:61
+msgid "Sorry, but there aren't any posts with this date."
+msgstr "Извините, но нет никаких записей, соответствующих вашему запросу."
+
+#: theme/partials/loop.php:65
+#, php-format
+msgid "Sorry, but there aren't any posts by %s yet."
+msgstr "Извините, но еще нет сообщений от %s."
+
+#: theme/partials/loop.php:67
+msgid "No posts found. Try a different search?"
+msgstr "Записи не найдены. Попробуйте использовать другие поисковые запросы?"
+
+#: theme/partials/loop.php:69
+msgid "No posts found."
+msgstr "Записей не найдено."
+
+#: theme/partials/post-meta.php:22
+#, php-format
+msgid "by %s"
+msgstr "от %s"
+
+#: theme/partials/post-meta.php:28
+msgid "Posted in "
+msgstr "Опубликовано в "
+
+#: theme/partials/post-meta.php:32
+msgid "No Comments"
+msgstr "Нет комментариев"
+
+#: theme/partials/post-meta.php:32
+msgid "1 Comment"
+msgstr "1 Комментарий"
+
+#: theme/partials/post-meta.php:32
+msgid "% Comments"
+msgstr "% Комментариев"
+
+#: theme/partials/post-meta.php:37
+msgid "Tags:"
+msgstr "Теги:"
+
+#: theme/searchform.php:13 theme/searchform.php:15
+msgid "Search for:"
+msgstr "Искать:"
+
+#: theme/searchform.php:15
+msgid "Search &hellip;"
+msgstr "Поиск &hellip;"
+
+#: theme/searchform.php:18
+msgid "Search"
+msgstr "Поиск"
