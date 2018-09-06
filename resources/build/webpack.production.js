@@ -2,6 +2,7 @@
  * The external dependencies.
  */
 const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
@@ -53,6 +54,9 @@ const extractSass = new ExtractTextPlugin({
  * Setup webpack plugins.
  */
 const plugins = [
+  new CleanWebpackPlugin(utils.distPath(), {
+    root: utils.themeRootPath(),
+  }),
   new WatchIgnorePlugin([
     utils.distImagesPath('sprite.png'),
     utils.distImagesPath('sprite@2x.png'),
