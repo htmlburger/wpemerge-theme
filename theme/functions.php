@@ -11,6 +11,10 @@
  * @package WPEmergeTheme
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Constant definitions.
  */
