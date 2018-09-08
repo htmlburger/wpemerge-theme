@@ -16,11 +16,8 @@ if ( post_password_required() ) {
 }
 ?>
 <section class="section-comments" id="comments">
-
 	<?php if ( have_comments() ) : ?>
-
 		<h3><?php comments_number( __( 'No Responses', 'app' ), __( 'One Response', 'app' ), __( '% Responses', 'app' ) ); ?></h3>
-
 		<ol class="comments">
 			<?php
 			wp_list_comments(
@@ -52,13 +49,10 @@ if ( post_password_required() ) {
 			]
 		);
 		?>
-
 	<?php else : ?>
-
 		<?php if ( ! comments_open() ) : ?>
 			<p class="nocomments"><?php esc_html_e( 'Comments are closed.', 'app' ); ?></p>
 		<?php endif; ?>
-
 	<?php endif; ?>
 
 	<?php
@@ -69,5 +63,4 @@ if ( post_password_required() ) {
 		]
 	);
 	?>
-
 </section>

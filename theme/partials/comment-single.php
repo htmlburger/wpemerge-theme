@@ -22,7 +22,7 @@
 			<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 				<?php
 				/* translators: comment date and time */
-				esc_html( sprintf( __( '%1$s at %2$s', 'app' ), get_comment_date(), get_comment_time() ) );
+				echo esc_html( sprintf( __( '%1$s at %2$s', 'app' ), get_comment_date(), get_comment_time() ) );
 				?>
 			</a>
 

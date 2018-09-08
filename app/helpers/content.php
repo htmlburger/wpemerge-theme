@@ -67,6 +67,16 @@ function app_filter_fix_upload_dir_url_schema( $upload_dir ) {
 }
 
 /**
+ * Get text suitable for the title attribute of a permalink anchor tag.
+ *
+ * @return string The title attribute value
+ */
+function app_get_permalink_title() {
+	/* translators: post link title attribute */
+	return sprintf( __( 'Permanent Link to %s', 'app' ), get_the_title() );
+}
+
+/**
  * Escape user input from WYSIWYG editors.
  *
  * Calls all filters usually executed on `the_content`.
@@ -76,4 +86,32 @@ function app_filter_fix_upload_dir_url_schema( $upload_dir ) {
  */
 function app_content( $content ) {
 	return apply_filters( 'app_content', $content );
+}
+
+/**
+ * Get text suitable for the title attribute of a permalink anchor tag.
+ *
+ * @return string The title attribute value
+ */
+function app_get_index_404_message() {
+	if ( is_category() ) {
+		/* translators: no posts found for category */
+		return sprintf( __( 'Sorry, but there aren\'t any posts in the %s category yet.', 'app' ), single_cat_title( '', false ) );
+	}
+
+	if ( is_date() ) {
+		return __( 'Sorry, but there aren\'t any posts with this date.', 'app' );
+	}
+
+	if ( is_author() ) {
+		$userdata = get_user_by( 'id', get_queried_object_id() );
+		/* translators: no posts found for author */
+		return sprintf( __( 'Sorry, but there aren\'t any posts by %s yet.', 'app' ), $userdata->display_name );
+	}
+
+	if ( is_search() ) {
+		return __( 'No posts found. Try a different search?', 'app' );
+	}
+
+	return __( 'No posts found.', 'app' );
 }

@@ -10,14 +10,10 @@
 	<ol class="articles">
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
-			<?php
-			/* translators: post link title attribute */
-			$link_title = sprintf( __( 'Permanent Link to %s', 'app' ), get_the_title() );
-			?>
 			<li <?php post_class( 'article' ); ?>>
 				<header class="article__head">
 					<h2 class="article__title">
-						<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php echo esc_attr( $link_title ); ?>">
+						<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php echo esc_attr( app_get_permalink_title() ); ?>">
 							<?php the_title(); ?>
 						</a>
 					</h2><!-- /.article__title -->
@@ -27,7 +23,7 @@
 
 				<div class="article__body">
 					<div class="article__entry">
-						<?php the_content( __( 'Read the rest of this entry &raquo;', 'app' ) ); ?>
+						<?php the_excerpt(); ?>
 					</div><!-- /.article__entry -->
 				</div><!-- /.article__body -->
 			</li><!-- /.article -->
@@ -52,24 +48,7 @@
 		<li class="article article--error404 article--not-found">
 			<div class="article__body">
 				<div class="article__entry">
-					<p>
-						<?php
-						if ( is_category() ) {
-							/* translators: no posts found for category */
-							echo esc_html( sprintf( __( 'Sorry, but there aren\'t any posts in the %s category yet.', 'app' ), single_cat_title( '', false ) ) );
-						} elseif ( is_date() ) {
-							esc_html_e( 'Sorry, but there aren\'t any posts with this date.', 'app' );
-						} elseif ( is_author() ) {
-							$userdata = get_user_by( 'id', get_queried_object_id() );
-							/* translators: no posts found for author */
-							echo esc_html( sprintf( __( 'Sorry, but there aren\'t any posts by %s yet.', 'app' ), $userdata->display_name ) );
-						} elseif ( is_search() ) {
-							esc_html_e( 'No posts found. Try a different search?', 'app' );
-						} else {
-							esc_html_e( 'No posts found.', 'app' );
-						}
-						?>
-					</p>
+					<p><?php echo esc_html( app_get_index_404_message() ); ?></p>
 					<?php get_search_form(); ?>
 				</div><!-- /.article__entry -->
 			</div><!-- /.article__body -->

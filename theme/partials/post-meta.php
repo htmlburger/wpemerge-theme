@@ -19,7 +19,7 @@ if ( get_post_type() !== 'post' ) {
 		<?php
 		the_time( 'F jS, Y ' );
 		/* translators: post author attribution */
-		esc_html( sprintf( __( 'by %s', 'app' ), get_the_author() ) );
+		echo esc_html( sprintf( __( 'by %s', 'app' ), get_the_author() ) );
 		?>
 	</p>
 
