@@ -1,0 +1,48 @@
+<?php
+/**
+ * Single comment partial.
+ *
+ * @package WPEmergeTheme
+ */
+
+?>
+<li @php comment_class() @endphp id="li-comment-@php comment_ID() @endphp">
+	<div id="comment-@php comment_ID() @endphp" class="comment-entry">
+		<div class="comment-author vcard">
+			{!! get_avatar( $comment, 48 ) !!}
+			@php comment_author_link() @endphp
+			<span class="says">{{ __( 'says:', 'app' ) }}</span>
+		</div>
+
+		@if ('0' === $comment->comment_approved)
+			<em class="moderation-notice">{{ __( 'Your comment is awaiting moderation.', 'app' ) }}</em><br />
+		@endif
+
+		<div class="comment-meta">
+			<a href="{{ esc_url( get_comment_link( $comment->comment_ID ) ) }}">
+				{{-- translators: comment date and time --}}
+				{{ sprintf( __( '%1$s at %2$s', 'app' ), get_comment_date(), get_comment_time() ) }}
+			</a>
+
+			@php edit_comment_link( esc_html__( '(Edit)', 'app' ), '  ', '' ) @endphp
+		</div>
+
+		<div class="comment-text">
+			@php comment_text() @endphp
+		</div>
+
+		<div class="comment-reply">
+			@php
+			comment_reply_link(
+				array_merge(
+					$args,
+					[
+						'depth'     => $depth,
+						'max_depth' => $args['max_depth'],
+					]
+				)
+			);
+			@endphp
+		</div>
+	</div>
+{{-- closing </li> tag is added by WordPress. --}}
