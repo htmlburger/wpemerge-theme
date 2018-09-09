@@ -8,7 +8,7 @@ Include a partial view file in a very similar fashion to how `get_template_part(
 
 1. Automatically look for the partial in the `theme/partials/` directory as well.
 1. Variables can be passed by utilizing the `$context` parameter.
-1. Internally uses WP Emerge's `app_partial()` to enable support for View Composers.
+1. Internally uses WP Emerge's `app_render()` to enable support for View Composers.
 
 ## Theme::uri()
 

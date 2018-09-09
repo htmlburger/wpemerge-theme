@@ -21,7 +21,7 @@
 				wp_list_comments(
 					[
 						'callback' => function( $comment, $args, $depth ) {
-							app_partial(
+							app_render(
 								'partials.comment-single',
 								[
 									'comment' => $comment,
