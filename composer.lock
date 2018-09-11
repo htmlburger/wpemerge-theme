@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3bd973d49cdd58f4ec39dd440c763891",
+    "content-hash": "9cd123603034aeb9cd78ea22b7411dd0",
     "packages": [
         {
             "name": "composer/installers",
@@ -244,16 +244,16 @@
         },
         {
             "name": "htmlburger/wpemerge",
-            "version": "0.9.3",
+            "version": "0.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/wpemerge.git",
-                "reference": "af1981079a12ea91652268f49b24734870fb9e70"
+                "reference": "553864d8c6d5ce09b4696aaf26fe2190813e2cc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/wpemerge/zipball/af1981079a12ea91652268f49b24734870fb9e70",
-                "reference": "af1981079a12ea91652268f49b24734870fb9e70",
+                "url": "https://api.github.com/repos/htmlburger/wpemerge/zipball/553864d8c6d5ce09b4696aaf26fe2190813e2cc9",
+                "reference": "553864d8c6d5ce09b4696aaf26fe2190813e2cc9",
                 "shasum": ""
             },
             "require": {
@@ -310,24 +310,24 @@
                 "wordpress",
                 "wpemerge"
             ],
-            "time": "2018-08-23T22:21:21+00:00"
+            "time": "2018-09-11T09:40:19+00:00"
         },
         {
             "name": "htmlburger/wpemerge-theme-core",
-            "version": "0.9.3",
+            "version": "0.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/wpemerge-theme-core.git",
-                "reference": "0e6c82a48f5275931269aa5917ec971d69fed492"
+                "reference": "97d9c9dd5df2a1f6dd3c47fc17062587a15f1f7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/wpemerge-theme-core/zipball/0e6c82a48f5275931269aa5917ec971d69fed492",
-                "reference": "0e6c82a48f5275931269aa5917ec971d69fed492",
+                "url": "https://api.github.com/repos/htmlburger/wpemerge-theme-core/zipball/97d9c9dd5df2a1f6dd3c47fc17062587a15f1f7c",
+                "reference": "97d9c9dd5df2a1f6dd3c47fc17062587a15f1f7c",
                 "shasum": ""
             },
             "require": {
-                "htmlburger/wpemerge": "0.9.*"
+                "htmlburger/wpemerge": "~0.10.0"
             },
             "type": "library",
             "autoload": {
@@ -359,7 +359,7 @@
             ],
             "description": "Core tools for the WP Emerge Theme.",
             "homepage": "https://wpemerge.com/",
-            "time": "2018-06-08T09:09:02+00:00"
+            "time": "2018-09-11T10:05:11+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -599,16 +599,16 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v3.4.14",
+            "version": "v3.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "d5a058ff6ecad26b30c1ba452241306ea34c65cc"
+                "reference": "c4625e75341e4fb309ce0c049cbf7fb84b8897cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/d5a058ff6ecad26b30c1ba452241306ea34c65cc",
-                "reference": "d5a058ff6ecad26b30c1ba452241306ea34c65cc",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/c4625e75341e4fb309ce0c049cbf7fb84b8897cd",
+                "reference": "c4625e75341e4fb309ce0c049cbf7fb84b8897cd",
                 "shasum": ""
             },
             "require": {
@@ -651,22 +651,22 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T11:19:56+00:00"
+            "time": "2018-08-03T10:42:44+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "filp/whoops",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "181c4502d8f34db7aed7bfe88d4f87875b8e947a"
+                "reference": "e79cd403fb77fc8963a99ecc30e80ddd885b3311"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/181c4502d8f34db7aed7bfe88d4f87875b8e947a",
-                "reference": "181c4502d8f34db7aed7bfe88d4f87875b8e947a",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/e79cd403fb77fc8963a99ecc30e80ddd885b3311",
+                "reference": "e79cd403fb77fc8963a99ecc30e80ddd885b3311",
                 "shasum": ""
             },
             "require": {
@@ -685,7 +685,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "autoload": {
@@ -714,20 +714,20 @@
                 "throwable",
                 "whoops"
             ],
-            "time": "2018-03-03T17:56:25+00:00"
+            "time": "2018-06-30T13:14:06+00:00"
         },
         {
             "name": "htmlburger/wpemerge-cli",
-            "version": "0.9.3",
+            "version": "0.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/wpemerge-cli.git",
-                "reference": "878cac0f69e296ad9834d8a73423a8cd46092d66"
+                "reference": "4f17d8ab621fd17388af817ed31caf61bcffcbea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/wpemerge-cli/zipball/878cac0f69e296ad9834d8a73423a8cd46092d66",
-                "reference": "878cac0f69e296ad9834d8a73423a8cd46092d66",
+                "url": "https://api.github.com/repos/htmlburger/wpemerge-cli/zipball/4f17d8ab621fd17388af817ed31caf61bcffcbea",
+                "reference": "4f17d8ab621fd17388af817ed31caf61bcffcbea",
                 "shasum": ""
             },
             "require": {
@@ -766,11 +766,11 @@
             ],
             "description": "CLI tool for WP Emerge.",
             "homepage": "https://wpemerge.com/",
-            "time": "2018-08-26T17:19:42+00:00"
+            "time": "2018-09-11T10:02:55+00:00"
         },
         {
             "name": "symfony/console",
-            "version": "v3.4.14",
+            "version": "v3.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -898,16 +898,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.14",
+            "version": "v3.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "0414db29bd770ec5a4152683e655f55efd4fa60f"
+                "reference": "4d6b125d5293cbceedc2aa10f2c71617e76262e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/0414db29bd770ec5a4152683e655f55efd4fa60f",
-                "reference": "0414db29bd770ec5a4152683e655f55efd4fa60f",
+                "url": "https://api.github.com/repos/symfony/process/zipball/4d6b125d5293cbceedc2aa10f2c71617e76262e7",
+                "reference": "4d6b125d5293cbceedc2aa10f2c71617e76262e7",
                 "shasum": ""
             },
             "require": {
@@ -943,7 +943,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T11:19:56+00:00"
+            "time": "2018-08-03T10:42:44+00:00"
         }
     ],
     "aliases": [],
