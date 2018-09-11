@@ -2,7 +2,7 @@
 /**
  * WP Emerge configuration.
  *
- * @link https://docs.wpemerge.com/configuration.html
+ * @link https://docs.wpemerge.com/#/framework/configuration
  *
  * @package WPEmergeTheme
  */

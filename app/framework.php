@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * ------------------------------------------------------------------------
  * Routes
  *
- * @link https://docs.wpemerge.com/routing/methods.html
+ * @link https://docs.wpemerge.com/#/framework/routing/methods
  * ------------------------------------------------------------------------
  */
 
@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Pass all front-end requests through WPEmerge.
  * WARNING: Do not add routes after this - they will be ignored.
  *
- * @link https://docs.wpemerge.com/routing/methods.html#handling-all-requests
+ * @link https://docs.wpemerge.com/#/framework/routing/methods?id=handling-all-requests
  */
 Router::handleAll();
 
@@ -39,7 +39,7 @@ Router::handleAll();
  * ------------------------------------------------------------------------
  * Globals
  *
- * @link https://docs.wpemerge.com/view/global-context.html
+ * @link https://docs.wpemerge.com/#/framework/views/global-context
  * ------------------------------------------------------------------------
  */
 
@@ -50,7 +50,7 @@ Router::handleAll();
  * ------------------------------------------------------------------------
  * View composers
  *
- * @link https://docs.wpemerge.com/view/view-composers.html
+ * @link https://docs.wpemerge.com/#/framework/views/view-composers
  * ------------------------------------------------------------------------
  */
 

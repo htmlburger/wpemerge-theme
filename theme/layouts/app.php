@@ -2,7 +2,7 @@
 /**
  * Base app layout.
  *
- * @link https://docs.wpemerge.com/view/layouts.html
+ * @link https://docs.wpemerge.com/#/framework/views/layouts
  *
  * @package WPEmergeTheme
  */

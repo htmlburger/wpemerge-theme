@@ -19,9 +19,9 @@ _This is the WP Emerge Theme project - for the WP Emerge framework please check 
 
 ## Documentation
 
-https://docs.theme.wpemerge.com/
+[https://docs.wpemerge.com/#/starter-theme/overview](https://docs.wpemerge.com/#/starter-theme/overview)
 
-https://docs.theme.wpemerge.com/quickstart.html
+[https://docs.wpemerge.com/#/starter-theme/quickstart](https://docs.wpemerge.com/#/starter-theme/quickstart)
 
 ## Development Team
 
@@ -43,7 +43,7 @@ Brought to you by [Atanas Angelov](https://github.com/atanas-angelov-dev) and th
 | Automatic Sprite Generation    | ✔                | ✖              | N/A³     |
 | Cache Breaker                  | ✔                | ✖              | ✖        |
 | WPCS Linting                   | ✔                | ✖              | ✖        |
-| [Advanced Error Reporting](https://docs.wpemerge.com/routing/exceptions.html) | ✔ | ✖ | ✖ |
+| [Advanced Error Reporting](https://docs.wpemerge.com/#/framework/routing/error-handling) | ✔ | ✖ | ✖ |
 | WP Unit Tests for your classes | ✔                | ✖              | ✖        |
 
 _¹ Sage's Controller is more of a View Composer than a Controller._
@@ -55,7 +55,7 @@ _³ Timber does not provide a front-end build process so you can implement whate
 _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.angelov.dev@gmail.com) so they can be corrected._ 
 
 ## Features
-- All features from [WP Emerge](https://docs.wpemerge.com/):
+- All features from [WP Emerge](https://docs.wpemerge.com/#/framework/overview):
   - Routes with optional rewrite rule integration
   - Controllers
   - Middleware
@@ -178,7 +178,7 @@ These directories are for the admin, editor and login bundles, respectively. The
 
 #### `theme/`
 
-Add views in this, the `theme/partials/` or the `theme/templates/` directories accordingly. Avoid adding any PHP logic here, unless it pertains to layouting (PHP logic should go into helper files or [WP Emerge controllers](https://docs.wpemerge.com/controllers/overview.html))
+Add views in this, the `theme/partials/` or the `theme/templates/` directories accordingly. Avoid adding any PHP logic here, unless it pertains to layouting (PHP logic should go into helper files or [WP Emerge controllers](https://docs.wpemerge.com/#/framework/routing/controllers))
 
 ## Contributing
 
