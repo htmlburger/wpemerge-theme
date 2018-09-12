@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9cd123603034aeb9cd78ea22b7411dd0",
+    "content-hash": "c6cbe93d69fed1bbade033788ebdeaf7",
     "packages": [
         {
             "name": "composer/installers",
@@ -244,16 +244,16 @@
         },
         {
             "name": "htmlburger/wpemerge",
-            "version": "0.10.0",
+            "version": "0.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/wpemerge.git",
-                "reference": "553864d8c6d5ce09b4696aaf26fe2190813e2cc9"
+                "reference": "2e9daefdd37b917c48f2d281359c1da29a63004a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/wpemerge/zipball/553864d8c6d5ce09b4696aaf26fe2190813e2cc9",
-                "reference": "553864d8c6d5ce09b4696aaf26fe2190813e2cc9",
+                "url": "https://api.github.com/repos/htmlburger/wpemerge/zipball/2e9daefdd37b917c48f2d281359c1da29a63004a",
+                "reference": "2e9daefdd37b917c48f2d281359c1da29a63004a",
                 "shasum": ""
             },
             "require": {
@@ -310,24 +310,24 @@
                 "wordpress",
                 "wpemerge"
             ],
-            "time": "2018-09-11T09:40:19+00:00"
+            "time": "2018-09-12T19:23:48+00:00"
         },
         {
             "name": "htmlburger/wpemerge-theme-core",
-            "version": "0.10.0",
+            "version": "0.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/wpemerge-theme-core.git",
-                "reference": "97d9c9dd5df2a1f6dd3c47fc17062587a15f1f7c"
+                "reference": "ebb0f78481b2f7fadfd05fe8bed262dc268699cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/wpemerge-theme-core/zipball/97d9c9dd5df2a1f6dd3c47fc17062587a15f1f7c",
-                "reference": "97d9c9dd5df2a1f6dd3c47fc17062587a15f1f7c",
+                "url": "https://api.github.com/repos/htmlburger/wpemerge-theme-core/zipball/ebb0f78481b2f7fadfd05fe8bed262dc268699cc",
+                "reference": "ebb0f78481b2f7fadfd05fe8bed262dc268699cc",
                 "shasum": ""
             },
             "require": {
-                "htmlburger/wpemerge": "~0.10.0"
+                "htmlburger/wpemerge": "~0.10.1"
             },
             "type": "library",
             "autoload": {
@@ -359,7 +359,7 @@
             ],
             "description": "Core tools for the WP Emerge Theme.",
             "homepage": "https://wpemerge.com/",
-            "time": "2018-09-11T10:05:11+00:00"
+            "time": "2018-09-12T19:30:16+00:00"
         },
         {
             "name": "pimple/pimple",
