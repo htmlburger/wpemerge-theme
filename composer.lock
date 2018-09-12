@@ -722,12 +722,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/wpemerge-cli.git",
-                "reference": "3ab48ae259b985987994865fe3fcc8bdb7ade1d2"
+                "reference": "15a3693e6f682f1d7fe6fc5782080eb27eb3922a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/wpemerge-cli/zipball/3ab48ae259b985987994865fe3fcc8bdb7ade1d2",
-                "reference": "3ab48ae259b985987994865fe3fcc8bdb7ade1d2",
+                "url": "https://api.github.com/repos/htmlburger/wpemerge-cli/zipball/15a3693e6f682f1d7fe6fc5782080eb27eb3922a",
+                "reference": "15a3693e6f682f1d7fe6fc5782080eb27eb3922a",
                 "shasum": ""
             },
             "require": {
@@ -766,7 +766,7 @@
             ],
             "description": "CLI tool for WP Emerge.",
             "homepage": "https://wpemerge.com/",
-            "time": "2018-09-12T20:02:20+00:00"
+            "time": "2018-09-12T20:35:01+00:00"
         },
         {
             "name": "symfony/console",
