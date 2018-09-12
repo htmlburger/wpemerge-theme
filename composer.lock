@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c6cbe93d69fed1bbade033788ebdeaf7",
+    "content-hash": "7c216d4519675aaaddeeca5c4bddc115",
     "packages": [
         {
             "name": "composer/installers",
@@ -718,16 +718,16 @@
         },
         {
             "name": "htmlburger/wpemerge-cli",
-            "version": "0.10.0",
+            "version": "0.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/wpemerge-cli.git",
-                "reference": "4f17d8ab621fd17388af817ed31caf61bcffcbea"
+                "reference": "3ab48ae259b985987994865fe3fcc8bdb7ade1d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/wpemerge-cli/zipball/4f17d8ab621fd17388af817ed31caf61bcffcbea",
-                "reference": "4f17d8ab621fd17388af817ed31caf61bcffcbea",
+                "url": "https://api.github.com/repos/htmlburger/wpemerge-cli/zipball/3ab48ae259b985987994865fe3fcc8bdb7ade1d2",
+                "reference": "3ab48ae259b985987994865fe3fcc8bdb7ade1d2",
                 "shasum": ""
             },
             "require": {
@@ -766,7 +766,7 @@
             ],
             "description": "CLI tool for WP Emerge.",
             "homepage": "https://wpemerge.com/",
-            "time": "2018-09-11T10:02:55+00:00"
+            "time": "2018-09-12T20:02:20+00:00"
         },
         {
             "name": "symfony/console",
