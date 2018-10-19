@@ -134,14 +134,3 @@ function app_action_editor_enqueue_assets() {
 function app_action_add_favicon() {
 	Theme\Assets::addFavicon();
 }
-
-/**
- * Enable upload of svg files.
- *
- * @param  array $mimes Array of accepted file mimes.
- * @return array
- */
-function app_filter_add_svg_support( $mimes ) {
-	$mimes['svg'] = 'image/svg+xml';
-	return $mimes;
-}

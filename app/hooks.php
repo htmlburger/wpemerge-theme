@@ -23,8 +23,6 @@ add_action( 'wp_head', 'app_action_add_favicon', 5 );
 add_action( 'login_head', 'app_action_add_favicon', 5 );
 add_action( 'admin_head', 'app_action_add_favicon', 5 );
 
-add_filter( 'upload_mimes', 'app_filter_add_svg_support' );
-
 add_filter( 'upload_dir', 'app_filter_fix_upload_dir_url_schema' );
 
 /**
