@@ -2,9 +2,12 @@
 # @link https://github.com/WordPress/twentyseventeen/blob/master/.travis.yml
 dist: trusty
 
+sudo: false
+
 language: php
 
-sudo: false
+node_js:
+  - 8
 
 php:
   - 5.5
@@ -24,7 +27,12 @@ matrix:
     env: WP_VERSION=4.7 WP_MULTISITE=1
 
 before_install:
+  # Update composer.
   - composer self-update
+  # Output the Node version.
+  - node -v
+  # Output the NPM version.
+  - npm -v
 
 before_script:
   # Set up WordPress installation.
@@ -50,10 +58,12 @@ before_script:
   - cd $theme_dir
   # Setup test environment.
   - composer install-test-env
-  # Install node packages.
-  - npm install
   # Install Yarn.
   - npm install -g yarn
+  # Output the Yarn version.
+  - yarn -v
+  # Install node packages.
+  - yarn install
 
 script:
   # Run build.
