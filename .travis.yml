@@ -50,6 +50,8 @@ before_script:
   - composer install-test-env
   # Install Yarn.
   - npm install -g yarn
+  # Install node packages.
+  - yarn install
 
 script:
   # Run lints.
