@@ -54,7 +54,7 @@ before_script:
   - yarn install
 
 script:
-  # Run lints.
-  - yarn lint
   # Run build.
-  - yarn build
+  - sudo yarn build
+  # Run lints.
+  - sudo yarn lint
