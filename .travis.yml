@@ -2,7 +2,7 @@
 # @link https://github.com/WordPress/twentyseventeen/blob/master/.travis.yml
 language: php
 
-sudo: false
+sudo: true
 
 php:
   - 5.5
@@ -55,6 +55,6 @@ before_script:
 
 script:
   # Run build.
-  - sudo yarn build
+  - yarn build
   # Run lints.
-  - sudo yarn lint
+  - yarn lint
