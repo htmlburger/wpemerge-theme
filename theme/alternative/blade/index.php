@@ -1,5 +1,8 @@
 <?php
 /**
  * This file is intentionally blank as its existence is required by WordPress.
- * If it exists, index.blade.php will be loaded instead.
+ * Note that index.blade.php will be loaded instead of this file, if it exists.
+ *
+ * @package WPEmergeTheme
+ * phpcs:disable
  */
