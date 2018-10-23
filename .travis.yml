@@ -1,8 +1,10 @@
 # Modified version of the TwentySeventeen theme .travis.yml file.
 # @link https://github.com/WordPress/twentyseventeen/blob/master/.travis.yml
+dist: trusty
+
 language: php
 
-sudo: true
+sudo: false
 
 php:
   - 5.5
@@ -55,6 +57,6 @@ before_script:
 
 script:
   # Run build.
-  - sudo yarn build
+  - yarn build
   # Run lints.
   - yarn lint
