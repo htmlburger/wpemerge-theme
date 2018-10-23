@@ -50,10 +50,10 @@ before_script:
   - cd $theme_dir
   # Setup test environment.
   - composer install-test-env
+  # Install node packages.
+  - npm install
   # Install Yarn.
   - npm install -g yarn
-  # Install node packages.
-  - yarn install
 
 script:
   # Run build.
