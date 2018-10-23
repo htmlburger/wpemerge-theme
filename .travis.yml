@@ -11,7 +11,8 @@ php:
   - 7.1
 
 env:
-  - WP_VERSION=latest WP_MULTISITE=0
+  - WP_VERSION=master WP_MULTISITE=0
+  - WP_VERSION=4.9 WP_MULTISITE=0
   - WP_VERSION=4.8 WP_MULTISITE=0
   - WP_VERSION=4.7 WP_MULTISITE=0
 
@@ -47,9 +48,11 @@ before_script:
   - cd $theme_dir
   # Setup test environment.
   - composer install-test-env
+  # Install Yarn.
+  - npm install -g yarn
 
 script:
   # Run lints.
-  - npm run lint
+  - yarn lint
   # Run build.
-  - npm run build
+  - yarn build
