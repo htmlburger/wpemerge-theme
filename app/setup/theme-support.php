@@ -51,6 +51,13 @@ add_theme_support( 'html5', [ 'search-form', 'comment-form', 'comment-list', 'ga
 // add_theme_support( 'post-formats', [ 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ] );
 
 /**
+ * Support default editor block styles.
+ *
+ * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
+ */
+add_theme_support( 'wp-block-styles' );
+
+/**
  * Support wide alignment for editor blocks.
  *
  * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
