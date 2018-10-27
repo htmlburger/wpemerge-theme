@@ -39,7 +39,8 @@
 			'first_html'        => '<a href="{URL}" class="paging__first"></a>',
 			'last_html'         => '<a href="{URL}" class="paging__last"></a>',
 			'limiter_html'      => '<li class="paging__spacer">...</li>',
-			'current_page_html' => '<span class="paging__label">Page {CURRENT_PAGE} of {TOTAL_PAGES}</span>',
+			// translators: %1$s = current page number; %2$s = total number of pages.
+			'current_page_html' => '<span class="paging__label">' . esc_html( sprintf( __( 'Page %1$s of %2$s', 'app' ), '{CURRENT_PAGE}', '{TOTAL_PAGES}' ) ) . '</span>',
 		]
 	);
 	@endphp
