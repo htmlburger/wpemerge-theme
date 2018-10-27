@@ -22,13 +22,13 @@
   "require": {
     "php": ">=5.5",
     "composer/installers": "^1.4",
-    "htmlburger/wpemerge": "~0.10.1",
-    "htmlburger/wpemerge-theme-core": "~0.10.1",
+    "htmlburger/wpemerge": "~0.11.0",
+    "htmlburger/wpemerge-theme-core": "~0.10.2",
     "htmlburger/carbon-pagination": "^1.1.6"
   },
   "require-dev": {
     "filp/whoops": "^2.2",
-    "htmlburger/wpemerge-cli": "~0.10.1",
+    "htmlburger/wpemerge-cli": "~0.11.0",
     "symfony/debug": "~3.0"
   },
   "autoload": {
