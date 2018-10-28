@@ -12,13 +12,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @since 1.0
- * @version 1.0
+ * @package WPEmergeTheme
  */
 
-if ( is_single() ) {
-	Theme::partial( 'loop', 'single' );
-} else {
-	Theme::partial( 'loop' );
-}
+Theme::partial( 'loop' );

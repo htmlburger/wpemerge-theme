@@ -2,13 +2,7 @@
 /**
  * App Layout: layouts/app.php
  *
- * The main template file.
- *
- * This is the template that is used for displaying:
- * - posts
- * - single posts
- * - archive pages
- * - search results pages
+ * This is the template that is used for displaying all posts by default.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -19,5 +13,5 @@
 @extends('layouts.app')
 
 @section('content')
-	@include('partials.loop')
+	@include('partials.loop-single')
 @endsection
