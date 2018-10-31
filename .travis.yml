@@ -11,6 +11,7 @@ php:
   - 5.6
   - 7.0
   - 7.1
+  - 7.2
 
 env:
   - WP_VERSION=master WP_MULTISITE=0
@@ -20,9 +21,12 @@ env:
 
 matrix:
   fast_finish: true
+
   include:
-  - php: 5.5
-    env: WP_VERSION=4.7 WP_MULTISITE=1
+    - php: 5.5
+      env: WP_VERSION=4.7 WP_MULTISITE=0 LINT=1
+    - php: 5.5
+      env: WP_VERSION=4.7 WP_MULTISITE=1
 
 before_install:
   # Update composer.
@@ -59,14 +63,17 @@ before_script:
   # Setup test environment.
   - composer install-test-env
   # Install Yarn.
-  - npm install -g yarn
+  - if [[ "$LINT" == "1" ]]; then npm install -g yarn; fi
   # Output the Yarn version.
-  - yarn -v
+  - if [[ "$LINT" == "1" ]]; then yarn -v; fi
   # Install node packages.
-  - yarn install
+  - if [[ "$LINT" == "1" ]]; then yarn install; fi
 
 script:
+  # Check all PHP files for syntax errors.
+  # The usage of bash + || exit 1 is to ensure xargs does not exit on first error.
+  - find app/ theme/ \( -name '*.php' \) | xargs -n1 bash -c 'php -lf $0 || exit 1'
   # Run build.
-  - yarn build
+  - if [[ "$LINT" == "1" ]]; then yarn build; fi
   # Run lints.
-  - yarn lint
+  - if [[ "$LINT" == "1" ]]; then yarn lint; fi
