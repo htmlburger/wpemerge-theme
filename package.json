@@ -3,9 +3,9 @@
     "node": ">=6.9.1"
   },
   "scripts": {
-    "start": "webpack --colors",
-    "dev": "cross-env NODE_ENV=development npm run start --color=always -- --config resources/build/webpack.development.js",
-    "build": "cross-env NODE_ENV=production npm run start --color=always -- --config resources/build/webpack.production.js",
+    "internal:pipeline": "webpack --colors",
+    "dev": "cross-env NODE_ENV=development npm run internal:pipeline --color=always -- --config resources/build/webpack.development.js",
+    "build": "cross-env NODE_ENV=production npm run internal:pipeline --color=always -- --config resources/build/webpack.production.js",
     "lint": "run-s -cl lint:wpcs lint:scripts lint:styles",
     "lint-fix": "run-s -cl lint-fix:wpcs lint-fix:scripts lint-fix:styles",
     "lint:wpcs": "./wpcs/vendor/bin/phpcs --colors --standard=WordPress --ignore=app/src/* app/ theme/",
