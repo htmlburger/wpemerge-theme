@@ -41,17 +41,15 @@ if ( post_password_required() ) {
 		carbon_pagination(
 			'comments',
 			[
-				// modify the text of the previous page link.
-				'prev_html' => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Older Comments', 'app' ) . '</a>',
-
-				// modify the text of the next page link.
-				'next_html' => '<a href="{URL}" class="paging__next">' . esc_html__( 'Newer Comments »', 'app' ) . '</a>',
+				'enable_numbers' => true,
+				'prev_html'      => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Previous Comments', 'app' ) . '</a>',
+				'next_html'      => '<a href="{URL}" class="paging__next">' . esc_html__( 'Next Comments »', 'app' ) . '</a>',
 			]
 		);
 		?>
 	<?php else : ?>
 		<?php if ( ! comments_open() ) : ?>
-			<p class="nocomments"><?php esc_html_e( 'Comments are closed.', 'app' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'app' ); ?></p>
 		<?php endif; ?>
 	<?php endif; ?>
 

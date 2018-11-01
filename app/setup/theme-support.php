@@ -221,3 +221,8 @@ add_theme_support(
 		],
 	]
 );
+
+/**
+ * Support WooCommerce.
+ */
+add_theme_support( 'woocommerce' );

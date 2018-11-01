@@ -10,7 +10,7 @@
 app_render( 'header' );
 
 if ( ! is_singular() ) {
-	app_the_title( '<h2 class="pagetitle">', '</h2>' );
+	app_the_title( '<h1 class="post-title">', '</h1>' );
 }
 
 app_layout_content();

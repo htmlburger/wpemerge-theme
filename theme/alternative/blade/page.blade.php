@@ -15,10 +15,10 @@
 @section('content')
 	@while (have_posts())
 		@php the_post() @endphp
-		<div @php post_class( 'page' ) @endphp>
-			@php app_the_title( '<h2 class="page__title pagetitle">', '</h2>' ) @endphp
+		<div @php post_class() @endphp>
+			@php app_the_title( '<h1 class="post-title">', '</h1>' ) @endphp
 
-			<div class="page__entry">
+			<div class="page__content">
 				@php
 				the_content();
 
@@ -26,7 +26,7 @@
 
 				edit_post_link( __( 'Edit this entry.', 'app' ), '<p>', '</p>' );
 				@endphp
-			</div><!-- /.page__entry -->
-		</div><!-- /.page -->
+			</div>
+		</div>
 	@endwhile
 @endsection

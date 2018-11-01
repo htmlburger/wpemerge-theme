@@ -7,18 +7,18 @@
 
 ?>
 <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-	<div id="comment-<?php comment_ID(); ?>" class="comment-entry">
-		<div class="comment-author vcard">
+	<div id="comment-<?php comment_ID(); ?>" class="comment">
+		<div class="comment__author vcard">
 			<?php echo get_avatar( $comment, 48 ); ?>
 			<?php comment_author_link(); ?>
-			<span class="says"><?php esc_html_e( 'says:', 'app' ); ?></span>
+			<span class="comment__says"><?php esc_html_e( 'says:', 'app' ); ?></span>
 		</div>
 
 		<?php if ( '0' === $comment->comment_approved ) : ?>
-			<em class="moderation-notice"><?php esc_html_e( 'Your comment is awaiting moderation.', 'app' ); ?></em><br />
+			<em class="comment__moderation-notice"><?php esc_html_e( 'Your comment is awaiting moderation.', 'app' ); ?></em><br />
 		<?php endif; ?>
 
-		<div class="comment-meta">
+		<div class="comment__meta">
 			<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 				<?php
 				/* translators: comment date and time */
@@ -29,11 +29,11 @@
 			<?php edit_comment_link( esc_html__( '(Edit)', 'app' ), '  ', '' ); ?>
 		</div>
 
-		<div class="comment-text">
+		<div class="comment__text">
 			<?php comment_text(); ?>
 		</div>
 
-		<div class="comment-reply">
+		<div class="comment__reply">
 			<?php
 			comment_reply_link(
 				array_merge(

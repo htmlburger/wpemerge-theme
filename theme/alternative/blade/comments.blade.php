@@ -39,17 +39,15 @@
 			carbon_pagination(
 				'comments',
 				[
-					// modify the text of the previous page link.
-					'prev_html' => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Older Comments', 'app' ) . '</a>',
-
-					// modify the text of the next page link.
-					'next_html' => '<a href="{URL}" class="paging__next">' . esc_html__( 'Newer Comments »', 'app' ) . '</a>',
+					'enable_numbers' => true,
+					'prev_html'      => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Previous Comments', 'app' ) . '</a>',
+					'next_html'      => '<a href="{URL}" class="paging__next">' . esc_html__( 'Next Comments »', 'app' ) . '</a>',
 				]
 			);
 			@endphp
 		@else
 			@if (!comments_open())
-				<p class="nocomments">{{ __( 'Comments are closed.', 'app' ) }}</p>
+				<p class="no-comments">{{ __( 'Comments are closed.', 'app' ) }}</p>
 			@endif
 		@endif
 

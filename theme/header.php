@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme footer partial.
+ * Theme header partial.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *

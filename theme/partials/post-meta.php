@@ -14,7 +14,7 @@ if ( get_post_type() !== 'post' ) {
 }
 ?>
 
-<div class="article-meta">
+<div class="article__meta">
 	<p>
 		<?php
 		the_time( 'F jS, Y ' );
@@ -35,4 +35,4 @@ if ( get_post_type() !== 'post' ) {
 	</p>
 
 	<?php the_tags( '<p>' . __( 'Tags:', 'app' ) . ' ', ', ', '</p>' ); ?>
-</div><!-- /.article-meta -->
+</div>

@@ -11,7 +11,7 @@
 
 ?>
 @if (get_post_type() === 'post')
-	<div class="article-meta">
+	<div class="article__meta">
 		<p>
 			{{ get_the_time( 'F jS, Y ' ) }}
 			{{-- translators: post author attribution --}}
@@ -28,5 +28,5 @@
 		</p>
 
 		@php the_tags( '<p>' . __( 'Tags:', 'app' ) . ' ', ', ', '</p>' ) @endphp
-	</div><!-- /.article-meta -->
+	</div>
 @endif
