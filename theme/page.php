@@ -13,7 +13,7 @@
 <?php while ( have_posts() ) : ?>
 	<?php the_post(); ?>
 	<div <?php post_class(); ?>>
-		<?php app_the_title( '<h1 class="post-title">', '</h1>' ); ?>
+		<?php app_the_title( '<h2 class="post-title">', '</h2>' ); ?>
 
 		<div class="page__content">
 			<?php

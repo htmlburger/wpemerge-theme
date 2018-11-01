@@ -16,7 +16,7 @@
 	@while (have_posts())
 		@php the_post() @endphp
 		<div @php post_class() @endphp>
-			@php app_the_title( '<h1 class="post-title">', '</h1>' ) @endphp
+			@php app_the_title( '<h2 class="post-title">', '</h2>' ) @endphp
 
 			<div class="page__content">
 				@php

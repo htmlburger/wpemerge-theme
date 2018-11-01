@@ -20,3 +20,4 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+		<h1><?php bloginfo( 'name' ); ?></h1>

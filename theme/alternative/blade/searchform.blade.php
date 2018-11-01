@@ -9,7 +9,7 @@
 
 ?>
 <form action="{{ esc_url( home_url( '/' ) ) }}" class="search-form" method="get" role="search">
-	<label>
+	<label for="s">
 		<span class="screen-reader-text">{{ __( 'Search for:', 'app' ) }}</span>
 
 		<input type="text" title="{{ __( 'Search for:', 'app' ) }}" name="s" value="" id="s" placeholder="{{ __( 'Search &hellip;', 'app' ) }}" class="search-form__field" />
