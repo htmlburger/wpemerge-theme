@@ -157,11 +157,11 @@ module.exports = {
                 minimize: true,
               },
             },
-            'sass-loader',
             {
               loader: 'postcss-loader',
               options: postcss,
             },
+            'sass-loader',
           ],
         }),
       },

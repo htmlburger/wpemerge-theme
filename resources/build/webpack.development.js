@@ -124,11 +124,11 @@ module.exports = {
                 minimize: false,
               },
             },
-            'sass-loader',
             {
               loader: 'postcss-loader',
               options: postcss,
             },
+            'sass-loader',
           ],
         }),
       },
