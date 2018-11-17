@@ -167,11 +167,11 @@ module.exports = {
       },
       {
         test: /images[\\/].*\.(ico|jpg|jpeg|png|svg|gif)$/,
-        use: 'file-loader?name=../images/[name].[ext]',
+        use: 'file-loader?name=../images/[name].[sha1:hash:hex:10].[ext]',
       },
       {
         test: /fonts[\\/].*\.(eot|svg|ttf|woff|woff2)$/,
-        use: 'file-loader?name=../fonts/[name].[ext]',
+        use: 'file-loader?name=../fonts/[name].[sha1:hash:hex:10].[ext]',
       },
     ],
   },
