@@ -192,31 +192,31 @@ add_theme_support(
 		[
 			'name'      => __( 'extra small', 'app' ),
 			'shortName' => __( 'XS', 'app' ),
-			'size'      => Theme\Config::get( 'variables.font-size.xs', 12 ),
+			'size'      => (int) Theme\Config::get( 'variables.font-size.xs', 12 ),
 			'slug'      => 'extra-small',
 		],
 		[
 			'name'      => __( 'small', 'app' ),
 			'shortName' => __( 'S', 'app' ),
-			'size'      => Theme\Config::get( 'variables.font-size.s', 16 ),
+			'size'      => (int) Theme\Config::get( 'variables.font-size.s', 16 ),
 			'slug'      => 'small',
 		],
 		[
 			'name'      => __( 'regular', 'app' ),
 			'shortName' => __( 'M', 'app' ),
-			'size'      => Theme\Config::get( 'variables.font-size.m', 20 ),
+			'size'      => (int) Theme\Config::get( 'variables.font-size.m', 20 ),
 			'slug'      => 'regular',
 		],
 		[
 			'name'      => __( 'large', 'app' ),
 			'shortName' => __( 'L', 'app' ),
-			'size'      => Theme\Config::get( 'variables.font-size.l', 28 ),
+			'size'      => (int) Theme\Config::get( 'variables.font-size.l', 28 ),
 			'slug'      => 'large',
 		],
 		[
 			'name'      => __( 'extra large', 'app' ),
 			'shortName' => __( 'XL', 'app' ),
-			'size'      => Theme\Config::get( 'variables.font-size.xl', 36 ),
+			'size'      => (int) Theme\Config::get( 'variables.font-size.xl', 36 ),
 			'slug'      => 'extra-large',
 		],
 	]
