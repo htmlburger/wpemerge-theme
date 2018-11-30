@@ -4,6 +4,7 @@
 const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 /**
  * The internal dependencies.
@@ -67,6 +68,7 @@ const plugins = [
   extractSass,
   spriteSmith,
   browsersync,
+  new ManifestPlugin(),
 ];
 
 /**

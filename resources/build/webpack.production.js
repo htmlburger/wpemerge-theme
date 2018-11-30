@@ -6,6 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 /**
  * The internal dependencies.
@@ -100,6 +101,7 @@ const plugins = [
       }),
     ],
   }),
+  new ManifestPlugin(),
 ];
 
 /**
