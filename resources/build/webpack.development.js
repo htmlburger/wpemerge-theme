@@ -46,7 +46,7 @@ const babelLoader = {
  * Setup extract text plugin.
  */
 const extractSass = new ExtractTextPlugin({
-  filename: '../styles/[name].css',
+  filename: 'styles/[name].css',
 });
 
 /**
@@ -81,9 +81,7 @@ module.exports = {
   /**
    * The output.
    */
-  output: {
-    path: utils.distPath('scripts'),
-  },
+  output: require('./webpack/output'),
 
   /**
    * Resolve utilities.
@@ -100,23 +98,39 @@ module.exports = {
    */
   module: {
     rules: [
+      /**
+       * Add support for blogs in import statements.
+       */
       {
         enforce: 'pre',
         test: /\.(js|jsx|css|scss)$/,
         use: 'import-glob',
       },
+
+      /**
+       * Handle the theme config.json.
+       */
       {
         test: utils.themeRootPath('config.json'),
         use: configLoader,
       },
+
+      /**
+       * Handle scripts.
+       */
       {
-        test: /\.(js|jsx)$/,
+        test: utils.tests.scripts,
         exclude: /node_modules/,
         use: babelLoader,
       },
+
+      /**
+       * Handle styles.
+       */
       {
-        test: /\.(css|scss)$/,
+        test: utils.tests.styles,
         use: extractSass.extract({
+          publicPath: '../',
           use: [
             {
               loader: 'css-loader',
@@ -132,13 +146,35 @@ module.exports = {
           ],
         }),
       },
+
+      /**
+       * Handle images.
+       */
       {
-        test: /images[\\/].*\.(ico|jpg|jpeg|png|svg|gif)$/,
-        use: 'file-loader?name=../images/[name].[sha1:hash:hex:10].[ext]',
+        test: utils.tests.images,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: file => `images/[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+            },
+          },
+        ],
       },
+
+      /**
+       * Handle fonts.
+       */
       {
-        test: /fonts[\\/].*\.(eot|svg|ttf|woff|woff2)$/,
-        use: 'file-loader?name=../fonts/[name].[sha1:hash:hex:10].[ext]',
+        test: utils.tests.fonts,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: file => `fonts/[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+            },
+          },
+        ],
       },
     ],
   },

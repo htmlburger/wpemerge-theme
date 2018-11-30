@@ -3,6 +3,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 /**
  * User config cache.
@@ -48,6 +49,13 @@ module.exports.distImagesPath = destPath =>
 module.exports.distFontsPath = destPath =>
   exports.distPath('fonts', destPath);
 
+module.exports.tests = {
+  scripts: /\.(js|jsx)$/,
+  styles: /\.(css|scss)$/,
+  images: /images[\\/].*\.(ico|jpg|jpeg|png|svg|gif)$/,
+  fonts: /fonts[\\/].*\.(eot|svg|ttf|woff|woff2)$/,
+};
+
 module.exports.detectEnv = () => {
   const env = process.env.NODE_ENV || 'development';
   const isDev = env === 'development';
@@ -80,4 +88,10 @@ module.exports.getUserConfig = () => {
   }
 
   return userConfig;
+};
+
+module.exports.filehash = (file) => {
+  const hash = crypto.createHash('sha1');
+  hash.update(fs.readFileSync(file));
+  return hash.digest('hex');
 };
