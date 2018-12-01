@@ -23,7 +23,7 @@
     "php": ">=5.5",
     "composer/installers": "^1.4",
     "htmlburger/wpemerge": "~0.11.0",
-    "htmlburger/wpemerge-theme-core": "~0.10.2",
+    "htmlburger/wpemerge-theme-core": "~0.12.0",
     "htmlburger/carbon-pagination": "^1.1.6"
   },
   "require-dev": {
