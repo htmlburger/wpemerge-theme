@@ -41,7 +41,7 @@ Brought to you by [Atanas Angelov](https://github.com/atanas-angelov-dev) and th
 | JavaScript                     | ES6              | ES6            | N/A³     |
 | Front end, Admin, Editor and Login Bundles | ✔                | ✖              | N/A³     |
 | Automatic Sprite Generation    | ✔                | ✖              | N/A³     |
-| Cache Breaker                  | ✔                | ✖              | ✖        |
+| Automatic Cache Busting        | ✔                | ✖              | ✖        |
 | WPCS Linting                   | ✔                | ✖              | ✖        |
 | [Advanced Error Reporting](https://docs.wpemerge.com/#/framework/routing/error-handling) | ✔ | ✖ | ✖ |
 | WP Unit Tests for your classes | ✔                | ✖              | ✖        |
@@ -71,7 +71,7 @@ _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.
 - [Webpack](https://webpack.js.org/) to transpile and bundle assets, create sprites, optimize images etc.
 - [Browsersync](https://www.browsersync.io/) for synchronized browser development.
 - Autoloading for all classes in your `App\` namespace.
-- Automatic, fool-proof style and script cache breaker.
+- Automatic, fool-proof cache busting for all assets, including ones referenced in styles.
 - WPCS, JavaScript and SASS linting using single yarn commands.
 - Single-command optional CSS package installation:
     - Normalize.css
