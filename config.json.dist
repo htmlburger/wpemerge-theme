@@ -30,6 +30,7 @@
     }
   },
   "development": {
-    "url": "http://localhost/"
+    "url": "http://localhost/",
+    "port": 3000
   }
 }
