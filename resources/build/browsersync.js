@@ -16,7 +16,7 @@ const userConfig = utils.getUserConfig();
 const config = {
   host: typeof userConfig.development.url !== 'undefined' ? url.parse(userConfig.development.url).hostname : 'localhost',
   proxy: typeof userConfig.development.url !== 'undefined' ? userConfig.development.url : 'localhost',
-  port: 3000,
+  port: typeof userConfig.development.port !== 'undefined' ? userConfig.development.port : 3000,
   open: 'external',
   files: [
     utils.themeRootPath('./theme/**/*.php'),
