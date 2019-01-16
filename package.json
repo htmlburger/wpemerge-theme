@@ -8,15 +8,15 @@
     "build": "cross-env NODE_ENV=production npm run internal:pipeline --color=always -- --config resources/build/webpack.production.js",
     "lint": "run-s -cl lint:wpcs lint:scripts lint:styles",
     "lint-fix": "run-s -cl lint-fix:wpcs lint-fix:scripts lint-fix:styles",
-    "lint:wpcs": "./wpcs/vendor/bin/phpcs --colors --standard=WordPress --ignore=app/src/* app/ theme/",
+    "lint:wpcs": "./vendor/bin/phpcs --colors --standard=WordPress --ignore=app/src/* app/ theme/",
     "lint:scripts": "eslint --color ./resources/scripts/**",
     "lint:styles": "stylelint --color ./resources/styles/**",
-    "lint-fix:wpcs": "./wpcs/vendor/bin/phpcbf --colors --standard=WordPress --ignore=app/src/* app/ theme/",
+    "lint-fix:wpcs": "./vendor/bin/phpcbf --colors --standard=WordPress --ignore=app/src/* app/ theme/",
     "lint-fix:scripts": "eslint --color --fix ./resources/scripts/**",
     "lint-fix:styles": "stylelint --color --fix ./resources/styles/**",
     "i18n": "run-s -cl i18n:textdomain i18n:pot",
-    "i18n:textdomain": "wpi18n addtextdomain --exclude=dist,docs,node_modules,resources,vendor,wpcs --textdomain=app",
-    "i18n:pot": "wpi18n makepot --exclude=dist,docs,node_modules,resources,vendor,wpcs --main-file=theme/style.css --domain-path=languages/ --pot-file=app.pot --type=wp-theme --textdomain=app"
+    "i18n:textdomain": "wpi18n addtextdomain --exclude=dist,docs,node_modules,resources,vendor --textdomain=app",
+    "i18n:pot": "wpi18n makepot --exclude=dist,docs,node_modules,resources,vendor --main-file=theme/style.css --domain-path=languages/ --pot-file=app.pot --type=wp-theme --textdomain=app"
   },
   "dependencies": {
     "airbnb-browser-shims": "^2.1.0",

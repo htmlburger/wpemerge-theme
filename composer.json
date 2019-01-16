@@ -29,7 +29,9 @@
   "require-dev": {
     "filp/whoops": "^2.2",
     "htmlburger/wpemerge-cli": "~0.11.0",
-    "symfony/debug": "~3.0"
+    "symfony/debug": "~3.0",
+    "wp-coding-standards/wpcs": "^2.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0"
   },
   "autoload": {
     "psr-4": {
@@ -37,14 +39,11 @@
     }
   },
   "scripts": {
-    "install-wpcs": "composer create-project wp-coding-standards/wpcs --no-dev",
     "install-test-env":[
-      "WPEmerge\\Cli\\App::createConfigJson",
-      "@install-wpcs"
+      "WPEmerge\\Cli\\App::createConfigJson"
     ],
     "post-create-project-cmd": [
       "WPEmerge\\Cli\\App::createConfigJson",
-      "@install-wpcs",
       "WPEmerge\\Cli\\App::install"
     ]
   }
