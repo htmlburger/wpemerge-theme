@@ -3,161 +3,14 @@
  *
  * @see resources/styles/shared/_variables.scss
  */
-.has-material-red-color {
-  color: $color-material-red;
-}
+@each $name, $value in $color {
+  .has-#{$name}-color {
+    color: $value;
+  }
 
-.has-material-pink-color {
-  color: $color-material-pink;
-}
-
-.has-material-purple-color {
-  color: $color-material-purple;
-}
-
-.has-material-deep-purple-color {
-  color: $color-material-deep-purple;
-}
-
-.has-material-indigo-color {
-  color: $color-material-indigo;
-}
-
-.has-material-blue-color {
-  color: $color-material-blue;
-}
-
-.has-material-light-blue-color {
-  color: $color-material-light-blue;
-}
-
-.has-material-cyan-color {
-  color: $color-material-cyan;
-}
-
-.has-material-teal-color {
-  color: $color-material-teal;
-}
-
-.has-material-green-color {
-  color: $color-material-green;
-}
-
-.has-material-light-green-color {
-  color: $color-material-light-green;
-}
-
-.has-material-lime-color {
-  color: $color-material-lime;
-}
-
-.has-material-yellow-color {
-  color: $color-material-yellow;
-}
-
-.has-material-amber-color {
-  color: $color-material-amber;
-}
-
-.has-material-orange-color {
-  color: $color-material-orange;
-}
-
-.has-material-deep-orange-color {
-  color: $color-material-deep-orange;
-}
-
-.has-material-brown-color {
-  color: $color-material-brown;
-}
-
-.has-material-grey-color {
-  color: $color-material-grey;
-}
-
-.has-material-blue-grey-color {
-  color: $color-material-blue-grey;
-}
-
-/**
- * Background color palette.
- *
- * @see resources/styles/shared/_variables.scss
- */
-.has-material-red-background-color {
-  background-color: $color-material-red;
-}
-
-.has-material-pink-background-color {
-  background-color: $color-material-pink;
-}
-
-.has-material-purple-background-color {
-  background-color: $color-material-purple;
-}
-
-.has-material-deep-purple-background-color {
-  background-color: $color-material-deep-purple;
-}
-
-.has-material-indigo-background-color {
-  background-color: $color-material-indigo;
-}
-
-.has-material-blue-background-color {
-  background-color: $color-material-blue;
-}
-
-.has-material-light-blue-background-color {
-  background-color: $color-material-light-blue;
-}
-
-.has-material-cyan-background-color {
-  background-color: $color-material-cyan;
-}
-
-.has-material-teal-background-color {
-  background-color: $color-material-teal;
-}
-
-.has-material-green-background-color {
-  background-color: $color-material-green;
-}
-
-.has-material-light-green-background-color {
-  background-color: $color-material-light-green;
-}
-
-.has-material-lime-background-color {
-  background-color: $color-material-lime;
-}
-
-.has-material-yellow-background-color {
-  background-color: $color-material-yellow;
-}
-
-.has-material-amber-background-color {
-  background-color: $color-material-amber;
-}
-
-.has-material-orange-background-color {
-  background-color: $color-material-orange;
-}
-
-.has-material-deep-orange-background-color {
-  background-color: $color-material-deep-orange;
-}
-
-.has-material-brown-background-color {
-  background-color: $color-material-brown;
-}
-
-.has-material-grey-background-color {
-  background-color: $color-material-grey;
-}
-
-.has-material-blue-grey-background-color {
-  background-color: $color-material-blue-grey;
+  .has-#{$name}-background-color {
+    background-color: $value;
+  }
 }
 
 /**
@@ -165,22 +18,8 @@
  *
  * @see resources/styles/shared/_variables.scss
  */
-.has-extra-small-font-size {
-  font-size: $font-size-xs;
-}
-
-.has-small-font-size {
-  font-size: $font-size-s;
-}
-
-.has-regular-font-size {
-  font-size: $font-size-m;
-}
-
-.has-large-font-size {
-  font-size: $font-size-l;
-}
-
-.has-extra-large-font-size {
-  font-size: $font-size-xl;
+@each $name, $value in $font-size {
+  .has-#{$name}-font-size {
+    font-size: $value;
+  }
 }

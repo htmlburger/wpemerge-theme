@@ -5,6 +5,55 @@ const fs = require('fs');
 const loaderUtils = require('loader-utils');
 
 /**
+ * Get maps SASS from variables.
+ *
+ * @param {object} variables
+ * @param {number} level
+ * @returns {string}
+ */
+const getMapsSass = (variables, level = 0) => {
+  const sass = [];
+  const maps = Object.keys(variables);
+
+  for (let i = 0; i < maps.length; i++) {
+    let map = maps[i];
+    let values = variables[map];
+    let indentation = '  '.repeat(level);
+    let mapPrefix = level === 0 ? '$' : '';
+    let mapSuffix = level === 0 ? ';' : ',';
+    mapSuffix = level === 0 || i < maps.length - 1 ? mapSuffix : '';
+
+    if (typeof values !== 'object' || values === null) {
+      continue;
+    }
+
+    let names = Object.keys(values);
+
+    sass.push(`${indentation}${mapPrefix}${map}: (`);
+
+    for (let j = 0; j < names.length; j++) {
+      let name = names[j];
+      let value = values[name];
+      let suffix = j < names.length - 1 ? ',' : '';
+
+      if (typeof value === 'object' && value !== null) {
+        sass.push(`${indentation}${getMapsSass(value, level + 1)}${suffix}`);
+      } else if (typeof value === 'string' || typeof value === 'number') {
+        sass.push(`${indentation}  ${name}: ${value}${suffix}`);
+      }
+    }
+
+    sass.push(`${indentation})${mapSuffix}`);
+
+    if (level === 0) {
+      sass.push('');
+    }
+  }
+
+  return sass.join('\n');
+};
+
+/**
  * Flatten variables from config.json, prefixing the variables names with dasherized parent names.
  *
  * @param {object} variables
@@ -25,7 +74,6 @@ const flattenVariables = (variables, prefix) => {
 
     if (typeof value === 'object' && value.constructor === Object) {
       flattenned = Object.assign(flattenned, flattenVariables(value, prefix + name));
-      continue;
     }
   }
 
@@ -33,20 +81,35 @@ const flattenVariables = (variables, prefix) => {
 };
 
 /**
- * Return SCSS output based on config.
+ * Get flat variables SASS from flattened variables.
  *
- * @param {object} config
+ * @param {object} variables
  * @returns {string}
  */
-const getSass = (config) => {
-  const sass = ['/**', '* Config.', '*', '* This is an automatically generated file - DO NOT edit manually.', '*/', ''];
-  const sassVariables = flattenVariables(config.variables);
+const getFlatVariablesSass = (variables) => {
+  const sassVariables = flattenVariables(variables);
+  const sass = [];
 
   for (let name in sassVariables) {
     let value = sassVariables[name];
     sass.push(`$${name}: ${value};`);
   }
 
+  return sass.join('\n');
+};
+
+/**
+ * Return SASS output based on config.
+ *
+ * @param {object} config
+ * @returns {string}
+ */
+const getSass = (config) => {
+  const sass = ['/**', '* Config.', '*', '* This is an automatically generated file - DO NOT edit manually.', '*/', ''];
+  sass.push('// Maps.');
+  sass.push(getMapsSass(config.variables));
+  sass.push('// Variables.');
+  sass.push(getFlatVariablesSass(config.variables));
   return sass.join('\n');
 };
 

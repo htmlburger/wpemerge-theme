@@ -193,31 +193,31 @@ add_theme_support(
 			'name'      => __( 'extra small', 'app' ),
 			'shortName' => __( 'XS', 'app' ),
 			'size'      => (int) Theme\Config::get( 'variables.font-size.xs', 12 ),
-			'slug'      => 'extra-small',
+			'slug'      => 'xs',
 		],
 		[
 			'name'      => __( 'small', 'app' ),
 			'shortName' => __( 'S', 'app' ),
 			'size'      => (int) Theme\Config::get( 'variables.font-size.s', 16 ),
-			'slug'      => 'small',
+			'slug'      => 's',
 		],
 		[
 			'name'      => __( 'regular', 'app' ),
 			'shortName' => __( 'M', 'app' ),
 			'size'      => (int) Theme\Config::get( 'variables.font-size.m', 20 ),
-			'slug'      => 'regular',
+			'slug'      => 'm',
 		],
 		[
 			'name'      => __( 'large', 'app' ),
 			'shortName' => __( 'L', 'app' ),
 			'size'      => (int) Theme\Config::get( 'variables.font-size.l', 28 ),
-			'slug'      => 'large',
+			'slug'      => 'l',
 		],
 		[
 			'name'      => __( 'extra large', 'app' ),
 			'shortName' => __( 'XL', 'app' ),
 			'size'      => (int) Theme\Config::get( 'variables.font-size.xl', 36 ),
-			'slug'      => 'extra-large',
+			'slug'      => 'xl',
 		],
 	]
 );
