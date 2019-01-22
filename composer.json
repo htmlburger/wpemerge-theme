@@ -45,6 +45,8 @@
     ],
     "post-create-project-cmd": [
       "WPEmerge\\Cli\\App::createConfigJson",
+      "WPEmerge\\Cli\\App::installDependencies",
+      "WPEmerge\\Cli\\App::buildAssets",
       "WPEmerge\\Cli\\App::install"
     ]
   }
