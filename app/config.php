@@ -27,7 +27,7 @@ return [
 	 * Use an absolute path or leave blank to disable.
 	 * Applies only to the default PhpViewEngine.
 	 */
-	'views' => '',
+	'views'             => '',
 
 	/**
 	 * Other config goes after this comment.
