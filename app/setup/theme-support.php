@@ -4,6 +4,7 @@
  *
  * @link https://developer.wordpress.org/reference/functions/add_theme_support/
  *
+ * @hook    after_setup_theme
  * @package WPEmergeTheme
  */
 

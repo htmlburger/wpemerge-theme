@@ -4,6 +4,7 @@
  *
  * @link https://developer.wordpress.org/reference/functions/register_sidebar/
  *
+ * @hook    widgets_init
  * @package WPEmergeTheme
  */
 
