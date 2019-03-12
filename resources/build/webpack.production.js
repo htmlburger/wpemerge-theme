@@ -138,7 +138,7 @@ module.exports = {
        */
       {
         enforce: 'pre',
-        test: /\.(js|jsx|css|scss)$/,
+        test: /\.(js|jsx|css|scss|sass)$/,
         use: 'import-glob',
       },
 
