@@ -21,11 +21,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Using our ExampleController to handle the homepage, for example.
 // phpcs:ignore
-// Router::get( '/', 'App\Controllers\ExampleController@home' );
+// Router::get( '/', 'ExampleController@home' );
 
 // If we do not want to hardcode a url, we can use one of the available route conditions instead.
 // phpcs:ignore
-// Router::get( ['post_id', get_option( 'page_on_front' )], 'App\Controllers\ExampleController@home' );
+// Router::get( ['post_id', get_option( 'page_on_front' )], 'ExampleController@home' );
 
 /**
  * Pass all front-end requests through WPEmerge.
@@ -55,4 +55,4 @@ Router::handleAll();
  */
 
 // phpcs:ignore
-// View::addComposer( 'partials/foo', \App\ViewComposers\FooPartialViewComposer::class );
+// View::addComposer( 'partials/foo', 'FooPartialViewComposer' );
