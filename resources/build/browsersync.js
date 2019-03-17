@@ -17,7 +17,7 @@ const config = {
   host: typeof userConfig.development.url !== 'undefined' ? url.parse(userConfig.development.url).hostname : 'localhost',
   proxy: typeof userConfig.development.url !== 'undefined' ? userConfig.development.url : 'localhost',
   port: typeof userConfig.development.port !== 'undefined' ? userConfig.development.port : 3000,
-  open: 'external',
+  open: 'local',
   files: [
     utils.themeRootPath('./theme/**/*.php'),
   ],
