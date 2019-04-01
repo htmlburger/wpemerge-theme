@@ -112,7 +112,8 @@ wp-content/themes/your-theme
 │   ├── config.php            # WP Emerge configuration.
 │   ├── helpers.php           # Require your helper files here.
 │   ├── hooks.php             # Register your actions and filters here.
-│   └── framework.php         # Register your WP Emerge routes, globals etc.
+│   ├── routes.php            # Register your WP Emerge routes.
+│   └── views.php             # Register your WP Emerge view composers etc.
 ├── dist/                     # Bundles, optimized images etc.
 ├── languages/                # Language files.
 ├── resources/

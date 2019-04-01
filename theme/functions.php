@@ -63,9 +63,14 @@ Theme::boot( require APP_APP_DIR . 'config.php' );
 require_once APP_APP_DIR . 'hooks.php';
 
 /**
- * Register framework details.
+ * Register framework routes.
  */
-require_once APP_APP_DIR . 'framework.php';
+require_once APP_APP_DIR . 'routes.php';
+
+/**
+ * Register framework view-related items.
+ */
+require_once APP_APP_DIR . 'views.php';
 
 add_action(
 	'after_setup_theme',
