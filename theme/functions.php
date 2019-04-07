@@ -55,7 +55,7 @@ require_once APP_APP_DIR . 'helpers.php';
 /**
  * Boostrap Theme after all dependencies and helpers are loaded.
  */
-Theme::boot( require APP_APP_DIR . 'config.php' );
+Theme::bootstrap( require APP_APP_DIR . 'config.php' );
 
 /**
  * Register hooks.

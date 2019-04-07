@@ -13,17 +13,15 @@ class RouteConditionsServiceProvider implements ServiceProviderInterface {
 	 * {@inheritDoc}
 	 */
 	public function register( $container ) {
-		/**
-		 * Example route condition registration
-		 */
+		// Example route condition registration.
 		// $this->registerRouteCondition( $container, 'my_condition', MyCondition::class );
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public function boot( $container ) {
-		// nothing to boot
+	public function bootstrap( $container ) {
+		// Nothing to bootstrap.
 	}
 
 	/**
