@@ -8,6 +8,10 @@
  * @package WPEmergeTheme
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Support automatic feed links.
  *

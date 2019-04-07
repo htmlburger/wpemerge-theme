@@ -8,6 +8,10 @@
  * @package WPEmergeTheme
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Array of default options.
  *

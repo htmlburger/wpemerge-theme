@@ -8,5 +8,9 @@
  * @package WPEmergeTheme
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 // phpcs:ignore
 // register_widget( MyWidgetClass::class );

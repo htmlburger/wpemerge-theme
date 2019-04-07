@@ -5,6 +5,10 @@
  * @package WPEmergeTheme
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * ------------------------------------------------------------------------
  * WordPress

@@ -8,6 +8,10 @@
  * @package WPEmergeTheme
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 // Custom hierarchical taxonomy (like categories).
 // phpcs:disable
 /*

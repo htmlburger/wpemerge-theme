@@ -8,6 +8,10 @@
  * @package WPEmergeTheme
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 // phpcs:disable
 /*
 register_post_type( 'app_custom_post_type', array(
