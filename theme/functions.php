@@ -20,6 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 define( 'APP_APP_DIR_NAME', 'app' );
 define( 'APP_APP_HELPERS_DIR_NAME', 'helpers' );
+define( 'APP_APP_ROUTES_DIR_NAME', 'routes' );
 define( 'APP_APP_SETUP_DIR_NAME', 'setup' );
 define( 'APP_DIST_DIR_NAME', 'dist' );
 define( 'APP_RESOURCES_DIR_NAME', 'resources' );
@@ -29,6 +30,7 @@ define( 'APP_VENDOR_DIR_NAME', 'vendor' );
 define( 'APP_DIR', dirname( __DIR__ ) . DIRECTORY_SEPARATOR );
 define( 'APP_APP_DIR', APP_DIR . APP_APP_DIR_NAME . DIRECTORY_SEPARATOR );
 define( 'APP_APP_HELPERS_DIR', APP_APP_DIR . APP_APP_HELPERS_DIR_NAME . DIRECTORY_SEPARATOR );
+define( 'APP_APP_ROUTES_DIR', APP_APP_DIR . APP_APP_ROUTES_DIR_NAME . DIRECTORY_SEPARATOR );
 define( 'APP_APP_SETUP_DIR', APP_APP_DIR . APP_APP_SETUP_DIR_NAME . DIRECTORY_SEPARATOR );
 define( 'APP_DIST_DIR', APP_DIR . APP_DIST_DIR_NAME . DIRECTORY_SEPARATOR );
 define( 'APP_RESOURCES_DIR', APP_DIR . APP_RESOURCES_DIR_NAME . DIRECTORY_SEPARATOR );
@@ -63,12 +65,16 @@ Theme::bootstrap( require APP_APP_DIR . 'config.php' );
 require_once APP_APP_DIR . 'hooks.php';
 
 /**
- * Register framework routes.
+ * Register application routes.
  */
-require_once APP_APP_DIR . 'routes.php';
+WPEmerge::routes(
+	APP_APP_ROUTES_DIR . 'web.php',
+	APP_APP_ROUTES_DIR . 'admin.php',
+	APP_APP_ROUTES_DIR . 'ajax.php'
+);
 
 /**
- * Register framework view-related items.
+ * Register application view-related items.
  */
 require_once APP_APP_DIR . 'views.php';
 

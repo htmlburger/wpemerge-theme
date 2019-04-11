@@ -1,6 +1,6 @@
 <?php
 /**
- * Routes.
+ * Web Routes.
  *
  * @link https://docs.wpemerge.com/#/framework/routing/methods
  *

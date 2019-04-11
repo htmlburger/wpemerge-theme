@@ -97,8 +97,13 @@ _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.
 ```
 wp-content/themes/your-theme
 ├── app/
-│   ├── helpers/              # Helper files, add your own here as well.
-│   ├── setup/                # Register WordPress menus, post types etc.
+│   ├── helpers/               # Helper files, add your own here as well.
+│   ├── routes/                # Register WordPress menus, post types etc.
+│   ├── routes/                # Register your WP Emerge routes.
+│   │   ├── admin.php
+│   │   ├── ajax.php
+│   │   └── web.php
+│   ├── setup/                 # Register WordPress menus, post types etc.
 │   │   ├── menus.php
 │   │   ├── post-types.php
 │   │   ├── sidebars.php
@@ -112,7 +117,6 @@ wp-content/themes/your-theme
 │   ├── config.php            # WP Emerge configuration.
 │   ├── helpers.php           # Require your helper files here.
 │   ├── hooks.php             # Register your actions and filters here.
-│   ├── routes.php            # Register your WP Emerge routes.
 │   └── views.php             # Register your WP Emerge view composers etc.
 ├── dist/                     # Bundles, optimized images etc.
 ├── languages/                # Language files.

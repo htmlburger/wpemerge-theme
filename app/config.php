@@ -16,13 +16,6 @@ return [
 	],
 
 	/**
-	 * Array of global middleware to apply to all requests.
-	 */
-	'global_middleware' => [
-		// phpcs:ignore
-	],
-
-	/**
 	 * Custom directory to search for views.
 	 * Use an absolute path or leave blank to disable.
 	 * Applies only to the default PhpViewEngine.
