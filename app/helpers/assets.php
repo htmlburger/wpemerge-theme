@@ -5,6 +5,9 @@
  * @package WPEmergeTheme
  */
 
+use WPEmergeTheme\Facades\Theme;
+use WPEmergeTheme\Facades\Assets;
+
 /**
  * Enqueue front-end assets.
  *
@@ -23,7 +26,7 @@ function app_action_theme_enqueue_assets() {
 	/**
 	 * Enqueue scripts.
 	 */
-	Theme\Assets::enqueueScript(
+	Assets::enqueueScript(
 		'theme-js-bundle',
 		$template_dir . '/dist/theme.js',
 		[ 'jquery' ],
@@ -33,7 +36,7 @@ function app_action_theme_enqueue_assets() {
 	/**
 	 * Enqueue styles.
 	 */
-	Theme\Assets::enqueueStyle(
+	Assets::enqueueStyle(
 		'theme-css-bundle',
 		$template_dir . '/dist/styles/theme.css'
 	);
@@ -41,7 +44,7 @@ function app_action_theme_enqueue_assets() {
 	/**
 	 * Enqueue theme's style.css file to allow overrides for the bundled styles.
 	 */
-	Theme\Assets::enqueueStyle( 'theme-styles', get_template_directory_uri() . '/style.css' );
+	Assets::enqueueStyle( 'theme-styles', get_template_directory_uri() . '/style.css' );
 }
 
 /**
@@ -55,7 +58,7 @@ function app_action_admin_enqueue_assets() {
 	/**
 	 * Enqueue scripts.
 	 */
-	Theme\Assets::enqueueScript(
+	Assets::enqueueScript(
 		'theme-admin-js-bundle',
 		$template_dir . '/dist/admin.js',
 		[ 'jquery' ],
@@ -65,7 +68,7 @@ function app_action_admin_enqueue_assets() {
 	/**
 	 * Enqueue styles.
 	 */
-	Theme\Assets::enqueueStyle(
+	Assets::enqueueStyle(
 		'theme-admin-css-bundle',
 		$template_dir . '/dist/styles/admin.css'
 	);
@@ -82,7 +85,7 @@ function app_action_login_enqueue_assets() {
 	/**
 	 * Enqueue scripts.
 	 */
-	Theme\Assets::enqueueScript(
+	Assets::enqueueScript(
 		'theme-login-js-bundle',
 		$template_dir . '/dist/login.js',
 		[ 'jquery' ],
@@ -92,7 +95,7 @@ function app_action_login_enqueue_assets() {
 	/**
 	 * Enqueue styles.
 	 */
-	Theme\Assets::enqueueStyle(
+	Assets::enqueueStyle(
 		'theme-login-css-bundle',
 		$template_dir . '/dist/styles/login.css'
 	);
@@ -109,7 +112,7 @@ function app_action_editor_enqueue_assets() {
 	/**
 	 * Enqueue scripts.
 	 */
-	Theme\Assets::enqueueScript(
+	Assets::enqueueScript(
 		'theme-editor-js-bundle',
 		$template_dir . '/dist/editor.js',
 		[ 'jquery' ],
@@ -119,7 +122,7 @@ function app_action_editor_enqueue_assets() {
 	/**
 	 * Enqueue styles.
 	 */
-	Theme\Assets::enqueueStyle(
+	Assets::enqueueStyle(
 		'theme-editor-css-bundle',
 		$template_dir . '/dist/styles/editor.css'
 	);
@@ -132,5 +135,5 @@ function app_action_editor_enqueue_assets() {
  * @return void
  */
 function app_action_add_favicon() {
-	Theme\Assets::addFavicon();
+	Assets::addFavicon();
 }

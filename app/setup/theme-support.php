@@ -8,6 +8,8 @@
  * @package WPEmergeTheme
  */
 
+use WPEmergeTheme\Facades\Config;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -82,103 +84,103 @@ add_theme_support(
 		[
 			'name'  => __( 'Red', 'app' ),
 			'slug'  => 'material-red',
-			'color' => Theme\Config::get( 'variables.color.material-red', '#000000' ),
+			'color' => Config::get( 'variables.color.material-red', '#000000' ),
 		],
 		[
 			'name'  => __( 'Pink', 'app' ),
 			'slug'  => 'material-pink',
-			'color' => Theme\Config::get( 'variables.color.material-pink', '#000000' ),
+			'color' => Config::get( 'variables.color.material-pink', '#000000' ),
 		],
 		[
 			'name'  => __( 'Purple', 'app' ),
 			'slug'  => 'material-purple',
-			'color' => Theme\Config::get( 'variables.color.material-purple', '#000000' ),
+			'color' => Config::get( 'variables.color.material-purple', '#000000' ),
 		],
 		[
 			'name'  => __( 'Deep Purple', 'app' ),
 			'slug'  => 'material-deep-purple',
-			'color' => Theme\Config::get( 'variables.color.material-deep-purple', '#000000' ),
+			'color' => Config::get( 'variables.color.material-deep-purple', '#000000' ),
 		],
 		[
 			'name'  => __( 'Indigo', 'app' ),
 			'slug'  => 'material-indigo',
-			'color' => Theme\Config::get( 'variables.color.material-indigo', '#000000' ),
+			'color' => Config::get( 'variables.color.material-indigo', '#000000' ),
 		],
 		[
 			'name'  => __( 'Blue', 'app' ),
 			'slug'  => 'material-blue',
-			'color' => Theme\Config::get( 'variables.color.material-blue', '#000000' ),
+			'color' => Config::get( 'variables.color.material-blue', '#000000' ),
 		],
 		[
 			'name'  => __( 'Light Blue', 'app' ),
 			'slug'  => 'material-light-blue',
-			'color' => Theme\Config::get( 'variables.color.material-light-blue', '#000000' ),
+			'color' => Config::get( 'variables.color.material-light-blue', '#000000' ),
 		],
 		[
 			'name'  => __( 'Cyan', 'app' ),
 			'slug'  => 'material-cyan	',
-			'color' => Theme\Config::get( 'variables.color.material-cyan	', '#000000' ),
+			'color' => Config::get( 'variables.color.material-cyan	', '#000000' ),
 		],
 		[
 			'name'  => __( 'Teal', 'app' ),
 			'slug'  => 'material-teal',
-			'color' => Theme\Config::get( 'variables.color.material-teal', '#000000' ),
+			'color' => Config::get( 'variables.color.material-teal', '#000000' ),
 		],
 		[
 			'name'  => __( 'Green', 'app' ),
 			'slug'  => 'material-green',
-			'color' => Theme\Config::get( 'variables.color.material-green', '#000000' ),
+			'color' => Config::get( 'variables.color.material-green', '#000000' ),
 		],
 		[
 			'name'  => __( 'Light Green', 'app' ),
 			'slug'  => 'material-light-green',
-			'color' => Theme\Config::get( 'variables.color.material-light-green', '#000000' ),
+			'color' => Config::get( 'variables.color.material-light-green', '#000000' ),
 		],
 		[
 			'name'  => __( 'Lime', 'app' ),
 			'slug'  => 'material-lime',
-			'color' => Theme\Config::get( 'variables.color.material-lime', '#000000' ),
+			'color' => Config::get( 'variables.color.material-lime', '#000000' ),
 		],
 		[
 			'name'  => __( 'Yellow', 'app' ),
 			'slug'  => 'material-yellow',
-			'color' => Theme\Config::get( 'variables.color.material-yellow', '#000000' ),
+			'color' => Config::get( 'variables.color.material-yellow', '#000000' ),
 		],
 		[
 			'name'  => __( 'Amber', 'app' ),
 			'slug'  => 'material-amber',
-			'color' => Theme\Config::get( 'variables.color.material-amber', '#000000' ),
+			'color' => Config::get( 'variables.color.material-amber', '#000000' ),
 		],
 		[
 			'name'  => __( 'Orange', 'app' ),
 			'slug'  => 'material-orange',
-			'color' => Theme\Config::get( 'variables.color.material-orange', '#000000' ),
+			'color' => Config::get( 'variables.color.material-orange', '#000000' ),
 		],
 		[
 			'name'  => __( 'Deep Orange', 'app' ),
 			'slug'  => 'material-deep-orange',
-			'color' => Theme\Config::get( 'variables.color.material-deep-orange', '#000000' ),
+			'color' => Config::get( 'variables.color.material-deep-orange', '#000000' ),
 		],
 		[
 			'name'  => __( 'Brown', 'app' ),
 			'slug'  => 'material-brown',
-			'color' => Theme\Config::get( 'variables.color.material-brown', '#000000' ),
+			'color' => Config::get( 'variables.color.material-brown', '#000000' ),
 		],
 		[
 			'name'  => __( 'Grey', 'app' ),
 			'slug'  => 'material-grey',
-			'color' => Theme\Config::get( 'variables.color.material-grey', '#000000' ),
+			'color' => Config::get( 'variables.color.material-grey', '#000000' ),
 		],
 		[
 			'name'  => __( 'Blue Grey', 'app' ),
 			'slug'  => 'material-blue-grey',
-			'color' => Theme\Config::get( 'variables.color.material-blue-grey', '#000000' ),
+			'color' => Config::get( 'variables.color.material-blue-grey', '#000000' ),
 		],
 	]
 );
 
 /**
- * Support color pallette enforcement.
+ * Support color palette enforcement.
  *
  * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
  */
@@ -197,31 +199,31 @@ add_theme_support(
 		[
 			'name'      => __( 'extra small', 'app' ),
 			'shortName' => __( 'XS', 'app' ),
-			'size'      => (int) Theme\Config::get( 'variables.font-size.xs', 12 ),
+			'size'      => (int) Config::get( 'variables.font-size.xs', 12 ),
 			'slug'      => 'xs',
 		],
 		[
 			'name'      => __( 'small', 'app' ),
 			'shortName' => __( 'S', 'app' ),
-			'size'      => (int) Theme\Config::get( 'variables.font-size.s', 16 ),
+			'size'      => (int) Config::get( 'variables.font-size.s', 16 ),
 			'slug'      => 's',
 		],
 		[
 			'name'      => __( 'regular', 'app' ),
 			'shortName' => __( 'M', 'app' ),
-			'size'      => (int) Theme\Config::get( 'variables.font-size.m', 20 ),
+			'size'      => (int) Config::get( 'variables.font-size.m', 20 ),
 			'slug'      => 'm',
 		],
 		[
 			'name'      => __( 'large', 'app' ),
 			'shortName' => __( 'L', 'app' ),
-			'size'      => (int) Theme\Config::get( 'variables.font-size.l', 28 ),
+			'size'      => (int) Config::get( 'variables.font-size.l', 28 ),
 			'slug'      => 'l',
 		],
 		[
 			'name'      => __( 'extra large', 'app' ),
 			'shortName' => __( 'XL', 'app' ),
-			'size'      => (int) Theme\Config::get( 'variables.font-size.xl', 36 ),
+			'size'      => (int) Config::get( 'variables.font-size.xl', 36 ),
 			'slug'      => 'xl',
 		],
 	]

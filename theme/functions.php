@@ -11,6 +11,9 @@
  * @package WPEmergeTheme
  */
 
+use WPEmerge\Facades\WPEmerge;
+use WPEmergeTheme\Facades\Theme;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -45,9 +48,9 @@ if ( file_exists( APP_VENDOR_DIR . 'autoload.php' ) ) {
 }
 
 /**
- * Enable the global Theme:: shortcut so we don't have to type WPEmergeTheme:: instead.
+ * Enable the global Theme:: shortcut so we don't have to type WPEmergeTheme:: every time.
  */
-WPEmerge::facade( 'Theme', \WPEmergeTheme\Facades\Theme::class );
+WPEmerge::alias( 'Theme', \WPEmergeTheme\Facades\Theme::class );
 
 /**
  * Load helpers.
