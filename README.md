@@ -98,7 +98,6 @@ _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.
 wp-content/themes/your-theme
 ├── app/
 │   ├── helpers/               # Helper files, add your own here as well.
-│   ├── routes/                # Register WordPress menus, post types etc.
 │   ├── routes/                # Register your WP Emerge routes.
 │   │   ├── admin.php
 │   │   ├── ajax.php
