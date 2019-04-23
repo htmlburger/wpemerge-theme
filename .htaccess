@@ -1,5 +1,5 @@
 # Disable access to any theme files outside of dist/.
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteRule !^dist/ - [L,R=404]
+RewriteRule !^(dist/|theme/screenshot.png|theme/style.css) - [L,R=404]
 </IfModule>
