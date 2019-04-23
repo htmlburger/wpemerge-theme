@@ -19,9 +19,9 @@ _This is the WP Emerge Theme project - for the WP Emerge framework please check 
 
 ## Documentation
 
-[https://docs.wpemerge.com/#/starter-theme/overview](https://docs.wpemerge.com/#/starter-theme/overview)
+[http://docs.wpemerge.com/#/starter-theme/overview](http://docs.wpemerge.com/#/starter-theme/overview)
 
-[https://docs.wpemerge.com/#/starter-theme/quickstart](https://docs.wpemerge.com/#/starter-theme/quickstart)
+[http://docs.wpemerge.com/#/starter-theme/quickstart](http://docs.wpemerge.com/#/starter-theme/quickstart)
 
 ## Development Team
 
@@ -31,8 +31,10 @@ Brought to you by [Atanas Angelov](https://github.com/atanas-angelov-dev) and th
 
 |                                | WP Emerge Theme  | Sage           | Timber   |
 |--------------------------------|------------------|----------------|----------|
-| View Engine                    | PHP, Blade, Twig, any | Blade          | Twig     |
+| View Engine                    | PHP, Blade, Twig, any | PHP, Blade     | Twig     |
 | Routing                        | ✔                | ✖              | ✖        |
+| WP Admin Routing | ✔ | ✖ | ✖ |
+| WP AJAX Routing | ✔ | ✖ | ✖ |
 | MVC                            | ✖✔✔              | ✖✔✖¹           | ✖✔✖      |
 | Middleware                     | ✔                | ✖              | ✖        |
 | View Composers                 | ✔                | ✔/✖²           | ✖        |
@@ -52,7 +54,7 @@ _² Sage's Controller provides similar functionality but is limited to 1 compose
 
 _³ Timber does not provide a front-end build process so you can implement whatever you prefer._
 
-_Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.angelov.dev@gmail.com) so they can be corrected._ 
+_Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they can be corrected._ 
 
 ## Features
 - All features from [WP Emerge](https://docs.wpemerge.com/#/framework/overview):
@@ -97,12 +99,12 @@ _Email any factual inaccuracies to [atanas.angelov.dev@gmail.com](mailto:atanas.
 ```
 wp-content/themes/your-theme
 ├── app/
-│   ├── helpers/               # Helper files, add your own here as well.
-│   ├── routes/                # Register your WP Emerge routes.
+│   ├── helpers/              # Helper files, add your own here as well.
+│   ├── routes/               # Register your WP Emerge routes.
 │   │   ├── admin.php
 │   │   ├── ajax.php
 │   │   └── web.php
-│   ├── setup/                 # Register WordPress menus, post types etc.
+│   ├── setup/                # Register WordPress menus, post types etc.
 │   │   ├── menus.php
 │   │   ├── post-types.php
 │   │   ├── sidebars.php
@@ -159,7 +161,7 @@ Modify files here according to your needs. These files should contain __registra
 
 #### `app/src/`
 
-Add PHP class files here. All clases in the `App\` namespace are autoloaded in accordance with the [PSR-4](http://www.php-fig.org/psr/psr-4/) standard.
+Add PHP class files here. All clases in the `App\` namespace are autoloaded in accordance with [PSR-4](http://www.php-fig.org/psr/psr-4/).
 
 #### `resources/images/`
 
@@ -189,10 +191,11 @@ Add views in this, the `theme/partials/` or the `theme/templates/` directories a
 
 WP Emerge Theme is completely open source and we encourage everybody to participate by:
 
-- ⭐ the project on GitHub (https://github.com/htmlburger/wpemerge-theme)
-- Posting bug reports (https://github.com/htmlburger/wpemerge-theme/issues)
-- (Emailing security issues to [atanas.angelov.dev@gmail.com](mailto:atanas.angelov.dev@gmail.com) instead)
-- Posting feature suggestions (https://github.com/htmlburger/wpemerge-theme/issues)
-- Posting and/or answering questions (https://github.com/htmlburger/wpemerge-theme/issues)
-- Submitting pull requests (https://github.com/htmlburger/wpemerge-theme/pulls)
+- Reviewing `.github/CONTRIBUTING.md`.
+- ⭐ the project on GitHub \([https://github.com/htmlburger/wpemerge-theme](https://github.com/htmlburger/wpemerge-theme)\)
+- Posting bug reports \([https://github.com/htmlburger/wpemerge-theme/issues](https://github.com/htmlburger/wpemerge-theme/issues)\)
+- (Emailing security issues to [hi@atanas.dev](mailto:hi@atanas.dev) instead)
+- Posting feature suggestions \([https://github.com/htmlburger/wpemerge-theme/issues](https://github.com/htmlburger/wpemerge-theme/issues)\)
+- Posting and/or answering questions \([https://github.com/htmlburger/wpemerge-theme/issues](https://github.com/htmlburger/wpemerge-theme/issues)\)
+- Submitting pull requests \([https://github.com/htmlburger/wpemerge-theme/pulls](https://github.com/htmlburger/wpemerge-theme/pulls)\)
 - Sharing your excitement about WP Emerge with your community
