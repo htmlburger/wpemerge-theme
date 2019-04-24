@@ -58,7 +58,7 @@ WPEmerge::alias( 'Theme', \WPEmergeTheme\Facades\Theme::class );
 require_once APP_APP_DIR . 'helpers.php';
 
 /**
- * Boostrap Theme after all dependencies and helpers are loaded.
+ * Bootstrap Theme after all dependencies and helpers are loaded.
  */
 Theme::bootstrap( require APP_APP_DIR . 'config.php' );
 
