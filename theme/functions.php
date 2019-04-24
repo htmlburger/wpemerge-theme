@@ -68,15 +68,6 @@ Theme::bootstrap( require APP_APP_DIR . 'config.php' );
 require_once APP_APP_DIR . 'hooks.php';
 
 /**
- * Register application routes.
- */
-WPEmerge::routes(
-	APP_APP_ROUTES_DIR . 'web.php',
-	APP_APP_ROUTES_DIR . 'admin.php',
-	APP_APP_ROUTES_DIR . 'ajax.php'
-);
-
-/**
  * Register application view-related items.
  */
 require_once APP_APP_DIR . 'views.php';

@@ -15,6 +15,12 @@ return [
 		\App\Routing\RouteConditionsServiceProvider::class,
 	],
 
+	'routes'              => [
+		'web'   => APP_APP_ROUTES_DIR . 'web.php',
+		'admin' => APP_APP_ROUTES_DIR . 'admin.php',
+		'ajax'  => APP_APP_ROUTES_DIR . 'ajax.php',
+	],
+
 	/**
 	 * Register middleware class aliases.
 	 * Use fully qualified middleware class names.
