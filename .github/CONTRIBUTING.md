@@ -2,12 +2,12 @@
 
 WP Emerge Theme is completely open source and we encourage everybody to participate by:
 
-- ⭐ the project on GitHub (https://github.com/htmlburger/wpemerge-theme)
-- Posting bug reports (https://github.com/htmlburger/wpemerge-theme/issues)
+- ⭐ the project on GitHub \([https://github.com/htmlburger/wpemerge-theme](https://github.com/htmlburger/wpemerge-theme)\)
+- Posting bug reports \([https://github.com/htmlburger/wpemerge-theme/issues](https://github.com/htmlburger/wpemerge-theme/issues)\)
 - (Emailing security issues to [hi@atanas.dev](mailto:hi@atanas.dev) instead)
-- Posting feature suggestions (https://github.com/htmlburger/wpemerge-theme/issues)
-- Posting and/or answering questions (https://github.com/htmlburger/wpemerge-theme/issues)
-- Submitting pull requests (https://github.com/htmlburger/wpemerge-theme/pulls)
+- Posting feature suggestions \([https://github.com/htmlburger/wpemerge-theme/issues](https://github.com/htmlburger/wpemerge-theme/issues)\)
+- Posting and/or answering questions \([https://github.com/htmlburger/wpemerge-theme/issues](https://github.com/htmlburger/wpemerge-theme/issues)\)
+- Submitting pull requests \([https://github.com/htmlburger/wpemerge-theme/pulls](https://github.com/htmlburger/wpemerge-theme/pulls)\)
 - Sharing your excitement about WP Emerge with your community
 
 ## Development setup

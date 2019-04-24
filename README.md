@@ -41,7 +41,7 @@ Brought to you by [Atanas Angelov](https://github.com/atanas-angelov-dev) and th
 | Service Container              | ✔                | ✔              | ✖        |
 | Stylesheets                    | SASS + PostCSS   | SASS + PostCSS | N/A³     |
 | JavaScript                     | ES6              | ES6            | N/A³     |
-| Front end, Admin, Editor and Login Bundles | ✔                | ✖              | N/A³     |
+| Front end, Admin, Editor and Login Bundles | ✔✔✔✔            | ✔✖✖✖              | N/A³     |
 | Automatic Sprite Generation    | ✔                | ✖              | N/A³     |
 | Automatic Cache Busting        | ✔                | ✖              | ✖        |
 | WPCS Linting                   | ✔                | ✖              | ✖        |
@@ -58,7 +58,7 @@ _Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they
 
 ## Features
 - All features from [WP Emerge](https://docs.wpemerge.com/#/framework/overview):
-  - Routes with optional rewrite rule integration
+  - Routes with custom URLs and query filters
   - Controllers
   - Middleware
   - PSR-7 Responses
@@ -70,11 +70,11 @@ _Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they
 - Gutenberg support.
 - [SASS](https://sass-lang.com/) + [PostCSS](https://github.com/postcss/postcss) for stylesheets. Separate bundles are created for **front-end**, **administration**, **Gutenberg** and **login** pages.
 - ES6 for JavaScript. Separate bundles are created for **front-end**, **administration**, **Gutenberg** and **login** pages.
-- [Webpack](https://webpack.js.org/) to transpile and bundle assets, create sprites, optimize images etc.
+- Pure [Webpack](https://webpack.js.org/) to transpile and bundle assets, create sprites, optimize images etc.
 - [Browsersync](https://www.browsersync.io/) for synchronized browser development.
 - Autoloading for all classes in your `App\` namespace.
 - Automatic, fool-proof cache busting for all assets, including ones referenced in styles.
-- WPCS, JavaScript and SASS linting using single yarn commands.
+- WPCS, JavaScript and SASS linting and fixing using a single yarn command.
 - Single-command optional CSS package installation:
     - Normalize.css
     - Boostrap 4
