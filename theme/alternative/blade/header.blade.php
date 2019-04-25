@@ -20,4 +20,6 @@
 		@php wp_head() @endphp
 	</head>
 	<body @php body_class() @endphp>
+		@php app_shim_wp_body_open() @endphp
+
 		<h1>@php bloginfo( 'name' ) @endphp</h1>

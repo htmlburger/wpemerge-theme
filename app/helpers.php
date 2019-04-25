@@ -12,6 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Load base helpers.
  */
+require_once APP_APP_HELPERS_DIR . 'shims.php';
 require_once APP_APP_HELPERS_DIR . 'admin.php';
 require_once APP_APP_HELPERS_DIR . 'assets.php';
 require_once APP_APP_HELPERS_DIR . 'content.php';
