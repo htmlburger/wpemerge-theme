@@ -6,7 +6,7 @@
  */
 
 /**
- * Changes the URL of the Logo on the Login screen.
+ * Changes the URL of the logo on the login screen.
  *
  * @return string Link to the Homepage.
  */
@@ -15,10 +15,10 @@ function app_filter_login_headerurl() {
 }
 
 /**
- * Changes the Title attribute of the Logo on the Login Screen.
+ * Changes the text of the logo on the login Screen.
  *
  * @return string Site Title.
  */
-function app_filter_login_headertitle() {
+function app_filter_login_headertext() {
 	return get_bloginfo( 'name' );
 }
