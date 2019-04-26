@@ -15,7 +15,9 @@
     "lint-fix:styles": "stylelint --color --fix ./resources/styles/**",
     "i18n": "run-s -cl i18n:textdomain i18n:pot",
     "i18n:textdomain": "wpi18n addtextdomain --exclude=dist,docs,node_modules,resources,vendor --textdomain=app",
-    "i18n:pot": "wpi18n makepot --exclude=dist,docs,node_modules,resources,vendor --main-file=theme/style.css --domain-path=languages/ --pot-file=app.pot --type=wp-theme --textdomain=app"
+    "i18n:pot": "wpi18n makepot --exclude=dist,docs,node_modules,resources,vendor --main-file=theme/style.css --domain-path=languages/ --pot-file=app.pot --type=wp-theme --textdomain=app",
+    "release": "run-s -cl build release:zip",
+    "release:zip": "node resources/build/release/release.js"
   },
   "dependencies": {
     "airbnb-browser-shims": "^2.1.0",
@@ -45,6 +47,7 @@
     "webpack-spritesmith": "^0.4.1"
   },
   "devDependencies": {
+    "archiver": "^3.0.0",
     "browser-sync": "^2.23.7",
     "browser-sync-webpack-plugin": "^2.2.2",
     "eslint": "^4.19.1",
@@ -53,6 +56,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.8.2",
     "node-wp-i18n": "^1.2.1",
+    "shelljs": "^0.8.3",
     "stylelint": "^9.2.1",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-order": "^0.8.1",
