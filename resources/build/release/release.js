@@ -38,7 +38,10 @@ const archive = archiver('zip', {
   },
 });
 
-archive.pipe(output);
+archive.on('error', (error) => {
+  console.error(`Error: Failed to create archive: ${error.message}`);
+  shutdown(1);
+});
 
 // Avoid bundling dev dependencies.
 console.log('Installing production dependencies ...');
@@ -46,6 +49,8 @@ if (shell.exec('composer install --no-dev').code !== 0) {
   console.error('Error: Failed to install production dependencies with composer.');
   shutdown(1);
 }
+
+archive.pipe(output);
 
 for (let i = 0; i < config.release.include.length; i++) {
   const item = config.release.include[ i ];
