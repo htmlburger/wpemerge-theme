@@ -7,6 +7,8 @@
  * @package WPEmergeTheme
  */
 
+use \WPEmerge\Facades\View;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }

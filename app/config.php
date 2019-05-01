@@ -13,6 +13,7 @@ return [
 	 */
 	'providers'           => [
 		\App\Routing\RouteConditionsServiceProvider::class,
+		\App\View\ViewServiceProvider::class,
 	],
 
 	'routes'              => [
