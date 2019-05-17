@@ -60,11 +60,11 @@ return [
 	],
 
 	/**
-	 * Custom directory to search for views.
-	 * Use an absolute path or leave blank to disable.
+	 * Custom directories to search for views.
+	 * Use absolute paths or leave blank to disable.
 	 * Applies only to the default PhpViewEngine.
 	 */
-	'views'               => '',
+	'views'               => [get_stylesheet_directory(), get_template_directory()],
 
 	/**
 	 * Other config goes after this comment.
