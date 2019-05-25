@@ -19,6 +19,9 @@
     "release": "run-s -cl build release:zip",
     "release:zip": "node resources/build/release/release.js"
   },
+  "browserslist": [
+    "last 3 versions"
+  ],
   "dependencies": {
     "airbnb-browser-shims": "^2.1.0",
     "autoprefixer": "^8.4.1",

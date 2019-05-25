@@ -30,14 +30,7 @@ const babelLoader = {
     cacheDirectory: false,
     comments: false,
     presets: [
-      [
-        'env',
-        {
-          targets: {
-            browsers: ['last 3 versions'],
-          },
-        },
-      ],
+      'env',
       // airbnb not included as stage-2 already covers it
       'stage-2',
     ],
