@@ -64,7 +64,7 @@ return [
 	 * Use absolute paths or leave blank to disable.
 	 * Applies only to the default PhpViewEngine.
 	 */
-	'views'               => [get_stylesheet_directory(), get_template_directory()],
+	'views'               => [ get_stylesheet_directory(), get_template_directory() ],
 
 	/**
 	 * Other config goes after this comment.
