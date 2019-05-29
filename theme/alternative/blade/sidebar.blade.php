@@ -8,6 +8,7 @@
  */
 
 ?>
+@php do_action('get_sidebar') @endphp
 <div class="sidebar">
 	<ul class="widgets">
 		@php dynamic_sidebar( Theme\Sidebar::getCurrentSidebarId() ) @endphp

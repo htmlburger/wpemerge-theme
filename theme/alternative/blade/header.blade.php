@@ -8,6 +8,7 @@
  */
 
 ?>
+@php do_action('get_header') @endphp
 <!DOCTYPE html>
 <html @php language_attributes() @endphp>
 	<head>

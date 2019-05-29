@@ -6,8 +6,6 @@
  */
 
 ?>
-
-@php do_action('get_header') @endphp
 @include('header')
 
 @if (!is_singular())
@@ -16,8 +14,6 @@
 
 @yield('content')
 
-@php do_action('get_sidebar') @endphp
 @include('sidebar')
 
-@php do_action('get_footer') @endphp
 @include('footer')
