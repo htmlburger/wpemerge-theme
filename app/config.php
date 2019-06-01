@@ -35,18 +35,20 @@ return [
 	 * Register middleware groups.
 	 * Use fully qualified middleware class names or registered aliases.
 	 * There are a couple built-in groups that you may override:
-	 * - 'web'    - Automatically applied to web routes.
-	 * - 'admin'  - Automatically applied to admin routes.
-	 * - 'ajax'   - Automatically applied to ajax routes.
-	 * - 'global' - Automatically applied to all of the above.
+	 * - 'web'      - Automatically applied to web routes.
+	 * - 'admin'    - Automatically applied to admin routes.
+	 * - 'ajax'     - Automatically applied to ajax routes.
+	 * - 'global'   - Automatically applied to all of the above.
+	 * - 'wpemerge' - Internal group applied the same way 'global' is.
 	 *
-	 * Warning: The 'global' group contains some internal WP Emerge
+	 * Warning: The 'wpemerge' group contains some internal WP Emerge
 	 * middleware which you should avoid overriding.
 	 */
 	'middleware_groups'   => [
-		'web'   => [],
-		'ajax'  => [],
-		'admin' => [],
+		'global' => [],
+		'web'    => [],
+		'ajax'   => [],
+		'admin'  => [],
 	],
 
 	/**
