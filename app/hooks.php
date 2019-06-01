@@ -50,7 +50,9 @@ add_filter( 'app_content', 'convert_smilies', 20 );
  * Login
  */
 add_filter( 'login_headerurl', 'app_filter_login_headerurl' );
-add_filter( 'login_headertitle', 'app_filter_login_headertext' );
+if ( version_compare( get_bloginfo( 'version' ), '5.2', '<' ) ) {
+	add_filter( 'login_headertitle', 'app_filter_login_headertext' );
+}
 add_filter( 'login_headertext', 'app_filter_login_headertext' );
 
 /**
