@@ -23,7 +23,6 @@ register_post_type( 'app_custom_post_type', array(
 		'view_item'          => __( 'View Custom Type', 'app' ),
 		'edit_item'          => __( 'Edit Custom Type', 'app' ),
 		'new_item'           => __( 'New Custom Type', 'app' ),
-		'view_item'          => __( 'View Custom Type', 'app' ),
 		'search_items'       => __( 'Search Custom Types', 'app' ),
 		'not_found'          => __( 'No custom types found', 'app' ),
 		'not_found_in_trash' => __( 'No custom types found in trash', 'app' ),
