@@ -38,6 +38,10 @@ const archive = archiver('zip', {
   },
 });
 
+output.on('close', () => {
+  shutdown();
+});
+
 archive.on('error', (error) => {
   console.error(`Error: Failed to create archive: ${error.message}`);
   shutdown(1);
@@ -74,9 +78,5 @@ for (let i = 0; i < config.release.include.length; i++) {
   console.error(`Item is neither a file nor a directory: ${item}`);
   shutdown(1);
 }
-
-archive.on('finish', () => {
-  shutdown();
-});
 
 archive.finalize();
