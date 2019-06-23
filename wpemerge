@@ -4,8 +4,8 @@ if ( php_sapi_name() !== 'cli' ) {
 }
 
 $vendors = [
-	__DIR__ . '/vendor',
-	__DIR__ . '/../../../../vendor',
+	__DIR__ . DIRECTORY_SEPARATOR . 'vendor',
+	dirname( dirname( dirname( dirname( __DIR__ ) ) ) ) . DIRECTORY_SEPARATOR . 'vendor',
 ];
 
 foreach ( $vendors as $vendor ) {
