@@ -1,0 +1,18 @@
+<?php
+if ( php_sapi_name() !== 'cli' ) {
+	exit;
+}
+
+$vendors = [
+	__DIR__ . '/vendor',
+	__DIR__ . '/../../../../vendor',
+];
+
+foreach ( $vendors as $vendor ) {
+	$runner = $vendor . '/htmlburger/wpemerge-cli/src/run.php';
+
+	if ( is_file( $runner) ) {
+		require_once $runner;
+		break;
+	}
+}
