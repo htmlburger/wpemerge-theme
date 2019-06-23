@@ -1,82 +1,51 @@
 /**
  * The external dependencies.
  */
-const archiver = require('archiver');
-const fs = require('fs');
-const path = require('path');
-const shell = require('shelljs');
+const fs    = require('fs');
+const path  = require('path');
 
 /**
  * The internal dependencies.
  */
-const utils = require('../lib/utils');
-const config = require('../../../config.json');
+const config   = require('../../../config.json');
+const utils    = require('../lib/utils');
+const composer = require('./composer');
+const archive  = require('./archive');
 
-const shutdown = (exitCode = 0) => {
-  // Restore dev dependencies.
+const cError      = '\x1b[31m';
+const cWarning    = '\x1b[33m';
+const cReset      = '\x1b[0m';
+const themeName   = path.basename(utils.themeRootPath());
+const destination = path.join(path.dirname(utils.themeRootPath()), `${themeName}.zip`);
+const shutdown    = (exitCode = 0) => {
   console.log('Restoring development dependencies ...');
-  if (shell.exec('composer install').code !== 0) {
-    console.error('Error: Failed to restore development dependencies with composer.');
-    console.log('Please run "composer install" manually.');
+  if (!composer.installDevelopmentDependencies()) {
+    console.error(`${cError}Error: Failed to restore development dependencies with composer.${cReset}`);
+    console.log(`${cWarning}Please run "composer install" manually.${cReset}`);
     exitCode = 1;
   }
   process.exit(exitCode);
 };
 
-const themeName = path.basename(utils.themeRootPath());
-const destination = path.join(path.dirname(utils.themeRootPath()), `${themeName}.zip`);
-
 if (fs.existsSync(destination)) {
-  console.error(`Destination file already exists: ${destination}`);
+  console.error(`${cError}Destination file already exists: ${destination}${cReset}`);
   process.exit(1);
 }
 
-const output = fs.createWriteStream(destination);
-const archive = archiver('zip', {
-  zlib: {
-    level: 9,
-  },
-});
-
-output.on('close', () => {
-  shutdown();
-});
-
-archive.on('error', (error) => {
-  console.error(`Error: Failed to create archive: ${error.message}`);
-  shutdown(1);
-});
-
-// Avoid bundling dev dependencies.
 console.log('Installing production dependencies ...');
-if (shell.exec('composer install --no-dev').code !== 0) {
-  console.error('Error: Failed to install production dependencies with composer.');
+if (!composer.installProductionDependencies()) {
+  console.error(`${cError}Error: Failed to install production dependencies with composer.${cReset}`);
   shutdown(1);
 }
 
-archive.pipe(output);
-
-for (let i = 0; i < config.release.include.length; i++) {
-  const item = config.release.include[ i ];
-  const itemPath = utils.themeRootPath(item);
-
-  if (!shell.test('-e', itemPath)) {
-    console.error(`File or directory does not exist: ${item}`);
+archive
+  .zip(
+    config.release.include.map(item => utils.themeRootPath(item)),
+    destination,
+    utils.themeRootPath()
+  )
+  .then(() => shutdown())
+  .catch((error) => {
+    console.error(`${cError}${error.message}${cReset}`);
     shutdown(1);
-  }
-
-  if (shell.test('-d', itemPath)) {
-    archive.directory(itemPath, item);
-    continue;
-  }
-
-  if (shell.test('-f', itemPath)) {
-    archive.file(itemPath, { name: item });
-    continue;
-  }
-
-  console.error(`Item is neither a file nor a directory: ${item}`);
-  shutdown(1);
-}
-
-archive.finalize();
+  });
