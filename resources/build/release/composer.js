@@ -8,7 +8,7 @@ const shell = require('shelljs');
  *
  * @returns {boolean}
  */
-const installProductionDependencies = () => shell.exec('composer install --no-dev').code === 0;
+const installProductionDependencies = () => shell.exec('composer install --no-dev --optimize-autoloader').code === 0;
 
 /**
  * Install development dependencies in the current directory.
