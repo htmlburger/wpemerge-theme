@@ -33,6 +33,23 @@
   margin-right: auto;
 }
 
+.alignwide {
+  @include media-breakpoint-between("md","md"){
+    margin-left  : calc( -100vw / 2 + 100% / 2 );
+    margin-right : calc( -100vw / 2 + 100% / 2 );
+    max-width : 100vw;
+  }
+  @include media-breakpoint-between("lg","xl"){
+    margin-left  : -15%;
+    margin-right : -15%;
+    max-width : 100vw;
+  }
+}
+.alignfull {
+  margin-left  : calc( -100vw / 2 + 100% / 2 );
+  margin-right : calc( -100vw / 2 + 100% / 2 );
+  max-width : 100vw;
+}
 .wp-caption {
   position: relative;
 
@@ -55,11 +72,6 @@
     Articles
 \* ------------------------------------------------------------ */
 
-.articles {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
 
 /* ------------------------------------------------------------ *\
     Sidebar

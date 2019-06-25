@@ -21,5 +21,24 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<?php app_shim_wp_body_open(); ?>
+		<nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+		  <div class="container">
+				<a class="navbar-brand" href="/"><?php bloginfo( 'name' ); ?></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-items-container" aria-controls="navbar-items-container" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-		<h1><?php bloginfo( 'name' ); ?></h1>
+					<?php
+					wp_nav_menu( array(
+						'theme_location'    => 'main-menu',
+						'depth'             => 2,
+						'container'         => 'div',
+						'container_class'   => 'collapse navbar-collapse',
+						'container_id'      => 'navbar-items-container',
+						'menu_class'        => 'nav navbar-nav',
+						'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+						'walker'            => new WP_Bootstrap_Navwalker(),
+					) );
+					?>
+			</div>
+		</nav>

@@ -1,6 +1,6 @@
 <?php
 /**
- * App Layout: layouts/app.php
+ * App Layout: layouts/nosidebar.php
  *
  * This is the template that is used for displaying all posts by default.
  *

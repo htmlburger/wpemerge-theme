@@ -20,6 +20,7 @@ const config = {
   open: 'local',
   files: [
     utils.themeRootPath('./theme/**/*.php'),
+    utils.themeRootPath('./app/**/*.php'),
   ],
   snippetOptions: {
     rule: {

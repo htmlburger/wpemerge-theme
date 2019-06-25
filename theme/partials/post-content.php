@@ -1,16 +1,6 @@
 <?php
-/**
- * App Layout: layouts/nosidebar.php
- *
- * This is the template that is used for displaying all pages by default.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WPEmergeTheme
- */
-
-?>
-<?php while ( have_posts() ) : ?>
+/* Display the post content */
+while ( have_posts() ) : ?>
 	<?php the_post(); ?>
 	<div <?php post_class(); ?>>
 

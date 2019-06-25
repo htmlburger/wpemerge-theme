@@ -116,3 +116,35 @@ add_action(
 		require_once APP_APP_SETUP_DIR . 'sidebars.php';
 	}
 );
+include_once APP_THEME_DIR.'partials\navwalker.php';
+add_image_size( "post_image", 2000, 400, ['center', 'center'] );
+add_image_size( "big_thumbnail", 200, 200, true);
+add_action( 'widgets_init', function(){
+	register_sidebar([
+		'name' 					=> 'footer-left',
+		'description'		=> __("Left footer widgetized area"),
+		'id'						=> 'footerleft',
+		'before_title'	=> '<h3>',
+		'after_title'		=> '</h3>',
+		'before_widget'	=> '<div class="widget flex-fill">',
+		'after_widget'	=> '</div>',
+	]);
+	register_sidebar([
+		'name' 					=> 'footer-center',
+		'description'		=> __("Center footer widgetized area"),
+		'id'						=> 'footer-center',
+		'before_title'	=> '<h3>',
+		'after_title'		=> '</h3>',
+		'before_widget'	=> '<div class="widget flex-fill">',
+		'after_widget'	=> '</div>',
+	]);
+	register_sidebar([
+		'name' 					=> 'footer-right',
+		'description'		=> __("Right footer widgetized area"),
+		'id'						=> 'footer-right',
+		'before_title'	=> '<h3>',
+		'after_title'		=> '</h3>',
+		'before_widget'	=> '<div class="widget flex-fill">',
+		'after_widget'	=> '</div>',
+	]);
+} );

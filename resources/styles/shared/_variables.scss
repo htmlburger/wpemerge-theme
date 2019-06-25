@@ -1,3 +1,35 @@
 /**
  * Any shared variables between front-end, editor, admin and login bundles.
  */
+ $blue:    map-get($color,'material-blue') ;
+ $indigo:  map-get($color,'material-indigo');
+ $purple:  map-get($color,'material-purple');
+ $pink:    map-get($color,'material-pink');
+ $red:     map-get($color,'material-red');
+ $orange:  map-get($color,'material-orange');
+ $yellow:  map-get($color,'material-yellow');
+ $green:   map-get($color,'material-green');
+ $teal:    map-get($color,'material-teal');
+ $cyan:    map-get($color,'material-cyan');
+
+ $primary:       $blue;
+ $secondary:     map-get($color,'material-light-blue');
+ $success:       $green;
+ $info:          $cyan;
+ $warning:       map-get($color,'material-deep-orange');
+ $danger:        $red;
+ $light:         #eeeeee;
+ $dark:          #212121;
+ $light-gray:    #e0e0e0;
+ $gray:          #9e9e9e;
+
+ $container-max-widths: (
+   sm: 540px,
+   md: 700px,
+   lg: 900px,
+   xl: 1000px
+ );
+
+%link-transform {
+  transition: color 0.2s ease-out;
+}

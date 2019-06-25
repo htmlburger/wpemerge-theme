@@ -4,28 +4,26 @@
  *
  * @package WPEmergeTheme
  */
-
+global $post;
 ?>
 <?php while ( have_posts() ) : ?>
 	<?php the_post(); ?>
 	<article <?php post_class( 'article article--single' ); ?>>
-		<header class="article__head">
-			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="article__thumbnail">
-					<?php the_post_thumbnail(); ?>
-				</div>
-			<?php endif; ?>
 
-			<h2 class="article__title">
-				<?php the_title(); ?>
-			</h2>
-
-			<?php Theme::partial( 'post-meta' ); ?>
-		</header>
+			<?php
+			$title = apply_filters('emergence_render_post_title', 'partials/page-title', $post);
+			WPEmerge\render($title);
+			?>
 
 		<div class="article__body">
 			<div class="article__entry">
+				<?php
+					do_action('emergence_content_before_content', $post);
+				 ?>
 				<?php the_content(); ?>
+				<?php
+					do_action('emergence_content_after_content', $post);
+				 ?>
 			</div>
 		</div>
 	</article>

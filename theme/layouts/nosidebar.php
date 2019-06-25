@@ -12,11 +12,8 @@ WPEmerge\render( 'header' );
 ?>
 <div class="container">
 	<div class="row">
-		<div class="col-sm-12 col-md-9">
-<?php WPEmerge\layout_content();?>
-		</div>
-		<div class="col d-sm-none d-lg-block">
-			<?php WPEmerge\render( 'sidebar' );  ?>
+		<div class="col">
+      <?php WPEmerge\layout_content();?>
 		</div>
 	</div>
 </div>
