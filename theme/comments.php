@@ -47,10 +47,6 @@ if ( post_password_required() ) {
 			]
 		);
 		?>
-	<?php else : ?>
-		<?php if ( ! comments_open() ) : ?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'app' ); ?></p>
-		<?php endif; ?>
 	<?php endif; ?>
 
 	<?php

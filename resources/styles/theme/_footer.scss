@@ -1,0 +1,21 @@
+footer{
+  background-color: #212121;
+  font-size: map-get($font-size,'sm');
+  a,p,h1,h2,h3,h4,h5,h6, span {
+    color: $light-gray;
+  }
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer a {
+  font-size: map-get($font-size,'s');
+  @extend %link-transform;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}

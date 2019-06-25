@@ -1,6 +1,6 @@
 <?php
 /**
- * App Layout: layouts/app.php
+ * App Layout: layouts/nosidebar.php
  *
  * The main template file.
  *

@@ -1,3 +1,5 @@
+
+
 /* ------------------------------------------------------------ *\
     Vendor
 \* ------------------------------------------------------------ */
@@ -18,4 +20,9 @@
     Theme
 \* ------------------------------------------------------------ */
 
+@import '~/bootstrap/scss/bootstrap.scss';
+@import '~@styles/gutenberg-block/index.scss';
 @import './_generic*.scss';
+@import './_page-title.scss';
+@import './_footer.scss';
+@import './_articles.scss';
