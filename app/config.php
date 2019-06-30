@@ -16,10 +16,19 @@ return [
 		\App\View\ViewServiceProvider::class,
 	],
 
+	/**
+	 * Array of route definitions and default attributes.
+	 */
 	'routes'              => [
-		'web'   => APP_APP_ROUTES_DIR . 'web.php',
-		'admin' => APP_APP_ROUTES_DIR . 'admin.php',
-		'ajax'  => APP_APP_ROUTES_DIR . 'ajax.php',
+		'web'   => [
+			'definitions' => APP_APP_ROUTES_DIR . 'web.php',
+		],
+		'admin' => [
+			'definitions' => APP_APP_ROUTES_DIR . 'admin.php',
+		],
+		'ajax'  => [
+			'definitions' => APP_APP_ROUTES_DIR . 'ajax.php',
+		],
 	],
 
 	/**
