@@ -48,11 +48,6 @@ if ( file_exists( APP_VENDOR_DIR . 'autoload.php' ) ) {
 }
 
 /**
- * Enable the global Theme:: shortcut so we don't have to type WPEmergeTheme:: every time.
- */
-WPEmerge::alias( 'Theme', \WPEmergeTheme\Facades\Theme::class );
-
-/**
  * Load helpers.
  */
 require_once APP_APP_DIR . 'helpers.php';
@@ -60,7 +55,13 @@ require_once APP_APP_DIR . 'helpers.php';
 /**
  * Bootstrap Theme after all dependencies and helpers are loaded.
  */
-Theme::bootstrap( require APP_APP_DIR . 'config.php' );
+$theme = \WPEmergeTheme\Theme\Theme::make();
+$theme->bootstrap( require APP_APP_DIR . 'config.php' );
+
+/**
+ * Enable the global Theme:: shortcut so we don't have to type WPEmergeTheme:: every time.
+ */
+WPEmerge::alias( 'Theme', \WPEmergeTheme\Facades\Theme::class );
 
 /**
  * Register hooks.
