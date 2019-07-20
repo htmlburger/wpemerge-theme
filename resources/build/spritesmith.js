@@ -20,5 +20,6 @@ module.exports = new SpritesmithPlugin({
   apiOptions: {
     cssImageRef: '~@dist/images/sprite.png',
   },
-  // retina: '@2x', // Uncomment this line to enable retina spritesheets.
+  // Uncomment the following line to enable retina spritesheets:
+  // retina: '@2x',
 });
