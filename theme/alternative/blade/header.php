@@ -5,4 +5,4 @@
  * @package WPEmergeTheme
  * phpcs:disable
  */
-WPEmerge\render( 'header' );
+\WPEmerge\render( 'header' );

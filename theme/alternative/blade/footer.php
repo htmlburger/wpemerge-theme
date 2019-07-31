@@ -5,4 +5,4 @@
  * @package WPEmergeTheme
  * phpcs:disable
  */
-WPEmerge\render( 'footer' );
+\WPEmerge\render( 'footer' );

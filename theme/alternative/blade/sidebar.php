@@ -5,4 +5,4 @@
  * @package WPEmergeTheme
  * phpcs:disable
  */
-WPEmerge\render( 'sidebar' );
+\WPEmerge\render( 'sidebar' );

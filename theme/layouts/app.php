@@ -7,14 +7,14 @@
  * @package WPEmergeTheme
  */
 
-WPEmerge\render( 'header' );
+\WPEmerge\render( 'header' );
 
 if ( ! is_singular() ) {
 	app_the_title( '<h2 class="post-title">', '</h2>' );
 }
 
-WPEmerge\layout_content();
+\WPEmerge\layout_content();
 
-WPEmerge\render( 'sidebar' );
+\WPEmerge\render( 'sidebar' );
 
-WPEmerge\render( 'footer' );
+\WPEmerge\render( 'footer' );
