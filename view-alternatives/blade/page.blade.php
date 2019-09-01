@@ -1,7 +1,5 @@
 <?php
 /**
- * App Layout: layouts/app.php
- *
  * This is the template that is used for displaying all pages by default.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
@@ -10,7 +8,7 @@
  */
 
 ?>
-@extends('layouts.app')
+@extends('view-layouts.app')
 
 @section('content')
 	@while (have_posts())

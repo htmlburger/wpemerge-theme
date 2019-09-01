@@ -1,7 +1,5 @@
 <?php
 /**
- * App Layout: layouts/app.php
- *
  * The main template file.
  *
  * This is the template that is used for displaying:
@@ -15,4 +13,9 @@
  * @package WPEmergeTheme
  */
 
-Theme::partial( 'loop' );
+?>
+@extends('view-layouts.app')
+
+@section('content')
+	@include('partials.loop')
+@endsection

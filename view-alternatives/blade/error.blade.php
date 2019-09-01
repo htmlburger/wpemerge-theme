@@ -1,7 +1,5 @@
 <?php
 /**
- * App Layout: layouts/app.php
- *
  * Generic error fallback view.
  * Used if no view is found for the current error status code.
  *
@@ -9,7 +7,7 @@
  */
 
 ?>
-@extends('layouts.app')
+@extends('view-layouts.app')
 
 @section('content')
 	<p>

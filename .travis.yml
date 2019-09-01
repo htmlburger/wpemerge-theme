@@ -73,7 +73,8 @@ before_script:
 script:
   # Check all PHP files for syntax errors.
   # The usage of bash + || exit 1 is to ensure xargs does not exit on first error.
-  - find app/ theme/ \( -name '*.php' \) | xargs -n1 bash -c 'php -lf $0 || exit 1'
+  - find ./ -maxdepth 1 -name '*.php' | xargs -n1 bash -c 'php -lf $0 || exit 1'
+  - find app/ view-alternatives/ view-layouts/ view-partials/ view-templates/ \( -name '*.php' \) | xargs -n1 bash -c 'php -lf $0 || exit 1'
   # Run build.
   - if [[ "$LINT" == "1" ]]; then yarn build; fi
   # Run lints.

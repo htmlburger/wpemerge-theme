@@ -1,14 +1,12 @@
 <?php
 /**
- * App Layout: layouts/app.php
- *
  * This is the template that is used for displaying 404 errors.
  *
  * @package WPEmergeTheme
  */
 
 ?>
-@extends('layouts.app')
+@extends('view-layouts.app')
 
 @section('content')
 	<p>

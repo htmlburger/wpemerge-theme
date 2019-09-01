@@ -19,7 +19,8 @@ const config = {
   port: typeof userConfig.development.port !== 'undefined' ? userConfig.development.port : 3000,
   open: 'local',
   files: [
-    utils.themeRootPath('./theme/**/*.php'),
+    'view-*/**/*.php',
+    '*.php',
   ],
   snippetOptions: {
     rule: {

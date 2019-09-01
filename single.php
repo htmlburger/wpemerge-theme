@@ -1,6 +1,6 @@
 <?php
 /**
- * App Layout: layouts/app.php
+ * App Layout: view-layouts/app.php
  *
  * This is the template that is used for displaying all posts by default.
  *
@@ -9,9 +9,4 @@
  * @package WPEmergeTheme
  */
 
-?>
-@extends('layouts.app')
-
-@section('content')
-	@include('partials.loop-single')
-@endsection
+Theme::partial( 'loop', 'single' );

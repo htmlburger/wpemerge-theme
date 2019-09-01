@@ -1,17 +1,54 @@
-# <!=Copyright (C) 2018
+# <!=Copyright (C) 2019
 # This file is distributed under the same license as the WP Emerge Starter Theme package.=!>
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Emerge Starter Theme\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/theme\n"
-"POT-Creation-Date: 2018-08-29 21:17:31+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wpemerge\n"
+"POT-Creation-Date: 2019-09-01 13:34:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: node-wp-i18n 1.2.1\n"
+"X-Generator: node-wp-i18n 1.2.3\n"
+
+#: 404.php:15 error.php:16
+#. translators: 404 page content; placeholders represents homepage opening and
+#. closing anchor tags
+#. translators: generic error page content; placeholders represents homepage
+#. opening and closing anchor tags
+msgid ""
+"Please check the URL for proper spelling and capitalization. If you're "
+"having trouble locating a destination, try visiting the %1$shome page%2$s."
+msgstr ""
+
+#: app/helpers/content.php:76
+#. translators: post link title attribute
+msgid "Permanent Link to %s"
+msgstr ""
+
+#: app/helpers/content.php:99
+#. translators: no posts found for category
+msgid "Sorry, but there aren't any posts in the %s category yet."
+msgstr ""
+
+#: app/helpers/content.php:103
+msgid "Sorry, but there aren't any posts with this date."
+msgstr ""
+
+#: app/helpers/content.php:109
+#. translators: no posts found for author
+msgid "Sorry, but there aren't any posts by %s yet."
+msgstr ""
+
+#: app/helpers/content.php:113
+msgid "No posts found. Try a different search?"
+msgstr ""
+
+#: app/helpers/content.php:116
+msgid "No posts found."
+msgstr ""
 
 #: app/helpers/title.php:25
 #. translators: search results page title
@@ -56,271 +93,270 @@ msgstr ""
 msgid "Error 404 - Not Found"
 msgstr ""
 
-#: app/setup/menus.php:12
+#: app/setup/menus.php:17
 msgid "Main Menu"
 msgstr ""
 
-#: app/setup/sidebars.php:29
+#: app/setup/post-types.php:54
+msgid "Custom Types"
+msgstr ""
+
+#: app/setup/post-types.php:55
+msgid "Custom Type"
+msgstr ""
+
+#: app/setup/post-types.php:56
+msgid "Add New"
+msgstr ""
+
+#: app/setup/post-types.php:57
+msgid "Add new Custom Type"
+msgstr ""
+
+#: app/setup/post-types.php:58
+msgid "View Custom Type"
+msgstr ""
+
+#: app/setup/post-types.php:59
+msgid "Edit Custom Type"
+msgstr ""
+
+#: app/setup/post-types.php:60
+msgid "New Custom Type"
+msgstr ""
+
+#: app/setup/post-types.php:61
+msgid "Search Custom Types"
+msgstr ""
+
+#: app/setup/post-types.php:62
+msgid "No custom types found"
+msgstr ""
+
+#: app/setup/post-types.php:63
+msgid "No custom types found in trash"
+msgstr ""
+
+#: app/setup/sidebars.php:34
 msgid "Default Sidebar"
 msgstr ""
 
-#: app/setup/theme-support.php:71
+#: app/setup/theme-support.php:85
 msgid "Red"
 msgstr ""
 
-#: app/setup/theme-support.php:76
+#: app/setup/theme-support.php:90
 msgid "Pink"
 msgstr ""
 
-#: app/setup/theme-support.php:81
+#: app/setup/theme-support.php:95
 msgid "Purple"
 msgstr ""
 
-#: app/setup/theme-support.php:86
+#: app/setup/theme-support.php:100
 msgid "Deep Purple"
 msgstr ""
 
-#: app/setup/theme-support.php:91
+#: app/setup/theme-support.php:105
 msgid "Indigo"
 msgstr ""
 
-#: app/setup/theme-support.php:96
+#: app/setup/theme-support.php:110
 msgid "Blue"
 msgstr ""
 
-#: app/setup/theme-support.php:101
+#: app/setup/theme-support.php:115
 msgid "Light Blue"
 msgstr ""
 
-#: app/setup/theme-support.php:106
+#: app/setup/theme-support.php:120
 msgid "Cyan"
 msgstr ""
 
-#: app/setup/theme-support.php:111
+#: app/setup/theme-support.php:125
 msgid "Teal"
 msgstr ""
 
-#: app/setup/theme-support.php:116
+#: app/setup/theme-support.php:130
 msgid "Green"
 msgstr ""
 
-#: app/setup/theme-support.php:121
+#: app/setup/theme-support.php:135
 msgid "Light Green"
 msgstr ""
 
-#: app/setup/theme-support.php:126
+#: app/setup/theme-support.php:140
 msgid "Lime"
 msgstr ""
 
-#: app/setup/theme-support.php:131
+#: app/setup/theme-support.php:145
 msgid "Yellow"
 msgstr ""
 
-#: app/setup/theme-support.php:136
+#: app/setup/theme-support.php:150
 msgid "Amber"
 msgstr ""
 
-#: app/setup/theme-support.php:141
+#: app/setup/theme-support.php:155
 msgid "Orange"
 msgstr ""
 
-#: app/setup/theme-support.php:146
+#: app/setup/theme-support.php:160
 msgid "Deep Orange"
 msgstr ""
 
-#: app/setup/theme-support.php:151
+#: app/setup/theme-support.php:165
 msgid "Brown"
 msgstr ""
 
-#: app/setup/theme-support.php:156
+#: app/setup/theme-support.php:170
 msgid "Grey"
 msgstr ""
 
-#: app/setup/theme-support.php:161
+#: app/setup/theme-support.php:175
 msgid "Blue Grey"
 msgstr ""
 
-#: app/setup/theme-support.php:186
+#: app/setup/theme-support.php:200
 msgid "extra small"
 msgstr ""
 
-#: app/setup/theme-support.php:187
+#: app/setup/theme-support.php:201
 msgid "XS"
 msgstr ""
 
-#: app/setup/theme-support.php:192
+#: app/setup/theme-support.php:206
 msgid "small"
 msgstr ""
 
-#: app/setup/theme-support.php:193
+#: app/setup/theme-support.php:207
 msgid "S"
 msgstr ""
 
-#: app/setup/theme-support.php:198
+#: app/setup/theme-support.php:212
 msgid "regular"
 msgstr ""
 
-#: app/setup/theme-support.php:199
+#: app/setup/theme-support.php:213
 msgid "M"
 msgstr ""
 
-#: app/setup/theme-support.php:204
+#: app/setup/theme-support.php:218
 msgid "large"
 msgstr ""
 
-#: app/setup/theme-support.php:205
+#: app/setup/theme-support.php:219
 msgid "L"
 msgstr ""
 
-#: app/setup/theme-support.php:210
+#: app/setup/theme-support.php:224
 msgid "extra large"
 msgstr ""
 
-#: app/setup/theme-support.php:211
+#: app/setup/theme-support.php:225
 msgid "XL"
 msgstr ""
 
-#: theme/404.php:15 theme/error.php:16
-#. translators: 404 page content; placeholders represents homepage opening and
-#. closing anchor tags
-#. translators: generic error page content; placeholders represents homepage
-#. opening and closing anchor tags
-msgid ""
-"Please check the URL for proper spelling and capitalization. If you're "
-"having trouble locating a destination, try visiting the %1$shome page%2$s."
-msgstr ""
-
-#: theme/comments.php:22
+#: comments.php:20
 msgid "No Responses"
 msgstr ""
 
-#: theme/comments.php:22
+#: comments.php:20
 msgid "One Response"
 msgstr ""
 
-#: theme/comments.php:22
+#: comments.php:20
 msgid "% Responses"
 msgstr ""
 
-#: theme/comments.php:48
-msgid "« Older Comments"
+#: comments.php:45
+msgid "« Previous Comments"
 msgstr ""
 
-#: theme/comments.php:51
-msgid "Newer Comments »"
+#: comments.php:46
+msgid "Next Comments »"
 msgstr ""
 
-#: theme/comments.php:59
+#: comments.php:52
 msgid "Comments are closed."
 msgstr ""
 
-#: theme/comments.php:67
+#: comments.php:59
 msgid "Leave a Reply"
 msgstr ""
 
-#: theme/page.php:24
+#: page.php:24
 msgid "Edit this entry."
 msgstr ""
 
-#: theme/partials/comment-single.php:14
+#: searchform.php:13 searchform.php:15
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:15
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:18
+msgid "Search"
+msgstr ""
+
+#: view-partials/comment-single.php:14
 msgid "says:"
 msgstr ""
 
-#: theme/partials/comment-single.php:18
+#: view-partials/comment-single.php:18
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: theme/partials/comment-single.php:25
+#: view-partials/comment-single.php:25
 #. translators: comment date and time
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: theme/partials/comment-single.php:29
+#: view-partials/comment-single.php:29
 msgid "(Edit)"
 msgstr ""
 
-#: theme/partials/loop-single.php:33
+#: view-partials/loop-single.php:39
 msgid "« Previous Entry"
 msgstr ""
 
-#: theme/partials/loop-single.php:34
+#: view-partials/loop-single.php:40
 msgid "Next Entry »"
 msgstr ""
 
-#: theme/partials/loop.php:15
-#. translators: post link title attribute
-msgid "Permanent Link to %s"
-msgstr ""
-
-#: theme/partials/loop.php:30
-msgid "Read the rest of this entry &raquo;"
-msgstr ""
-
-#: theme/partials/loop.php:41
+#: view-partials/loop.php:44
 msgid "« Previous Entries"
 msgstr ""
 
-#: theme/partials/loop.php:42
+#: view-partials/loop.php:45
 msgid "Next Entries »"
 msgstr ""
 
-#: theme/partials/loop.php:59
-#. translators: no posts found for category
-msgid "Sorry, but there aren't any posts in the %s category yet."
-msgstr ""
-
-#: theme/partials/loop.php:61
-msgid "Sorry, but there aren't any posts with this date."
-msgstr ""
-
-#: theme/partials/loop.php:65
-#. translators: no posts found for author
-msgid "Sorry, but there aren't any posts by %s yet."
-msgstr ""
-
-#: theme/partials/loop.php:67
-msgid "No posts found. Try a different search?"
-msgstr ""
-
-#: theme/partials/loop.php:69
-msgid "No posts found."
-msgstr ""
-
-#: theme/partials/post-meta.php:22
+#: view-partials/post-meta.php:22
 #. translators: post author attribution
 msgid "by %s"
 msgstr ""
 
-#: theme/partials/post-meta.php:28
+#: view-partials/post-meta.php:28
 msgid "Posted in "
 msgstr ""
 
-#: theme/partials/post-meta.php:32
+#: view-partials/post-meta.php:32
 msgid "No Comments"
 msgstr ""
 
-#: theme/partials/post-meta.php:32
+#: view-partials/post-meta.php:32
 msgid "1 Comment"
 msgstr ""
 
-#: theme/partials/post-meta.php:32
+#: view-partials/post-meta.php:32
 msgid "% Comments"
 msgstr ""
 
-#: theme/partials/post-meta.php:37
+#: view-partials/post-meta.php:37
 msgid "Tags:"
-msgstr ""
-
-#: theme/searchform.php:13 theme/searchform.php:15
-msgid "Search for:"
-msgstr ""
-
-#: theme/searchform.php:15
-msgid "Search &hellip;"
-msgstr ""
-
-#: theme/searchform.php:18
-msgid "Search"
 msgstr ""
 
 #. Theme Name of the plugin/theme

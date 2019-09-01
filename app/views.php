@@ -33,4 +33,4 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 // phpcs:ignore
-// View::addComposer( 'partials/foo', 'FooPartialViewComposer' );
+// View::addComposer( 'view-partials/foo', 'FooPartialViewComposer' );

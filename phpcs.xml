@@ -30,9 +30,9 @@
 
 	<!-- Allow whitespace at the beginning of files in fragments -->
 	<rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
-		<exclude-pattern>theme/partials/*</exclude-pattern>
-		<exclude-pattern>theme/footer.php</exclude-pattern>
-		<exclude-pattern>theme/footer-*.php</exclude-pattern>
+		<exclude-pattern>view-partials/*</exclude-pattern>
+		<exclude-pattern>footer.php</exclude-pattern>
+		<exclude-pattern>footer-*.php</exclude-pattern>
 	</rule>
 
 	<rule ref="WordPress-Extra">

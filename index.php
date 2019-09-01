@@ -1,6 +1,6 @@
 <?php
 /**
- * App Layout: layouts/app.php
+ * App Layout: view-layouts/app.php
  *
  * The main template file.
  *
@@ -15,9 +15,4 @@
  * @package WPEmergeTheme
  */
 
-?>
-@extends('layouts.app')
-
-@section('content')
-	@include('partials.loop')
-@endsection
+Theme::partial( 'loop' );

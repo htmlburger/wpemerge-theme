@@ -38,12 +38,15 @@
       "app",
       "dist",
       "languages",
-      "theme",
       "vendor",
-      ".htaccess",
+      "view-layouts",
+      "view-partials",
+      "view-templates",
       "config.json",
       "LICENSE",
-      "README.md"
+      "README.md",
+      "screenshot.png",
+      "style.css"
     ]
   }
 }
