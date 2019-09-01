@@ -35,18 +35,19 @@
   },
   "release": {
     "include": [
-      "app",
-      "dist",
-      "languages",
-      "vendor",
-      "view-layouts",
-      "view-partials",
-      "view-templates",
+      "app/",
+      "dist/",
+      "languages/",
+      "vendor/",
+      "view-layouts/",
+      "view-partials/",
+      "view-templates/",
       "config.json",
       "LICENSE",
       "README.md",
       "screenshot.png",
-      "style.css"
+      "style.css",
+      "*.php"
     ]
   }
 }

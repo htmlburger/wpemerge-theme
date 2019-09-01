@@ -5,6 +5,7 @@ const archiver = require('archiver');
 const fs       = require('fs');
 const path     = require('path');
 const shell    = require('shelljs');
+const glob     = require('glob');
 
 /**
  * Zip up multiple files and/or directories.
@@ -28,26 +29,32 @@ const zip = (sources, destination, relativeTo) => new Promise((resolve, reject) 
   archive.pipe(output);
 
   for (let i = 0; i < sources.length; i++) {
-    const item         = sources[ i ];
-    const relativeItem = path.relative(relativeTo, item);
+    const pattern      = sources[i];
 
-    if (!shell.test('-e', item)) {
-      reject(new Error(`File or directory does not exist: ${relativeItem}`));
+    const matches = glob.sync(pattern);
+
+    for (let j = 0; j < matches.length; j++) {
+      const item         = matches[j];
+      const relativeItem = path.relative(relativeTo, item);
+
+      if (!shell.test('-e', item)) {
+        reject(new Error(`File or directory does not exist: ${relativeItem}`));
+        return;
+      }
+
+      if (shell.test('-d', item)) {
+        archive.directory(item, relativeItem);
+        continue;
+      }
+
+      if (shell.test('-f', item)) {
+        archive.file(item, { name: relativeItem });
+        continue;
+      }
+
+      reject(new Error(`Item is neither a file nor a directory: ${relativeItem}`));
       return;
     }
-
-    if (shell.test('-d', item)) {
-      archive.directory(item, relativeItem);
-      continue;
-    }
-
-    if (shell.test('-f', item)) {
-      archive.file(item, { name: relativeItem });
-      continue;
-    }
-
-    reject(new Error(`Item is neither a file nor a directory: ${relativeItem}`));
-    return;
   }
 
   archive.finalize();
