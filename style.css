@@ -1,7 +1,13 @@
 /*
 Theme name: WP Emerge Starter Theme
+Theme URI:
+Author: atanasangelovdev
+Author URI: https://wpemerge.com/
 Description:
 Version:
+License: GPL-2.0-only
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: app
 */
 
 /*
@@ -13,3 +19,9 @@ how to get the build process up & running.
 If you need to make a quick fix, feel free to add CSS
 below this comment - it will override the bundled styles.
 */
+
+.sticky {  }
+
+.gallery-caption {  }
+
+.bypostauthor {  }

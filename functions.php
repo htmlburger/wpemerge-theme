@@ -12,7 +12,6 @@
  */
 
 use WPEmerge\Facades\WPEmerge;
-use WPEmergeTheme\Facades\Theme;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -37,6 +36,10 @@ define( 'APP_APP_SETUP_DIR', APP_APP_DIR . APP_APP_SETUP_DIR_NAME . DIRECTORY_SE
 define( 'APP_DIST_DIR', APP_DIR . APP_DIST_DIR_NAME . DIRECTORY_SEPARATOR );
 define( 'APP_RESOURCES_DIR', APP_DIR . APP_RESOURCES_DIR_NAME . DIRECTORY_SEPARATOR );
 define( 'APP_VENDOR_DIR', APP_DIR . APP_VENDOR_DIR_NAME . DIRECTORY_SEPARATOR );
+
+if ( ! isset( $content_width ) ) {
+	$content_width = 1080;
+}
 
 /**
  * Load composer dependencies.
