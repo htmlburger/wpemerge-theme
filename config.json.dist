@@ -45,6 +45,7 @@
       "config.json",
       "LICENSE",
       "README.md",
+      "readme.txt",
       "screenshot.png",
       "style.css",
       "*.php"
