@@ -20,7 +20,7 @@
 				<?php the_title(); ?>
 			</h2>
 
-			<?php Theme::partial( 'post-meta' ); ?>
+			<?php \Theme::partial( 'post-meta' ); ?>
 		</header>
 
 		<div class="article__body">

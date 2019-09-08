@@ -17,5 +17,5 @@
 @extends('views.layouts.app')
 
 @section('content')
-	@include('partials.loop')
+	@include('views.partials.loop')
 @endsection

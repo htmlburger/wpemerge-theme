@@ -9,4 +9,4 @@
  * @package WPEmergeTheme
  */
 
-Theme::partial( 'loop', 'single' );
+\Theme::partial( 'loop', 'single' );

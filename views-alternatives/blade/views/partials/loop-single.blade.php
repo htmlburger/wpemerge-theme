@@ -20,7 +20,7 @@
 				{{ get_the_title() }}
 			</h2>
 
-			@include('partials.post-meta')
+			@include('views.partials.post-meta')
 		</header>
 
 		<div class="article__body">

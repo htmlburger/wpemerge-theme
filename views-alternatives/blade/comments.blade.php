@@ -21,8 +21,8 @@
 				wp_list_comments(
 					[
 						'callback' => function( $comment, $args, $depth ) {
-							\WPEmerge\render(
-								'partials.comment-single',
+							\Theme::partial(
+								'comment-single',
 								[
 									'comment' => $comment,
 									'args'    => $args,
