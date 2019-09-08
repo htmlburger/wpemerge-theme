@@ -137,15 +137,14 @@ wp-content/themes/your-theme
 │   │   ├── shared/           # Shared styles.
 │   │   └── theme/            # Front-end styles.
 │   └── vendor/               # Any third-party, non-npm assets.
-├── theme/                    # Required theme files and views
-│   ├── partials/             # View partials.
-│   ├── templates/            # Page templates.
-│   ├── functions.php         # Bootstrap theme.
-│   ├── screenshot.png        # Theme screenshot.
-│   ├── style.css             # Theme stylesheet (avoid adding css here).
-│   └── [index.php ...]
 ├── vendor/                   # Composer packages.
-├── README.md                 # Your theme README.
+├── views/
+│   ├── layouts/
+│   └── partials/
+├── views-alternatives/       # Views for other engines like Blade.
+├── functions.php             # Bootstrap theme.
+├── screenshot.png            # Theme screenshot.
+├── style.css                 # Theme stylesheet.
 └── ...
 ```
 
@@ -183,9 +182,14 @@ Add JavaScript files here to add them to the front-end bundle. The entry point i
 
 These directories are for the admin, editor and login bundles, respectively. They work identically to the main `resources/scripts/theme/` directory.
 
-#### `theme/`
+#### `views/`
 
-Add views in this, the `theme/partials/` or the `theme/templates/` directories accordingly. Avoid adding any PHP logic here, unless it pertains to layouting (PHP logic should go into helper files or [WP Emerge controllers](https://docs.wpemerge.com/#/framework/routing/controllers))
+While views that follow the WordPress template hierarchy should go in the theme root directory (e.g. `index.php`, `searchform.php`, `archive-post.php` etc.), others should go in the following directories:
+1. `views/layouts/` - Layouts that other views extend.
+2. `views/partials/` - Small snippets that are meant to be reused throughout other views.
+3. `views/` - Named [custom post templates](https://developer.wordpress.org/themes/template-files-section/page-template-files/#creating-custom-page-templates-for-global-use) or views that don't fit anywhere else.
+
+Avoid adding any PHP logic in any of these views, unless it pertains to layouting (PHP logic should go into helper files or [WP Emerge controllers](https://docs.wpemerge.com/#/framework/routing/controllers)).
 
 ## Contributing
 
