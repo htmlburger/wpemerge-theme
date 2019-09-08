@@ -8,7 +8,7 @@
  */
 
 ?>
-@php do_action('get_footer') @endphp
+		@php apply_filters( "wpemerge.partials.footer.hook", true ) && do_action('get_footer') @endphp
 		@php wp_footer() @endphp
 	</body>
 </html>

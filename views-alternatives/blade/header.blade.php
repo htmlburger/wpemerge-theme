@@ -8,7 +8,7 @@
  */
 
 ?>
-@php do_action('get_header') @endphp
+@php apply_filters( "wpemerge.partials.header.hook", true ) && do_action('get_header') @endphp
 <!DOCTYPE html>
 <html @php language_attributes() @endphp>
 	<head>

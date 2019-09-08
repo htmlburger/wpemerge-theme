@@ -5,4 +5,6 @@
  * @package WPEmergeTheme
  * phpcs:disable
  */
+add_filter( 'wpemerge.partials.header.hook', '__return_false' );
 \WPEmerge\render( 'header' );
+remove_filter( 'wpemerge.partials.header.hook', '__return_false' );
