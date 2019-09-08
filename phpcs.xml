@@ -30,7 +30,7 @@
 
 	<!-- Allow whitespace at the beginning of files in fragments -->
 	<rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
-		<exclude-pattern>view-partials/*</exclude-pattern>
+		<exclude-pattern>views/partials/*</exclude-pattern>
 		<exclude-pattern>footer.php</exclude-pattern>
 		<exclude-pattern>footer-*.php</exclude-pattern>
 	</rule>

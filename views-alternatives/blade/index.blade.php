@@ -14,7 +14,7 @@
  */
 
 ?>
-@extends('view-layouts.app')
+@extends('views.layouts.app')
 
 @section('content')
 	@include('partials.loop')

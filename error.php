@@ -1,6 +1,6 @@
 <?php
 /**
- * App Layout: view-layouts/app.php
+ * App Layout: views/layouts/app.php
  *
  * Generic error fallback view.
  * Used if no view is found for the current error status code.

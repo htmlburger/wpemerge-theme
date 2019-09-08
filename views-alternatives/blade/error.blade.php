@@ -7,7 +7,7 @@
  */
 
 ?>
-@extends('view-layouts.app')
+@extends('views.layouts.app')
 
 @section('content')
 	<p>
