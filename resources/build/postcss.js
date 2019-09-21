@@ -9,10 +9,10 @@ const utils = require('./lib/utils');
  * Setup PostCSS plugins.
  */
 const plugins = [
-  require('autoprefixer'),
   /* @preset-begin(Tailwind CSS)
   require('tailwindcss')(utils.srcPath('build/tailwindcss.js')),
   @preset-end(Tailwind CSS) */
+  require('autoprefixer'),
 ];
 
 /**
