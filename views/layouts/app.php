@@ -1,6 +1,6 @@
 <?php
 /**
- * Base app layout.
+ * Base layout.
  *
  * @link https://docs.wpemerge.com/#/framework/views/layouts
  *

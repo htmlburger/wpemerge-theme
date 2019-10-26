@@ -1,6 +1,6 @@
 <?php
 /**
- * App Layout: views/layouts/app.php
+ * Layout: views/layouts/app.php
  *
  * The main template file.
  *

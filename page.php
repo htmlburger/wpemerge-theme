@@ -1,6 +1,6 @@
 <?php
 /**
- * App Layout: views/layouts/app.php
+ * Layout: views/layouts/app.php
  *
  * This is the template that is used for displaying all pages by default.
  *

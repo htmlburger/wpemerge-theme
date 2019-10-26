@@ -1,6 +1,6 @@
 <?php
 /**
- * Base app layout.
+ * Base layout.
  *
  * @package WPEmergeTheme
  */
