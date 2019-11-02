@@ -11,8 +11,6 @@
  * @package WPEmergeTheme
  */
 
-use WPEmerge\Facades\WPEmerge;
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -24,12 +22,14 @@ define( 'APP_APP_DIR_NAME', 'app' );
 define( 'APP_APP_HELPERS_DIR_NAME', 'helpers' );
 define( 'APP_APP_ROUTES_DIR_NAME', 'routes' );
 define( 'APP_APP_SETUP_DIR_NAME', 'setup' );
+define( 'APP_APP_SRC_DIR_NAME', 'src' );
 define( 'APP_DIST_DIR_NAME', 'dist' );
 define( 'APP_RESOURCES_DIR_NAME', 'resources' );
 define( 'APP_VENDOR_DIR_NAME', 'vendor' );
 
 define( 'APP_DIR', __DIR__ . DIRECTORY_SEPARATOR );
 define( 'APP_APP_DIR', APP_DIR . APP_APP_DIR_NAME . DIRECTORY_SEPARATOR );
+define( 'APP_APP_SRC_DIR', APP_DIR . APP_APP_DIR_NAME . DIRECTORY_SEPARATOR . APP_APP_SRC_DIR_NAME . DIRECTORY_SEPARATOR );
 define( 'APP_APP_HELPERS_DIR', APP_APP_DIR . APP_APP_HELPERS_DIR_NAME . DIRECTORY_SEPARATOR );
 define( 'APP_APP_ROUTES_DIR', APP_APP_DIR . APP_APP_ROUTES_DIR_NAME . DIRECTORY_SEPARATOR );
 define( 'APP_APP_SETUP_DIR', APP_APP_DIR . APP_APP_SETUP_DIR_NAME . DIRECTORY_SEPARATOR );
@@ -51,18 +51,13 @@ if ( file_exists( APP_VENDOR_DIR . 'autoload.php' ) ) {
 /**
  * Load helpers.
  */
+require_once APP_APP_SRC_DIR . 'App.php';
 require_once APP_APP_DIR . 'helpers.php';
 
 /**
- * Bootstrap Theme after all dependencies and helpers are loaded.
+ * Bootstrap theme after all dependencies and helpers are loaded.
  */
-$theme = \WPEmergeTheme\Theme\Theme::make();
-$theme->bootstrap( require APP_APP_DIR . 'config.php' );
-
-/**
- * Enable the global Theme:: shortcut so we don't have to type WPEmergeTheme:: every time.
- */
-WPEmerge::alias( 'Theme', \WPEmergeTheme\Facades\Theme::class );
+App::make()->bootstrap( require APP_APP_DIR . 'config.php' );
 
 /**
  * Register hooks.

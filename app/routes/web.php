@@ -7,19 +7,17 @@
  * @package WPEmergeTheme
  */
 
-use WPEmerge\Facades\Route;
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 // Using our ExampleController to handle the homepage, for example.
 // phpcs:ignore
-// Route::get()->url( '/' )->handle( 'ExampleController@home' );
+// App::route()->get()->url( '/' )->handle( 'ExampleController@home' );
 
 // If we do not want to hardcode a url, we can use one of the available route conditions instead.
 // phpcs:ignore
-// Route::get()->where( 'post_id', get_option( 'page_on_front' ) )->handle( 'ExampleController@home' );
+// App::route()->get()->where( 'post_id', get_option( 'page_on_front' ) )->handle( 'ExampleController@home' );
 
 /**
  * Pass all front-end requests through WPEmerge.
@@ -27,4 +25,4 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @link https://docs.wpemerge.com/#/framework/routing/methods?id=handling-all-requests
  */
-Route::all();
+App::route()->all();

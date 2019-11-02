@@ -9,8 +9,6 @@
  * @package WPEmergeTheme
  */
 
-use WPEmerge\Facades\Route;
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }

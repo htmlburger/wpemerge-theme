@@ -12,6 +12,12 @@ return [
 	 * Array of service providers you wish to enable.
 	 */
 	'providers'           => [
+		\WPEmergeTheme\Assets\AssetsServiceProvider::class,
+		\WPEmergeTheme\Avatar\AvatarServiceProvider::class,
+		\WPEmergeTheme\Config\ConfigServiceProvider::class,
+		\WPEmergeTheme\Image\ImageServiceProvider::class,
+		\WPEmergeTheme\Sidebar\SidebarServiceProvider::class,
+		\WPEmergeTheme\Theme\ThemeServiceProvider::class,
 		\App\Routing\RouteConditionsServiceProvider::class,
 		\App\View\ViewServiceProvider::class,
 	],

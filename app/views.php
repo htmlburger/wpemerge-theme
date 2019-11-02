@@ -7,8 +7,6 @@
  * @package WPEmergeTheme
  */
 
-use \WPEmerge\Facades\View;
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -22,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 // phpcs:ignore
-// View::addGlobal( 'foo', 'bar' );
+// App::views()->addGlobal( 'foo', 'bar' );
 
 /**
  * ------------------------------------------------------------------------
@@ -33,4 +31,4 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 // phpcs:ignore
-// View::addComposer( 'views/partials/foo', 'FooPartialViewComposer' );
+// App::views()->addComposer( 'views/partials/foo', 'FooPartialViewComposer' );

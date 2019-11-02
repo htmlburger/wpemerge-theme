@@ -6,5 +6,5 @@
  * phpcs:disable
  */
 add_filter( 'wpemerge.partials.footer.hook', '__return_false' );
-\WPEmerge\render( 'footer' );
+App::render( 'footer' );
 remove_filter( 'wpemerge.partials.footer.hook', '__return_false' );
