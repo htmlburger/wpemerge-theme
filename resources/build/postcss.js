@@ -13,6 +13,7 @@ const plugins = [
   require('tailwindcss')(utils.srcPath('build/tailwindcss.js')),
   @preset-end(Tailwind CSS) */
   require('autoprefixer'),
+  require('./lib/combine-media-queries'),
 ];
 
 /**
