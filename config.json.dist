@@ -34,6 +34,9 @@
     "port": 3000
   },
   "release": {
+    "configWhitelist": [
+      "variables"
+    ],
     "include": [
       "app/",
       "dist/",

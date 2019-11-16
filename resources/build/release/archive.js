@@ -8,10 +8,32 @@ const shell    = require('shelljs');
 const glob     = require('glob');
 
 /**
+ * Get the config with only the whitelisted keys.
+ *
+ * @param   {String} file
+ * @returns {Object}
+ */
+const getWhitelistedConfig = (file) => {
+  const config    = JSON.parse(fs.readFileSync(file));
+  const whitelist = config.release.configWhitelist || [];
+  const filtered  = {};
+
+  for (let i = 0; i < whitelist.length; i++) {
+    const key = whitelist[i];
+    if (config[key] !== undefined) {
+      filtered[key] = config[key];
+    }
+  }
+
+  return filtered;
+};
+
+/**
  * Zip up multiple files and/or directories.
  *
  * @param {Array<String>} sources Absolute paths to files and/or directories.
  * @param {String} destination
+ * @param {String} relativeTo
  * @returns {Promise<*>}
  */
 const zip = (sources, destination, relativeTo) => new Promise((resolve, reject) => {
@@ -29,8 +51,7 @@ const zip = (sources, destination, relativeTo) => new Promise((resolve, reject) 
   archive.pipe(output);
 
   for (let i = 0; i < sources.length; i++) {
-    const pattern      = sources[i];
-
+    const pattern = sources[i];
     const matches = glob.sync(pattern);
 
     for (let j = 0; j < matches.length; j++) {
@@ -48,6 +69,11 @@ const zip = (sources, destination, relativeTo) => new Promise((resolve, reject) 
       }
 
       if (shell.test('-f', item)) {
+        if (relativeItem === 'config.json') {
+          archive.append(Buffer.from(JSON.stringify(getWhitelistedConfig(item))), { name: relativeItem });
+          continue;
+        }
+
         archive.file(item, { name: relativeItem });
         continue;
       }
