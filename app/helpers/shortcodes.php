@@ -14,7 +14,7 @@
  * Render the current year.
  */
 function app_shortcode_year() {
-	return date( 'Y' );
+	return gmdate( 'Y' );
 }
 add_shortcode( 'year', 'app_shortcode_year' );
 
