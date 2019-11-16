@@ -13,13 +13,13 @@ WP Emerge Theme is completely open source and we encourage everybody to particip
 ## Development setup
 
 1. Fork this repository.
-1. Open up your `wp-content/themes/` directory in your terminal of choice.
-1. Clone your fork e.g. `git clone git@github.com:your-username/wpemerge-theme.git wpemerge`.
-1. Run `cd wpemerge/ && composer install && composer run post-create-project-cmd`.
-1. Answer no to any questions asked during installation.
-1. Ignore any `TTY mode is not supported on Windows platform.` errors.
-1. Make changes to `config.json` if necessary.
-1. Activate the WP Emerge theme from your WordPress admin panel.
+2. Open up your `wp-content/themes/` directory in your terminal of choice.
+3. Clone your fork e.g. `git clone git@github.com:your-username/wpemerge-theme.git wpemerge`.
+4. Run `cd wpemerge/ && composer install && composer run post-create-project-cmd`.
+5. Answer no to any questions asked during installation.
+6. Ignore any `TTY mode is not supported on Windows platform.` errors.
+7. Make changes to `config.json` if necessary.
+8. Activate the WP Emerge theme from your WordPress admin panel.
 
 ## Pull Requests
 
