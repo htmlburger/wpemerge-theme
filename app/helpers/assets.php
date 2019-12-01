@@ -25,7 +25,7 @@ function app_action_theme_enqueue_assets() {
 	 */
 	App::theme()->assets()->enqueueScript(
 		'theme-js-bundle',
-		$template_dir . '/dist/theme.js',
+		$template_dir . '/dist/frontend.js',
 		[ 'jquery' ],
 		true
 	);
@@ -35,7 +35,7 @@ function app_action_theme_enqueue_assets() {
 	 */
 	App::theme()->assets()->enqueueStyle(
 		'theme-css-bundle',
-		$template_dir . '/dist/styles/theme.css'
+		$template_dir . '/dist/styles/frontend.css'
 	);
 
 	/**

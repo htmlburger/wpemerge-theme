@@ -1,6 +1,6 @@
 # Build files
 /dist/
-/resources/styles/theme/_sprite.scss
+/resources/styles/frontend/_sprite.scss
 /resources/styles/shared/_config.scss
 
 # Development files

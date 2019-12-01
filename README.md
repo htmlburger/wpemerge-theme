@@ -166,21 +166,21 @@ Add PHP class files here. All clases in the `App\` namespace are autoloaded in a
 
 Add images for styling here. Optimized copies will be placed in `dist/images/` when running the build process.
 
-#### `resources/styles/theme/`
+#### `resources/styles/frontend/`
 
 Add .css and .scss files to add them to the front-end bundle. Don't forget to `@import` them in `index.scss`.
 
 #### `resources/styles/[admin,editor,login]/`
 
-These directories are for the admin, editor and login bundles, respectively. They work identically to the main `resources/styles/theme/` directory.
+These directories are for the admin, editor and login bundles, respectively. They work identically to the main `resources/styles/frontend/` directory.
 
-#### `resources/scripts/theme/`
+#### `resources/scripts/frontend/`
 
-Add JavaScript files here to add them to the front-end bundle. The entry point is `index.js`.
+Add JavaScript files here to add them to the frontend bundle. The entry point is `index.js`.
 
 #### `resources/scripts/[admin,editor,login]/`
 
-These directories are for the admin, editor and login bundles, respectively. They work identically to the main `resources/scripts/theme/` directory.
+These directories are for the admin, editor and login bundles, respectively. They work identically to the main `resources/scripts/frontend/` directory.
 
 #### `views/`
 
