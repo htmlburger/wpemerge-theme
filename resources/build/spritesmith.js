@@ -15,7 +15,7 @@ module.exports = new SpritesmithPlugin({
   },
   target: {
     image: utils.distImagesPath('sprite.png'),
-    css: utils.srcStylesPath('theme/_sprite.scss'),
+    css: utils.srcStylesPath('frontend/_sprite.scss'),
   },
   apiOptions: {
     cssImageRef: '~@dist/images/sprite.png',
