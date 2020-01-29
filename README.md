@@ -104,16 +104,9 @@ wp-content/themes/your-theme
 │   │   ├── admin.php
 │   │   ├── ajax.php
 │   │   └── web.php
-│   ├── setup/                # Register WordPress menus, post types etc.
-│   │   ├── menus.php
-│   │   ├── post-types.php
-│   │   ├── sidebars.php
-│   │   ├── taxonomies.php
-│   │   ├── theme-support.php
-│   │   └── widgets.php
 │   ├── src/                  # PSR-4 autoloaded classes.
 │   │   ├── Controllers/      # Controller classes for WP Emerge routes.
-│   │   ├── Widgets/          # Widget classes.
+│   │   ├── WordPress/        # Register post types, taxonomies, menus etc.
 │   │   └── ...
 │   ├── config.php            # WP Emerge configuration.
 │   ├── helpers.php           # Require your helper files here.
@@ -153,10 +146,6 @@ wp-content/themes/your-theme
 #### `app/helpers/`
 
 Add PHP helper files here. Helper files should include __function definitions only__. See below for information on where to put actions, filters, classes etc.
-
-#### `app/setup/`
-
-Modify files here according to your needs. These files should contain __registrations and declarations of WordPress entities only__ such as post types, taxonomies etc.
 
 #### `app/src/`
 

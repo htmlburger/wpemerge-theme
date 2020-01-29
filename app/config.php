@@ -20,6 +20,10 @@ return [
 		\WPEmergeTheme\Theme\ThemeServiceProvider::class,
 		\App\Routing\RouteConditionsServiceProvider::class,
 		\App\View\ViewServiceProvider::class,
+		\App\WordPress\ContentTypesServiceProvider::class,
+		\App\WordPress\MenusServiceProvider::class,
+		\App\WordPress\ThemeServiceProvider::class,
+		\App\WordPress\WidgetsServiceProvider::class,
 	],
 
 	/**
