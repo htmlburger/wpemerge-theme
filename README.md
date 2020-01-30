@@ -106,12 +106,13 @@ wp-content/themes/your-theme
 │   │   └── web.php
 │   ├── src/                  # PSR-4 autoloaded classes.
 │   │   ├── Controllers/      # Controller classes for WP Emerge routes.
+│   │   ├── Routing/          # Register your custom routing conditions etc.
+│   │   ├── View/             # Register your view composers, globals etc.
 │   │   ├── WordPress/        # Register post types, taxonomies, menus etc.
 │   │   └── ...
 │   ├── config.php            # WP Emerge configuration.
 │   ├── helpers.php           # Require your helper files here.
-│   ├── hooks.php             # Register your actions and filters here.
-│   └── views.php             # Register your WP Emerge view composers etc.
+│   └── hooks.php             # Register your actions and filters here.
 ├── dist/                     # Bundles, optimized images etc.
 ├── languages/                # Language files.
 ├── resources/

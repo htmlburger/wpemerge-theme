@@ -20,6 +20,37 @@ class ViewServiceProvider implements ServiceProviderInterface {
 	 * {@inheritDoc}
 	 */
 	public function bootstrap( $container ) {
-		require_once APP_APP_DIR . 'views.php';
+		$this->registerGlobals();
+		$this->registerComposers();
+	}
+
+	/**
+	 * Register view globals.
+	 *
+	 * @return void
+	 */
+	protected function registerGlobals() {
+		/**
+		 * Globals
+		 *
+		 * @link https://docs.wpemerge.com/#/framework/views/overview
+		 */
+		// phpcs:ignore
+		// \App::views()->addGlobal( 'foo', 'bar' );
+	}
+
+	/**
+	 * Register view composers.
+	 *
+	 * @return void
+	 */
+	protected function registerComposers() {
+		/**
+		 * View composers
+		 *
+		 * @link https://docs.wpemerge.com/#/framework/views/view-composers
+		 */
+		// phpcs:ignore
+		// \App::views()->addComposer( 'views/partials/foo', 'FooPartialViewComposer' );
 	}
 }
