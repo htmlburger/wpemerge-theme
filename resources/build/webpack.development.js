@@ -3,7 +3,7 @@
  */
 const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
 /**
@@ -37,13 +37,6 @@ const babelLoader = {
 };
 
 /**
- * Setup extract text plugin.
- */
-const extractSass = new ExtractTextPlugin({
-  filename: 'styles/[name].css',
-});
-
-/**
  * Setup webpack plugins.
  */
 const plugins = [
@@ -58,7 +51,9 @@ const plugins = [
     $: 'jquery',
     jQuery: 'jquery',
   }),
-  extractSass,
+  new MiniCssExtractPlugin({
+    filename: 'styles/[name].css',
+  }),
   spriteSmith,
   browsersync,
   new ManifestPlugin(),
@@ -124,22 +119,25 @@ module.exports = {
        */
       {
         test: utils.tests.styles,
-        use: extractSass.extract({
-          publicPath: '../',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                minimize: false,
-              },
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../',
             },
-            {
-              loader: 'postcss-loader',
-              options: postcss,
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              minimize: false,
             },
-            'sass-loader',
-          ],
-        }),
+          },
+          {
+            loader: 'postcss-loader',
+            options: postcss,
+          },
+          'sass-loader',
+        ],
       },
 
       /**

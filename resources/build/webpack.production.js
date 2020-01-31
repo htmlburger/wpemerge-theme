@@ -3,7 +3,7 @@
  */
 const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ManifestPlugin = require('webpack-manifest-plugin');
@@ -38,13 +38,6 @@ const babelLoader = {
 };
 
 /**
- * Setup extract text plugin.
- */
-const extractSass = new ExtractTextPlugin({
-  filename: 'styles/[name].css',
-});
-
-/**
  * Setup webpack plugins.
  */
 const plugins = [
@@ -59,7 +52,9 @@ const plugins = [
     $: 'jquery',
     jQuery: 'jquery',
   }),
-  extractSass,
+  new MiniCssExtractPlugin({
+    filename: 'styles/[name].css',
+  }),
   spriteSmith,
   new UglifyJSPlugin(),
   new ImageminPlugin({
@@ -86,7 +81,7 @@ const plugins = [
         { removeViewBox: true },
         { cleanupIDs: false },
         { convertStyleToAttrs: true },
-      ]
+      ],
     },
     plugins: [
       require('imagemin-mozjpeg')({
@@ -157,22 +152,25 @@ module.exports = {
        */
       {
         test: utils.tests.styles,
-        use: extractSass.extract({
-          publicPath: '../',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                minimize: true,
-              },
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../',
             },
-            {
-              loader: 'postcss-loader',
-              options: postcss,
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              minimize: true,
             },
-            'sass-loader',
-          ],
-        }),
+          },
+          {
+            loader: 'postcss-loader',
+            options: postcss,
+          },
+          'sass-loader',
+        ],
       },
 
       /**
