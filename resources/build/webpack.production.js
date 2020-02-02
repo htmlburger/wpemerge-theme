@@ -4,7 +4,7 @@
 const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ManifestPlugin = require('webpack-manifest-plugin');
 
@@ -56,7 +56,6 @@ const plugins = [
     filename: 'styles/[name].css',
   }),
   spriteSmith,
-  new UglifyJSPlugin(),
   new ImageminPlugin({
     optipng: {
       optimizationLevel: 7,
@@ -209,6 +208,14 @@ module.exports = {
    * Setup the transformations.
    */
   plugins,
+
+  /**
+   * Setup optimizations.
+   */
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
 
   /**
    * Setup the development tools.
