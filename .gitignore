@@ -12,9 +12,6 @@
 # Composer packages
 /vendor/
 
-# WordPress Coding Standards
-/wpcs/
-
 # NPM lockfile as it causes more problems than it solves
 package-lock.json
 
