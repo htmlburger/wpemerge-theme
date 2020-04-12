@@ -71,7 +71,7 @@ _Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they
 - [SASS](https://sass-lang.com/) + [PostCSS](https://github.com/postcss/postcss) for stylesheets. Separate bundles are created for **front-end**, **administration**, **Gutenberg** and **login** pages.
 - ES6 for JavaScript. Separate bundles are created for **front-end**, **administration**, **Gutenberg** and **login** pages.
 - Pure [Webpack](https://webpack.js.org/) to transpile and bundle assets, create sprites, optimize images etc.
-- [Browsersync](https://www.browsersync.io/) for synchronized browser development.
+- [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/) for synchronized browser development.
 - Autoloading for all classes in your `App\` namespace.
 - Automatic, fool-proof cache busting for all assets, including ones referenced in styles.
 - WPCS, JavaScript and SASS linting and fixing using a single yarn command.
