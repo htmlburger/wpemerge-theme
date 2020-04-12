@@ -8,8 +8,8 @@
 /**
  * Get asset source url.
  *
- * @param string  $name Source basename (no extension).
- * @param string  $extension Source extension - '.js' or '.css'.
+ * @param string $name Source basename (no extension).
+ * @param string $extension Source extension - '.js' or '.css'.
  * @return string
  */
 function app_theme_get_asset_source( $name, $extension ) {
@@ -18,7 +18,7 @@ function app_theme_get_asset_source( $name, $extension ) {
 
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 		$mode = 'debug';
-	} else if ( ! file_exists( get_template_directory() . "/dist/{$path}.min{$extension}" ) ) {
+	} elseif ( ! file_exists( get_template_directory() . "/dist/{$path}.min{$extension}" ) ) {
 		$mode = 'development';
 	}
 
