@@ -1,10 +1,13 @@
 /**
  * The external dependencies.
  */
+const url = require('url');
 const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const chokidar = require('chokidar');
+const _ = require('lodash');
 
 /**
  * The internal dependencies.
@@ -14,12 +17,14 @@ const configLoader = require('./config-loader');
 const spriteSmith = require('./spritesmith');
 const spriteSvg = require('./spritesvg');
 const postcss = require('./postcss');
-const browsersync = require('./browsersync');
 
 /**
- * Setup the env.
+ * Setup the environment.
  */
 const { env: envName } = utils.detectEnv();
+const userConfig = utils.getUserConfig();
+const devPort = _.get(userConfig, 'development.port', 3000);
+const devUrl = url.parse(_.get(userConfig, 'development.url', 'http://localhost/').replace(/\/$/, ''));
 
 /**
  * Setup babel loader.
@@ -122,12 +127,7 @@ module.exports = {
       {
         test: utils.tests.styles,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '../',
-            },
-          },
+          'style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -215,4 +215,31 @@ module.exports = {
   bail: false,
   watch: true,
   devtool: 'source-map',
+  devServer: {
+    index: '',
+    port: devPort,
+    proxy: {
+      context: '/',
+      target: `${devUrl.protocol}//${devUrl.host}`,
+      changeOrigin: true,
+    },
+    hot: true,
+    open: true,
+    openPage: devUrl.pathname !== '/' ? devUrl.pathname.replace(/^\//, '').replace(/\/?$/, '/') : '',
+    overlay: true,
+
+    /**
+     * Reload on view file changes.
+     */
+    before: (app, server) => {
+      chokidar
+        .watch([
+          './views/**/*.php',
+          './*.php',
+        ])
+        .on('all', () => {
+          server.sockWrite(server.sockets, 'content-changed');
+        });
+    },
+  },
 };

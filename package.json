@@ -3,7 +3,7 @@
     "node": ">=6.9.1"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --colors --config resources/build/webpack.development.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --colors --config resources/build/webpack.development.js",
     "build": "cross-env NODE_ENV=production webpack --colors --config resources/build/webpack.production.js",
     "lint": "run-s -cl lint:wpcs lint:scripts lint:styles",
     "lint-fix": "run-s -cl lint-fix:wpcs lint-fix:scripts lint-fix:styles",
@@ -38,6 +38,7 @@
     "import-glob": "^1.5.0",
     "intersection-observer": "^0.7.0",
     "loader-utils": "^1.1.0",
+    "lodash": "^4.17.15",
     "lozad": "^1.9.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.9.0",
@@ -54,8 +55,7 @@
   },
   "devDependencies": {
     "archiver": "^3.0.0",
-    "browser-sync": "^2.23.7",
-    "browser-sync-webpack-plugin": "^2.2.2",
+    "chokidar": "^3.3.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.12.0",
@@ -69,5 +69,6 @@
     "stylelint-order": "^0.8.1",
     "stylelint-scss": "^3.1.0",
     "svgo-loader": "^2.2.1"
+    "webpack-dev-server": "^3.10.3"
   }
 }

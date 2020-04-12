@@ -32,6 +32,9 @@ matrix:
 before_install:
   # Update composer.
   - composer self-update
+  # Install required Node version.
+  - nvm install 8.10
+  - nvm use 8.10
   # Output the Node version.
   - node -v
   # Output the NPM version.

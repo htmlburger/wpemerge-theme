@@ -55,6 +55,8 @@ module.exports.tests = {
   svgs: /images[\\/]sprite-svg[\\/].*\.svg$/,
   images: /(resources[\\/]images|node_modules)[\\/](?!sprite-svg).*\.(ico|jpg|jpeg|png|svg|gif)$/,
   fonts: /(resources[\\/]fonts|node_modules)[\\/].*\.(eot|svg|ttf|woff|woff2)$/,
+  images: /(resources|dist|node_modules)[\\/].*\.(ico|jpg|jpeg|png|svg|gif)$/,
+  fonts: /(resources|dist|node_modules)[\\/].*\.(eot|svg|ttf|woff|woff2)$/,
 };
 
 module.exports.detectEnv = () => {
