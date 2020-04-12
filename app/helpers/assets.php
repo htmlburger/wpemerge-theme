@@ -45,6 +45,21 @@ function app_action_theme_enqueue_assets() {
 }
 
 /**
+ * Enqueue sprite svg.
+ *
+ * @return void
+ */
+function app_enqueue_svg_sprite() {
+	$file = APP_DIST_DIR . 'images/sprite-svg.svg';
+
+	if ( ! file_exists( $file ) ) {
+		return;
+	}
+
+	include $file;
+}
+
+/**
  * Enqueue admin assets.
  *
  * @return void

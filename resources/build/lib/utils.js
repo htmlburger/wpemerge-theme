@@ -52,7 +52,8 @@ module.exports.distFontsPath = destPath =>
 module.exports.tests = {
   scripts: /\.(js|jsx)$/,
   styles: /\.(css|scss|sass)$/,
-  images: /(resources[\\/]images|node_modules)[\\/].*\.(ico|jpg|jpeg|png|svg|gif)$/,
+  svgs: /images[\\/]sprite-svg[\\/].*\.svg$/,
+  images: /(resources[\\/]images|node_modules)[\\/](?!sprite-svg).*\.(ico|jpg|jpeg|png|svg|gif)$/,
   fonts: /(resources[\\/]fonts|node_modules)[\\/].*\.(eot|svg|ttf|woff|woff2)$/,
 };
 

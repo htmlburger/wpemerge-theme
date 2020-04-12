@@ -18,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Assets
  */
+add_action( 'wp_body_open', 'app_enqueue_svg_sprite' );
 add_action( 'wp_enqueue_scripts', 'app_action_theme_enqueue_assets' );
 add_action( 'admin_enqueue_scripts', 'app_action_admin_enqueue_assets' );
 add_action( 'login_enqueue_scripts', 'app_action_login_enqueue_assets' );

@@ -12,6 +12,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const utils = require('./lib/utils');
 const configLoader = require('./config-loader');
 const spriteSmith = require('./spritesmith');
+const spriteSvg = require('./spritesvg');
 const postcss = require('./postcss');
 const browsersync = require('./browsersync');
 
@@ -55,6 +56,7 @@ const plugins = [
     filename: 'styles/[name].css',
   }),
   spriteSmith,
+  spriteSvg,
   browsersync,
   new ManifestPlugin(),
 ];
@@ -150,6 +152,34 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: file => `images/[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+            },
+          },
+        ],
+      },
+
+      /**
+       * Handle svg sprites.
+       */
+      {
+        test: utils.tests.svgs,
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              extract: true,
+              spriteFilename: 'images/sprite-svg.svg',
+            },
+          },
+          {
+            loader: 'svgo-loader',
+            options: {
+              plugins: [
+                {
+                  removeAttrs: {
+                    attrs: '*:(stroke|fill)*',
+                  },
+                },
+              ],
             },
           },
         ],

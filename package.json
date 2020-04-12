@@ -45,6 +45,7 @@
     "postcss-loader": "^2.1.4",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
+    "svg-sprite-loader": "^4.2.5",
     "terser-webpack-plugin": "^2.3.4",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
@@ -66,6 +67,7 @@
     "stylelint": "^9.2.1",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-order": "^0.8.1",
-    "stylelint-scss": "^3.1.0"
+    "stylelint-scss": "^3.1.0",
+    "svgo-loader": "^2.2.1"
   }
 }

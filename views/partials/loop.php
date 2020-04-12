@@ -20,6 +20,9 @@
 
 					<h2 class="article__title">
 						<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php echo esc_attr( app_get_permalink_title() ); ?>">
+							<svg class="icon icon-angle-right" width="1em" height="1em" fill="currentColor">
+								<use xlink:href="#angle-right"></use>
+							</svg>
 							<?php the_title(); ?>
 						</a>
 					</h2>
