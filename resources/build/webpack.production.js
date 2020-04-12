@@ -14,6 +14,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const utils = require('./lib/utils');
 const configLoader = require('./config-loader');
 const spriteSmith = require('./spritesmith');
+const spriteSvg = require('./spritesvg');
 const postcss = require('./postcss');
 
 /**
@@ -56,6 +57,7 @@ const plugins = [
     filename: 'styles/[name].css',
   }),
   spriteSmith,
+  spriteSvg,
   new ImageminPlugin({
     optipng: {
       optimizationLevel: 7,
