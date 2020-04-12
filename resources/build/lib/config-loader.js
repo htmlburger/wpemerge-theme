@@ -119,7 +119,7 @@ const getSass = (config) => {
  * @param rawConfig
  * @returns {string}
  */
-module.exports = function(rawConfig) {
+module.exports = function (rawConfig) {
   const options = loaderUtils.getOptions(this);
   const config = JSON.parse(rawConfig);
 
