@@ -12,6 +12,7 @@ const plugins = [
   /* @preset-begin(Tailwind CSS)
   require('tailwindcss')(utils.srcPath('build/tailwindcss.js')),
   @preset-end(Tailwind CSS) */
+  require('postcss-discard-comments'),
   require('autoprefixer'),
   require('./lib/combine-media-queries'),
 ];
