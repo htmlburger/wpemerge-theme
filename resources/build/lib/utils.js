@@ -60,12 +60,18 @@ module.exports.tests = {
 module.exports.detectEnv = () => {
   const env = process.env.NODE_ENV || 'development';
   const isDev = env === 'development';
+  const isHot = env === 'hot';
+  const isDebug = env === 'debug';
   const isProduction = env === 'production';
 
   return {
     env,
     isDev,
+    isHot,
+    isDebug,
     isProduction,
+    minify: isProduction,
+    filenameSuffix: isDev || isProduction ? '.min' : '',
   };
 };
 

@@ -3,7 +3,9 @@
  */
 const utils = require('../lib/utils');
 
+const env = utils.detectEnv();
+
 module.exports = {
   path: utils.distPath(),
-  filename: '[name].js',
+  filename: `[name]${env.filenameSuffix}.js`,
 };

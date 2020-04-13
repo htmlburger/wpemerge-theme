@@ -4,7 +4,6 @@
 const url = require('url');
 const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const chokidar = require('chokidar');
 const _ = require('lodash');
@@ -21,7 +20,6 @@ const postcss = require('./postcss');
 /**
  * Setup the environment.
  */
-const { env: envName } = utils.detectEnv();
 const userConfig = utils.getUserConfig();
 const devPort = _.get(userConfig, 'development.port', 3000);
 const devUrl = url.parse(_.get(userConfig, 'development.url', 'http://localhost/').replace(/\/$/, ''));
@@ -56,9 +54,6 @@ const plugins = [
   new ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery',
-  }),
-  new MiniCssExtractPlugin({
-    filename: 'styles/[name].css',
   }),
   spriteSmith,
   spriteSvg,
@@ -128,12 +123,7 @@ module.exports = {
         test: utils.tests.styles,
         use: [
           'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              minimize: false,
-            },
-          },
+          'css-loader',
           {
             loader: 'postcss-loader',
             options: postcss,
@@ -210,7 +200,7 @@ module.exports = {
   /**
    * Setup the development tools.
    */
-  mode: envName,
+  mode: 'development',
   cache: true,
   bail: false,
   watch: true,

@@ -6,16 +6,39 @@
  */
 
 /**
+ * Get asset source url.
+ *
+ * @param string $name Source basename (no extension).
+ * @param string $extension Source extension - '.js' or '.css'.
+ * @return string
+ */
+function app_theme_get_asset_source( $name, $extension ) {
+	$mode = 'production';
+	$path = '.css' === $extension ? "styles/{$name}" : $name;
+
+	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+		$mode = 'debug';
+	} elseif ( ! file_exists( get_template_directory() . "/dist/{$path}.min{$extension}" ) ) {
+		$mode = 'development';
+	}
+
+	if ( 'development' === $mode && '.css' === $extension ) {
+		return '';
+	}
+
+	$template_dir_uri = get_template_directory_uri();
+	$port             = 'development' === $mode ? ':' . App::theme()->config()->get( 'development.port', 3000 ) : '';
+	$suffix           = 'production' === $mode ? '.min' : '';
+
+	return 'development' === $mode ? "http://localhost{$port}/{$path}{$suffix}{$extension}" : "$template_dir_uri/dist/{$path}{$suffix}{$extension}";
+}
+
+/**
  * Enqueue front-end assets.
  *
  * @return void
  */
 function app_action_theme_enqueue_assets() {
-	$template_dir_uri = get_template_directory_uri();
-	$template_dir     = get_template_directory();
-	$production       = file_exists( $template_dir . DIRECTORY_SEPARATOR . 'dist' . DIRECTORY_SEPARATOR . 'frontend.js' );
-	$port             = App::theme()->config()->get( 'development.port', 3000 );
-
 	/**
 	 * Enqueue the built-in comment-reply script for singular pages.
 	 */
@@ -28,7 +51,7 @@ function app_action_theme_enqueue_assets() {
 	 */
 	App::theme()->assets()->enqueueScript(
 		'theme-js-bundle',
-		$production ? $template_dir_uri . '/dist/frontend.js' : "http://localhost:{$port}/frontend.js",
+		app_theme_get_asset_source( 'frontend', '.js' ),
 		[ 'jquery' ],
 		true
 	);
@@ -36,10 +59,12 @@ function app_action_theme_enqueue_assets() {
 	/**
 	 * Enqueue styles.
 	 */
-	if ( $production ) {
+	$style = app_theme_get_asset_source( 'frontend', '.css' );
+
+	if ( $style ) {
 		App::theme()->assets()->enqueueStyle(
 			'theme-css-bundle',
-			$template_dir_uri . '/dist/styles/frontend.css'
+			$style
 		);
 	}
 
@@ -70,17 +95,12 @@ function app_enqueue_svg_sprite() {
  * @return void
  */
 function app_action_admin_enqueue_assets() {
-	$template_dir_uri = get_template_directory_uri();
-	$template_dir     = get_template_directory();
-	$production       = file_exists( $template_dir . DIRECTORY_SEPARATOR . 'dist' . DIRECTORY_SEPARATOR . 'admin.js' );
-	$port             = App::theme()->config()->get( 'development.port', 3000 );
-
 	/**
 	 * Enqueue scripts.
 	 */
 	App::theme()->assets()->enqueueScript(
 		'theme-admin-js-bundle',
-		$production ? $template_dir_uri . '/dist/admin.js' : "http://localhost:{$port}/admin.js",
+		app_theme_get_asset_source( 'admin', '.js' ),
 		[ 'jquery' ],
 		true
 	);
@@ -88,10 +108,12 @@ function app_action_admin_enqueue_assets() {
 	/**
 	 * Enqueue styles.
 	 */
-	if ( $production ) {
+	$style = app_theme_get_asset_source( 'admin', '.css' );
+
+	if ( $style ) {
 		App::theme()->assets()->enqueueStyle(
 			'theme-admin-css-bundle',
-			$template_dir_uri . '/dist/styles/admin.css'
+			$style
 		);
 	}
 }
@@ -102,17 +124,12 @@ function app_action_admin_enqueue_assets() {
  * @return void
  */
 function app_action_login_enqueue_assets() {
-	$template_dir_uri = get_template_directory_uri();
-	$template_dir     = get_template_directory();
-	$production       = file_exists( $template_dir . DIRECTORY_SEPARATOR . 'dist' . DIRECTORY_SEPARATOR . 'login.js' );
-	$port             = App::theme()->config()->get( 'development.port', 3000 );
-
 	/**
 	 * Enqueue scripts.
 	 */
 	App::theme()->assets()->enqueueScript(
 		'theme-login-js-bundle',
-		$production ? $template_dir_uri . '/dist/login.js' : "http://localhost:{$port}/login.js",
+		app_theme_get_asset_source( 'login', '.js' ),
 		[ 'jquery' ],
 		true
 	);
@@ -120,10 +137,12 @@ function app_action_login_enqueue_assets() {
 	/**
 	 * Enqueue styles.
 	 */
-	if ( $production ) {
+	$style = app_theme_get_asset_source( 'login', '.css' );
+
+	if ( $style ) {
 		App::theme()->assets()->enqueueStyle(
 			'theme-login-css-bundle',
-			$template_dir_uri . '/dist/styles/login.css'
+			$style
 		);
 	}
 }
@@ -134,17 +153,12 @@ function app_action_login_enqueue_assets() {
  * @return void
  */
 function app_action_editor_enqueue_assets() {
-	$template_dir_uri = get_template_directory_uri();
-	$template_dir     = get_template_directory();
-	$production       = file_exists( $template_dir . DIRECTORY_SEPARATOR . 'dist' . DIRECTORY_SEPARATOR . 'editor.js' );
-	$port             = App::theme()->config()->get( 'development.port', 3000 );
-
 	/**
 	 * Enqueue scripts.
 	 */
 	App::theme()->assets()->enqueueScript(
 		'theme-editor-js-bundle',
-		$production ? $template_dir_uri . '/dist/editor.js' : "http://localhost:{$port}/editor.js",
+		app_theme_get_asset_source( 'editor', '.js' ),
 		[ 'jquery' ],
 		true
 	);
@@ -152,10 +166,12 @@ function app_action_editor_enqueue_assets() {
 	/**
 	 * Enqueue styles.
 	 */
-	if ( $production ) {
+	$style = app_theme_get_asset_source( 'editor', '.css' );
+
+	if ( $style ) {
 		App::theme()->assets()->enqueueStyle(
 			'theme-editor-css-bundle',
-			$template_dir_uri . '/dist/styles/editor.css'
+			$style
 		);
 	}
 }

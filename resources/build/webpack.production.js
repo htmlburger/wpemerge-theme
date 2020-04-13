@@ -4,7 +4,6 @@
 const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ManifestPlugin = require('webpack-manifest-plugin');
 
@@ -20,7 +19,7 @@ const postcss = require('./postcss');
 /**
  * Setup the env.
  */
-const { env: envName } = utils.detectEnv();
+const env = utils.detectEnv();
 
 /**
  * Setup babel loader.
@@ -42,9 +41,6 @@ const babelLoader = {
  * Setup webpack plugins.
  */
 const plugins = [
-  new CleanWebpackPlugin(utils.distPath(), {
-    root: utils.themeRootPath(),
-  }),
   new WatchIgnorePlugin([
     utils.distImagesPath('sprite.png'),
     utils.distImagesPath('sprite@2x.png'),
@@ -54,7 +50,7 @@ const plugins = [
     jQuery: 'jquery',
   }),
   new MiniCssExtractPlugin({
-    filename: 'styles/[name].css',
+    filename: `styles/[name]${env.filenameSuffix}.css`,
   }),
   spriteSmith,
   spriteSvg,
@@ -92,6 +88,13 @@ const plugins = [
   }),
   new ManifestPlugin(),
 ];
+
+// When doing a combined build, only clean up the first time.
+if (process.env.WPEMERGE_COMBINED_BUILD && env.isDebug) {
+  plugins.push(new CleanWebpackPlugin(utils.distPath(), {
+    root: utils.themeRootPath(),
+  }));
+}
 
 /**
  * Export the configuration.
@@ -160,17 +163,17 @@ module.exports = {
               publicPath: '../',
             },
           },
-          {
-            loader: 'css-loader',
-            options: {
-              minimize: true,
-            },
-          },
+          'css-loader',
           {
             loader: 'postcss-loader',
             options: postcss,
           },
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              outputStyle: env.isDebug ? 'compact' : 'compressed',
+            },
+          },
         ],
       },
 
@@ -215,14 +218,13 @@ module.exports = {
    * Setup optimizations.
    */
   optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
+    minimize: env.minify,
   },
 
   /**
    * Setup the development tools.
    */
-  mode: envName,
+  mode: 'production',
   cache: false,
   bail: false,
   watch: false,
