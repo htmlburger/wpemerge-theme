@@ -41,6 +41,19 @@ class ThemeServiceProvider implements ServiceProviderInterface
 	 */
 	public function addThemeSupport() {
 		/**
+		 * Support custom logo.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/custom-logo/
+		 */
+		add_theme_support( 'custom-logo', array(
+			'height'      => 100,
+			'width'       => 400,
+			'flex-height' => true,
+			'flex-width'  => true,
+			'header-text' => array( 'site-title', 'site-description' ),
+		) );
+
+		/**
 		 * Support automatic feed links.
 		 *
 		 * @link https://codex.wordpress.org/Automatic_Feed_Links

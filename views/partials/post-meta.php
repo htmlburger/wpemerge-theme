@@ -13,7 +13,6 @@ if ( get_post_type() !== 'post' ) {
 	return;
 }
 ?>
-
 <div class="article__meta">
 	<p>
 		<?php

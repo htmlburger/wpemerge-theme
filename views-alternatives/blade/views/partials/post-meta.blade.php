@@ -10,7 +10,7 @@
  */
 
 ?>
-@if (get_post_type() === 'post')
+@if ( get_post_type() === 'post' )
 	<div class="article__meta">
 		<p>
 			{{ get_the_time( 'F jS, Y ' ) }}
