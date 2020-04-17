@@ -16,12 +16,17 @@ function app_theme_get_asset_source( $name, $extension ) {
 	$template_dir_uri = get_template_directory_uri();
 	$mode             = 'production';
 	$uri_path         = '.css' === $extension ? "styles/{$name}" : $name;
-	$file_path        = implode( DIRECTORY_SEPARATOR, array_filter( [
-		get_template_directory(),
-		'dist',
-		'.css' === $extension ? 'styles' : '',
-		"$name.min$extension",
-	] ) );
+	$file_path        = implode(
+		DIRECTORY_SEPARATOR,
+		array_filter(
+			[
+				get_template_directory(),
+				'dist',
+				'.css' === $extension ? 'styles' : '',
+				"$name.min$extension",
+			]
+		)
+	);
 
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 		$mode = 'debug';
