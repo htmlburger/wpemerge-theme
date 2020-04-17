@@ -13,30 +13,39 @@
  * @return string
  */
 function app_theme_get_asset_source( $name, $extension ) {
-	$mode = 'production';
-	$path = '.css' === $extension ? "styles/{$name}" : $name;
+	$template_dir_uri = get_template_directory_uri();
+	$mode             = 'production';
+	$uri_path         = '.css' === $extension ? "styles/{$name}" : $name;
+	$file_path        = implode( DIRECTORY_SEPARATOR, array_filter( [
+		get_template_directory(),
+		'dist',
+		'.css' === $extension ? 'styles' : '',
+		"$name.min$extension",
+	] ) );
 
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 		$mode = 'debug';
-	} elseif ( ! file_exists( get_template_directory() . "/dist/{$path}.min{$extension}" ) ) {
+	} elseif ( ! file_exists( $file_path ) ) {
 		$mode = 'development';
 	}
 
-	if ( 'development' === $mode ) {
-		if ( '.css' === $extension ) {
-			// CSS files are injected via JS in development mode.
-			return '';
-		}
-
-		$hot_url  = wp_parse_url( App::theme()->config()->get( 'development.hotUrl', 'http://localhost/' ) );
-		$hot_port = App::theme()->config()->get( 'development.port', 3000 );
-
-		return "${hot_url['scheme']}://{$hot_url['host']}:{$hot_port}/{$path}{$extension}";
+	if ( 'production' === $mode ) {
+		return "$template_dir_uri/dist/{$uri_path}.min{$extension}";
 	}
 
-	$template_dir_uri = get_template_directory_uri();
+	if ( 'debug' === $mode ) {
+		return "$template_dir_uri/dist/{$uri_path}{$extension}";
+	}
 
-	return "$template_dir_uri/dist/{$path}.min{$extension}";
+	if ( '.css' === $extension ) {
+		// CSS files are injected via JS in development mode.
+		return '';
+	}
+
+	$hot_url  = wp_parse_url( App::theme()->config()->get( 'development.hotUrl', 'http://localhost/' ) );
+	$hot_port = App::theme()->config()->get( 'development.port', 3000 );
+
+	return "${hot_url['scheme']}://{$hot_url['host']}:{$hot_port}/{$uri_path}{$extension}";
 }
 
 /**
