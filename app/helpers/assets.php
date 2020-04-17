@@ -22,15 +22,21 @@ function app_theme_get_asset_source( $name, $extension ) {
 		$mode = 'development';
 	}
 
-	if ( 'development' === $mode && '.css' === $extension ) {
-		return '';
+	if ( 'development' === $mode ) {
+		if ( '.css' === $extension ) {
+			// CSS files are injected via JS in development mode.
+			return '';
+		}
+
+		$hot_url  = wp_parse_url( App::theme()->config()->get( 'development.hotUrl', 'http://localhost/' ) );
+		$hot_port = App::theme()->config()->get( 'development.port', 3000 );
+
+		return "${hot_url['scheme']}://{$hot_url['host']}:{$hot_port}/{$path}{$extension}";
 	}
 
 	$template_dir_uri = get_template_directory_uri();
-	$port             = 'development' === $mode ? ':' . App::theme()->config()->get( 'development.port', 3000 ) : '';
-	$suffix           = 'production' === $mode ? '.min' : '';
 
-	return 'development' === $mode ? "http://localhost{$port}/{$path}{$suffix}{$extension}" : "$template_dir_uri/dist/{$path}{$suffix}{$extension}";
+	return "$template_dir_uri/dist/{$path}.min{$extension}";
 }
 
 /**

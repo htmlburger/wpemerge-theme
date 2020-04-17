@@ -22,6 +22,7 @@ const postcss = require('./postcss');
 const userConfig = utils.getUserConfig();
 const devPort = _.get(userConfig, 'development.port', 3000);
 const devUrl = url.parse(_.get(userConfig, 'development.url', 'http://localhost/').replace(/\/$/, ''));
+const devHotUrl = url.parse(_.get(userConfig, 'development.hotUrl', 'http://localhost/').replace(/\/$/, ''));
 
 /**
  * Setup babel loader.
@@ -70,7 +71,11 @@ module.exports = {
   /**
    * The output.
    */
-  output: require('./webpack/output'),
+  output: {
+    ...require('./webpack/output'),
+    // Required to work around https://github.com/webpack/webpack-dev-server/issues/1385
+    publicPath: `${devHotUrl.protocol}//${devHotUrl.host}:${devPort}/`,
+  },
 
   /**
    * Resolve utilities.
@@ -175,21 +180,18 @@ module.exports = {
   watch: true,
   devtool: 'source-map',
   devServer: {
-    index: '',
-    port: devPort,
-    proxy: {
-      context: '/',
-      target: `${devUrl.protocol}//${devUrl.host}`,
-      changeOrigin: true,
-    },
     hot: true,
+    host: devHotUrl.host,
+    port: devPort,
+    disableHostCheck: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
     open: true,
-    openPage: devUrl.pathname !== '/' ? devUrl.pathname.replace(/^\//, '').replace(/\/?$/, '/') : '',
+    openPage: devUrl.href,
     overlay: true,
 
-    /**
-     * Reload on view file changes.
-     */
+    // Reload on view file changes.
     before: (app, server) => {
       chokidar
         .watch([
