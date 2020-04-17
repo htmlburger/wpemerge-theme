@@ -187,8 +187,6 @@ module.exports = {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
-    open: true,
-    openPage: devUrl.href,
     overlay: true,
 
     // Reload on view file changes.
