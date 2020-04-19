@@ -29,10 +29,6 @@ add_action( 'admin_head', 'app_action_add_favicon', 5 );
 
 add_filter( 'upload_dir', 'app_filter_fix_upload_dir_url_schema' );
 
-// Uncomment the following line to enable lazy-loading of media images.
-// phpcs:ignore
-// add_filter( 'wp_get_attachment_image_attributes', 'app_filter_enable_lazyload' );
-
 /**
  * Content
  */

@@ -42,7 +42,6 @@
     "intersection-observer": "^0.7.0",
     "loader-utils": "^1.1.0",
     "lodash": "^4.17.15",
-    "lozad": "^1.9.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.9.0",
     "npm-run-all": "^4.1.3",

@@ -190,37 +190,3 @@ function app_action_editor_enqueue_assets() {
 function app_action_add_favicon() {
 	App::theme()->assets()->addFavicon();
 }
-
-/**
- * Adjust attachment attributes to enable lazyloading.
- *
- * @link https://github.com/ApoorvSaxena/lozad.js
- * @param array $attributes Array of attributes.
- * @return array
- */
-function app_filter_enable_lazyload( $attributes ) {
-	if ( is_admin() ) {
-		return $attributes;
-	}
-
-	$lazyload = false;
-
-	if ( ! empty( $attributes['src'] ) ) {
-		$lazyload               = true;
-		$attributes['data-src'] = $attributes['src'];
-		unset( $attributes['src'] );
-	}
-
-	if ( ! empty( $attributes['srcset'] ) ) {
-		$lazyload                  = true;
-		$attributes['data-srcset'] = $attributes['srcset'];
-		unset( $attributes['srcset'] );
-	}
-
-	if ( $lazyload ) {
-		$class               = isset( $attributes['class'] ) ? $attributes['class'] : '';
-		$attributes['class'] = $class . ' lozad';
-	}
-
-	return $attributes;
-}
