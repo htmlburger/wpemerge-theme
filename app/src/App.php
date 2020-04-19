@@ -1,7 +1,7 @@
 <?php
 
-use WPEmerge\Application\Application;
+use WPEmerge\Application\Portal;
 
-class App extends Application {
+class App extends Portal {
 
 }
