@@ -19,9 +19,9 @@ const postcss = require('./postcss');
 /**
  * Setup the environment.
  */
+const env = utils.detectEnv();
 const userConfig = utils.getUserConfig();
 const devPort = _.get(userConfig, 'development.port', 3000);
-const devUrl = url.parse(_.get(userConfig, 'development.url', 'http://localhost/').replace(/\/$/, ''));
 const devHotUrl = url.parse(_.get(userConfig, 'development.hotUrl', 'http://localhost/').replace(/\/$/, ''));
 
 /**
@@ -73,8 +73,11 @@ module.exports = {
    */
   output: {
     ...require('./webpack/output'),
-    // Required to work around https://github.com/webpack/webpack-dev-server/issues/1385
-    publicPath: `${devHotUrl.protocol}//${devHotUrl.host}:${devPort}/`,
+    ...(env.isHot
+      // Required to work around https://github.com/webpack/webpack-dev-server/issues/1385
+      ? { publicPath: `${devHotUrl.protocol}//${devHotUrl.host}:${devPort}/` }
+      : {}
+    ),
   },
 
   /**
