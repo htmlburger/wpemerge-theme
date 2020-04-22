@@ -41,13 +41,13 @@
   },
   "scripts": {
     "install-test-env": [
-      "php wpemerge config:create"
+      "wpemerge config:create"
     ],
     "post-create-project-cmd": [
-      "php wpemerge config:create",
-      "php wpemerge install:dependencies",
-      "php wpemerge assets:build",
-      "php wpemerge install"
+      "wpemerge config:create",
+      "wpemerge install:dependencies",
+      "wpemerge assets:build",
+      "wpemerge install"
     ]
   }
 }
