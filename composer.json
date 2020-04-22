@@ -40,14 +40,14 @@
     }
   },
   "scripts": {
-    "install-test-env":[
-      "WPEmerge\\Cli\\App::createConfigJson"
+    "install-test-env": [
+      "php wpemerge config:create"
     ],
     "post-create-project-cmd": [
-      "WPEmerge\\Cli\\App::createConfigJson",
-      "WPEmerge\\Cli\\App::installDependencies",
-      "WPEmerge\\Cli\\App::buildAssets",
-      "WPEmerge\\Cli\\App::install"
+      "php wpemerge config:create",
+      "php wpemerge install:dependencies",
+      "php wpemerge assets:build",
+      "php wpemerge install"
     ]
   }
 }
