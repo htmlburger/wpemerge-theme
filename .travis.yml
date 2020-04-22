@@ -1,23 +1,23 @@
 # Modified version of the TwentySeventeen theme .travis.yml file.
 # @link https://github.com/WordPress/twentyseventeen/blob/master/.travis.yml
-dist: trusty
-
-sudo: false
-
 language: php
+
+os: linux
+
+dist: trusty
 
 php:
   - 5.5
   - 5.6
-  - 7.0
-  - 7.1
   - 7.2
+  - 7.3
+  - 7.4
 
 env:
   - WP_VERSION=master WP_MULTISITE=0
-  - WP_VERSION=5.0 WP_MULTISITE=0
+  - WP_VERSION=5.4 WP_MULTISITE=0
+  - WP_VERSION=5.3 WP_MULTISITE=0
   - WP_VERSION=4.9 WP_MULTISITE=0
-  - WP_VERSION=4.8 WP_MULTISITE=0
   - WP_VERSION=4.7 WP_MULTISITE=0
 
 matrix:
@@ -25,13 +25,11 @@ matrix:
 
   include:
     - php: 5.5
-      env: WP_VERSION=4.7 WP_MULTISITE=0 LINT=1
-    - php: 5.5
       env: WP_VERSION=4.7 WP_MULTISITE=1
+    - php: 5.5
+      env: WP_VERSION=4.7 WP_MULTISITE=0 LINT=1
 
 before_install:
-  # Update composer.
-  - composer self-update
   # Install required Node version.
   - nvm install 8.10
   - nvm use 8.10
