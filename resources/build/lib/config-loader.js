@@ -2,6 +2,7 @@
  * The external dependencies.
  */
 const fs = require('fs');
+const path = require('path');
 const loaderUtils = require('loader-utils');
 
 /**
@@ -116,7 +117,7 @@ const getSass = (config) => {
 /**
  * Config loader.
  *
- * @param rawConfig
+ * @param {string} rawConfig
  * @returns {string}
  */
 module.exports = function (rawConfig) {
@@ -124,7 +125,15 @@ module.exports = function (rawConfig) {
   const config = JSON.parse(rawConfig);
 
   if (typeof options.sassOutput !== 'undefined') {
-    fs.writeFileSync(options.sassOutput, getSass(config));
+    const sass = getSass(config);
+
+    this._module.reasons.forEach((reason) => {
+      const file = loaderUtils.interpolateName({
+        resourcePath: reason.module.context,
+      }, options.sassOutput, { content: sass });
+
+      fs.writeFileSync(path.resolve(this.context, file), sass);
+    });
   }
 
   return rawConfig;
