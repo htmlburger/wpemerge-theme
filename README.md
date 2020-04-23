@@ -58,7 +58,7 @@ _Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they
 
 ## Features
 - All features from [WP Emerge](https://docs.wpemerge.com/#/framework/overview):
-  - Routes with custom URLs and query filters
+  - Named routes with custom URLs and query filters
   - Controllers
   - Middleware
   - PSR-7 Responses
