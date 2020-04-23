@@ -6,5 +6,5 @@
  * phpcs:disable
  */
 add_filter( 'wpemerge.partials.header.hook', '__return_false' );
-App::render( 'views.partials.header' );
+\App::render( 'views.partials.header' );
 remove_filter( 'wpemerge.partials.header.hook', '__return_false' );

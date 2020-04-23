@@ -47,8 +47,8 @@ function app_theme_get_asset_source( $name, $extension ) {
 		return '';
 	}
 
-	$hot_url  = wp_parse_url( App::theme()->config()->get( 'development.hotUrl', 'http://localhost/' ) );
-	$hot_port = App::theme()->config()->get( 'development.port', 3000 );
+	$hot_url  = wp_parse_url( \App::theme()->config()->get( 'development.hotUrl', 'http://localhost/' ) );
+	$hot_port = \App::theme()->config()->get( 'development.port', 3000 );
 
 	return "${hot_url['scheme']}://{$hot_url['host']}:{$hot_port}/{$uri_path}{$extension}";
 }
@@ -69,7 +69,7 @@ function app_action_theme_enqueue_assets() {
 	/**
 	 * Enqueue scripts.
 	 */
-	App::theme()->assets()->enqueueScript(
+	\App::theme()->assets()->enqueueScript(
 		'theme-js-bundle',
 		app_theme_get_asset_source( 'frontend', '.js' ),
 		[ 'jquery' ],
@@ -82,7 +82,7 @@ function app_action_theme_enqueue_assets() {
 	$style = app_theme_get_asset_source( 'frontend', '.css' );
 
 	if ( $style ) {
-		App::theme()->assets()->enqueueStyle(
+		\App::theme()->assets()->enqueueStyle(
 			'theme-css-bundle',
 			$style
 		);
@@ -91,7 +91,7 @@ function app_action_theme_enqueue_assets() {
 	/**
 	 * Enqueue theme's style.css file to allow overrides for the bundled styles.
 	 */
-	App::theme()->assets()->enqueueStyle( 'theme-styles', get_template_directory_uri() . '/style.css' );
+	\App::theme()->assets()->enqueueStyle( 'theme-styles', get_template_directory_uri() . '/style.css' );
 }
 
 /**
@@ -103,7 +103,7 @@ function app_action_admin_enqueue_assets() {
 	/**
 	 * Enqueue scripts.
 	 */
-	App::theme()->assets()->enqueueScript(
+	\App::theme()->assets()->enqueueScript(
 		'theme-admin-js-bundle',
 		app_theme_get_asset_source( 'admin', '.js' ),
 		[ 'jquery' ],
@@ -116,7 +116,7 @@ function app_action_admin_enqueue_assets() {
 	$style = app_theme_get_asset_source( 'admin', '.css' );
 
 	if ( $style ) {
-		App::theme()->assets()->enqueueStyle(
+		\App::theme()->assets()->enqueueStyle(
 			'theme-admin-css-bundle',
 			$style
 		);
@@ -132,7 +132,7 @@ function app_action_login_enqueue_assets() {
 	/**
 	 * Enqueue scripts.
 	 */
-	App::theme()->assets()->enqueueScript(
+	\App::theme()->assets()->enqueueScript(
 		'theme-login-js-bundle',
 		app_theme_get_asset_source( 'login', '.js' ),
 		[ 'jquery' ],
@@ -145,7 +145,7 @@ function app_action_login_enqueue_assets() {
 	$style = app_theme_get_asset_source( 'login', '.css' );
 
 	if ( $style ) {
-		App::theme()->assets()->enqueueStyle(
+		\App::theme()->assets()->enqueueStyle(
 			'theme-login-css-bundle',
 			$style
 		);
@@ -161,7 +161,7 @@ function app_action_editor_enqueue_assets() {
 	/**
 	 * Enqueue scripts.
 	 */
-	App::theme()->assets()->enqueueScript(
+	\App::theme()->assets()->enqueueScript(
 		'theme-editor-js-bundle',
 		app_theme_get_asset_source( 'editor', '.js' ),
 		[ 'jquery' ],
@@ -174,7 +174,7 @@ function app_action_editor_enqueue_assets() {
 	$style = app_theme_get_asset_source( 'editor', '.css' );
 
 	if ( $style ) {
-		App::theme()->assets()->enqueueStyle(
+		\App::theme()->assets()->enqueueStyle(
 			'theme-editor-css-bundle',
 			$style
 		);
@@ -188,5 +188,5 @@ function app_action_editor_enqueue_assets() {
  * @return void
  */
 function app_action_add_favicon() {
-	App::theme()->assets()->addFavicon();
+	\App::theme()->assets()->addFavicon();
 }

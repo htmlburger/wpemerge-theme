@@ -23,7 +23,7 @@ if ( post_password_required() ) {
 			wp_list_comments(
 				[
 					'callback' => function( $comment, $args, $depth ) {
-						App::theme()->partial(
+						\App::theme()->partial(
 							'comment-single',
 							[
 								'comment' => $comment,

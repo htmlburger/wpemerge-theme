@@ -24,7 +24,7 @@
 						</a>
 					</h2>
 
-					<?php App::theme()->partial( 'post-meta' ); ?>
+					<?php \App::theme()->partial( 'post-meta' ); ?>
 				</header>
 
 				<div class="article__body">
