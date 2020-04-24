@@ -1,51 +1,43 @@
 /**
  * The external dependencies.
  */
-const fs    = require('fs');
-const path  = require('path');
+const process = require('process');
+const path = require('path');
+const EventEmitter = require('events');
+const chalk = require('chalk');
 
 /**
  * The internal dependencies.
  */
-const config   = require('../../../config.json');
-const utils    = require('../lib/utils');
-const composer = require('./composer');
-const archive  = require('./archive');
+const config = require('../../../config.json');
+const utils = require('../lib/utils');
+const steps = require('./steps');
 
-const cError      = '\x1b[31m';
-const cWarning    = '\x1b[33m';
-const cReset      = '\x1b[0m';
-const themeName   = path.basename(utils.themeRootPath());
-const destination = path.join(path.dirname(utils.themeRootPath()), `${themeName}.zip`);
-const shutdown    = (exitCode = 0) => {
-  console.log('Restoring development dependencies ...');
-  if (!composer.installDevelopmentDependencies()) {
-    console.error(`${cError}Error: Failed to restore development dependencies with composer.${cReset}`);
-    console.log(`${cWarning}Please run "composer install" manually.${cReset}`);
-    exitCode = 1;
-  }
-  process.exit(exitCode);
-};
-
-if (fs.existsSync(destination)) {
-  console.error(`${cError}Destination file already exists: ${destination}${cReset}`);
-  process.exit(1);
+if (chalk.level === 0) {
+  // Make sure we get color even if run-s switches the output stream.
+  chalk.level = 1;
 }
 
-console.log('Installing production dependencies ...');
-if (!composer.installProductionDependencies()) {
-  console.error(`${cError}Error: Failed to install production dependencies with composer.${cReset}`);
-  shutdown(1);
-}
+const { log, error: logError } = console;
+const name = process.argv[2] || 'wpemerge-release';
+const source = utils.themeRootPath();
+const destination = path.join(path.dirname(source), name);
+const emitter = new EventEmitter();
 
-archive
-  .zip(
-    config.release.include.map(item => utils.themeRootPath(item)),
-    destination,
-    utils.themeRootPath()
-  )
-  .then(() => shutdown())
-  .catch((error) => {
-    console.error(`${cError}${error.message}${cReset}`);
-    shutdown(1);
-  });
+emitter.on('file.copy', file => process.stdout.write(`Copying ${path.relative(source, file)} ...`));
+emitter.on('file.copied', () => log(' done'));
+
+(new Promise(resolve => resolve()))
+  .then(() => {
+    steps.validate(destination);
+
+    steps.createDirectory(destination);
+
+    steps.copyFiles(config.release.include, source, destination, emitter);
+
+    log('Installing production composer dependencies ...');
+    steps.installComposerDependencies(source, destination);
+
+    return steps.zip(destination, `${destination}.zip`);
+  })
+  .catch(e => logError(chalk.red(e.message)));

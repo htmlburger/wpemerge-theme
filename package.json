@@ -5,7 +5,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack --colors --config resources/build/webpack.development.js",
     "hot": "cross-env NODE_ENV=hot webpack-dev-server --colors --config resources/build/webpack.development.js",
-    "build": "cross-env WPEMERGE_COMBINED_BUILD=1 run-s -cl build:debug build:production",
+    "build": "cross-env WPEMERGE_COMBINED_BUILD=1 run-s -l build:debug build:production",
     "build:debug": "cross-env NODE_ENV=debug webpack --colors --config resources/build/webpack.production.js",
     "build:production": "cross-env NODE_ENV=production webpack --colors --config resources/build/webpack.production.js",
     "lint": "run-s -cl lint:wpcs lint:scripts lint:styles",
@@ -19,8 +19,8 @@
     "i18n": "run-s -cl i18n:textdomain i18n:pot",
     "i18n:textdomain": "wpi18n addtextdomain --exclude=dist,node_modules,resources,tests,vendor,.packages --textdomain=app",
     "i18n:pot": "wpi18n makepot --exclude=dist,node_modules,resources,tests,vendor,.packages --main-file=style.css --domain-path=languages/ --pot-file=app.pot --type=wp-theme --textdomain=app",
-    "release": "run-s -cl build release:zip",
-    "release:zip": "node resources/build/release/release.js"
+    "release": "run-s build release:zip",
+    "release:zip": "node resources/build/release/release.js wpemerge-release"
   },
   "browserslist": [
     "last 3 versions"
@@ -56,6 +56,7 @@
   },
   "devDependencies": {
     "archiver": "^3.0.0",
+    "chalk": "^4.0.0",
     "chokidar": "^3.3.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
