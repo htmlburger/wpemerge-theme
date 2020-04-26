@@ -1,10 +1,10 @@
 <?php
 
-use WPEmerge\Application\Portal;
+use WPEmerge\Application\ApplicationTrait;
 
 /**
- * @mixin \WPEmergeTheme\Application\PortalMixin
+ * @mixin \WPEmergeTheme\Application\ApplicationMixin
  */
-class App extends Portal {
-
+class App {
+	use ApplicationTrait;
 }
