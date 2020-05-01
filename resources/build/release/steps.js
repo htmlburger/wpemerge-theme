@@ -79,6 +79,7 @@ const copyFile = (fileSource, source, destination, emitter) => {
   if (fileRelative === 'config.json') {
     fs.writeFileSync(fileDestination, JSON.stringify(config.getWhitelisted(fileSource)));
   } else {
+    shell.mkdir('-p', path.dirname(fileDestination));
     shell.cp('-R', fileSource, fileDestination);
   }
 
