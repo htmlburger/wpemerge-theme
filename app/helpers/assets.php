@@ -59,16 +59,12 @@ function app_theme_get_asset_source( $name, $extension ) {
  * @return void
  */
 function app_action_theme_enqueue_assets() {
-	/**
-	 * Enqueue the built-in comment-reply script for singular pages.
-	 */
+	// Enqueue the built-in comment-reply script for singular pages.
 	if ( is_singular() ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	/**
-	 * Enqueue scripts.
-	 */
+	// Enqueue scripts.
 	\App::theme()->assets()->enqueueScript(
 		'theme-js-bundle',
 		app_theme_get_asset_source( 'frontend', '.js' ),
@@ -76,9 +72,7 @@ function app_action_theme_enqueue_assets() {
 		true
 	);
 
-	/**
-	 * Enqueue styles.
-	 */
+	// Enqueue styles.
 	$style = app_theme_get_asset_source( 'frontend', '.css' );
 
 	if ( $style ) {
@@ -88,9 +82,7 @@ function app_action_theme_enqueue_assets() {
 		);
 	}
 
-	/**
-	 * Enqueue theme's style.css file to allow overrides for the bundled styles.
-	 */
+	// Enqueue theme's style.css file to allow overrides for the bundled styles.
 	\App::theme()->assets()->enqueueStyle( 'theme-styles', get_template_directory_uri() . '/style.css' );
 }
 
@@ -100,9 +92,7 @@ function app_action_theme_enqueue_assets() {
  * @return void
  */
 function app_action_admin_enqueue_assets() {
-	/**
-	 * Enqueue scripts.
-	 */
+	// Enqueue scripts.
 	\App::theme()->assets()->enqueueScript(
 		'theme-admin-js-bundle',
 		app_theme_get_asset_source( 'admin', '.js' ),
@@ -110,9 +100,7 @@ function app_action_admin_enqueue_assets() {
 		true
 	);
 
-	/**
-	 * Enqueue styles.
-	 */
+	// Enqueue styles.
 	$style = app_theme_get_asset_source( 'admin', '.css' );
 
 	if ( $style ) {
@@ -129,9 +117,7 @@ function app_action_admin_enqueue_assets() {
  * @return void
  */
 function app_action_login_enqueue_assets() {
-	/**
-	 * Enqueue scripts.
-	 */
+	// Enqueue scripts.
 	\App::theme()->assets()->enqueueScript(
 		'theme-login-js-bundle',
 		app_theme_get_asset_source( 'login', '.js' ),
@@ -139,9 +125,7 @@ function app_action_login_enqueue_assets() {
 		true
 	);
 
-	/**
-	 * Enqueue styles.
-	 */
+	// Enqueue styles.
 	$style = app_theme_get_asset_source( 'login', '.css' );
 
 	if ( $style ) {
@@ -158,27 +142,13 @@ function app_action_login_enqueue_assets() {
  * @return void
  */
 function app_action_editor_enqueue_assets() {
-	/**
-	 * Enqueue scripts.
-	 */
+	// Enqueue scripts.
 	\App::theme()->assets()->enqueueScript(
 		'theme-editor-js-bundle',
 		app_theme_get_asset_source( 'editor', '.js' ),
 		[ 'jquery' ],
 		true
 	);
-
-	/**
-	 * Enqueue styles.
-	 */
-	$style = app_theme_get_asset_source( 'editor', '.css' );
-
-	if ( $style ) {
-		\App::theme()->assets()->enqueueStyle(
-			'theme-editor-css-bundle',
-			$style
-		);
-	}
 }
 
 /**

@@ -104,6 +104,14 @@ class ThemeServiceProvider implements ServiceProviderInterface
 		add_theme_support( 'align-wide' );
 
 		/**
+		 * Support block editor styles.
+		 *
+		 * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
+		 */
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'dist/styles/editor.css' );
+
+		/**
 		 * Support custom editor block color palette.
 		 * Don't forget to edit resources/styles/shared/variables.scss when you update these.
 		 * Uses Material Design colors.
