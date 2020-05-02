@@ -10,14 +10,6 @@
  * @package WPEmergeTheme
  */
 
-/**
- * Render the current year.
- */
-function app_shortcode_year() {
-	return gmdate( 'Y' );
-}
-add_shortcode( 'year', 'app_shortcode_year' );
-
 // phpcs:disable
 /**
  * Example Shortcode.
