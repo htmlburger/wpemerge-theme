@@ -31,7 +31,7 @@ class ThemeServiceProvider implements ServiceProviderInterface
 	 * @return void
 	 */
 	public function loadTextdomain() {
-		load_theme_textdomain( 'app', APP_DIR . 'languages' );
+		load_theme_textdomain( 'app', get_template_directory() . DIRECTORY_SEPARATOR . 'languages' );
 	}
 
 	/**

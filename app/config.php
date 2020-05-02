@@ -35,13 +35,13 @@ return [
 	 */
 	'routes'              => [
 		'web'   => [
-			'definitions' => APP_APP_ROUTES_DIR . 'web.php',
+			'definitions' => __DIR__ . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'web.php',
 		],
 		'admin' => [
-			'definitions' => APP_APP_ROUTES_DIR . 'admin.php',
+			'definitions' => __DIR__ . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'admin.php',
 		],
 		'ajax'  => [
-			'definitions' => APP_APP_ROUTES_DIR . 'ajax.php',
+			'definitions' => __DIR__ . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'ajax.php',
 		],
 	],
 
