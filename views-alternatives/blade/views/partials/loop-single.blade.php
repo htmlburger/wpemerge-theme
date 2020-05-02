@@ -30,15 +30,7 @@
 		</div>
 	</article>
 
-	@php comments_template() @endphp
+	@include('views.partials.pagination')
 
-	@php
-	carbon_pagination(
-		'post',
-		[
-			'prev_html' => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Previous Entry', 'mytheme' ) . '</a>',
-			'next_html' => '<a href="{URL}" class="paging__next">' . esc_html__( 'Next Entry »', 'mytheme' ) . '</a>',
-		]
-	);
-	@endphp
+	@php comments_template() @endphp
 @endwhile

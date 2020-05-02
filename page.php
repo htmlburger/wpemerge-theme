@@ -16,13 +16,11 @@
 		<?php mytheme_the_title( '<h2 class="post-title">', '</h2>' ); ?>
 
 		<div class="page__content">
-			<?php
-			the_content();
+			<?php the_content(); ?>
 
-			carbon_pagination( 'custom' );
+			<?php edit_post_link( __( 'Edit this entry.', 'mytheme' ), '<p>', '</p>' ); ?>
 
-			edit_post_link( __( 'Edit this entry.', 'mytheme' ), '<p>', '</p>' );
-			?>
+			<?php \MyTheme::theme()->partial( 'pagination' ); ?>
 		</div>
 	</div>
 <?php endwhile; ?>

@@ -24,8 +24,7 @@
     "php": ">=5.5",
     "composer/installers": "^1.4",
     "htmlburger/wpemerge": "~0.15.0",
-    "htmlburger/wpemerge-theme-core": "~0.15.0",
-    "htmlburger/carbon-pagination": "^1.1.6"
+    "htmlburger/wpemerge-theme-core": "~0.15.0"
   },
   "require-dev": {
     "filp/whoops": "^2.2",

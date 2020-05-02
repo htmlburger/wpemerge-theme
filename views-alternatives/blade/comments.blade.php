@@ -35,16 +35,7 @@
 				@endphp
 			</ol>
 
-			@php
-			carbon_pagination(
-				'comments',
-				[
-					'enable_numbers' => true,
-					'prev_html'      => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Previous Comments', 'mytheme' ) . '</a>',
-					'next_html'      => '<a href="{URL}" class="paging__next">' . esc_html__( 'Next Comments »', 'mytheme' ) . '</a>',
-				]
-			);
-			@endphp
+			@include('views.partials.pagination')
 		@else
 			@if (!comments_open())
 				<p class="no-comments">{{ __( 'Comments are closed.', 'mytheme' ) }}</p>

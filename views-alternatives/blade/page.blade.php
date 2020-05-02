@@ -17,13 +17,11 @@
 			@php mytheme_the_title( '<h2 class="post-title">', '</h2>' ) @endphp
 
 			<div class="page__content">
-				@php
-				the_content();
+				@php the_content(); @endphp
 
-				carbon_pagination( 'custom' );
+				@php edit_post_link( __( 'Edit this entry.', 'mytheme' ), '<p>', '</p>' ); @endphp
 
-				edit_post_link( __( 'Edit this entry.', 'mytheme' ), '<p>', '</p>' );
-				@endphp
+				@include('views.partials.pagination')
 			</div>
 		</div>
 	@endwhile

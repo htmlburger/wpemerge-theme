@@ -139,46 +139,6 @@
 }
 
 /* ------------------------------------------------------------ *\
-    Pagination
-\* ------------------------------------------------------------ */
-
-.paging {
-  padding: 0 0 20px;
-  text-align: center;
-
-  ul {
-    list-style: none outside none;
-    padding: 0;
-    margin: 0;
-  }
-
-  ul,
-  li {
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  a {
-    display: inline-block;
-    padding: 4px 10px;
-    border: 1px solid #000;
-    margin: 0 2px;
-    text-decoration: none;
-  }
-
-  .current a,
-  a:hover {
-    text-decoration: none;
-    background: #000;
-    color: #fff;
-  }
-}
-
-.paging-label {
-  padding-right: 10px;
-}
-
-/* ------------------------------------------------------------ *\
     Comments
 \* ------------------------------------------------------------ */
 
@@ -306,7 +266,6 @@
 .comment-respond {
   width: 100%;
   padding-top: 30px;
-  border-top: 1px solid #363636;
 
   h3 {
     position: relative;

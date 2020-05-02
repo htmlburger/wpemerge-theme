@@ -36,19 +36,7 @@
 		@endwhile
 	</ul>
 
-	@php
-	carbon_pagination(
-		'posts',
-		[
-			'enable_numbers'    => true,
-			'prev_html'         => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Previous Entries', 'mytheme' ) . '</a>',
-			'next_html'         => '<a href="{URL}" class="paging__next">' . esc_html__( 'Next Entries »', 'mytheme' ) . '</a>',
-			'first_html'        => '<a href="{URL}" class="paging__first"></a>',
-			'last_html'         => '<a href="{URL}" class="paging__last"></a>',
-			'limiter_html'      => '<li class="paging__spacer">...</li>',
-		]
-	);
-	@endphp
+	@include('views.partials.pagination')
 @else
 	<ul class="articles">
 		<li class="article article--error404 article--not-found">
