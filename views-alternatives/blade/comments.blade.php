@@ -35,7 +35,7 @@
 				@endphp
 			</ol>
 
-			@include('views.partials.pagination')
+			@include('views.partials.pagination', ['comments' => true])
 		@else
 			@if (!comments_open())
 				<p class="no-comments">{{ __( 'Comments are closed.', 'mytheme' ) }}</p>
