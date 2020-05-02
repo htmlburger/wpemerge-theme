@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 			?>
 		</ol>
 
-		<?php \MyTheme::theme()->partial( 'pagination', ['comments' => true] ); ?>
+		<?php \MyTheme::theme()->partial( 'pagination', [ 'for_comments' => true ] ); ?>
 	<?php else : ?>
 		<?php if ( ! comments_open() ) : ?>
 			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'mytheme' ); ?></p>

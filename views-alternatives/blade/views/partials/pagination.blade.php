@@ -5,11 +5,11 @@
  * @package WPEmergeTheme
  */
 
-$comments = isset( $comments ) ? $comments : false;
+$for_comments = isset( $for_comments ) ? $for_comments : false;
 
-if ( $comments ) {
+if ( $for_comments ) {
 	paginate_comments_links();
-} else if ( is_singular() ) {
+} elseif ( is_singular() ) {
 	wp_link_pages();
 } else {
 	the_posts_pagination();
