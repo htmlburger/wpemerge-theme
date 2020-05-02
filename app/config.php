@@ -18,12 +18,16 @@ return [
 		\WPEmergeTheme\Image\ImageServiceProvider::class,
 		\WPEmergeTheme\Sidebar\SidebarServiceProvider::class,
 		\WPEmergeTheme\Theme\ThemeServiceProvider::class,
-		\App\Routing\RouteConditionsServiceProvider::class,
-		\App\View\ViewServiceProvider::class,
-		\App\WordPress\ContentTypesServiceProvider::class,
-		\App\WordPress\MenusServiceProvider::class,
-		\App\WordPress\ThemeServiceProvider::class,
-		\App\WordPress\WidgetsServiceProvider::class,
+		\MyTheme\Routing\RouteConditionsServiceProvider::class,
+		\MyTheme\View\ViewServiceProvider::class,
+		\MyTheme\WordPress\AdminServiceProvider::class,
+		\MyTheme\WordPress\AssetsServiceProvider::class,
+		\MyTheme\WordPress\ContentTypesServiceProvider::class,
+		\MyTheme\WordPress\LoginServiceProvider::class,
+		\MyTheme\WordPress\MenusServiceProvider::class,
+		\MyTheme\WordPress\ShortcodesServiceProvider::class,
+		\MyTheme\WordPress\ThemeServiceProvider::class,
+		\MyTheme\WordPress\WidgetsServiceProvider::class,
 	],
 
 	/**
@@ -36,13 +40,29 @@ return [
 	'routes'              => [
 		'web'   => [
 			'definitions' => __DIR__ . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'web.php',
+			'attributes'  => [
+				'namespace' => 'MyTheme\\Controllers\\Web\\',
+			],
 		],
 		'admin' => [
 			'definitions' => __DIR__ . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'admin.php',
+			'attributes'  => [
+				'namespace' => 'MyTheme\\Controllers\\Admin\\',
+			],
 		],
 		'ajax'  => [
 			'definitions' => __DIR__ . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'ajax.php',
+			'attributes'  => [
+				'namespace' => 'MyTheme\\Controllers\\Ajax\\',
+			],
 		],
+	],
+
+	/**
+	 * View Composers settings.
+	 */
+	'view_composers'      => [
+		'namespace' => 'MyTheme\\ViewComposers\\',
 	],
 
 	/**
@@ -59,7 +79,7 @@ return [
 	 */
 	'middleware'          => [
 		// phpcs:ignore
-		// 'mymiddleware' => \App\Middleware\MyMiddleware::class,
+		// 'mymiddleware' => \MyTheme\Middleware\MyMiddleware::class,
 	],
 
 	/**
@@ -88,8 +108,8 @@ return [
 	 */
 	'middleware_priority' => [
 		// phpcs:ignore
-		// \App\Middleware\MyMiddlewareThatShouldRunFirst::class,
-		// \App\Middleware\MyMiddlewareThatShouldRunSecond::class,
+		// \MyTheme\Middleware\MyMiddlewareThatShouldRunFirst::class,
+		// \MyTheme\Middleware\MyMiddlewareThatShouldRunSecond::class,
 	],
 
 	/**

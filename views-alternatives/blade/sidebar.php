@@ -6,5 +6,5 @@
  * phpcs:disable
  */
 add_filter( 'wpemerge.partials.sidebar.hook', '__return_false' );
-\App::render( 'views.partials.sidebar' );
+\MyTheme::render( 'views.partials.sidebar' );
 remove_filter( 'wpemerge.partials.sidebar.hook', '__return_false' );

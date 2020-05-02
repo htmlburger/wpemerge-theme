@@ -5,6 +5,6 @@ use WPEmerge\Application\ApplicationTrait;
 /**
  * @mixin \WPEmergeTheme\Application\ApplicationMixin
  */
-class App {
+class MyTheme {
 	use ApplicationTrait;
 }

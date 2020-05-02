@@ -14,7 +14,7 @@
 	@while (have_posts())
 		@php the_post() @endphp
 		<div @php post_class() @endphp>
-			@php app_the_title( '<h2 class="post-title">', '</h2>' ) @endphp
+			@php mytheme_the_title( '<h2 class="post-title">', '</h2>' ) @endphp
 
 			<div class="page__content">
 				@php
@@ -22,7 +22,7 @@
 
 				carbon_pagination( 'custom' );
 
-				edit_post_link( __( 'Edit this entry.', 'app' ), '<p>', '</p>' );
+				edit_post_link( __( 'Edit this entry.', 'mytheme' ), '<p>', '</p>' );
 				@endphp
 			</div>
 		</div>

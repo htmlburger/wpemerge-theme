@@ -10,6 +10,6 @@
 ?>
 <div class="sidebar">
 	<ul class="widgets">
-		<?php dynamic_sidebar( \App::theme()->sidebar()->getCurrentSidebarId() ); ?>
+		<?php dynamic_sidebar( \MyTheme::theme()->sidebar()->getCurrentSidebarId() ); ?>
 	</ul>
 </div>

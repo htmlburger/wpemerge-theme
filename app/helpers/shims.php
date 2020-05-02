@@ -10,7 +10,7 @@
  *
  * @return void
  */
-function app_shim_wp_body_open() {
+function mytheme_shim_wp_body_open() {
 	if ( function_exists( 'wp_body_open' ) ) {
 		wp_body_open();
 	} else {

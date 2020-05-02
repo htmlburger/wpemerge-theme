@@ -36,8 +36,8 @@
 	carbon_pagination(
 		'post',
 		[
-			'prev_html' => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Previous Entry', 'app' ) . '</a>',
-			'next_html' => '<a href="{URL}" class="paging__next">' . esc_html__( 'Next Entry »', 'app' ) . '</a>',
+			'prev_html' => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Previous Entry', 'mytheme' ) . '</a>',
+			'next_html' => '<a href="{URL}" class="paging__next">' . esc_html__( 'Next Entry »', 'mytheme' ) . '</a>',
 		]
 	);
 	@endphp

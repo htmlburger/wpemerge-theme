@@ -21,6 +21,6 @@
 		@php wp_head() @endphp
 	</head>
 	<body @php body_class() @endphp>
-		@php app_shim_wp_body_open() @endphp
+		@php mytheme_shim_wp_body_open() @endphp
 
 		@include('views.partials.logo')

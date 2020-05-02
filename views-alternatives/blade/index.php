@@ -5,4 +5,4 @@
  * @package WPEmergeTheme
  * phpcs:disable
  */
-\App::render( 'views.index' );
+\MyTheme::render( 'views.index' );

@@ -20,6 +20,6 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<?php app_shim_wp_body_open(); ?>
+		<?php mytheme_shim_wp_body_open(); ?>
 
-		<?php \App::theme()->partial( 'logo' ); ?>
+		<?php \MyTheme::theme()->partial( 'logo' ); ?>

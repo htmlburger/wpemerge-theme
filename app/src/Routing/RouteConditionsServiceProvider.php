@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Routing;
+namespace MyTheme\Routing;
 
 use WPEmerge\ServiceProviders\ServiceProviderInterface;
 

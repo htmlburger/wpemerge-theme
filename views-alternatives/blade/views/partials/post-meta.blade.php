@@ -15,18 +15,18 @@
 		<p>
 			{{ get_the_time( 'F jS, Y ' ) }}
 			{{-- translators: post author attribution --}}
-			{{ sprintf( __( 'by %s', 'app' ), get_the_author() ) }}
+			{{ sprintf( __( 'by %s', 'mytheme' ), get_the_author() ) }}
 		</p>
 
 		<p>
-			{{ __( 'Posted in ', 'app' ) }}
+			{{ __( 'Posted in ', 'mytheme' ) }}
 			@php the_category( ', ' ) @endphp
 			@if (comments_open())
 				<span> | </span>
-				@php comments_popup_link( __( 'No Comments', 'app' ), __( '1 Comment', 'app' ), __( '% Comments', 'app' ) ) @endphp
+				@php comments_popup_link( __( 'No Comments', 'mytheme' ), __( '1 Comment', 'mytheme' ), __( '% Comments', 'mytheme' ) ) @endphp
 			@endif
 		</p>
 
-		@php the_tags( '<p>' . __( 'Tags:', 'app' ) . ' ', ', ', '</p>' ) @endphp
+		@php the_tags( '<p>' . __( 'Tags:', 'mytheme' ) . ' ', ', ', '</p>' ) @endphp
 	</div>
 @endif

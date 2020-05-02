@@ -1,11 +1,11 @@
 <?php
 
-namespace App\WordPress;
+namespace MyTheme\WordPress;
 
 use WPEmerge\ServiceProviders\ServiceProviderInterface;
 
 /**
- * Registers widgets and sidebars.
+ * Register widgets and sidebars.
  */
 class WidgetsServiceProvider implements ServiceProviderInterface {
 	/**
@@ -58,7 +58,7 @@ class WidgetsServiceProvider implements ServiceProviderInterface {
 			array_merge(
 				$default_options,
 				[
-					'name' => __( 'Default Sidebar', 'app' ),
+					'name' => __( 'Default Sidebar', 'mytheme' ),
 					'id'   => 'default-sidebar',
 				]
 			)

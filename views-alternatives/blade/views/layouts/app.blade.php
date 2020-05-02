@@ -9,7 +9,7 @@
 @include('views.partials.header')
 
 @if (!is_singular())
-	@php app_the_title( '<h2 class="post-title">', '</h2>' ) @endphp
+	@php mytheme_the_title( '<h2 class="post-title">', '</h2>' ) @endphp
 @endif
 
 @yield('content')
