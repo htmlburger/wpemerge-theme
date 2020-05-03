@@ -6,7 +6,7 @@
  *
  * It will be displayed only for post type "post".
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 if ( get_post_type() !== 'post' ) {

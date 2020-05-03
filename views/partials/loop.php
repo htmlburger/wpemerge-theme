@@ -2,7 +2,7 @@
 /**
  * "The Loop" partial.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 ?>

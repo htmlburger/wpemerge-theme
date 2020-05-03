@@ -4,7 +4,7 @@
  *
  * @link https://docs.wpemerge.com/#/framework/routing/methods
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

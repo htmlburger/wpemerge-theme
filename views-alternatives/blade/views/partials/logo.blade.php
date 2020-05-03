@@ -2,7 +2,7 @@
 /**
  * Displays the site logo. Falls back to the site name.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 ?>

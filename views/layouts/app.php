@@ -4,7 +4,7 @@
  *
  * @link https://docs.wpemerge.com/#/framework/views/layouts
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 \MyTheme::render( 'header' );

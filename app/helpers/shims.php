@@ -2,7 +2,7 @@
 /**
  * Backwards compatibility shims.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 /**

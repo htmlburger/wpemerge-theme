@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Customizing_Your_Sidebar
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 ?>

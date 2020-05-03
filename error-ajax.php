@@ -3,7 +3,7 @@
  * Generic error fallback view for ajax requests.
  * Used if no view is found for the current error status code.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 ?>

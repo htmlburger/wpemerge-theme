@@ -2,7 +2,7 @@
 /**
  * Base layout.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 ?>

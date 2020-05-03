@@ -6,7 +6,7 @@
  *
  * It will be displayed only for post type "post".
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 ?>

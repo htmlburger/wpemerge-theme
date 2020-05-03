@@ -2,7 +2,7 @@
 /**
  * Single comment partial.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 ?>

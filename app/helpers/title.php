@@ -2,7 +2,7 @@
 /**
  * Post title helpers.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 /**

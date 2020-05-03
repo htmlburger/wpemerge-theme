@@ -2,7 +2,7 @@
 /**
  * Displays pagination for the main query.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 $for_comments = isset( $for_comments ) ? $for_comments : false;

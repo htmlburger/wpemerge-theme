@@ -4,7 +4,7 @@
  *
  * The area of the page that contains comments and the comment form.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 /*

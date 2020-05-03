@@ -2,7 +2,7 @@
 /**
  * Content helpers.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 /**

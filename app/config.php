@@ -4,7 +4,7 @@
  *
  * @link https://docs.wpemerge.com/#/framework/configuration
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 return [

@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Styling_Theme_Forms#The_Search_Form
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 ?>
