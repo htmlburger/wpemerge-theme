@@ -38,8 +38,8 @@ jobs:
 
 before_install:
   # Install required Node version.
-  - nvm install 8.10
-  - nvm use 8.10
+  - nvm install 12
+  - nvm use 12
   # Output the Node version.
   - node -v
   # Output the NPM version.
