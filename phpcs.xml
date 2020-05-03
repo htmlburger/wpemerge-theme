@@ -49,7 +49,7 @@
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="string" value="app"/>
+			<property name="text_domain" type="string" value="mytheme" />
 		</properties>
 	</rule>
 </ruleset>

@@ -54,7 +54,7 @@ function mytheme_get_title() {
 	 *
 	 * @param string $title The current main title
 	 */
-	$title = apply_filters( 'wpemerge_theme_get_title', $title );
+	$title = apply_filters( 'mytheme_get_title', $title );
 
 	return $title;
 }
