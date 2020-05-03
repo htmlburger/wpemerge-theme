@@ -7,5 +7,10 @@ module.exports = {
     "import/extensions": "off",
     // Prevent warnings for import statements with aliases.
     "import/first": "off",
+  },
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
   }
 };
