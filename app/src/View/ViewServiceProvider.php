@@ -5,7 +5,7 @@ namespace MyTheme\View;
 use WPEmerge\ServiceProviders\ServiceProviderInterface;
 
 /**
- * Provides custom route conditions.
+ * Register view composers and globals.
  * This is an example class so feel free to modify or remove it.
  */
 class ViewServiceProvider implements ServiceProviderInterface {
