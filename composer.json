@@ -42,7 +42,7 @@
   },
   "require-dev": {
     "filp/whoops": "^2.2",
-    "htmlburger/wpemerge-cli": "dev-master as 0.15.1",
+    "htmlburger/wpemerge-cli": "~0.15.1",
     "symfony/debug": "~3.0",
     "wp-coding-standards/wpcs": "^2.0",
     "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0"
