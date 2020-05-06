@@ -195,6 +195,22 @@ module.exports = {
       },
 
       /**
+       * Handle SVG sprites.
+       */
+      {
+        test: utils.tests.svgs,
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              extract: true,
+              spriteFilename: 'images/sprite.svg',
+            },
+          },
+        ],
+      },
+
+      /**
        * Handle fonts.
        */
       {
@@ -203,7 +219,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: file => `fonts/[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+              name: (file) => `fonts/[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
             },
           },
         ],

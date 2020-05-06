@@ -58,7 +58,6 @@ const plugins = [
   }),
   spriteSmith,
   spriteSvg,
-  browsersync,
   new ManifestPlugin(),
 ];
 
@@ -156,7 +155,7 @@ module.exports = {
       },
 
       /**
-       * Handle svg sprites.
+       * Handle SVG sprites.
        */
       {
         test: utils.tests.svgs,
@@ -165,19 +164,7 @@ module.exports = {
             loader: 'svg-sprite-loader',
             options: {
               extract: true,
-              spriteFilename: 'images/sprite-svg.svg',
-            },
-          },
-          {
-            loader: 'svgo-loader',
-            options: {
-              plugins: [
-                {
-                  removeAttrs: {
-                    attrs: '*:(stroke|fill)*',
-                  },
-                },
-              ],
+              spriteFilename: 'images/sprite.svg',
             },
           },
         ],

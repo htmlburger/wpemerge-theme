@@ -52,9 +52,9 @@ module.exports.distFontsPath = destPath =>
 module.exports.tests = {
   scripts: /\.(js|jsx)$/,
   styles: /\.(css|scss|sass)$/,
-  svgs: /(resources|dist|node_modules)[\\/]sprite-svg.*\.(ico|jpg|jpeg|png|svg|gif)$/,
-  images: /(resources|dist|node_modules)[\\/](?!sprite-svg).*\.(ico|jpg|jpeg|png|svg|gif)$/,
-  fonts: /(resources|dist|node_modules)[\\/].*\.(eot|svg|ttf|woff|woff2)$/,
+  svgs: /(resources|dist|node_modules)[\\/]images[\\/]sprite-svg[\\/].*\.svg$/,
+  images: /(resources|dist|node_modules)[\\/](?!images\/sprite-svg).*\.(ico|jpg|jpeg|png|svg|gif)$/,
+  fonts: /(resources|dist|node_modules)[\\/](?!images\/sprite-svg).*\.(eot|svg|ttf|woff|woff2)$/,
 };
 
 module.exports.detectEnv = () => {
