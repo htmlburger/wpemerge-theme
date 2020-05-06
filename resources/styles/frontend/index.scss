@@ -8,7 +8,7 @@
     Settings
 \* ------------------------------------------------------------ */
 
-@import '~@styles/shared/_config.scss';
+@import '~@styles/frontend.config.scss';
 @import '~@styles/shared/_variables.scss';
 @import '~@styles/shared/_editor.scss';
 @import './_variables.scss';
@@ -18,4 +18,5 @@
     Theme
 \* ------------------------------------------------------------ */
 
+@import '~@styles/editor';
 @import './_generic*.scss';

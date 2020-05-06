@@ -12,7 +12,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
-App::theme()->partial( 'loop' );
+\MyTheme::theme()->partial( 'loop' );

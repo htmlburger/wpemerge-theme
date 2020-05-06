@@ -6,7 +6,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
-App::theme()->partial( 'loop', 'single' );
+\MyTheme::theme()->partial( 'loop', 'single' );

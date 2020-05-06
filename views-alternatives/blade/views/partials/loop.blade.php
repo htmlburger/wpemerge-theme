@@ -2,7 +2,7 @@
 /**
  * "The Loop" partial.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 ?>
@@ -19,7 +19,7 @@
 					@endif
 
 					<h2 class="article__title">
-						<a href="{{ get_permalink() }}" rel="bookmark" title="{{ app_get_permalink_title() }}">
+						<a href="{{ get_permalink() }}" rel="bookmark" title="{{ mytheme_get_permalink_title() }}">
 							{{ get_the_title() }}
 						</a>
 					</h2>
@@ -36,25 +36,13 @@
 		@endwhile
 	</ul>
 
-	@php
-	carbon_pagination(
-		'posts',
-		[
-			'enable_numbers'    => true,
-			'prev_html'         => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Previous Entries', 'app' ) . '</a>',
-			'next_html'         => '<a href="{URL}" class="paging__next">' . esc_html__( 'Next Entries »', 'app' ) . '</a>',
-			'first_html'        => '<a href="{URL}" class="paging__first"></a>',
-			'last_html'         => '<a href="{URL}" class="paging__last"></a>',
-			'limiter_html'      => '<li class="paging__spacer">...</li>',
-		]
-	);
-	@endphp
+	@include('views.partials.pagination')
 @else
 	<ul class="articles">
 		<li class="article article--error404 article--not-found">
 			<div class="article__body">
 				<div class="article__entry">
-					<p>{{ app_get_index_404_message() }}</p>
+					<p>{{ mytheme_get_index_404_message() }}</p>
 					<?php get_search_form(); ?>
 				</div>
 			</div>

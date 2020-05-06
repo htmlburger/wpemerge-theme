@@ -1,12 +1,12 @@
 <?php
 /**
  * WordPress AJAX Routes.
- * WARNING: Do not use Route::all() here, otherwise you will override
+ * WARNING: Do not use \MyTheme::route->all() here, otherwise you will override
  * ALL AJAX requests which you most likely do not want to do.
  *
  * @link https://docs.wpemerge.com/#/framework/routing/methods
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -15,4 +15,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Using our ExampleController to handle a custom ajax action, for example.
 // phpcs:ignore
-// Route::get()->where( 'ajax', 'my-custom-ajax-action' )->handle( 'ExampleController@ajax' );
+// \MyTheme::route->get()->where( 'ajax', 'my-custom-ajax-action' )->handle( 'ExampleController@ajax' );

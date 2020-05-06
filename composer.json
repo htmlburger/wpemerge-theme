@@ -37,9 +37,8 @@
   "require": {
     "php": ">=5.5",
     "composer/installers": "^1.4",
-    "htmlburger/wpemerge": "dev-master as 0.15.1",
-    "htmlburger/wpemerge-theme-core": "dev-master as 0.15.1",
-    "htmlburger/carbon-pagination": "^1.1.6"
+    "htmlburger/wpemerge": "~0.15.0",
+    "htmlburger/wpemerge-theme-core": "~0.15.0"
   },
   "require-dev": {
     "filp/whoops": "^2.2",
@@ -50,18 +49,18 @@
   },
   "autoload": {
     "psr-4": {
-      "App\\": "app/src/"
+      "MyTheme\\": "app/src/"
     }
   },
   "scripts": {
-    "install-test-env":[
-      "WPEmerge\\Cli\\App::createConfigJson"
+    "install-test-env": [
+      "wpemerge config:create"
     ],
     "post-create-project-cmd": [
-      "WPEmerge\\Cli\\App::createConfigJson",
-      "WPEmerge\\Cli\\App::installDependencies",
-      "WPEmerge\\Cli\\App::buildAssets",
-      "WPEmerge\\Cli\\App::install"
+      "wpemerge config:create",
+      "wpemerge install:dependencies",
+      "wpemerge assets:build",
+      "wpemerge install"
     ]
   }
 }

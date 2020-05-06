@@ -1,28 +1,19 @@
 <?php
 /**
  * Load helpers.
+ * Define any generic functions in a helper file and then require that helper file here.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Load base helpers.
- */
-require_once APP_APP_HELPERS_DIR . 'shims.php';
-require_once APP_APP_HELPERS_DIR . 'admin.php';
-require_once APP_APP_HELPERS_DIR . 'assets.php';
-require_once APP_APP_HELPERS_DIR . 'content.php';
-require_once APP_APP_HELPERS_DIR . 'login.php';
-require_once APP_APP_HELPERS_DIR . 'shortcodes.php';
-require_once APP_APP_HELPERS_DIR . 'title.php';
-
-/**
- * Require custom helper files here.
- */
+// Load helpers.
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'helpers' . DIRECTORY_SEPARATOR . 'shims.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'helpers' . DIRECTORY_SEPARATOR . 'content.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'helpers' . DIRECTORY_SEPARATOR . 'title.php';
 
 // phpcs:disable
 /**
@@ -31,7 +22,7 @@ require_once APP_APP_HELPERS_DIR . 'title.php';
  * Automatically require all helper files in the app/helpers directory (non-recursive).
  */
 /*
-$helpers = glob( APP_APP_HELPERS_DIR . '*.php' );
+$helpers = glob( __DIR__ . DIRECTORY_SEPARATOR . 'helpers' . DIRECTORY_SEPARATOR . '*.php' );
 foreach ( $helpers as $helper ) {
 	if ( ! is_file( $helper ) ) {
 		continue;

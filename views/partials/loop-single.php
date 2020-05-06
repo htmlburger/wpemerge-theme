@@ -2,7 +2,7 @@
 /**
  * Single post partial.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 ?>
@@ -20,7 +20,7 @@
 				<?php the_title(); ?>
 			</h2>
 
-			<?php App::theme()->partial( 'post-meta' ); ?>
+			<?php \MyTheme::theme()->partial( 'post-meta' ); ?>
 		</header>
 
 		<div class="article__body">
@@ -30,15 +30,7 @@
 		</div>
 	</article>
 
-	<?php comments_template(); ?>
+	<?php \MyTheme::theme()->partial( 'pagination' ); ?>
 
-	<?php
-	carbon_pagination(
-		'post',
-		[
-			'prev_html' => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Previous Entry', 'app' ) . '</a>',
-			'next_html' => '<a href="{URL}" class="paging__next">' . esc_html__( 'Next Entry »', 'app' ) . '</a>',
-		]
-	);
-	?>
+	<?php comments_template(); ?>
 <?php endwhile; ?>

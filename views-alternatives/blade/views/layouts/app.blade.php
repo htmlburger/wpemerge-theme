@@ -2,18 +2,18 @@
 /**
  * Base layout.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 ?>
-@include('header')
+@include('views.partials.header')
 
 @if (!is_singular())
-	@php app_the_title( '<h2 class="post-title">', '</h2>' ) @endphp
+	@php mytheme_the_title( '<h2 class="post-title">', '</h2>' ) @endphp
 @endif
 
 @yield('content')
 
-@include('sidebar')
+@include('views.partials.sidebar')
 
-@include('footer')
+@include('views.partials.footer')

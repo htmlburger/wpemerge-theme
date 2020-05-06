@@ -58,7 +58,7 @@ _Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they
 
 ## Features
 - All features from [WP Emerge](https://docs.wpemerge.com/#/framework/overview):
-  - Routes with custom URLs and query filters
+  - Named routes with custom URLs and query filters
   - Controllers
   - Middleware
   - PSR-7 Responses
@@ -72,7 +72,7 @@ _Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they
 - ES6 for JavaScript. Separate bundles are created for **front-end**, **administration**, **Gutenberg** and **login** pages.
 - Pure [Webpack](https://webpack.js.org/) to transpile and bundle assets, create sprites, optimize images etc.
 - [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/) for synchronized browser development.
-- Autoloading for all classes in your `App\` namespace.
+- Autoloading for all classes in your `MyTheme\` namespace.
 - Automatic, fool-proof cache busting for all assets, including ones referenced in styles.
 - WPCS, JavaScript and SASS linting and fixing using a single yarn command.
 - Single-command optional CSS package installation:
@@ -150,7 +150,7 @@ Add PHP helper files here. Helper files should include __function definitions on
 
 #### `app/src/`
 
-Add PHP class files here. All clases in the `App\` namespace are autoloaded in accordance with [PSR-4](http://www.php-fig.org/psr/psr-4/).
+Add PHP class files here. All clases in the `MyTheme\` namespace are autoloaded in accordance with [PSR-4](http://www.php-fig.org/psr/psr-4/).
 
 #### `resources/images/`
 

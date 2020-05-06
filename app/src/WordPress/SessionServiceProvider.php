@@ -5,9 +5,9 @@ namespace MyTheme\WordPress;
 use WPEmerge\ServiceProviders\ServiceProviderInterface;
 
 /**
- * Register widgets and sidebars.
+ * Register a session for Flash and OldInput to work with.
  */
-class MenusServiceProvider implements ServiceProviderInterface {
+class SessionServiceProvider implements ServiceProviderInterface {
 	/**
 	 * {@inheritDoc}
 	 */
@@ -19,19 +19,15 @@ class MenusServiceProvider implements ServiceProviderInterface {
 	 * {@inheritDoc}
 	 */
 	public function bootstrap( $container ) {
-		add_action( 'after_setup_theme', [$this, 'registerMenus'] );
+		add_action( 'init', [$this, 'startSession'] );
 	}
 
 	/**
-	 * Register menu locations.
+	 * Start a new session.
 	 *
 	 * @return void
 	 */
-	public function registerMenus() {
-		register_nav_menus(
-			[
-				'main-menu' => __( 'Main Menu', 'mytheme' ),
-			]
-		);
+	public function startSession() {
+		session_start();
 	}
 }

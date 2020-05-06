@@ -1,11 +1,11 @@
 <?php
 
-namespace App\View;
+namespace MyTheme\View;
 
 use WPEmerge\ServiceProviders\ServiceProviderInterface;
 
 /**
- * Provides custom route conditions.
+ * Register view composers and globals.
  * This is an example class so feel free to modify or remove it.
  */
 class ViewServiceProvider implements ServiceProviderInterface {
@@ -36,7 +36,7 @@ class ViewServiceProvider implements ServiceProviderInterface {
 		 * @link https://docs.wpemerge.com/#/framework/views/overview
 		 */
 		// phpcs:ignore
-		// \App::views()->addGlobal( 'foo', 'bar' );
+		// \MyTheme::views()->addGlobal( 'foo', 'bar' );
 	}
 
 	/**
@@ -51,6 +51,6 @@ class ViewServiceProvider implements ServiceProviderInterface {
 		 * @link https://docs.wpemerge.com/#/framework/views/view-composers
 		 */
 		// phpcs:ignore
-		// \App::views()->addComposer( 'views/partials/foo', 'FooPartialViewComposer' );
+		// \MyTheme::views()->addComposer( 'views/partials/foo', 'FooPartialViewComposer' );
 	}
 }

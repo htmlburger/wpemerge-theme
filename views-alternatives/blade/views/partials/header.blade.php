@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 ?>
@@ -21,6 +21,6 @@
 		@php wp_head() @endphp
 	</head>
 	<body @php body_class() @endphp>
-		@php app_shim_wp_body_open() @endphp
+		@php mytheme_shim_wp_body_open() @endphp
 
-		<h1>@php bloginfo( 'name' ) @endphp</h1>
+		@include('views.partials.logo')

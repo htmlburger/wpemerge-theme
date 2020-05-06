@@ -4,7 +4,10 @@ if ( php_sapi_name() !== 'cli' ) {
 }
 
 $vendors = [
+	// $theme/vendor
 	__DIR__ . DIRECTORY_SEPARATOR . 'vendor',
+
+	// $bedrock/vendor
 	dirname( dirname( dirname( dirname( __DIR__ ) ) ) ) . DIRECTORY_SEPARATOR . 'vendor',
 ];
 

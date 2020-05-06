@@ -2,7 +2,7 @@
 /**
  * Single comment partial.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 ?>
@@ -11,22 +11,22 @@
 		<div class="comment__author vcard">
 			<?php echo get_avatar( $comment, 48 ); ?>
 			<?php comment_author_link(); ?>
-			<span class="comment__says"><?php esc_html_e( 'says:', 'app' ); ?></span>
+			<span class="comment__says"><?php esc_html_e( 'says:', 'mytheme' ); ?></span>
 		</div>
 
 		<?php if ( '0' === $comment->comment_approved ) : ?>
-			<em class="comment__moderation-notice"><?php esc_html_e( 'Your comment is awaiting moderation.', 'app' ); ?></em><br />
+			<em class="comment__moderation-notice"><?php esc_html_e( 'Your comment is awaiting moderation.', 'mytheme' ); ?></em><br />
 		<?php endif; ?>
 
 		<div class="comment__meta">
 			<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 				<?php
 				/* translators: comment date and time */
-				echo esc_html( sprintf( __( '%1$s at %2$s', 'app' ), get_comment_date(), get_comment_time() ) );
+				echo esc_html( sprintf( __( '%1$s at %2$s', 'mytheme' ), get_comment_date(), get_comment_time() ) );
 				?>
 			</a>
 
-			<?php edit_comment_link( esc_html__( '(Edit)', 'app' ), '  ', '' ); ?>
+			<?php edit_comment_link( esc_html__( '(Edit)', 'mytheme' ), '  ', '' ); ?>
 		</div>
 
 		<div class="comment__text">

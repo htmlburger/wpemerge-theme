@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Routing;
+namespace MyTheme\Routing;
 
 use WPEmerge\ServiceProviders\ServiceProviderInterface;
 
 /**
- * Provides custom route conditions.
+ * Provide custom route conditions.
  * This is an example class so feel free to modify or remove it.
  */
 class RouteConditionsServiceProvider implements ServiceProviderInterface {

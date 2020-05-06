@@ -15,11 +15,43 @@ WP Emerge Theme is completely open source and we encourage everybody to particip
 1. Fork this repository.
 2. Open up your `wp-content/themes/` directory in your terminal of choice.
 3. Clone your fork e.g. `git clone git@github.com:your-username/wpemerge-theme.git wpemerge`.
-4. Run `cd wpemerge/ && composer install && composer run post-create-project-cmd`.
-5. Answer no to any questions asked during installation.
-6. Ignore any `TTY mode is not supported on Windows platform.` errors.
-7. Make changes to `config.json` if necessary.
-8. Activate the WP Emerge theme from your WordPress admin panel.
+4. Run `cd wpemerge/`.
+5. Edit the `composer.json` file and add a new `repositories` key:
+    ```json
+    "repositories": [
+      {
+        "type": "git",
+        "url": "https://github.com/htmlburger/wpemerge.git"
+      },
+      {
+        "type": "git",
+        "url": "https://github.com/htmlburger/wpemerge-theme-core.git"
+      },
+      {
+        "type": "git",
+        "url": "https://github.com/htmlburger/wpemerge-cli.git"
+      }
+    ],
+    ```
+    If you have forked any of the above repositories, feel free to replace the repository url where necessary.
+6. Continue editing the `composer.json` file and replace the versions of `htmlburger/wpemerge*` packages like so:
+    ```json
+    "htmlburger/wpemerge": "~0.15.1",
+    "htmlburger/wpemerge-theme-core": "~0.15.1",
+    "htmlburger/wpemerge-cli": "~0.15.1",
+    ```
+    should be edited to
+    ```json
+    "htmlburger/wpemerge": "dev-master as 0.15.1",
+    "htmlburger/wpemerge-theme-core": "dev-master as 0.15.1",
+    "htmlburger/wpemerge-cli": "dev-master as 0.15.1",
+    ```
+    Do this for both `require` and `require-dev` packages.
+6. Run `composer install && composer run post-create-project-cmd`.
+7. Answer no to any questions asked during installation.
+8. Ignore any `TTY mode is not supported on Windows platform.` errors.
+9. Make changes to `config.json` if necessary.
+10. Activate the WP Emerge theme from your WordPress admin panel.
 
 ## Pull Requests
 

@@ -2,7 +2,7 @@
 /**
  * Single post partial.
  *
- * @package WPEmergeTheme
+ * @package MyTheme
  */
 
 ?>
@@ -30,15 +30,7 @@
 		</div>
 	</article>
 
-	@php comments_template() @endphp
+	@include('views.partials.pagination')
 
-	@php
-	carbon_pagination(
-		'post',
-		[
-			'prev_html' => '<a href="{URL}" class="paging__prev">' . esc_html__( '« Previous Entry', 'app' ) . '</a>',
-			'next_html' => '<a href="{URL}" class="paging__next">' . esc_html__( 'Next Entry »', 'app' ) . '</a>',
-		]
-	);
-	@endphp
+	@php comments_template() @endphp
 @endwhile

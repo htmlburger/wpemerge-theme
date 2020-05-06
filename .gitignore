@@ -1,7 +1,7 @@
 # Build files
 /dist/
 /resources/styles/frontend/_sprite.scss
-/resources/styles/shared/_config.scss
+/resources/styles/*.config.scss
 
 # Development files
 /config.json

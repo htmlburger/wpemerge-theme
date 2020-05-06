@@ -6,18 +6,10 @@ const shell = require('shelljs');
 /**
  * Install production-only dependencies in the current directory.
  *
- * @returns {boolean}
+ * @returns {Object}
  */
-const installProductionDependencies = () => shell.exec('composer install --no-dev --classmap-authoritative').code === 0;
-
-/**
- * Install development dependencies in the current directory.
- *
- * @returns {boolean}
- */
-const installDevelopmentDependencies = () => shell.exec('composer install').code === 0;
+const installProductionDependencies = (cwd = null) => shell.exec('composer install --no-dev --classmap-authoritative', { cwd });
 
 module.exports = {
   installProductionDependencies,
-  installDevelopmentDependencies,
 };
