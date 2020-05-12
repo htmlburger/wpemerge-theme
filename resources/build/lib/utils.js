@@ -13,7 +13,7 @@ let userConfig = null;
 /**
  * API.
  */
-module.exports.themeRootPath = (basePath = '', destPath = '') =>
+module.exports.rootPath = (basePath = '', destPath = '') =>
   path.resolve(path.dirname(__dirname), '../../', basePath, destPath);
 
 module.exports.srcPath = (basePath = '', destPath = '') =>

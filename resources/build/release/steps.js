@@ -1,7 +1,6 @@
 /**
  * The external dependencies.
  */
-const process = require('process');
 const fs = require('fs');
 const path = require('path');
 const shell = require('shelljs');
@@ -11,7 +10,6 @@ const glob = require('glob');
  * The internal dependencies.
  */
 const config = require('./config');
-const utils = require('../lib/utils');
 const composer = require('./composer');
 const archive = require('./archive');
 
@@ -44,7 +42,7 @@ const validate = (destination) => {
 };
 
 /**
- * Create the theme release version directory.
+ * Create the release version directory.
  *
  * @param {string} destination
  */

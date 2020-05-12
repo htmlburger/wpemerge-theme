@@ -9,8 +9,8 @@ const chalk = require('chalk');
 /**
  * The internal dependencies.
  */
-const config = require('../../../config.json');
 const utils = require('../lib/utils');
+const config = require('../../../config.json');
 const steps = require('./steps');
 
 if (chalk.level === 0) {
@@ -20,7 +20,7 @@ if (chalk.level === 0) {
 
 const { log, error: logError } = console;
 const name = process.argv[2] || 'wpemerge-release';
-const source = utils.themeRootPath();
+const source = utils.rootPath();
 const destination = path.join(path.dirname(source), name);
 const emitter = new EventEmitter();
 
