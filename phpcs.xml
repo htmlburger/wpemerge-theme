@@ -2,54 +2,29 @@
 <ruleset name="MyTheme">
 	<description>Theme Coding Standard</description>
 
-	<!-- Excludes -->
-	<exclude-pattern>app/src/*</exclude-pattern>
-	<exclude-pattern>dist/*</exclude-pattern>
-	<exclude-pattern>node_modules/*</exclude-pattern>
-	<exclude-pattern>vendor/*</exclude-pattern>
-	<exclude-pattern>wpcs/*</exclude-pattern>
-	<exclude-pattern>*/*.css</exclude-pattern>
-	<exclude-pattern>*/*.js</exclude-pattern>
+	<exclude-pattern>.packages</exclude-pattern>
+	<exclude-pattern>app/src</exclude-pattern>
+	<exclude-pattern>dist</exclude-pattern>
+	<exclude-pattern>node_modules</exclude-pattern>
+	<exclude-pattern>resources</exclude-pattern>
+	<exclude-pattern>tests</exclude-pattern>
+	<exclude-pattern>vendor</exclude-pattern>
+
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter" />
+	<rule ref="Generic.Commenting.Todo" />
+	<rule ref="Squiz.WhiteSpace.SuperfluousWhitespace" />
 
 	<rule ref="WordPress">
-		<exclude name="Generic.Files.LineEndings.InvalidEOLChar" />
-		<exclude name="Generic.Files.LowercasedFilename.NotFound" />
-
-		<exclude name="Squiz.Commenting.ClassComment.Missing" />
-		<exclude name="Squiz.Commenting.FileComment.Missing" />
-		<exclude name="Squiz.Commenting.FileComment.MissingPackageTag" />
-		<exclude name="Squiz.Commenting.FunctionComment.Missing" />
-		<exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpaceBeforeEquals" />
-		<exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpaceAfterDefault" />
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />
 		<exclude name="Squiz.PHP.CommentedOutCode.Found" />
-		<exclude name="Squiz.Commenting.BlockComment.NoNewLine" />
-
-		<exclude name="WordPress.PHP.YodaConditions.NotYoda" />
-		<exclude name="WordPress.Files.FileName.UnderscoresNotAllowed" />
 	</rule>
-
-	<!-- Allow whitespace at the beginning of files in fragments -->
-	<rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
-		<exclude-pattern>views/partials/*</exclude-pattern>
-		<exclude-pattern>footer.php</exclude-pattern>
-		<exclude-pattern>footer-*.php</exclude-pattern>
-	</rule>
-
-	<rule ref="WordPress-Extra">
-		<exclude name="WordPress.WhiteSpace.ControlStructureSpacing"/>
-		<exclude name="WordPress.XSS.EscapeOutput"/>
-	</rule>
-
-	<!-- Let's also check that everything is properly documented. -->
-	<rule ref="WordPress-Docs"/>
-
-	<!-- Add in some extra rules from other standards. -->
-	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
-	<rule ref="Generic.Commenting.Todo"/>
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="string" value="mytheme" />
 		</properties>
 	</rule>
+
+	<rule ref="WordPress-Extra" />
+	<rule ref="WordPress-Docs" />
 </ruleset>

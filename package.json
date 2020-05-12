@@ -10,7 +10,7 @@
     "build:production": "cross-env NODE_ENV=production webpack --colors --config resources/build/webpack.production.js",
     "lint": "run-s -cl lint:wpcs lint:scripts lint:styles",
     "lint-fix": "run-s -cl lint-fix:wpcs lint-fix:scripts lint-fix:styles",
-    "lint:wpcs": "./vendor/bin/phpcs --colors --standard=wpcs.xml ./",
+    "lint:wpcs": "./vendor/bin/phpcs --colors --standard=phpcs.xml ./",
     "lint:scripts": "eslint --color ./resources/scripts/**",
     "lint:styles": "stylelint --color ./resources/styles/**",
     "lint-fix:wpcs": "./vendor/bin/phpcbf --colors --standard=wpcs.xml ./",
