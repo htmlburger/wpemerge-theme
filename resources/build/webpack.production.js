@@ -136,6 +136,7 @@ module.exports = {
        * Handle config.json.
        */
       {
+        type: 'javascript/auto',
         test: utils.rootPath('config.json'),
         use: configLoader,
       },

@@ -141,5 +141,6 @@ module.exports = function (rawConfig) {
     });
   }
 
-  return JSON.stringify(config);
+  // Make sure the JSON is inlined as an object instead of being parsed at runtime.
+  return `module.exports = ${JSON.stringify(config)};`;
 };
