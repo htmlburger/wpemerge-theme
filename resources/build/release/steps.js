@@ -9,7 +9,7 @@ const glob = require('glob');
 /**
  * The internal dependencies.
  */
-const config = require('./config');
+const utils = require('../lib/utils');
 const composer = require('./composer');
 const archive = require('./archive');
 
@@ -75,7 +75,7 @@ const copyFile = (fileSource, source, destination, emitter) => {
   emit(emitter, 'file.copy', fileSource);
 
   if (fileRelative === 'config.json') {
-    fs.writeFileSync(fileDestination, JSON.stringify(config.getWhitelisted(fileSource)));
+    fs.writeFileSync(fileDestination, JSON.stringify(utils.getUserConfig(fileSource, true)));
   } else {
     shell.mkdir('-p', path.dirname(fileDestination));
     shell.cp('-R', fileSource, fileDestination);
