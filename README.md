@@ -123,13 +123,13 @@ wp-content/themes/your-theme
 │   │   ├── admin/            # Administration scripts.
 │   │   ├── editor/           # Gutenberg editor scripts.
 │   │   ├── login/            # Login scripts.
-│   │   └── theme/            # Front-end scripts.
+│   │   └── frontend/         # Front-end scripts.
 │   ├── styles/
 │   │   ├── admin/            # Administration styles.
 │   │   ├── editor/           # Gutenberg editor styles.
 │   │   ├── login/            # Login styles.
 │   │   ├── shared/           # Shared styles.
-│   │   └── theme/            # Front-end styles.
+│   │   └── frontend/         # Front-end styles.
 │   └── vendor/               # Any third-party, non-npm assets.
 ├── vendor/                   # Composer packages.
 ├── views/
@@ -179,7 +179,10 @@ While views that follow the WordPress template hierarchy should go in the theme 
 2. `views/partials/` - Small snippets that are meant to be reused throughout other views.
 3. `views/` - Named [custom post templates](https://developer.wordpress.org/themes/template-files-section/page-template-files/#creating-custom-page-templates-for-global-use) or views that don't fit anywhere else.
 
-Avoid adding any PHP logic in any of these views, unless it pertains to layouting (PHP logic should go into helper files or [WP Emerge controllers](https://docs.wpemerge.com/#/framework/routing/controllers)).
+Avoid adding any PHP logic in any of these views, unless it pertains to layouting. Business logic should go into:
+- Helper files (`app/helpers/*.php`)
+- Service classes
+- [WP Emerge Controllers](https://docs.wpemerge.com/#/framework/routing/controllers)
 
 ## Contributing
 
