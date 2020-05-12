@@ -1,6 +1,6 @@
 <?php
 
-namespace MyTheme\View;
+namespace MyApp\View;
 
 use WPEmerge\ServiceProviders\ServiceProviderInterface;
 
@@ -36,7 +36,7 @@ class ViewServiceProvider implements ServiceProviderInterface {
 		 * @link https://docs.wpemerge.com/#/framework/views/overview
 		 */
 		// phpcs:ignore
-		// \MyTheme::views()->addGlobal( 'foo', 'bar' );
+		// \MyApp::views()->addGlobal( 'foo', 'bar' );
 	}
 
 	/**
@@ -51,6 +51,6 @@ class ViewServiceProvider implements ServiceProviderInterface {
 		 * @link https://docs.wpemerge.com/#/framework/views/view-composers
 		 */
 		// phpcs:ignore
-		// \MyTheme::views()->addComposer( 'views/partials/foo', 'FooPartialViewComposer' );
+		// \MyApp::views()->addComposer( 'views/partials/foo', 'FooPartialViewComposer' );
 	}
 }

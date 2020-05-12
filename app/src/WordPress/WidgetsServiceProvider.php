@@ -1,6 +1,6 @@
 <?php
 
-namespace MyTheme\WordPress;
+namespace MyApp\WordPress;
 
 use WPEmerge\ServiceProviders\ServiceProviderInterface;
 
@@ -58,7 +58,7 @@ class WidgetsServiceProvider implements ServiceProviderInterface {
 			array_merge(
 				$default_options,
 				[
-					'name' => __( 'Default Sidebar', 'mytheme' ),
+					'name' => __( 'Default Sidebar', 'myapp' ),
 					'id'   => 'default-sidebar',
 				]
 			)

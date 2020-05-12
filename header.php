@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package MyTheme
+ * @package MyApp
  */
 
 ?>
@@ -20,6 +20,6 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<?php mytheme_shim_wp_body_open(); ?>
+		<?php myapp_shim_wp_body_open(); ?>
 
-		<?php \MyTheme::theme()->partial( 'logo' ); ?>
+		<?php \MyApp::theme()->partial( 'logo' ); ?>

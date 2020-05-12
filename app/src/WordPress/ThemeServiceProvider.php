@@ -1,6 +1,6 @@
 <?php
 
-namespace MyTheme\WordPress;
+namespace MyApp\WordPress;
 
 use WPEmerge\ServiceProviders\ServiceProviderInterface;
 
@@ -30,7 +30,7 @@ class ThemeServiceProvider implements ServiceProviderInterface
 	 * @return void
 	 */
 	public function loadTextdomain() {
-		load_theme_textdomain( 'mytheme', get_template_directory() . DIRECTORY_SEPARATOR . 'languages' );
+		load_theme_textdomain( 'myapp', get_template_directory() . DIRECTORY_SEPARATOR . 'languages' );
 	}
 
 	/**
@@ -121,99 +121,99 @@ class ThemeServiceProvider implements ServiceProviderInterface
 			'editor-color-palette',
 			[
 				[
-					'name'  => __( 'Red', 'mytheme' ),
+					'name'  => __( 'Red', 'myapp' ),
 					'slug'  => 'material-red',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-red', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-red', '#000000' ),
 				],
 				[
-					'name'  => __( 'Pink', 'mytheme' ),
+					'name'  => __( 'Pink', 'myapp' ),
 					'slug'  => 'material-pink',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-pink', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-pink', '#000000' ),
 				],
 				[
-					'name'  => __( 'Purple', 'mytheme' ),
+					'name'  => __( 'Purple', 'myapp' ),
 					'slug'  => 'material-purple',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-purple', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-purple', '#000000' ),
 				],
 				[
-					'name'  => __( 'Deep Purple', 'mytheme' ),
+					'name'  => __( 'Deep Purple', 'myapp' ),
 					'slug'  => 'material-deep-purple',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-deep-purple', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-deep-purple', '#000000' ),
 				],
 				[
-					'name'  => __( 'Indigo', 'mytheme' ),
+					'name'  => __( 'Indigo', 'myapp' ),
 					'slug'  => 'material-indigo',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-indigo', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-indigo', '#000000' ),
 				],
 				[
-					'name'  => __( 'Blue', 'mytheme' ),
+					'name'  => __( 'Blue', 'myapp' ),
 					'slug'  => 'material-blue',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-blue', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-blue', '#000000' ),
 				],
 				[
-					'name'  => __( 'Light Blue', 'mytheme' ),
+					'name'  => __( 'Light Blue', 'myapp' ),
 					'slug'  => 'material-light-blue',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-light-blue', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-light-blue', '#000000' ),
 				],
 				[
-					'name'  => __( 'Cyan', 'mytheme' ),
+					'name'  => __( 'Cyan', 'myapp' ),
 					'slug'  => 'material-cyan	',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-cyan	', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-cyan	', '#000000' ),
 				],
 				[
-					'name'  => __( 'Teal', 'mytheme' ),
+					'name'  => __( 'Teal', 'myapp' ),
 					'slug'  => 'material-teal',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-teal', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-teal', '#000000' ),
 				],
 				[
-					'name'  => __( 'Green', 'mytheme' ),
+					'name'  => __( 'Green', 'myapp' ),
 					'slug'  => 'material-green',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-green', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-green', '#000000' ),
 				],
 				[
-					'name'  => __( 'Light Green', 'mytheme' ),
+					'name'  => __( 'Light Green', 'myapp' ),
 					'slug'  => 'material-light-green',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-light-green', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-light-green', '#000000' ),
 				],
 				[
-					'name'  => __( 'Lime', 'mytheme' ),
+					'name'  => __( 'Lime', 'myapp' ),
 					'slug'  => 'material-lime',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-lime', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-lime', '#000000' ),
 				],
 				[
-					'name'  => __( 'Yellow', 'mytheme' ),
+					'name'  => __( 'Yellow', 'myapp' ),
 					'slug'  => 'material-yellow',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-yellow', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-yellow', '#000000' ),
 				],
 				[
-					'name'  => __( 'Amber', 'mytheme' ),
+					'name'  => __( 'Amber', 'myapp' ),
 					'slug'  => 'material-amber',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-amber', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-amber', '#000000' ),
 				],
 				[
-					'name'  => __( 'Orange', 'mytheme' ),
+					'name'  => __( 'Orange', 'myapp' ),
 					'slug'  => 'material-orange',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-orange', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-orange', '#000000' ),
 				],
 				[
-					'name'  => __( 'Deep Orange', 'mytheme' ),
+					'name'  => __( 'Deep Orange', 'myapp' ),
 					'slug'  => 'material-deep-orange',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-deep-orange', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-deep-orange', '#000000' ),
 				],
 				[
-					'name'  => __( 'Brown', 'mytheme' ),
+					'name'  => __( 'Brown', 'myapp' ),
 					'slug'  => 'material-brown',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-brown', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-brown', '#000000' ),
 				],
 				[
-					'name'  => __( 'Grey', 'mytheme' ),
+					'name'  => __( 'Grey', 'myapp' ),
 					'slug'  => 'material-grey',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-grey', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-grey', '#000000' ),
 				],
 				[
-					'name'  => __( 'Blue Grey', 'mytheme' ),
+					'name'  => __( 'Blue Grey', 'myapp' ),
 					'slug'  => 'material-blue-grey',
-					'color' => \MyTheme::theme()->config()->get( 'variables.color.material-blue-grey', '#000000' ),
+					'color' => \MyApp::theme()->config()->get( 'variables.color.material-blue-grey', '#000000' ),
 				],
 			]
 		);
@@ -236,33 +236,33 @@ class ThemeServiceProvider implements ServiceProviderInterface
 			'editor-font-sizes',
 			[
 				[
-					'name'      => __( 'extra small', 'mytheme' ),
-					'shortName' => __( 'XS', 'mytheme' ),
-					'size'      => (int) \MyTheme::theme()->config()->get( 'variables.font-size.xs', 12 ),
+					'name'      => __( 'extra small', 'myapp' ),
+					'shortName' => __( 'XS', 'myapp' ),
+					'size'      => (int) \MyApp::theme()->config()->get( 'variables.font-size.xs', 12 ),
 					'slug'      => 'xs',
 				],
 				[
-					'name'      => __( 'small', 'mytheme' ),
-					'shortName' => __( 'S', 'mytheme' ),
-					'size'      => (int) \MyTheme::theme()->config()->get( 'variables.font-size.s', 16 ),
+					'name'      => __( 'small', 'myapp' ),
+					'shortName' => __( 'S', 'myapp' ),
+					'size'      => (int) \MyApp::theme()->config()->get( 'variables.font-size.s', 16 ),
 					'slug'      => 's',
 				],
 				[
-					'name'      => __( 'regular', 'mytheme' ),
-					'shortName' => __( 'M', 'mytheme' ),
-					'size'      => (int) \MyTheme::theme()->config()->get( 'variables.font-size.m', 20 ),
+					'name'      => __( 'regular', 'myapp' ),
+					'shortName' => __( 'M', 'myapp' ),
+					'size'      => (int) \MyApp::theme()->config()->get( 'variables.font-size.m', 20 ),
 					'slug'      => 'm',
 				],
 				[
-					'name'      => __( 'large', 'mytheme' ),
-					'shortName' => __( 'L', 'mytheme' ),
-					'size'      => (int) \MyTheme::theme()->config()->get( 'variables.font-size.l', 28 ),
+					'name'      => __( 'large', 'myapp' ),
+					'shortName' => __( 'L', 'myapp' ),
+					'size'      => (int) \MyApp::theme()->config()->get( 'variables.font-size.l', 28 ),
 					'slug'      => 'l',
 				],
 				[
-					'name'      => __( 'extra large', 'mytheme' ),
-					'shortName' => __( 'XL', 'mytheme' ),
-					'size'      => (int) \MyTheme::theme()->config()->get( 'variables.font-size.xl', 36 ),
+					'name'      => __( 'extra large', 'myapp' ),
+					'shortName' => __( 'XL', 'myapp' ),
+					'size'      => (int) \MyApp::theme()->config()->get( 'variables.font-size.xl', 36 ),
 					'slug'      => 'xl',
 				],
 			]

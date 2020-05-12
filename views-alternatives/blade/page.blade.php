@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package MyTheme
+ * @package MyApp
  */
 
 ?>
@@ -14,12 +14,12 @@
 	@while (have_posts())
 		@php the_post() @endphp
 		<div @php post_class() @endphp>
-			@php mytheme_the_title( '<h2 class="post-title">', '</h2>' ) @endphp
+			@php myapp_the_title( '<h2 class="post-title">', '</h2>' ) @endphp
 
 			<div class="page__content">
 				@php the_content(); @endphp
 
-				@php edit_post_link( __( 'Edit this entry.', 'mytheme' ), '<p>', '</p>' ); @endphp
+				@php edit_post_link( __( 'Edit this entry.', 'myapp' ), '<p>', '</p>' ); @endphp
 
 				@include('views.partials.pagination')
 			</div>

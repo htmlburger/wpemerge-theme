@@ -2,7 +2,7 @@
 /**
  * This file is required by WordPress. Delegates the actual rendering to index.blade.php.
  *
- * @package MyTheme
+ * @package MyApp
  * phpcs:disable
  */
-\MyTheme::render( 'views.index' );
+\MyApp::render( 'views.index' );

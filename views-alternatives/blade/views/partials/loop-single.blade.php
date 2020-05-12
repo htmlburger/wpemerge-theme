@@ -2,7 +2,7 @@
 /**
  * Single post partial.
  *
- * @package MyTheme
+ * @package MyApp
  */
 
 ?>

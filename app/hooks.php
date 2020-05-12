@@ -4,7 +4,7 @@
  * In most cases you should use a service provider, but in cases where you
  * just need to add an action/filter and forget about it you can add it here.
  *
- * @package MyTheme
+ * @package MyApp
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

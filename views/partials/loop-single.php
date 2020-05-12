@@ -2,7 +2,7 @@
 /**
  * Single post partial.
  *
- * @package MyTheme
+ * @package MyApp
  */
 
 ?>
@@ -20,7 +20,7 @@
 				<?php the_title(); ?>
 			</h2>
 
-			<?php \MyTheme::theme()->partial( 'post-meta' ); ?>
+			<?php \MyApp::theme()->partial( 'post-meta' ); ?>
 		</header>
 
 		<div class="article__body">
@@ -30,7 +30,7 @@
 		</div>
 	</article>
 
-	<?php \MyTheme::theme()->partial( 'pagination' ); ?>
+	<?php \MyApp::theme()->partial( 'pagination' ); ?>
 
 	<?php comments_template(); ?>
 <?php endwhile; ?>

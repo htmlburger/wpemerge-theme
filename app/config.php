@@ -4,7 +4,7 @@
  *
  * @link https://docs.wpemerge.com/#/framework/configuration
  *
- * @package MyTheme
+ * @package MyApp
  */
 
 return [
@@ -18,16 +18,16 @@ return [
 		\WPEmergeThemeCore\Image\ImageServiceProvider::class,
 		\WPEmergeThemeCore\Sidebar\SidebarServiceProvider::class,
 		\WPEmergeThemeCore\Theme\ThemeServiceProvider::class,
-		\MyTheme\Routing\RouteConditionsServiceProvider::class,
-		\MyTheme\View\ViewServiceProvider::class,
-		\MyTheme\WordPress\AdminServiceProvider::class,
-		\MyTheme\WordPress\AssetsServiceProvider::class,
-		\MyTheme\WordPress\ContentTypesServiceProvider::class,
-		\MyTheme\WordPress\LoginServiceProvider::class,
-		\MyTheme\WordPress\MenusServiceProvider::class,
-		\MyTheme\WordPress\ShortcodesServiceProvider::class,
-		\MyTheme\WordPress\ThemeServiceProvider::class,
-		\MyTheme\WordPress\WidgetsServiceProvider::class,
+		\MyApp\Routing\RouteConditionsServiceProvider::class,
+		\MyApp\View\ViewServiceProvider::class,
+		\MyApp\WordPress\AdminServiceProvider::class,
+		\MyApp\WordPress\AssetsServiceProvider::class,
+		\MyApp\WordPress\ContentTypesServiceProvider::class,
+		\MyApp\WordPress\LoginServiceProvider::class,
+		\MyApp\WordPress\MenusServiceProvider::class,
+		\MyApp\WordPress\ShortcodesServiceProvider::class,
+		\MyApp\WordPress\ThemeServiceProvider::class,
+		\MyApp\WordPress\WidgetsServiceProvider::class,
 	],
 
 	/**
@@ -41,19 +41,19 @@ return [
 		'web'   => [
 			'definitions' => __DIR__ . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'web.php',
 			'attributes'  => [
-				'namespace' => 'MyTheme\\Controllers\\Web\\',
+				'namespace' => 'MyApp\\Controllers\\Web\\',
 			],
 		],
 		'admin' => [
 			'definitions' => __DIR__ . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'admin.php',
 			'attributes'  => [
-				'namespace' => 'MyTheme\\Controllers\\Admin\\',
+				'namespace' => 'MyApp\\Controllers\\Admin\\',
 			],
 		],
 		'ajax'  => [
 			'definitions' => __DIR__ . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'ajax.php',
 			'attributes'  => [
-				'namespace' => 'MyTheme\\Controllers\\Ajax\\',
+				'namespace' => 'MyApp\\Controllers\\Ajax\\',
 			],
 		],
 	],
@@ -62,7 +62,7 @@ return [
 	 * View Composers settings.
 	 */
 	'view_composers'      => [
-		'namespace' => 'MyTheme\\ViewComposers\\',
+		'namespace' => 'MyApp\\ViewComposers\\',
 	],
 
 	/**
@@ -79,7 +79,7 @@ return [
 	 */
 	'middleware'          => [
 		// phpcs:ignore
-		// 'mymiddleware' => \MyTheme\Middleware\MyMiddleware::class,
+		// 'mymiddleware' => \MyApp\Middleware\MyMiddleware::class,
 	],
 
 	/**
@@ -108,8 +108,8 @@ return [
 	 */
 	'middleware_priority' => [
 		// phpcs:ignore
-		// \MyTheme\Middleware\MyMiddlewareThatShouldRunFirst::class,
-		// \MyTheme\Middleware\MyMiddlewareThatShouldRunSecond::class,
+		// \MyApp\Middleware\MyMiddlewareThatShouldRunFirst::class,
+		// \MyApp\Middleware\MyMiddlewareThatShouldRunSecond::class,
 	],
 
 	/**

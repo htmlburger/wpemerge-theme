@@ -2,7 +2,7 @@
 /**
  * Displays pagination for the main query.
  *
- * @package MyTheme
+ * @package MyApp
  */
 
 $for_comments = isset( $for_comments ) ? $for_comments : false;

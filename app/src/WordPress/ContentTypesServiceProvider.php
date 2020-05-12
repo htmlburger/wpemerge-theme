@@ -1,6 +1,6 @@
 <?php
 
-namespace MyTheme\WordPress;
+namespace MyApp\WordPress;
 
 use WPEmerge\ServiceProviders\ServiceProviderInterface;
 
@@ -33,19 +33,19 @@ class ContentTypesServiceProvider implements ServiceProviderInterface
 		// phpcs:disable
 		/*
 		register_post_type(
-			'mytheme_custom_post_type',
+			'myapp_custom_post_type',
 			array(
 				'labels'              => array(
-					'name'               => __( 'Custom Types', 'mytheme' ),
-					'singular_name'      => __( 'Custom Type', 'mytheme' ),
-					'add_new'            => __( 'Add New', 'mytheme' ),
-					'add_new_item'       => __( 'Add new Custom Type', 'mytheme' ),
-					'view_item'          => __( 'View Custom Type', 'mytheme' ),
-					'edit_item'          => __( 'Edit Custom Type', 'mytheme' ),
-					'new_item'           => __( 'New Custom Type', 'mytheme' ),
-					'search_items'       => __( 'Search Custom Types', 'mytheme' ),
-					'not_found'          => __( 'No custom types found', 'mytheme' ),
-					'not_found_in_trash' => __( 'No custom types found in trash', 'mytheme' ),
+					'name'               => __( 'Custom Types', 'myapp' ),
+					'singular_name'      => __( 'Custom Type', 'myapp' ),
+					'add_new'            => __( 'Add New', 'myapp' ),
+					'add_new_item'       => __( 'Add new Custom Type', 'myapp' ),
+					'view_item'          => __( 'View Custom Type', 'myapp' ),
+					'edit_item'          => __( 'Edit Custom Type', 'myapp' ),
+					'new_item'           => __( 'New Custom Type', 'myapp' ),
+					'search_items'       => __( 'Search Custom Types', 'myapp' ),
+					'not_found'          => __( 'No custom types found', 'myapp' ),
+					'not_found_in_trash' => __( 'No custom types found in trash', 'myapp' ),
 				),
 				'public'              => true,
 				'exclude_from_search' => false,
@@ -74,22 +74,22 @@ class ContentTypesServiceProvider implements ServiceProviderInterface
 		// phpcs:disable
 		/*
 		register_taxonomy(
-			'mytheme_custom_taxonomy',
+			'myapp_custom_taxonomy',
 			array( 'post_type' ),
 			array(
 				'labels'            => array(
-					'name'              => __( 'Custom Taxonomies', 'mytheme' ),
-					'singular_name'     => __( 'Custom Taxonomy', 'mytheme' ),
-					'search_items'      => __( 'Search Custom Taxonomies', 'mytheme' ),
-					'all_items'         => __( 'All Custom Taxonomies', 'mytheme' ),
-					'parent_item'       => __( 'Parent Custom Taxonomy', 'mytheme' ),
-					'parent_item_colon' => __( 'Parent Custom Taxonomy:', 'mytheme' ),
-					'view_item'         => __( 'View Custom Taxonomy', 'mytheme' ),
-					'edit_item'         => __( 'Edit Custom Taxonomy', 'mytheme' ),
-					'update_item'       => __( 'Update Custom Taxonomy', 'mytheme' ),
-					'add_new_item'      => __( 'Add New Custom Taxonomy', 'mytheme' ),
-					'new_item_name'     => __( 'New Custom Taxonomy Name', 'mytheme' ),
-					'menu_name'         => __( 'Custom Taxonomies', 'mytheme' ),
+					'name'              => __( 'Custom Taxonomies', 'myapp' ),
+					'singular_name'     => __( 'Custom Taxonomy', 'myapp' ),
+					'search_items'      => __( 'Search Custom Taxonomies', 'myapp' ),
+					'all_items'         => __( 'All Custom Taxonomies', 'myapp' ),
+					'parent_item'       => __( 'Parent Custom Taxonomy', 'myapp' ),
+					'parent_item_colon' => __( 'Parent Custom Taxonomy:', 'myapp' ),
+					'view_item'         => __( 'View Custom Taxonomy', 'myapp' ),
+					'edit_item'         => __( 'Edit Custom Taxonomy', 'myapp' ),
+					'update_item'       => __( 'Update Custom Taxonomy', 'myapp' ),
+					'add_new_item'      => __( 'Add New Custom Taxonomy', 'myapp' ),
+					'new_item_name'     => __( 'New Custom Taxonomy Name', 'myapp' ),
+					'menu_name'         => __( 'Custom Taxonomies', 'myapp' ),
 				),
 				'hierarchical'      => true,
 				'show_ui'           => true,
