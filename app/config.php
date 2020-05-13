@@ -120,6 +120,13 @@ return [
 	'views'               => [ get_stylesheet_directory(), get_template_directory() ],
 
 	/**
+	 * App Core configuration.
+	 */
+	'app_core'            => [
+		'root' => dirname( __DIR__ ),
+	],
+
+	/**
 	 * Other config goes after this comment.
 	 */
 
