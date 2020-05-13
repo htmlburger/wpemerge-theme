@@ -4,7 +4,7 @@ if ( php_sapi_name() !== 'cli' ) {
 }
 
 $vendors = [
-	// $theme/vendor
+	// $app/vendor
 	__DIR__ . DIRECTORY_SEPARATOR . 'vendor',
 
 	// $bedrock/vendor
@@ -14,7 +14,7 @@ $vendors = [
 foreach ( $vendors as $vendor ) {
 	$runner = $vendor . '/htmlburger/wpemerge-cli/src/run.php';
 
-	if ( is_file( $runner) ) {
+	if ( is_file( $runner ) ) {
 		require_once $runner;
 		break;
 	}
