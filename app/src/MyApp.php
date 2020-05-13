@@ -3,7 +3,7 @@
 use WPEmerge\Application\ApplicationTrait;
 
 /**
- * @mixin \WPEmergeThemeCore\Application\ApplicationMixin
+ * @mixin \WPEmergeAppCore\Application\ApplicationMixin
  */
 class MyApp {
 	use ApplicationTrait;

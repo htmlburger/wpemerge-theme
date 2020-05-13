@@ -25,7 +25,7 @@ WP Emerge Theme is completely open source and we encourage everybody to particip
       },
       {
         "type": "git",
-        "url": "https://github.com/htmlburger/wpemerge-theme-core.git"
+        "url": "https://github.com/htmlburger/wpemerge-app-core.git"
       },
       {
         "type": "git",
@@ -37,13 +37,13 @@ WP Emerge Theme is completely open source and we encourage everybody to particip
 6. Continue editing the `composer.json` file and replace the versions of `htmlburger/wpemerge*` packages like so:
     ```json
     "htmlburger/wpemerge": "~0.15.1",
-    "htmlburger/wpemerge-theme-core": "~0.15.1",
+    "htmlburger/wpemerge-app-core": "~0.15.1",
     "htmlburger/wpemerge-cli": "~0.15.1",
     ```
     should be edited to
     ```json
     "htmlburger/wpemerge": "dev-master as 0.15.1",
-    "htmlburger/wpemerge-theme-core": "dev-master as 0.15.1",
+    "htmlburger/wpemerge-app-core": "dev-master as 0.15.1",
     "htmlburger/wpemerge-cli": "dev-master as 0.15.1",
     ```
     Do this for both `require` and `require-dev` packages.

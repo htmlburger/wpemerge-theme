@@ -11,6 +11,6 @@
 @php apply_filters( "wpemerge.partials.sidebar.hook", true ) && do_action('get_sidebar') @endphp
 <div class="sidebar">
 	<ul class="widgets">
-		@php dynamic_sidebar( \MyApp::theme()->sidebar()->getCurrentSidebarId() ) @endphp
+		@php dynamic_sidebar( \MyApp::core()->sidebar()->getCurrentSidebarId() ) @endphp
 	</ul>
 </div>
