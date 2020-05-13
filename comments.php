@@ -23,7 +23,7 @@ if ( post_password_required() ) {
 			wp_list_comments(
 				[
 					'callback' => function( $comment, $args, $depth ) {
-						\MyApp::theme()->partial(
+						\MyApp::render(
 							'comment-single',
 							[
 								'comment' => $comment,
@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 			?>
 		</ol>
 
-		<?php \MyApp::theme()->partial( 'pagination', [ 'for_comments' => true ] ); ?>
+		<?php \MyApp::render( 'pagination', [ 'for_comments' => true ] ); ?>
 	<?php else : ?>
 		<?php if ( ! comments_open() ) : ?>
 			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'myapp' ); ?></p>

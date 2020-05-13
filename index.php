@@ -15,4 +15,4 @@
  * @package MyApp
  */
 
-\MyApp::theme()->partial( 'loop' );
+\MyApp::render( 'loop' );

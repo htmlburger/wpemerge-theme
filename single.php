@@ -9,4 +9,4 @@
  * @package MyApp
  */
 
-\MyApp::theme()->partial( 'loop', 'single' );
+\MyApp::render( ['loop-single', 'loop'] );

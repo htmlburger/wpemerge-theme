@@ -20,7 +20,7 @@
 
 			<?php edit_post_link( __( 'Edit this entry.', 'myapp' ), '<p>', '</p>' ); ?>
 
-			<?php \MyApp::theme()->partial( 'pagination' ); ?>
+			<?php \MyApp::render( 'pagination' ); ?>
 		</div>
 	</div>
 <?php endwhile; ?>

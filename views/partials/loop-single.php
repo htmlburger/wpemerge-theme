@@ -20,7 +20,7 @@
 				<?php the_title(); ?>
 			</h2>
 
-			<?php \MyApp::theme()->partial( 'post-meta' ); ?>
+			<?php \MyApp::render( 'post-meta' ); ?>
 		</header>
 
 		<div class="article__body">
@@ -30,7 +30,7 @@
 		</div>
 	</article>
 
-	<?php \MyApp::theme()->partial( 'pagination' ); ?>
+	<?php \MyApp::render( 'pagination' ); ?>
 
 	<?php comments_template(); ?>
 <?php endwhile; ?>

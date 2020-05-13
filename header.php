@@ -22,4 +22,4 @@
 	<body <?php body_class(); ?>>
 		<?php myapp_shim_wp_body_open(); ?>
 
-		<?php \MyApp::theme()->partial( 'logo' ); ?>
+		<?php \MyApp::render( 'logo' ); ?>
