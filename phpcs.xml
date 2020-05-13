@@ -2,7 +2,6 @@
 <ruleset name="MyApp">
 	<description>Theme Coding Standard</description>
 
-	<exclude-pattern>.packages</exclude-pattern>
 	<exclude-pattern>app/src</exclude-pattern>
 	<exclude-pattern>dist</exclude-pattern>
 	<exclude-pattern>node_modules</exclude-pattern>

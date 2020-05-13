@@ -17,8 +17,8 @@
     "lint-fix:scripts": "eslint --color --fix ./resources/scripts/**",
     "lint-fix:styles": "stylelint --color --fix ./resources/styles/**",
     "i18n": "run-s -cl i18n:textdomain i18n:pot",
-    "i18n:textdomain": "wpi18n addtextdomain --exclude=dist,node_modules,resources,tests,vendor,.packages --textdomain=myapp",
-    "i18n:pot": "wpi18n makepot --exclude=dist,node_modules,resources,tests,vendor,.packages --type=wp-theme --main-file=style.css --domain-path=languages/ --pot-file=myapp.pot --textdomain=myapp",
+    "i18n:textdomain": "wpi18n addtextdomain --exclude=dist,node_modules,resources,tests,vendor --textdomain=myapp",
+    "i18n:pot": "wpi18n makepot --exclude=dist,node_modules,resources,tests,vendor --type=wp-theme --main-file=style.css --domain-path=languages/ --pot-file=myapp.pot --textdomain=myapp",
     "release": "run-s build release:zip",
     "release:zip": "node resources/build/release/release.js wpemerge-release"
   },
