@@ -9,4 +9,4 @@
  * @package MyApp
  */
 
-\MyApp::render( ['loop-single', 'loop'] );
+\MyApp::render( [ 'loop-single', 'loop' ] );
