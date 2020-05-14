@@ -24,7 +24,7 @@ if ( post_password_required() ) {
 				[
 					'callback' => function( $comment, $args, $depth ) {
 						\MyApp::render(
-							'comment-single',
+							'views/partials/comment-single',
 							[
 								'comment' => $comment,
 								'args'    => $args,
@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 			?>
 		</ol>
 
-		<?php \MyApp::render( 'pagination', [ 'for_comments' => true ] ); ?>
+		<?php \MyApp::render( 'views/partials/pagination', [ 'for_comments' => true ] ); ?>
 	<?php else : ?>
 		<?php if ( ! comments_open() ) : ?>
 			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'myapp' ); ?></p>

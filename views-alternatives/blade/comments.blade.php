@@ -22,7 +22,7 @@
 					[
 						'callback' => function( $comment, $args, $depth ) {
 							\MyApp::render(
-								'comment-single',
+								'views/partials/comment-single',
 								[
 									'comment' => $comment,
 									'args'    => $args,

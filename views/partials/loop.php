@@ -24,7 +24,7 @@
 						</a>
 					</h2>
 
-					<?php \MyApp::render( 'post-meta' ); ?>
+					<?php \MyApp::render( 'views/partials/post-meta' ); ?>
 				</header>
 
 				<div class="article__body">
@@ -36,7 +36,7 @@
 		<?php endwhile; ?>
 	</ul>
 
-	<?php \MyApp::render( 'pagination' ); ?>
+	<?php \MyApp::render( 'views/partials/pagination' ); ?>
 <?php else : ?>
 	<ul class="articles">
 		<li class="article article--error404 article--not-found">
