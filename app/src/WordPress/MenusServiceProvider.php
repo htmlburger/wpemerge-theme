@@ -30,7 +30,7 @@ class MenusServiceProvider implements ServiceProviderInterface {
 	public function registerMenus() {
 		register_nav_menus(
 			[
-				'main-menu' => __( 'Main Menu', 'myapp' ),
+				'main-menu' => __( 'Main Menu', 'my_app' ),
 			]
 		);
 	}

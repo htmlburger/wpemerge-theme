@@ -28,11 +28,11 @@ if ( ! isset( $content_width ) ) {
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'version.php';
 
 $name = trim( get_file_data( __DIR__ . DIRECTORY_SEPARATOR . 'style.css', [ 'Theme Name' ] )[0] );
-$load = myapp_should_load_wpemerge( $name, '0.15.0', '2.0.0' );
+$load = my_app_should_load_wpemerge( $name, '0.15.0', '2.0.0' );
 
 if ( ! $load ) {
 	// An incompatible WP Emerge version is already loaded - stop further execution.
-	// myapp_should_load_wpemerge() will automatically add an admin notice.
+	// my_app_should_load_wpemerge() will automatically add an admin notice.
 	return;
 }
 
@@ -41,7 +41,7 @@ if ( file_exists( __DIR__ . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR
 	require_once __DIR__ . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 }
 
-myapp_declare_loaded_wpemerge( $name, 'theme', __FILE__ );
+my_app_declare_loaded_wpemerge( $name, 'theme', __FILE__ );
 
 // Load helpers.
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'MyApp.php';

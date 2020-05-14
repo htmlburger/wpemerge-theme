@@ -17,7 +17,7 @@ if ( post_password_required() ) {
 ?>
 <section class="section-comments" id="comments">
 	<?php if ( have_comments() ) : ?>
-		<h3><?php comments_number( __( 'No Responses', 'myapp' ), __( 'One Response', 'myapp' ), __( '% Responses', 'myapp' ) ); ?></h3>
+		<h3><?php comments_number( __( 'No Responses', 'my_app' ), __( 'One Response', 'my_app' ), __( '% Responses', 'my_app' ) ); ?></h3>
 		<ol class="comments">
 			<?php
 			wp_list_comments(
@@ -40,14 +40,14 @@ if ( post_password_required() ) {
 		<?php \MyApp::render( 'views/partials/pagination', [ 'for_comments' => true ] ); ?>
 	<?php else : ?>
 		<?php if ( ! comments_open() ) : ?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'myapp' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'my_app' ); ?></p>
 		<?php endif; ?>
 	<?php endif; ?>
 
 	<?php
 	comment_form(
 		[
-			'title_reply'         => __( 'Leave a Reply', 'myapp' ),
+			'title_reply'         => __( 'Leave a Reply', 'my_app' ),
 			'comment_notes_after' => '',
 		]
 	);

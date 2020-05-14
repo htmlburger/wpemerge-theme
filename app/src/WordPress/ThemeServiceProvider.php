@@ -30,7 +30,7 @@ class ThemeServiceProvider implements ServiceProviderInterface
 	 * @return void
 	 */
 	public function loadTextdomain() {
-		load_theme_textdomain( 'myapp', get_template_directory() . DIRECTORY_SEPARATOR . 'languages' );
+		load_theme_textdomain( 'my_app', get_template_directory() . DIRECTORY_SEPARATOR . 'languages' );
 	}
 
 	/**
@@ -121,97 +121,97 @@ class ThemeServiceProvider implements ServiceProviderInterface
 			'editor-color-palette',
 			[
 				[
-					'name'  => __( 'Red', 'myapp' ),
+					'name'  => __( 'Red', 'my_app' ),
 					'slug'  => 'material-red',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-red', '#000000' ),
 				],
 				[
-					'name'  => __( 'Pink', 'myapp' ),
+					'name'  => __( 'Pink', 'my_app' ),
 					'slug'  => 'material-pink',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-pink', '#000000' ),
 				],
 				[
-					'name'  => __( 'Purple', 'myapp' ),
+					'name'  => __( 'Purple', 'my_app' ),
 					'slug'  => 'material-purple',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-purple', '#000000' ),
 				],
 				[
-					'name'  => __( 'Deep Purple', 'myapp' ),
+					'name'  => __( 'Deep Purple', 'my_app' ),
 					'slug'  => 'material-deep-purple',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-deep-purple', '#000000' ),
 				],
 				[
-					'name'  => __( 'Indigo', 'myapp' ),
+					'name'  => __( 'Indigo', 'my_app' ),
 					'slug'  => 'material-indigo',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-indigo', '#000000' ),
 				],
 				[
-					'name'  => __( 'Blue', 'myapp' ),
+					'name'  => __( 'Blue', 'my_app' ),
 					'slug'  => 'material-blue',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-blue', '#000000' ),
 				],
 				[
-					'name'  => __( 'Light Blue', 'myapp' ),
+					'name'  => __( 'Light Blue', 'my_app' ),
 					'slug'  => 'material-light-blue',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-light-blue', '#000000' ),
 				],
 				[
-					'name'  => __( 'Cyan', 'myapp' ),
+					'name'  => __( 'Cyan', 'my_app' ),
 					'slug'  => 'material-cyan',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-cyan', '#000000' ),
 				],
 				[
-					'name'  => __( 'Teal', 'myapp' ),
+					'name'  => __( 'Teal', 'my_app' ),
 					'slug'  => 'material-teal',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-teal', '#000000' ),
 				],
 				[
-					'name'  => __( 'Green', 'myapp' ),
+					'name'  => __( 'Green', 'my_app' ),
 					'slug'  => 'material-green',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-green', '#000000' ),
 				],
 				[
-					'name'  => __( 'Light Green', 'myapp' ),
+					'name'  => __( 'Light Green', 'my_app' ),
 					'slug'  => 'material-light-green',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-light-green', '#000000' ),
 				],
 				[
-					'name'  => __( 'Lime', 'myapp' ),
+					'name'  => __( 'Lime', 'my_app' ),
 					'slug'  => 'material-lime',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-lime', '#000000' ),
 				],
 				[
-					'name'  => __( 'Yellow', 'myapp' ),
+					'name'  => __( 'Yellow', 'my_app' ),
 					'slug'  => 'material-yellow',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-yellow', '#000000' ),
 				],
 				[
-					'name'  => __( 'Amber', 'myapp' ),
+					'name'  => __( 'Amber', 'my_app' ),
 					'slug'  => 'material-amber',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-amber', '#000000' ),
 				],
 				[
-					'name'  => __( 'Orange', 'myapp' ),
+					'name'  => __( 'Orange', 'my_app' ),
 					'slug'  => 'material-orange',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-orange', '#000000' ),
 				],
 				[
-					'name'  => __( 'Deep Orange', 'myapp' ),
+					'name'  => __( 'Deep Orange', 'my_app' ),
 					'slug'  => 'material-deep-orange',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-deep-orange', '#000000' ),
 				],
 				[
-					'name'  => __( 'Brown', 'myapp' ),
+					'name'  => __( 'Brown', 'my_app' ),
 					'slug'  => 'material-brown',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-brown', '#000000' ),
 				],
 				[
-					'name'  => __( 'Grey', 'myapp' ),
+					'name'  => __( 'Grey', 'my_app' ),
 					'slug'  => 'material-grey',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-grey', '#000000' ),
 				],
 				[
-					'name'  => __( 'Blue Grey', 'myapp' ),
+					'name'  => __( 'Blue Grey', 'my_app' ),
 					'slug'  => 'material-blue-grey',
 					'color' => \MyApp::core()->config()->get( 'variables.color.material-blue-grey', '#000000' ),
 				],
@@ -236,32 +236,32 @@ class ThemeServiceProvider implements ServiceProviderInterface
 			'editor-font-sizes',
 			[
 				[
-					'name'      => __( 'extra small', 'myapp' ),
-					'shortName' => __( 'XS', 'myapp' ),
+					'name'      => __( 'extra small', 'my_app' ),
+					'shortName' => __( 'XS', 'my_app' ),
 					'size'      => (int) \MyApp::core()->config()->get( 'variables.font-size.xs', 12 ),
 					'slug'      => 'xs',
 				],
 				[
-					'name'      => __( 'small', 'myapp' ),
-					'shortName' => __( 'S', 'myapp' ),
+					'name'      => __( 'small', 'my_app' ),
+					'shortName' => __( 'S', 'my_app' ),
 					'size'      => (int) \MyApp::core()->config()->get( 'variables.font-size.s', 16 ),
 					'slug'      => 's',
 				],
 				[
-					'name'      => __( 'regular', 'myapp' ),
-					'shortName' => __( 'M', 'myapp' ),
+					'name'      => __( 'regular', 'my_app' ),
+					'shortName' => __( 'M', 'my_app' ),
 					'size'      => (int) \MyApp::core()->config()->get( 'variables.font-size.m', 20 ),
 					'slug'      => 'm',
 				],
 				[
-					'name'      => __( 'large', 'myapp' ),
-					'shortName' => __( 'L', 'myapp' ),
+					'name'      => __( 'large', 'my_app' ),
+					'shortName' => __( 'L', 'my_app' ),
 					'size'      => (int) \MyApp::core()->config()->get( 'variables.font-size.l', 28 ),
 					'slug'      => 'l',
 				],
 				[
-					'name'      => __( 'extra large', 'myapp' ),
-					'shortName' => __( 'XL', 'myapp' ),
+					'name'      => __( 'extra large', 'my_app' ),
+					'shortName' => __( 'XL', 'my_app' ),
 					'size'      => (int) \MyApp::core()->config()->get( 'variables.font-size.xl', 36 ),
 					'slug'      => 'xl',
 				],

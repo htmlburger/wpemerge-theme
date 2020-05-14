@@ -9,13 +9,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! function_exists( 'myapp_get_loaded_wpemerge' ) ) {
+if ( ! function_exists( 'my_app_get_loaded_wpemerge' ) ) {
 	/**
 	 * Get the currently loaded WP Emerge version, if any.
 	 *
 	 * @return array|void
 	 */
-	function myapp_get_loaded_wpemerge() {
+	function my_app_get_loaded_wpemerge() {
 		/**
 		 * Filters the loaded WP Emerge version.
 		 *
@@ -25,7 +25,7 @@ if ( ! function_exists( 'myapp_get_loaded_wpemerge' ) ) {
 	}
 }
 
-if ( ! function_exists( 'myapp_should_load_wpemerge' ) ) {
+if ( ! function_exists( 'my_app_should_load_wpemerge' ) ) {
 	/**
 	 * Get whether a compatible WP Emerge version is or should be loaded.
 	 *
@@ -34,8 +34,8 @@ if ( ! function_exists( 'myapp_should_load_wpemerge' ) ) {
 	 * @param string $max Maximum version (exclusive).
 	 * @return bool
 	 */
-	function myapp_should_load_wpemerge( $name, $min, $max ) {
-		$loaded = myapp_get_loaded_wpemerge();
+	function my_app_should_load_wpemerge( $name, $min, $max ) {
+		$loaded = my_app_get_loaded_wpemerge();
 
 		if ( false === $loaded ) {
 			// No version is loaded, yet.
@@ -51,7 +51,7 @@ if ( ! function_exists( 'myapp_should_load_wpemerge' ) ) {
 			'admin_notices',
 			function () use ( $name, $min, $max, $loaded ) {
 				// Translators: %1$s = plugin or theme name; %2$s = minimum version number; %3$s = maximum version number; %4$s plugin or theme name; %5$s loaded version number.
-				$message = __( '%1$s requires WP Emerge version >= %2$s and < %3$s but %4$s has already loaded version %5$s.', 'myapp' );
+				$message = __( '%1$s requires WP Emerge version >= %2$s and < %3$s but %4$s has already loaded version %5$s.', 'my_app' );
 				?>
 				<div class="notice notice-error">
 					<p><strong><?php echo esc_html( $name ); ?></strong></p>
@@ -66,7 +66,7 @@ if ( ! function_exists( 'myapp_should_load_wpemerge' ) ) {
 	}
 }
 
-if ( ! function_exists( 'myapp_declare_loaded_wpemerge' ) ) {
+if ( ! function_exists( 'my_app_declare_loaded_wpemerge' ) ) {
 	/**
 	 * Declare the loaded WP Emerge version.
 	 *
@@ -75,8 +75,8 @@ if ( ! function_exists( 'myapp_declare_loaded_wpemerge' ) ) {
 	 * @param  string $file Main project file.
 	 * @return void
 	 */
-	function myapp_declare_loaded_wpemerge( $name, $type, $file ) {
-		$loaded = myapp_get_loaded_wpemerge();
+	function my_app_declare_loaded_wpemerge( $name, $type, $file ) {
+		$loaded = my_app_get_loaded_wpemerge();
 
 		if ( $loaded ) {
 			// A version is already loaded - bail.
