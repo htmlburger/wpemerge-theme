@@ -1,11 +1,11 @@
-# <a href="http://wpemerge.com"><img src="https://docs.wpemerge.com/_images/wpemerge-theme-logo-bar.png" height="61" alt="WP Emerge Theme Logo" aria-label='WPEmerge.com' /></a>
+# <a href="http://wpemerge.com"><img src="https://docs.wpemerge.com/_images/wpemerge-theme-logo-bar.png" height="61" alt="WP Emerge Starter Theme Logo" aria-label='WPEmerge.com' /></a>
 
 [![Packagist](https://img.shields.io/packagist/vpre/htmlburger/wpemerge-theme.svg?style=flat-square&colorB=0366d6)](https://packagist.org/packages/htmlburger/wpemerge-theme) [![Travis branch](https://img.shields.io/travis/htmlburger/wpemerge-theme/master.svg?style=flat-square)](https://travis-ci.org/htmlburger/wpemerge-theme/builds) [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square&colorB=7d07d1)](https://gitter.im/wpemerge/Lobby)
 
 
 A modern WordPress starter theme which uses the [WP Emerge](https://github.com/htmlburger/wpemerge) framework.
 
-_This is the WP Emerge Theme project - for the WP Emerge framework please check out https://github.com/htmlburger/wpemerge._
+_This is the WP Emerge Starter Theme project - for the WP Emerge framework please check out https://github.com/htmlburger/wpemerge._
 
 ## Summary
 
@@ -186,7 +186,7 @@ Avoid adding any PHP logic in any of these views, unless it pertains to layoutin
 
 ## Contributing
 
-WP Emerge Theme is completely open source and we encourage everybody to participate by:
+WP Emerge Starter Theme is completely open source and we encourage everybody to participate by:
 
 - Reviewing `.github/CONTRIBUTING.md`.
 - ⭐ the project on GitHub \([https://github.com/htmlburger/wpemerge-theme](https://github.com/htmlburger/wpemerge-theme)\)

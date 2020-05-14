@@ -1,4 +1,4 @@
-=== WP Emerge Theme ===
+=== WP Emerge Starter Theme ===
 Contributors: atanasangelovdev
 Tags:
 Requires at least: 4.7.0

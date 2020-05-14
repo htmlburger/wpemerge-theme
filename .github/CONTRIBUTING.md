@@ -1,6 +1,6 @@
 # How to contribute
 
-WP Emerge Theme is completely open source and we encourage everybody to participate by:
+WP Emerge Starter Theme is completely open source and we encourage everybody to participate by:
 
 - ⭐ the project on GitHub \([https://github.com/htmlburger/wpemerge-theme](https://github.com/htmlburger/wpemerge-theme)\)
 - Posting bug reports \([https://github.com/htmlburger/wpemerge-theme/issues](https://github.com/htmlburger/wpemerge-theme/issues)\)
@@ -51,7 +51,7 @@ WP Emerge Theme is completely open source and we encourage everybody to particip
 7. Answer no to any questions asked during installation.
 8. Ignore any `TTY mode is not supported on Windows platform.` errors.
 9. Make changes to `config.json` if necessary.
-10. Activate the WP Emerge theme from your WordPress admin panel.
+10. Activate the WP Emerge Starter Theme theme from your WordPress admin panel.
 
 ## Pull Requests
 
