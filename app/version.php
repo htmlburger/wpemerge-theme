@@ -21,7 +21,7 @@ if ( ! function_exists( 'myapp_get_loaded_wpemerge' ) ) {
 		 *
 		 * @param array|false $loaded
 		 */
-		return apply_filters( 'wpemerge.loaded', false );
+		return apply_filters( 'wpemerge_loaded', false );
 	}
 }
 
@@ -47,16 +47,19 @@ if ( ! function_exists( 'myapp_should_load_wpemerge' ) ) {
 			return true;
 		}
 
-		add_action( 'admin_notices', function () use ( $name, $min, $max, $loaded ) {
-			// Translators: %1$s = plugin or theme name; %2$s = minimum version number; %3$s = maximum version number; %4$s plugin or theme name; %5$s loaded version number.
-			$message = __( '%1$s requires WP Emerge version >= %2$s and < %3$s but %4$s has already loaded version %5$s.', 'myapp' );
-			?>
-			<div class="notice notice-error">
-				<p><strong><?php echo esc_html( $name ); ?></strong></p>
-				<p><?php echo esc_html( sprintf( $message, $name, $min, $max, $loaded['name'], $loaded['version'] ) ); ?></p>
-			</div>
-			<?php
-		} );
+		add_action(
+			'admin_notices',
+			function () use ( $name, $min, $max, $loaded ) {
+				// Translators: %1$s = plugin or theme name; %2$s = minimum version number; %3$s = maximum version number; %4$s plugin or theme name; %5$s loaded version number.
+				$message = __( '%1$s requires WP Emerge version >= %2$s and < %3$s but %4$s has already loaded version %5$s.', 'myapp' );
+				?>
+				<div class="notice notice-error">
+					<p><strong><?php echo esc_html( $name ); ?></strong></p>
+					<p><?php echo esc_html( sprintf( $message, $name, $min, $max, $loaded['name'], $loaded['version'] ) ); ?></p>
+				</div>
+				<?php
+			}
+		);
 
 		// An incompatible version is already loaded.
 		return false;
@@ -67,6 +70,9 @@ if ( ! function_exists( 'myapp_declare_loaded_wpemerge' ) ) {
 	/**
 	 * Declare the loaded WP Emerge version.
 	 *
+	 * @param  string $name Project name.
+	 * @param  string $type Project type - 'plugin' or 'theme'.
+	 * @param  string $file Main project file.
 	 * @return void
 	 */
 	function myapp_declare_loaded_wpemerge( $name, $type, $file ) {
@@ -78,13 +84,16 @@ if ( ! function_exists( 'myapp_declare_loaded_wpemerge' ) ) {
 		}
 
 		// Declare loaded WP Emerge version.
-		add_filter( 'wpemerge.loaded', function () use ( $name, $type, $file ) {
-			return [
-				'version' => WPEMERGE_VERSION,
-				'name'    => $name,
-				'type'    => $type,
-				'file'    => $file,
-			];
-		} );
+		add_filter(
+			'wpemerge_loaded',
+			function () use ( $name, $type, $file ) {
+				return [
+					'version' => WPEMERGE_VERSION,
+					'name'    => $name,
+					'type'    => $type,
+					'file'    => $file,
+				];
+			}
+		);
 	}
 }
