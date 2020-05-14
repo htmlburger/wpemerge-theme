@@ -12,12 +12,12 @@ return [
 	 * Array of service providers you wish to enable.
 	 */
 	'providers'           => [
+		\WPEmergeAppCore\AppCore\AppCoreServiceProvider::class,
 		\WPEmergeAppCore\Assets\AssetsServiceProvider::class,
 		\WPEmergeAppCore\Avatar\AvatarServiceProvider::class,
 		\WPEmergeAppCore\Config\ConfigServiceProvider::class,
 		\WPEmergeAppCore\Image\ImageServiceProvider::class,
 		\WPEmergeAppCore\Sidebar\SidebarServiceProvider::class,
-		\WPEmergeAppCore\AppCore\AppCoreServiceProvider::class,
 		\MyApp\Routing\RouteConditionsServiceProvider::class,
 		\MyApp\View\ViewServiceProvider::class,
 		\MyApp\WordPress\AdminServiceProvider::class,
@@ -123,7 +123,8 @@ return [
 	 * App Core configuration.
 	 */
 	'app_core'            => [
-		'root' => dirname( __DIR__ ),
+		'path' => dirname( __DIR__ ),
+		'url'  => get_template_directory_uri(),
 	],
 
 	/**

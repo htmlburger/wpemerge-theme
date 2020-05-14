@@ -40,9 +40,9 @@ class AssetsServiceProvider implements ServiceProviderInterface
 	 * @return string
 	 */
 	protected function getAssetSource( $name, $extension ) {
-		$dir_uri   = get_template_directory_uri();
+		$dir_url   = get_template_directory_uri();
 		$mode      = 'production';
-		$uri_path  = '.css' === $extension ? "styles/{$name}" : $name;
+		$url_path  = '.css' === $extension ? "styles/{$name}" : $name;
 		$file_path = implode(
 			DIRECTORY_SEPARATOR,
 			array_filter(
@@ -62,11 +62,11 @@ class AssetsServiceProvider implements ServiceProviderInterface
 		}
 
 		if ( 'production' === $mode ) {
-			return "$dir_uri/dist/{$uri_path}.min{$extension}";
+			return "$dir_url/dist/{$url_path}.min{$extension}";
 		}
 
 		if ( 'debug' === $mode ) {
-			return "$dir_uri/dist/{$uri_path}{$extension}";
+			return "$dir_url/dist/{$url_path}{$extension}";
 		}
 
 		if ( '.css' === $extension ) {
@@ -77,7 +77,7 @@ class AssetsServiceProvider implements ServiceProviderInterface
 		$hot_url  = wp_parse_url( \MyApp::core()->config()->get( 'development.hotUrl', 'http://localhost/' ) );
 		$hot_port = \MyApp::core()->config()->get( 'development.port', 3000 );
 
-		return "${hot_url['scheme']}://{$hot_url['host']}:{$hot_port}/{$uri_path}{$extension}";
+		return "${hot_url['scheme']}://{$hot_url['host']}:{$hot_port}/{$url_path}{$extension}";
 	}
 
 	/**
