@@ -2,14 +2,14 @@
 /**
  * Base layout.
  *
- * @package MyTheme
+ * @package MyApp
  */
 
 ?>
 @include('views.partials.header')
 
 @if (!is_singular())
-	@php mytheme_the_title( '<h2 class="post-title">', '</h2>' ) @endphp
+	@php myapp_the_title( '<h2 class="post-title">', '</h2>' ) @endphp
 @endif
 
 @yield('content')

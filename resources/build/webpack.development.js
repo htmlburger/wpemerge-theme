@@ -6,7 +6,7 @@ const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const chokidar = require('chokidar');
-const _ = require('lodash');
+const get = require('lodash/get');
 
 /**
  * The internal dependencies.
@@ -22,8 +22,8 @@ const postcss = require('./postcss');
  */
 const env = utils.detectEnv();
 const userConfig = utils.getUserConfig();
-const devPort = _.get(userConfig, 'development.port', 3000);
-const devHotUrl = url.parse(_.get(userConfig, 'development.hotUrl', 'http://localhost/').replace(/\/$/, ''));
+const devPort = get(userConfig, 'development.port', 3000);
+const devHotUrl = url.parse(get(userConfig, 'development.hotUrl', 'http://localhost/').replace(/\/$/, ''));
 
 /**
  * Setup babel loader.
@@ -46,7 +46,7 @@ const babelLoader = {
  */
 const plugins = [
   new CleanWebpackPlugin(utils.distPath(), {
-    root: utils.themeRootPath(),
+    root: utils.rootPath(),
   }),
   new WatchIgnorePlugin([
     utils.distImagesPath('sprite.png'),
@@ -107,10 +107,11 @@ module.exports = {
       },
 
       /**
-       * Handle the theme config.json.
+       * Handle config.json.
        */
       {
-        test: utils.themeRootPath('config.json'),
+        type: 'javascript/auto',
+        test: utils.rootPath('config.json'),
         use: configLoader,
       },
 

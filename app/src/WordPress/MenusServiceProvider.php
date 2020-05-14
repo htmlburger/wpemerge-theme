@@ -1,6 +1,6 @@
 <?php
 
-namespace MyTheme\WordPress;
+namespace MyApp\WordPress;
 
 use WPEmerge\ServiceProviders\ServiceProviderInterface;
 
@@ -30,7 +30,7 @@ class MenusServiceProvider implements ServiceProviderInterface {
 	public function registerMenus() {
 		register_nav_menus(
 			[
-				'main-menu' => __( 'Main Menu', 'mytheme' ),
+				'main-menu' => __( 'Main Menu', 'myapp' ),
 			]
 		);
 	}

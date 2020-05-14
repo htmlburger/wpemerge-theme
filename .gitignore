@@ -15,6 +15,9 @@
 # NPM lockfile as it causes more problems than it solves
 package-lock.json
 
+# WordPress test environment
+/tests/environment
+
 # CLI tools
 drone.json
 

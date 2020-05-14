@@ -2,7 +2,7 @@
 Contributors: atanasangelovdev
 Tags:
 Requires at least: 4.7.0
-Tested up to: WordPress 5.0
+Tested up to: WordPress 5.4
 Requires PHP: 5.5.9
 Stable tag: 1.0
 License: GPL-2.0-only

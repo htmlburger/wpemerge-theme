@@ -1,6 +1,6 @@
 <?php
 
-namespace MyTheme\WordPress;
+namespace MyApp\WordPress;
 
 use WPEmerge\ServiceProviders\ServiceProviderInterface;
 
@@ -47,7 +47,7 @@ class ShortcodesServiceProvider implements ServiceProviderInterface {
 		$html = ob_get_clean();
 
 		// Alternatively, you can use a WP Emerge View instead of a buffer:
-		// $html = \MyTheme::view( 'some-view' )->with( $atts )->with( 'content', $content )->toString();
+		// $html = \MyApp::view( 'some-view' )->with( $atts )->with( 'content', $content )->toString();
 
 		return $html;
 	}

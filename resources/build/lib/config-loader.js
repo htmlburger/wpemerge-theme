@@ -6,6 +6,11 @@ const path = require('path');
 const loaderUtils = require('loader-utils');
 
 /**
+ * The internal dependencies.
+ */
+const utils = require('../lib/utils');
+
+/**
  * Get maps SASS from variables.
  *
  * @param {object} variables
@@ -122,7 +127,7 @@ const getSass = (config) => {
  */
 module.exports = function (rawConfig) {
   const options = loaderUtils.getOptions(this);
-  const config = JSON.parse(rawConfig);
+  const config = utils.getWhitelistedUserConfig(JSON.parse(rawConfig));
 
   if (typeof options.sassOutput !== 'undefined') {
     const sass = getSass(config);
@@ -136,5 +141,6 @@ module.exports = function (rawConfig) {
     });
   }
 
-  return rawConfig;
+  // Make sure the JSON is inlined as an object instead of being parsed at runtime.
+  return `module.exports = ${JSON.stringify(config)};`;
 };

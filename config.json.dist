@@ -1,4 +1,10 @@
 {
+  "bundles": [
+    "frontend",
+    "admin",
+    "login",
+    "editor"
+  ],
   "variables": {
     "color": {
       "material-red": "#f44336",

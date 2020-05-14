@@ -1,6 +1,6 @@
 <?php
 
-namespace MyTheme\WordPress;
+namespace MyApp\WordPress;
 
 use WPEmerge\ServiceProviders\ServiceProviderInterface;
 
@@ -42,10 +42,10 @@ class AssetsServiceProvider implements ServiceProviderInterface
 	 * @return string
 	 */
 	protected function getAssetSource( $name, $extension ) {
-		$template_dir_uri = get_template_directory_uri();
-		$mode             = 'production';
-		$uri_path         = '.css' === $extension ? "styles/{$name}" : $name;
-		$file_path        = implode(
+		$dir_uri   = get_template_directory_uri();
+		$mode      = 'production';
+		$uri_path  = '.css' === $extension ? "styles/{$name}" : $name;
+		$file_path = implode(
 			DIRECTORY_SEPARATOR,
 			array_filter(
 				[
@@ -64,11 +64,11 @@ class AssetsServiceProvider implements ServiceProviderInterface
 		}
 
 		if ( 'production' === $mode ) {
-			return "$template_dir_uri/dist/{$uri_path}.min{$extension}";
+			return "$dir_uri/dist/{$uri_path}.min{$extension}";
 		}
 
 		if ( 'debug' === $mode ) {
-			return "$template_dir_uri/dist/{$uri_path}{$extension}";
+			return "$dir_uri/dist/{$uri_path}{$extension}";
 		}
 
 		if ( '.css' === $extension ) {
@@ -76,8 +76,8 @@ class AssetsServiceProvider implements ServiceProviderInterface
 			return '';
 		}
 
-		$hot_url  = wp_parse_url( \MyTheme::theme()->config()->get( 'development.hotUrl', 'http://localhost/' ) );
-		$hot_port = \MyTheme::theme()->config()->get( 'development.port', 3000 );
+		$hot_url  = wp_parse_url( \MyApp::core()->config()->get( 'development.hotUrl', 'http://localhost/' ) );
+		$hot_port = \MyApp::core()->config()->get( 'development.port', 3000 );
 
 		return "${hot_url['scheme']}://{$hot_url['host']}:{$hot_port}/{$uri_path}{$extension}";
 	}
@@ -94,7 +94,7 @@ class AssetsServiceProvider implements ServiceProviderInterface
 		}
 
 		// Enqueue scripts.
-		\MyTheme::theme()->assets()->enqueueScript(
+		\MyApp::core()->assets()->enqueueScript(
 			'theme-js-bundle',
 			$this->getAssetSource( 'frontend', '.js' ),
 			[ 'jquery' ],
@@ -105,14 +105,14 @@ class AssetsServiceProvider implements ServiceProviderInterface
 		$style = $this->getAssetSource( 'frontend', '.css' );
 
 		if ( $style ) {
-			\MyTheme::theme()->assets()->enqueueStyle(
+			\MyApp::core()->assets()->enqueueStyle(
 				'theme-css-bundle',
 				$style
 			);
 		}
 
 		// Enqueue theme's style.css file to allow overrides for the bundled styles.
-		\MyTheme::theme()->assets()->enqueueStyle( 'theme-styles', get_template_directory_uri() . '/style.css' );
+		\MyApp::core()->assets()->enqueueStyle( 'theme-styles', get_template_directory_uri() . '/style.css' );
 	}
 
 	/**
@@ -122,7 +122,7 @@ class AssetsServiceProvider implements ServiceProviderInterface
 	 */
 	public function enqueueAdminAssets() {
 		// Enqueue scripts.
-		\MyTheme::theme()->assets()->enqueueScript(
+		\MyApp::core()->assets()->enqueueScript(
 			'theme-admin-js-bundle',
 			$this->getAssetSource( 'admin', '.js' ),
 			[ 'jquery' ],
@@ -133,7 +133,7 @@ class AssetsServiceProvider implements ServiceProviderInterface
 		$style = $this->getAssetSource( 'admin', '.css' );
 
 		if ( $style ) {
-			\MyTheme::theme()->assets()->enqueueStyle(
+			\MyApp::core()->assets()->enqueueStyle(
 				'theme-admin-css-bundle',
 				$style
 			);
@@ -147,7 +147,7 @@ class AssetsServiceProvider implements ServiceProviderInterface
 	 */
 	public function enqueueLoginAssets() {
 		// Enqueue scripts.
-		\MyTheme::theme()->assets()->enqueueScript(
+		\MyApp::core()->assets()->enqueueScript(
 			'theme-login-js-bundle',
 			$this->getAssetSource( 'login', '.js' ),
 			[ 'jquery' ],
@@ -158,7 +158,7 @@ class AssetsServiceProvider implements ServiceProviderInterface
 		$style = $this->getAssetSource( 'login', '.css' );
 
 		if ( $style ) {
-			\MyTheme::theme()->assets()->enqueueStyle(
+			\MyApp::core()->assets()->enqueueStyle(
 				'theme-login-css-bundle',
 				$style
 			);
@@ -172,7 +172,7 @@ class AssetsServiceProvider implements ServiceProviderInterface
 	 */
 	public function enqueueEditorAssets() {
 		// Enqueue scripts.
-		\MyTheme::theme()->assets()->enqueueScript(
+		\MyApp::core()->assets()->enqueueScript(
 			'theme-editor-js-bundle',
 			$this->getAssetSource( 'editor', '.js' ),
 			[ 'jquery' ],
@@ -186,7 +186,7 @@ class AssetsServiceProvider implements ServiceProviderInterface
 	 * @return void
 	 */
 	public function addFavicon() {
-		\MyTheme::theme()->assets()->addFavicon();
+		\MyApp::core()->assets()->addFavicon();
 	}
 
 

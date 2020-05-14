@@ -2,7 +2,7 @@
 /**
  * "The Loop" partial.
  *
- * @package MyTheme
+ * @package MyApp
  */
 
 ?>
@@ -19,12 +19,12 @@
 					<?php endif; ?>
 
 					<h2 class="article__title">
-						<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php echo esc_attr( mytheme_get_permalink_title() ); ?>">
+						<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php echo esc_attr( myapp_get_permalink_title() ); ?>">
 							<?php the_title(); ?>
 						</a>
 					</h2>
 
-					<?php \MyTheme::theme()->partial( 'post-meta' ); ?>
+					<?php \MyApp::render( 'post-meta' ); ?>
 				</header>
 
 				<div class="article__body">
@@ -36,13 +36,13 @@
 		<?php endwhile; ?>
 	</ul>
 
-	<?php \MyTheme::theme()->partial( 'pagination' ); ?>
+	<?php \MyApp::render( 'pagination' ); ?>
 <?php else : ?>
 	<ul class="articles">
 		<li class="article article--error404 article--not-found">
 			<div class="article__body">
 				<div class="article__entry">
-					<p><?php echo esc_html( mytheme_get_index_404_message() ); ?></p>
+					<p><?php echo esc_html( myapp_get_index_404_message() ); ?></p>
 					<?php get_search_form(); ?>
 				</div>
 			</div>

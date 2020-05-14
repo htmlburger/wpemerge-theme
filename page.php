@@ -6,21 +6,21 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package MyTheme
+ * @package MyApp
  */
 
 ?>
 <?php while ( have_posts() ) : ?>
 	<?php the_post(); ?>
 	<div <?php post_class(); ?>>
-		<?php mytheme_the_title( '<h2 class="post-title">', '</h2>' ); ?>
+		<?php myapp_the_title( '<h2 class="post-title">', '</h2>' ); ?>
 
 		<div class="page__content">
 			<?php the_content(); ?>
 
-			<?php edit_post_link( __( 'Edit this entry.', 'mytheme' ), '<p>', '</p>' ); ?>
+			<?php edit_post_link( __( 'Edit this entry.', 'myapp' ), '<p>', '</p>' ); ?>
 
-			<?php \MyTheme::theme()->partial( 'pagination' ); ?>
+			<?php \MyApp::render( 'pagination' ); ?>
 		</div>
 	</div>
 <?php endwhile; ?>

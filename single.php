@@ -6,7 +6,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package MyTheme
+ * @package MyApp
  */
 
-\MyTheme::theme()->partial( 'loop', 'single' );
+\MyApp::render( ['loop-single', 'loop'] );

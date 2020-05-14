@@ -2,10 +2,10 @@
  * The internal dependencies.
  */
 const utils = require('../lib/utils');
+const keyBy = require('lodash/keyBy');
+const mapValues = require('lodash/mapValues');
 
-module.exports = {
-  'frontend': utils.srcScriptsPath('frontend/index.js'),
-  'admin': utils.srcScriptsPath('admin/index.js'),
-  'login': utils.srcScriptsPath('login/index.js'),
-  'editor': utils.srcScriptsPath('editor/index.js'),
-};
+module.exports = mapValues(
+  keyBy(utils.getUserConfig().bundles, bundle => bundle),
+  bundle => utils.srcScriptsPath(`${bundle}/index.js`)
+);

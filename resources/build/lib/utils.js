@@ -4,6 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const pick = require('lodash/pick');
 
 /**
  * User config cache.
@@ -13,7 +14,7 @@ let userConfig = null;
 /**
  * API.
  */
-module.exports.themeRootPath = (basePath = '', destPath = '') =>
+module.exports.rootPath = (basePath = '', destPath = '') =>
   path.resolve(path.dirname(__dirname), '../../', basePath, destPath);
 
 module.exports.srcPath = (basePath = '', destPath = '') =>
@@ -75,23 +76,32 @@ module.exports.detectEnv = () => {
   };
 };
 
-module.exports.getUserConfig = () => {
-  const userConfigPath = path.join(process.cwd(), 'config.json');
+module.exports.getWhitelistedUserConfig = (config) => {
+  const whitelist = config.release.configWhitelist || [];
+  return pick(config, whitelist);
+};
+
+module.exports.getUserConfig = (file, whitelisted = false) => {
+  const userConfigPath = file || path.join(process.cwd(), 'config.json');
 
   if (userConfig !== null) {
     return userConfig;
   }
 
   if (!fs.existsSync(userConfigPath)) {
-    console.log('\x1B[31mCould not find your config.json file. Please make a copy of config.json.dist and adjust as needed.\x1B[0m');
+    console.error('\x1B[31mCould not find your config.json file. Please make a copy of config.json.dist and adjust as needed.\x1B[0m');
     process.exit(1);
   }
 
   try {
     userConfig = JSON.parse(fs.readFileSync(userConfigPath));
   } catch (e) {
-    console.log('\x1B[31mCould not parse your config.json file. Please make sure it is a valid JSON file.\x1B[0m');
+    console.error('\x1B[31mCould not parse your config.json file. Please make sure it is a valid JSON file.\x1B[0m');
     process.exit(1);
+  }
+
+  if (whitelisted) {
+    return module.exports.getWhitelistedUserConfig(userConfig);
   }
 
   return userConfig;

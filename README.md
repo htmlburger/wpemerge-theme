@@ -72,7 +72,7 @@ _Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they
 - ES6 for JavaScript. Separate bundles are created for **front-end**, **administration**, **Gutenberg** and **login** pages.
 - Pure [Webpack](https://webpack.js.org/) to transpile and bundle assets, create sprites, optimize images etc.
 - [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/) for synchronized browser development.
-- Autoloading for all classes in your `MyTheme\` namespace.
+- Autoloading for all classes in your `MyApp\` namespace.
 - Automatic, fool-proof cache busting for all assets, including ones referenced in styles.
 - WPCS, JavaScript and SASS linting and fixing using a single yarn command.
 - Single-command optional CSS package installation:
@@ -123,13 +123,13 @@ wp-content/themes/your-theme
 │   │   ├── admin/            # Administration scripts.
 │   │   ├── editor/           # Gutenberg editor scripts.
 │   │   ├── login/            # Login scripts.
-│   │   └── theme/            # Front-end scripts.
+│   │   └── frontend/         # Front-end scripts.
 │   ├── styles/
 │   │   ├── admin/            # Administration styles.
 │   │   ├── editor/           # Gutenberg editor styles.
 │   │   ├── login/            # Login styles.
 │   │   ├── shared/           # Shared styles.
-│   │   └── theme/            # Front-end styles.
+│   │   └── frontend/         # Front-end styles.
 │   └── vendor/               # Any third-party, non-npm assets.
 ├── vendor/                   # Composer packages.
 ├── views/
@@ -150,7 +150,7 @@ Add PHP helper files here. Helper files should include __function definitions on
 
 #### `app/src/`
 
-Add PHP class files here. All clases in the `MyTheme\` namespace are autoloaded in accordance with [PSR-4](http://www.php-fig.org/psr/psr-4/).
+Add PHP class files here. All clases in the `MyApp\` namespace are autoloaded in accordance with [PSR-4](http://www.php-fig.org/psr/psr-4/).
 
 #### `resources/images/`
 
@@ -179,7 +179,10 @@ While views that follow the WordPress template hierarchy should go in the theme 
 2. `views/partials/` - Small snippets that are meant to be reused throughout other views.
 3. `views/` - Named [custom post templates](https://developer.wordpress.org/themes/template-files-section/page-template-files/#creating-custom-page-templates-for-global-use) or views that don't fit anywhere else.
 
-Avoid adding any PHP logic in any of these views, unless it pertains to layouting (PHP logic should go into helper files or [WP Emerge controllers](https://docs.wpemerge.com/#/framework/routing/controllers)).
+Avoid adding any PHP logic in any of these views, unless it pertains to layouting. Business logic should go into:
+- Helper files (`app/helpers/*.php`)
+- Service classes
+- [WP Emerge Controllers](https://docs.wpemerge.com/#/framework/routing/controllers)
 
 ## Contributing
 

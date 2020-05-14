@@ -92,7 +92,7 @@ const plugins = [
 // When doing a combined build, only clean up the first time.
 if (process.env.WPEMERGE_COMBINED_BUILD && env.isDebug) {
   plugins.push(new CleanWebpackPlugin(utils.distPath(), {
-    root: utils.themeRootPath(),
+    root: utils.rootPath(),
   }));
 }
 
@@ -135,10 +135,11 @@ module.exports = {
       },
 
       /**
-       * Handle the theme config.json.
+       * Handle config.json.
        */
       {
-        test: utils.themeRootPath('config.json'),
+        type: 'javascript/auto',
+        test: utils.rootPath('config.json'),
         use: configLoader,
       },
 

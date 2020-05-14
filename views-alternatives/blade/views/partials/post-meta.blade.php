@@ -6,7 +6,7 @@
  *
  * It will be displayed only for post type "post".
  *
- * @package MyTheme
+ * @package MyApp
  */
 
 ?>
@@ -15,18 +15,18 @@
 		<p>
 			{{ get_the_time( 'F jS, Y ' ) }}
 			{{-- translators: post author attribution --}}
-			{{ sprintf( __( 'by %s', 'mytheme' ), get_the_author() ) }}
+			{{ sprintf( __( 'by %s', 'myapp' ), get_the_author() ) }}
 		</p>
 
 		<p>
-			{{ __( 'Posted in ', 'mytheme' ) }}
+			{{ __( 'Posted in ', 'myapp' ) }}
 			@php the_category( ', ' ) @endphp
 			@if (comments_open())
 				<span> | </span>
-				@php comments_popup_link( __( 'No Comments', 'mytheme' ), __( '1 Comment', 'mytheme' ), __( '% Comments', 'mytheme' ) ) @endphp
+				@php comments_popup_link( __( 'No Comments', 'myapp' ), __( '1 Comment', 'myapp' ), __( '% Comments', 'myapp' ) ) @endphp
 			@endif
 		</p>
 
-		@php the_tags( '<p>' . __( 'Tags:', 'mytheme' ) . ' ', ', ', '</p>' ) @endphp
+		@php the_tags( '<p>' . __( 'Tags:', 'myapp' ) . ' ', ', ', '</p>' ) @endphp
 	</div>
 @endif

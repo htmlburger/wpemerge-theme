@@ -4,17 +4,17 @@
  *
  * @link https://docs.wpemerge.com/#/framework/views/layouts
  *
- * @package MyTheme
+ * @package MyApp
  */
 
-\MyTheme::render( 'header' );
+\MyApp::render( 'header' );
 
 if ( ! is_singular() ) {
-	mytheme_the_title( '<h2 class="post-title">', '</h2>' );
+	myapp_the_title( '<h2 class="post-title">', '</h2>' );
 }
 
-\MyTheme::layoutContent();
+\MyApp::layoutContent();
 
-\MyTheme::render( 'sidebar' );
+\MyApp::render( 'sidebar' );
 
-\MyTheme::render( 'footer' );
+\MyApp::render( 'footer' );
