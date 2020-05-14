@@ -33,54 +33,6 @@ class AssetsServiceProvider implements ServiceProviderInterface
 	}
 
 	/**
-	 * Get asset source url.
-	 *
-	 * @param string  $name Source basename (no extension).
-	 * @param string  $extension Source extension - '.js' or '.css'.
-	 * @return string
-	 */
-	protected function getAssetSource( $name, $extension ) {
-		$dir_url   = get_template_directory_uri();
-		$mode      = 'production';
-		$url_path  = '.css' === $extension ? "styles/{$name}" : $name;
-		$file_path = implode(
-			DIRECTORY_SEPARATOR,
-			array_filter(
-				[
-					get_template_directory(),
-					'dist',
-					'.css' === $extension ? 'styles' : '',
-					"$name.min$extension",
-				]
-			)
-		);
-
-		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
-			$mode = 'debug';
-		} elseif ( ! file_exists( $file_path ) ) {
-			$mode = 'development';
-		}
-
-		if ( 'production' === $mode ) {
-			return "$dir_url/dist/{$url_path}.min{$extension}";
-		}
-
-		if ( 'debug' === $mode ) {
-			return "$dir_url/dist/{$url_path}{$extension}";
-		}
-
-		if ( '.css' === $extension ) {
-			// CSS files are injected via JS in development mode.
-			return '';
-		}
-
-		$hot_url  = wp_parse_url( \MyApp::core()->config()->get( 'development.hotUrl', 'http://localhost/' ) );
-		$hot_port = \MyApp::core()->config()->get( 'development.port', 3000 );
-
-		return "${hot_url['scheme']}://{$hot_url['host']}:{$hot_port}/{$url_path}{$extension}";
-	}
-
-	/**
 	 * Enqueue frontend assets.
 	 *
 	 * @return void
@@ -94,13 +46,13 @@ class AssetsServiceProvider implements ServiceProviderInterface
 		// Enqueue scripts.
 		\MyApp::core()->assets()->enqueueScript(
 			'theme-js-bundle',
-			$this->getAssetSource( 'frontend', '.js' ),
+			\MyApp::core()->assets()->getBundleUrl( 'frontend', '.js' ),
 			[ 'jquery' ],
 			true
 		);
 
 		// Enqueue styles.
-		$style = $this->getAssetSource( 'frontend', '.css' );
+		$style = \MyApp::core()->assets()->getBundleUrl( 'frontend', '.css' );
 
 		if ( $style ) {
 			\MyApp::core()->assets()->enqueueStyle(
@@ -122,13 +74,13 @@ class AssetsServiceProvider implements ServiceProviderInterface
 		// Enqueue scripts.
 		\MyApp::core()->assets()->enqueueScript(
 			'theme-admin-js-bundle',
-			$this->getAssetSource( 'admin', '.js' ),
+			\MyApp::core()->assets()->getBundleUrl( 'admin', '.js' ),
 			[ 'jquery' ],
 			true
 		);
 
 		// Enqueue styles.
-		$style = $this->getAssetSource( 'admin', '.css' );
+		$style = \MyApp::core()->assets()->getBundleUrl( 'admin', '.css' );
 
 		if ( $style ) {
 			\MyApp::core()->assets()->enqueueStyle(
@@ -147,13 +99,13 @@ class AssetsServiceProvider implements ServiceProviderInterface
 		// Enqueue scripts.
 		\MyApp::core()->assets()->enqueueScript(
 			'theme-login-js-bundle',
-			$this->getAssetSource( 'login', '.js' ),
+			\MyApp::core()->assets()->getBundleUrl( 'login', '.js' ),
 			[ 'jquery' ],
 			true
 		);
 
 		// Enqueue styles.
-		$style = $this->getAssetSource( 'login', '.css' );
+		$style = \MyApp::core()->assets()->getBundleUrl( 'login', '.css' );
 
 		if ( $style ) {
 			\MyApp::core()->assets()->enqueueStyle(
@@ -172,7 +124,7 @@ class AssetsServiceProvider implements ServiceProviderInterface
 		// Enqueue scripts.
 		\MyApp::core()->assets()->enqueueScript(
 			'theme-editor-js-bundle',
-			$this->getAssetSource( 'editor', '.js' ),
+			\MyApp::core()->assets()->getBundleUrl( 'editor', '.js' ),
 			[ 'jquery' ],
 			true
 		);
