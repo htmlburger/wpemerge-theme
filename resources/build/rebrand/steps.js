@@ -1,6 +1,7 @@
 /**
  * The external dependencies.
  */
+const path = require('path');
 const chalk = require('chalk');
 const { pascalCase, constantCase, snakeCase } = require('change-case');
 const shell = require('shelljs');
@@ -101,13 +102,32 @@ const askForReplacementTokens = (log) => inquirer
  * @returns {Promise}
  */
 const replaceTokens = (tokens, matchGlobs, ignoreGlobs) => {
-  if (shell.test('-e', utils.rootPath('languages/my_app.pot'))) {
-    // Rename the .pot file to match the textdomain.
-    shell.mv(
-      utils.rootPath('languages/my_app.pot'),
-      utils.rootPath(`languages/${tokens['my_app']}.pot`)
-    );
-  }
+  const rename = [
+    'app/src/MyApp.php',
+    'languages/my_app.pot',
+  ];
+
+  // Rename specific files that match tokens.
+  forEach(rename, (file) => {
+    const from = utils.rootPath(file);
+
+    if (!shell.test('-e', from)) {
+      return;
+    }
+
+    const directory = path.dirname(from);
+    const extension = path.extname(from);
+    const name = path.basename(from, extension);
+    const to = path.join(directory, `${tokens[name]}${extension}`);
+
+    if (tokens[name] !== undefined && from !== to) {
+      if (!shell.test('-e', to)) {
+        shell.mv(from, to);
+      } else {
+        console.error(chalk.red(`${file} could not be renamed: ${to} already exists.`));
+      }
+    }
+  });
 
   // Replace the tokens in the provided globs.
   forEach(tokens, (to, from) => {

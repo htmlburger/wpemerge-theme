@@ -36,6 +36,6 @@ const { log, error: logError } = console;
 
 steps.requireCleanWorkingDirectory()
   .then(() => steps.askForReplacementTokens(log))
-  .then((tokens) => log('Replacing ...') || steps.replaceTokens(tokens, match, ignore))
+  .then((tokens) => log('Rebranding - this may take a while ...') || steps.replaceTokens(tokens, match, ignore))
   .then(() => log('Done.'))
   .catch((e) => logError(chalk.red(e.message)));
