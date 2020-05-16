@@ -19,9 +19,9 @@ _This is the WP Emerge Starter Theme project - for the WP Emerge framework pleas
 
 ## Documentation
 
-[http://docs.wpemerge.com/#/starter-theme/overview](http://docs.wpemerge.com/#/starter-theme/overview)
+[http://docs.wpemerge.com/#/starter/theme/overview](http://docs.wpemerge.com/#/starter/theme/overview)
 
-[http://docs.wpemerge.com/#/starter-theme/quickstart](http://docs.wpemerge.com/#/starter-theme/quickstart)
+[http://docs.wpemerge.com/#/starter/theme/quickstart](http://docs.wpemerge.com/#/starter/theme/quickstart)
 
 ## Development Team
 
@@ -54,7 +54,7 @@ _² Sage's Controller provides similar functionality but is limited to 1 compose
 
 _³ Timber does not provide a front-end build process so you can implement whatever you prefer._
 
-_Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they can be corrected._ 
+_Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they can be corrected._
 
 ## Features
 - All features from [WP Emerge](https://docs.wpemerge.com/#/framework/overview):
