@@ -112,7 +112,8 @@ wp-content/themes/your-theme
 │   │   └── ...
 │   ├── config.php            # WP Emerge configuration.
 │   ├── helpers.php           # Require your helper files here.
-│   └── hooks.php             # Register your actions and filters here.
+│   ├── hooks.php             # Register your actions and filters here.
+│   └── version.php           # WP Emerge version handling.
 ├── dist/                     # Bundles, optimized images etc.
 ├── languages/                # Language files.
 ├── resources/
@@ -128,8 +129,8 @@ wp-content/themes/your-theme
 │   │   ├── admin/            # Administration styles.
 │   │   ├── editor/           # Gutenberg editor styles.
 │   │   ├── login/            # Login styles.
-│   │   ├── shared/           # Shared styles.
-│   │   └── frontend/         # Front-end styles.
+│   │   ├── frontend/         # Front-end styles.
+│   │   └── shared/           # Shared styles.
 │   └── vendor/               # Any third-party, non-npm assets.
 ├── vendor/                   # Composer packages.
 ├── views/
@@ -139,6 +140,7 @@ wp-content/themes/your-theme
 ├── functions.php             # Bootstrap theme.
 ├── screenshot.png            # Theme screenshot.
 ├── style.css                 # Theme stylesheet.
+├── wpemerge                  # WP Emerge CLI shortcut.
 └── ...
 ```
 
