@@ -159,13 +159,12 @@ module.exports = {
        * Handle SVG sprites.
        */
       {
-        test: utils.tests.svgs,
+        test: utils.tests.spriteSvgs,
         use: [
           {
             loader: 'svg-sprite-loader',
             options: {
-              extract: true,
-              spriteFilename: 'images/sprite.svg',
+              extract: false,
             },
           },
         ],

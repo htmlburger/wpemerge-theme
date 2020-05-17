@@ -199,7 +199,7 @@ module.exports = {
        * Handle SVG sprites.
        */
       {
-        test: utils.tests.svgs,
+        test: utils.tests.spriteSvgs,
         use: [
           {
             loader: 'svg-sprite-loader',
@@ -220,7 +220,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: (file) => `fonts/[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+              name: file => `fonts/[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
             },
           },
         ],

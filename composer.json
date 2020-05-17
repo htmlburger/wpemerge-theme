@@ -20,20 +20,6 @@
       "role": "Developer"
     }
   ],
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/htmlburger/wpemerge.git"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/htmlburger/wpemerge-theme-core.git"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/htmlburger/wpemerge-cli.git"
-    }
-  ],
   "require": {
     "php": ">=5.5",
     "composer/installers": "^1.4",
