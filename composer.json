@@ -9,8 +9,8 @@
   "authors": [
     {
       "name": "Atanas Angelov",
-      "email": "atanas.angelov.dev@gmail.com",
-      "homepage": "https://github.com/atanas-angelov-dev/",
+      "email": "hi@atanas.dev",
+      "homepage": "https://atanas.dev/",
       "role": "Developer"
     },
     {
@@ -54,13 +54,13 @@
   },
   "scripts": {
     "install-test-env": [
-      "wpemerge config:create"
+      "@php wpemerge config:create"
     ],
-    "post-create-project-cmd": [
-      "wpemerge config:create",
-      "wpemerge install:dependencies",
-      "wpemerge assets:build",
-      "wpemerge install"
-    ]
+    "install-dev-env": [
+      "@php wpemerge config:create",
+      "@php wpemerge install:dependencies",
+      "@php wpemerge assets:build"
+    ],
+    "post-create-project-cmd": "@install-dev-env"
   }
 }

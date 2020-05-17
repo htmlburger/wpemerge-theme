@@ -19,7 +19,7 @@
 					@endif
 
 					<h2 class="article__title">
-						<a href="{{ get_permalink() }}" rel="bookmark" title="{{ myapp_get_permalink_title() }}">
+						<a href="{{ get_permalink() }}" rel="bookmark" title="{{ my_app_get_permalink_title() }}">
 							{{ get_the_title() }}
 						</a>
 					</h2>
@@ -42,7 +42,7 @@
 		<li class="article article--error404 article--not-found">
 			<div class="article__body">
 				<div class="article__entry">
-					<p>{{ myapp_get_index_404_message() }}</p>
+					<p>{{ my_app_get_index_404_message() }}</p>
 					<?php get_search_form(); ?>
 				</div>
 			</div>

@@ -15,14 +15,14 @@
 @if (!post_password_required())
 	<section class="section-comments" id="comments">
 		@if (have_comments())
-			<h3>@php comments_number( __( 'No Responses', 'myapp' ), __( 'One Response', 'myapp' ), __( '% Responses', 'myapp' ) ) @endphp</h3>
+			<h3>@php comments_number( __( 'No Responses', 'my_app' ), __( 'One Response', 'my_app' ), __( '% Responses', 'my_app' ) ) @endphp</h3>
 			<ol class="comments">
 				@php
 				wp_list_comments(
 					[
 						'callback' => function( $comment, $args, $depth ) {
 							\MyApp::render(
-								'comment-single',
+								'views/partials/comment-single',
 								[
 									'comment' => $comment,
 									'args'    => $args,
@@ -38,14 +38,14 @@
 			@include('views.partials.pagination', ['for_comments' => true])
 		@else
 			@if (!comments_open())
-				<p class="no-comments">{{ __( 'Comments are closed.', 'myapp' ) }}</p>
+				<p class="no-comments">{{ __( 'Comments are closed.', 'my_app' ) }}</p>
 			@endif
 		@endif
 
 		@php
 		comment_form(
 			[
-				'title_reply'         => __( 'Leave a Reply', 'myapp' ),
+				'title_reply'         => __( 'Leave a Reply', 'my_app' ),
 				'comment_notes_after' => '',
 			]
 		);

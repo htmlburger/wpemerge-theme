@@ -58,7 +58,7 @@ class WidgetsServiceProvider implements ServiceProviderInterface {
 			array_merge(
 				$default_options,
 				[
-					'name' => __( 'Default Sidebar', 'myapp' ),
+					'name' => __( 'Default Sidebar', 'my_app' ),
 					'id'   => 'default-sidebar',
 				]
 			)

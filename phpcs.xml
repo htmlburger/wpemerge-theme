@@ -20,7 +20,7 @@
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="string" value="myapp" />
+			<property name="text_domain" type="string" value="my_app" />
 		</properties>
 	</rule>
 

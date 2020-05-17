@@ -15,4 +15,4 @@
  * @package MyApp
  */
 
-\MyApp::render( 'loop' );
+\MyApp::render( 'views/partials/loop' );

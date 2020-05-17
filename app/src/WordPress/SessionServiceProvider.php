@@ -28,6 +28,8 @@ class SessionServiceProvider implements ServiceProviderInterface {
 	 * @return void
 	 */
 	public function startSession() {
-		session_start();
+		if ( session_status() === PHP_SESSION_NONE ) {
+			session_start();
+		}
 	}
 }

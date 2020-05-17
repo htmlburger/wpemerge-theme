@@ -20,6 +20,6 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<?php myapp_shim_wp_body_open(); ?>
+		<?php my_app_shim_wp_body_open(); ?>
 
-		<?php \MyApp::render( 'logo' ); ?>
+		<?php \MyApp::render( 'views/partials/logo' ); ?>

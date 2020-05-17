@@ -1,4 +1,13 @@
 <?php
+/**
+ * WP Emerge CLI shortcut.
+ *
+ * To get a full list of available commands run:
+ * php wpemerge list
+ *
+ * @link http://docs.wpemerge.com/#/starter/cli/overview
+ */
+
 if ( php_sapi_name() !== 'cli' ) {
 	exit;
 }
@@ -12,7 +21,7 @@ $vendors = [
 ];
 
 foreach ( $vendors as $vendor ) {
-	$runner = $vendor . '/htmlburger/wpemerge-cli/src/run.php';
+	$runner = implode( DIRECTORY_SEPARATOR, [$vendor, 'htmlburger', 'wpemerge-cli', 'src', 'run.php'] );
 
 	if ( is_file( $runner ) ) {
 		require_once $runner;
