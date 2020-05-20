@@ -13,6 +13,7 @@ _This is the WP Emerge Starter Theme project - for the WP Emerge framework pleas
 - [Development Team](#development-team)
 - [Comparison Table](#comparison-table)
 - [Features](#features)
+- [Non-goals](#non-goals)
 - [Requirements](#requirements)
 - [Directory structure](#directory-structure)
 - [Contributing](#contributing)
@@ -68,8 +69,8 @@ _Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they
   - PHP view layouts (a.k.a. automatic wrapping)
   - Support for PHP, [Blade 5.4](https://laravel.com/docs/5.4/blade) and/or [Twig 2](https://twig.symfony.com/doc/2.x/api.html) for views
 - Gutenberg support.
-- [SASS](https://sass-lang.com/) + [PostCSS](https://github.com/postcss/postcss) for stylesheets. Separate bundles are created for **front-end**, **administration**, **Gutenberg** and **login** pages.
-- ES6 for JavaScript. Separate bundles are created for **front-end**, **administration**, **Gutenberg** and **login** pages.
+- [SASS](https://sass-lang.com/) + [PostCSS](https://github.com/postcss/postcss) for stylesheets. Separate bundles are created for **front-end**, **administration**, **Gutenberg** and **login** pages and custom bundles can be added easily.
+- ES6 for JavaScript. Separate bundles are created for **front-end**, **administration**, **Gutenberg** and **login** pages and custom bundles can be added easily.
 - Pure [Webpack](https://webpack.js.org/) to transpile and bundle assets, create sprites, optimize images etc.
 - [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/) for synchronized browser development.
 - Autoloading for all classes in your `MyApp\` namespace.
@@ -86,12 +87,32 @@ _Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they
     - FontAwesome
 - WP Unit Test scaffolding for your own classes.
 
+## Non-goals
+
+- Taking over the WordPress main query.
+
+  WP Emerge does __not__ take over the main query - it actively works with it.
+- Taking over WordPress routing.
+
+  WP Emerge does __not__ take over WordPress' routing - it actively works with it. The only exception to this are hardcoded URLs explicitly added by a user.
+- Reinventing WordPress APIs using object-oriented interfaces.
+
+  WP Emerge does not provide alternative APIs for registering post types, taxonomies or the like for little added benefit. Instead, it provides logical and handy places for developers to use said APIs.
+- Using a third party engine by default.
+
+  WP Emerge uses PHP by default in the same way WordPress does but with added features. Using a third party engine is entirely optional and requires installing an extension.
+- Include most of Laravel or another framework.
+
+  WP Emerge is lean and tuned for WordPress. While inspired by Laravel, it does not come with any `illuminate/*` package. There are only 2 third party production dependencies:
+  - `pimple/pimple` - The one-file PHP service container.
+  - `guzzlehttp/psr7` - A PSR-7 Request and ServerRequest implementation.
+
 ## Requirements
 
 - [PHP](http://php.net/) >= 5.5
 - [WordPress](https://wordpress.org/) >= 4.7
 - [Composer](https://getcomposer.org/)
-- [Node.js](https://nodejs.org/en/) >= 6.9.1
+- [Node.js](https://nodejs.org/en/) >= 12
 - [Yarn](https://yarnpkg.com/en/) or NPM
 
 ## Directory structure
