@@ -1,328 +1,336 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WPEmerge Theme\n"
-"POT-Creation-Date: 2018-08-14 19:15+0300\n"
-"PO-Revision-Date: 2018-08-14 19:15+0300\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wpemerge\n"
+"POT-Creation-Date: 2020-05-20 20:35:09+00:00\n"
+"PO-Revision-Date: 2020-05-20 23:40+0300\n"
 "Last-Translator: \n"
 "Language-Team: hi@atanas.dev\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: app\n"
 "X-Poedit-SearchPath-1: theme\n"
 
-#: app/helpers/title.php:18
-#, php-format
-msgid "Search Results for: %s"
-msgstr ""
-
-#: app/helpers/title.php:21
-#, php-format
-msgid "Category Archives: %s"
-msgstr ""
-
-#: app/helpers/title.php:24
-#, php-format
-msgid "Tag Archives: %s"
-msgstr ""
-
-#: app/helpers/title.php:27
-#, php-format
-msgid "Daily Archives: %s"
-msgstr ""
-
-#: app/helpers/title.php:30
-#, php-format
-msgid "Monthly Archives: %s"
-msgstr ""
-
-#: app/helpers/title.php:33
-#, php-format
-msgid "Yearly Archives: %s"
-msgstr ""
-
-#: app/helpers/title.php:36
-#, php-format
-msgid "Posts by %s"
-msgstr ""
-
-#: app/helpers/title.php:38
-msgid "Archives"
-msgstr ""
-
-#: app/helpers/title.php:40
-msgid "Error 404 - Not Found"
-msgstr ""
-
-#: app/setup/menus.php:9
-msgid "Main Menu"
-msgstr ""
-
-#: app/setup/sidebars.php:26
-msgid "Default Sidebar"
-msgstr ""
-
-#: app/setup/theme-support.php:66
-msgid "Red"
-msgstr ""
-
-#: app/setup/theme-support.php:71
-msgid "Pink"
-msgstr ""
-
-#: app/setup/theme-support.php:76
-msgid "Purple"
-msgstr ""
-
-#: app/setup/theme-support.php:81
-msgid "Deep Purple"
-msgstr ""
-
-#: app/setup/theme-support.php:86
-msgid "Indigo"
-msgstr ""
-
-#: app/setup/theme-support.php:91
-msgid "Blue"
-msgstr ""
-
-#: app/setup/theme-support.php:96
-msgid "Light Blue"
-msgstr ""
-
-#: app/setup/theme-support.php:101
-msgid "Cyan"
-msgstr ""
-
-#: app/setup/theme-support.php:106
-msgid "Teal"
-msgstr ""
-
-#: app/setup/theme-support.php:111
-msgid "Green"
-msgstr ""
-
-#: app/setup/theme-support.php:116
-msgid "Light Green"
-msgstr ""
-
-#: app/setup/theme-support.php:121
-msgid "Lime"
-msgstr ""
-
-#: app/setup/theme-support.php:126
-msgid "Yellow"
-msgstr ""
-
-#: app/setup/theme-support.php:131
-msgid "Amber"
-msgstr ""
-
-#: app/setup/theme-support.php:136
-msgid "Orange"
-msgstr ""
-
-#: app/setup/theme-support.php:141
-msgid "Deep Orange"
-msgstr ""
-
-#: app/setup/theme-support.php:146
-msgid "Brown"
-msgstr ""
-
-#: app/setup/theme-support.php:151
-msgid "Grey"
-msgstr ""
-
-#: app/setup/theme-support.php:156
-msgid "Blue Grey"
-msgstr ""
-
-#: app/setup/theme-support.php:177
-msgid "extra small"
-msgstr ""
-
-#: app/setup/theme-support.php:178
-msgid "XS"
-msgstr ""
-
-#: app/setup/theme-support.php:183
-msgid "small"
-msgstr ""
-
-#: app/setup/theme-support.php:184
-msgid "S"
-msgstr ""
-
-#: app/setup/theme-support.php:189
-msgid "regular"
-msgstr ""
-
-#: app/setup/theme-support.php:190
-msgid "M"
-msgstr ""
-
-#: app/setup/theme-support.php:195
-msgid "large"
-msgstr ""
-
-#: app/setup/theme-support.php:196
-msgid "L"
-msgstr ""
-
-#: app/setup/theme-support.php:201
-msgid "extra large"
-msgstr ""
-
-#: app/setup/theme-support.php:202
-msgid "XL"
-msgstr ""
-
-#: theme/404.php:9 theme/error.php:10
-#, php-format
+#. translators: 404 page content; placeholders represents homepage opening and
+#. closing anchor tags
+#. translators: generic error page content; placeholders represents homepage
+#. opening and closing anchor tags
+#. translators: generic error page content; placeholders represents homepage
+#. opening and closing anchor tags
+#. translators: generic error page content; placeholders represents homepage
+#. opening and closing anchor tags
+#: 404.php:15 error-admin.php:14 error-ajax.php:14 error.php:16
 msgid ""
-"<p>Please check the URL for proper spelling and capitalization.<br />If "
-"you're having trouble locating a destination, try visiting the <a href=\"%1$s"
-"\">home page</a>.</p>"
+"Please check the URL for proper spelling and capitalization. If you're "
+"having trouble locating a destination, try visiting the %1$shome page%2$s."
 msgstr ""
 
-#: theme/cache/blade/2a88d38ef4b00fcfb123439c241889b60d345da7.php:22
-#: theme/page.php:20
-msgid "Edit this entry."
-msgstr ""
-
-#: theme/comments.php:20
-msgid "No Responses"
-msgstr ""
-
-#: theme/comments.php:20
-msgid "One Response"
-msgstr ""
-
-#: theme/comments.php:20
-msgid "% Responses"
-msgstr ""
-
-#: theme/comments.php:39
-msgid "« Older Comments"
-msgstr ""
-
-#: theme/comments.php:42
-msgid "Newer Comments »"
-msgstr ""
-
-#: theme/comments.php:49
-msgid "Comments are closed."
-msgstr ""
-
-#: theme/comments.php:56
-msgid "Leave a Reply"
-msgstr ""
-
-#: theme/partials/comment-single.php:6
-msgid "says:"
-msgstr ""
-
-#: theme/partials/comment-single.php:10
-msgid "Your comment is awaiting moderation."
-msgstr ""
-
-#: theme/partials/comment-single.php:17
-#, php-format
-msgid "%1$s at %2$s"
-msgstr ""
-
-#: theme/partials/comment-single.php:21
-msgid "(Edit)"
-msgstr ""
-
-#: theme/partials/loop-single.php:22
-msgid "« Previous Entry"
-msgstr ""
-
-#: theme/partials/loop-single.php:23
-msgid "Next Entry »"
-msgstr ""
-
-#: theme/partials/loop.php:6
-#, php-format
+#. translators: post link title attribute
+#: app/helpers/content.php:20
 msgid "Permanent Link to %s"
 msgstr ""
 
-#: theme/partials/loop.php:21
-msgid "Read the rest of this entry &raquo;"
+#. translators: no posts found for category
+#: app/helpers/content.php:31
+msgid "There are no posts in the %s category yet."
 msgstr ""
 
-#: theme/partials/loop.php:30
-msgid "« Previous Entries"
+#. translators: no posts found with tag
+#: app/helpers/content.php:35
+msgid "There are no posts with the %s tag yet."
 msgstr ""
 
-#: theme/partials/loop.php:31
-msgid "Next Entries »"
+#: app/helpers/content.php:39
+msgid "There are no posts published on this date."
 msgstr ""
 
-#: theme/partials/loop.php:47
-#, php-format
-msgid "Sorry, but there aren't any posts in the %s category yet."
+#. translators: no posts found by author
+#: app/helpers/content.php:45
+msgid "There are no posts published by %s yet."
 msgstr ""
 
-#: theme/partials/loop.php:49
-msgid "Sorry, but there aren't any posts with this date."
-msgstr ""
-
-#: theme/partials/loop.php:53
-#, php-format
-msgid "Sorry, but there aren't any posts by %s yet."
-msgstr ""
-
-#: theme/partials/loop.php:55
+#: app/helpers/content.php:49
 msgid "No posts found. Try a different search?"
 msgstr ""
 
-#: theme/partials/loop.php:57
+#: app/helpers/content.php:52
 msgid "No posts found."
 msgstr ""
 
-#: theme/partials/post-meta.php:20
-#, php-format
-msgid "by %s"
+#. translators: search results page title
+#: app/helpers/title.php:25
+msgid "Search Results for: %s"
 msgstr ""
 
-#: theme/partials/post-meta.php:26
-msgid "Posted in "
+#. translators: category post listing page title
+#: app/helpers/title.php:28
+msgid "Category Archives: %s"
 msgstr ""
 
-#: theme/partials/post-meta.php:30
-msgid "No Comments"
+#. translators: tag post listing page title
+#: app/helpers/title.php:31
+msgid "Tag Archives: %s"
 msgstr ""
 
-#: theme/partials/post-meta.php:30
-msgid "1 Comment"
+#. translators: day archive post listing page title
+#: app/helpers/title.php:34
+msgid "Daily Archives: %s"
 msgstr ""
 
-#: theme/partials/post-meta.php:30
-msgid "% Comments"
+#. translators: month archive post listing page title
+#: app/helpers/title.php:37
+msgid "Monthly Archives: %s"
 msgstr ""
 
-#: theme/partials/post-meta.php:35
-msgid "Tags:"
+#. translators: year archive post listing page title
+#: app/helpers/title.php:40
+msgid "Yearly Archives: %s"
 msgstr ""
 
-#: theme/searchform.php:3 theme/searchform.php:5
+#. translators: author archive post listing page title
+#: app/helpers/title.php:43
+msgid "Posts by %s"
+msgstr ""
+
+#: app/helpers/title.php:45
+msgid "Archives"
+msgstr ""
+
+#: app/helpers/title.php:47
+msgid "Error 404 - Not Found"
+msgstr ""
+
+#: app/src/WordPress/MenusServiceProvider.php:33
+msgid "Main Menu"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:124
+msgid "Red"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:129
+msgid "Pink"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:134
+msgid "Purple"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:139
+msgid "Deep Purple"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:144
+msgid "Indigo"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:149
+msgid "Blue"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:154
+msgid "Light Blue"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:159
+msgid "Cyan"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:164
+msgid "Teal"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:169
+msgid "Green"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:174
+msgid "Light Green"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:179
+msgid "Lime"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:184
+msgid "Yellow"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:189
+msgid "Amber"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:194
+msgid "Orange"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:199
+msgid "Deep Orange"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:204
+msgid "Brown"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:209
+msgid "Grey"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:214
+msgid "Blue Grey"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:239
+msgid "extra small"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:240
+msgid "XS"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:245
+msgid "small"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:246
+msgid "S"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:251
+msgid "regular"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:252
+msgid "M"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:257
+msgid "large"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:258
+msgid "L"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:263
+msgid "extra large"
+msgstr ""
+
+#: app/src/WordPress/ThemeServiceProvider.php:264
+msgid "XL"
+msgstr ""
+
+#: app/src/WordPress/WidgetsServiceProvider.php:61
+msgid "Default Sidebar"
+msgstr ""
+
+#. Translators: %1$s = plugin or theme name; %2$s = minimum version number;
+#. %3$s = maximum version number; %4$s plugin or theme name; %5$s loaded
+#. version number.
+#: app/version.php:54
+msgid ""
+"%1$s requires WP Emerge version >= %2$s and < %3$s but %4$s has already "
+"loaded version %5$s."
+msgstr ""
+
+#: comments.php:20
+msgid "No Responses"
+msgstr ""
+
+#: comments.php:20
+msgid "One Response"
+msgstr ""
+
+#: comments.php:20
+msgid "% Responses"
+msgstr ""
+
+#: comments.php:43
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:50
+msgid "Leave a Reply"
+msgstr ""
+
+#: page.php:21
+msgid "Edit this entry."
+msgstr ""
+
+#: searchform.php:13 searchform.php:15
 msgid "Search for:"
 msgstr ""
 
-#: theme/searchform.php:5
+#: searchform.php:15
 msgid "Search &hellip;"
 msgstr ""
 
-#: theme/searchform.php:8
+#: searchform.php:18
 msgid "Search"
+msgstr ""
+
+#: views/partials/comment-single.php:14
+msgid "says:"
+msgstr ""
+
+#: views/partials/comment-single.php:18
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#. translators: comment date and time
+#: views/partials/comment-single.php:25
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: views/partials/comment-single.php:29
+msgid "(Edit)"
+msgstr ""
+
+#. translators: post author attribution
+#: views/partials/post-meta.php:21
+msgid "by %s"
+msgstr ""
+
+#: views/partials/post-meta.php:27
+msgid "Posted in "
+msgstr ""
+
+#: views/partials/post-meta.php:31
+msgid "No Comments"
+msgstr ""
+
+#: views/partials/post-meta.php:31
+msgid "1 Comment"
+msgstr ""
+
+#: views/partials/post-meta.php:31
+msgid "% Comments"
+msgstr ""
+
+#: views/partials/post-meta.php:36
+msgid "Tags:"
+msgstr ""
+
+#: woocommerce/cart/cart-empty.php:29
+msgid "Return to shop"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "WP Emerge Starter Theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "atanasangelovdev"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wpemerge.com/"
 msgstr ""
