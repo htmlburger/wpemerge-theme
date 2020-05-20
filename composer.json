@@ -40,7 +40,7 @@
   },
   "scripts": {
     "install-test-env": [
-      "@php wpemerge config:create"
+      "wpemerge config:create"
     ],
     "install-dev-env": [
       "@php wpemerge config:create",
