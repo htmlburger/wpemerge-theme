@@ -54,7 +54,7 @@ module.exports.tests = {
   scripts: /\.(js|jsx)$/,
   styles: /\.(css|scss|sass)$/,
   spriteSvgs: /(resources|dist|node_modules)[\\/]images[\\/]sprite-svg[\\/].*\.svg$/,
-  images: /(resources|dist|node_modules)[\\/](?!images[\\/]sprite-svg).*\.(ico|jpg|jpeg|png|svg|gif)$/,
+  images: /(resources|dist|node_modules)[\\/](?!images[\\/]sprite-svg|fonts).*\.(ico|jpg|jpeg|png|svg|gif)$/,
   fonts: /(resources|dist|node_modules)[\\/](?!images[\\/]sprite-svg).*\.(eot|svg|ttf|woff|woff2)$/,
 };
 
