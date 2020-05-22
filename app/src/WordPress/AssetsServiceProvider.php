@@ -30,6 +30,8 @@ class AssetsServiceProvider implements ServiceProviderInterface
 		add_action( 'admin_head', [$this, 'addFavicon'], 5 );
 
 		add_action( 'upload_dir', [$this, 'fixUploadDirUrlSchema'] );
+
+		add_action( 'wp_footer', [$this, 'loadSvgSprite'] );
 	}
 
 	/**
@@ -160,5 +162,30 @@ class AssetsServiceProvider implements ServiceProviderInterface
 		}
 
 		return $upload_dir;
+	}
+
+	/**
+	 * Load SVG sprite.
+	 *
+	 * @return void
+	 */
+	public function loadSvgSprite() {
+		$file_path = implode(
+			DIRECTORY_SEPARATOR,
+			array_filter(
+				[
+					get_template_directory(),
+					'dist',
+					'images',
+					'sprite.svg'
+				]
+			)
+		);
+
+		if ( ! file_exists( $file_path ) ) {
+			return;
+		}
+
+		readfile( $file_path );
 	}
 }

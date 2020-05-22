@@ -13,6 +13,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const utils = require('./lib/utils');
 const configLoader = require('./config-loader');
 const spriteSmith = require('./spritesmith');
+const spriteSvg = require('./spritesvg');
 const postcss = require('./postcss');
 
 /**
@@ -52,6 +53,7 @@ const plugins = [
     filename: `styles/[name]${env.filenameSuffix}.css`,
   }),
   spriteSmith,
+  spriteSvg,
   new ImageminPlugin({
     optipng: {
       optimizationLevel: 7,
@@ -188,6 +190,22 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: file => `images/[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+            },
+          },
+        ],
+      },
+
+      /**
+       * Handle SVG sprites.
+       */
+      {
+        test: utils.tests.spriteSvgs,
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              extract: true,
+              spriteFilename: 'images/sprite.svg',
             },
           },
         ],
