@@ -28,7 +28,7 @@ if ( ! isset( $content_width ) ) {
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'version.php';
 
 $name = trim( get_file_data( __DIR__ . DIRECTORY_SEPARATOR . 'style.css', [ 'Theme Name' ] )[0] );
-$load = my_app_should_load_wpemerge( $name, '0.15.0', '2.0.0' );
+$load = my_app_should_load_wpemerge( $name, '0.16.0', '2.0.0' );
 
 if ( ! $load ) {
 	// An incompatible WP Emerge version is already loaded - stop further execution.
