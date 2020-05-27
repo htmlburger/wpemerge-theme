@@ -35,7 +35,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "chokidar": "^3.4.0",
     "clean-webpack-plugin": "^0.1.19",
-    "cross-env": "^5.1.4",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
     "imagemin-mozjpeg": "^8.0.0",
