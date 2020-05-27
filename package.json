@@ -27,7 +27,7 @@
     "last 3 versions"
   ],
   "dependencies": {
-    "airbnb-browser-shims": "^2.1.0",
+    "airbnb-browser-shims": "^3.3.0",
     "autoprefixer": "^8.4.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
