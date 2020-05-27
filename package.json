@@ -57,7 +57,7 @@
     "webpack-spritesmith": "^0.4.1"
   },
   "devDependencies": {
-    "archiver": "^3.0.0",
+    "archiver": "^4.0.1",
     "chalk": "^4.0.0",
     "change-case": "^4.1.1",
     "eslint": "^6.8.0",
