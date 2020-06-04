@@ -13,7 +13,7 @@ if ( ! function_exists( 'my_app_get_loaded_wpemerge' ) ) {
 	/**
 	 * Get the currently loaded WP Emerge version, if any.
 	 *
-	 * @return array|void
+	 * @return array|false
 	 */
 	function my_app_get_loaded_wpemerge() {
 		/**
