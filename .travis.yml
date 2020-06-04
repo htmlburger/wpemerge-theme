@@ -54,7 +54,6 @@ before_install:
 
 before_cache:
   - mv $APP_DIR/node_modules $WP_DIR/node_modules-cache || true
-  - mv $APP_DIR/yarn.lock $WP_DIR/yarn.lock.cache || true
   - mv $APP_DIR/vendor $WP_DIR/vendor-cache
   - rm -rf $APP_DIR
 
@@ -63,7 +62,7 @@ before_script:
   - >
     if [ ! -d "$WP_DIR/src" ];
     then git clone --depth=1 --branch="$WP_VERSION" git://develop.git.wordpress.org/ $WP_DIR && rm -rf "$WP_DIR/.git";
-    else (mv $WP_DIR/yarn.lock.cache $PWD/yarn.lock || true) && (mv $WP_DIR/node_modules-cache $PWD/node_modules || true) && mv $WP_DIR/vendor-cache $PWD/vendor;
+    else (mv $WP_DIR/node_modules-cache $PWD/node_modules || true) && mv $WP_DIR/vendor-cache $PWD/vendor;
     fi
   # Set up app.
   - ln -s $PWD $APP_DIR
