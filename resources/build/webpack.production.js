@@ -189,7 +189,8 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: file => `images/[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+              name: file => `[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+              outputPath: 'images',
             },
           },
         ],
@@ -220,7 +221,8 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: file => `fonts/[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+              name: file => `[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+              outputPath: 'fonts',
             },
           },
         ],

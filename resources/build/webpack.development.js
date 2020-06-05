@@ -4,6 +4,7 @@
 const url = require('url');
 const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const chokidar = require('chokidar');
 const get = require('lodash/get');
@@ -56,9 +57,14 @@ const plugins = [
     $: 'jquery',
     jQuery: 'jquery',
   }),
+  new MiniCssExtractPlugin({
+    filename: `styles/[name]${env.filenameSuffix}.css`,
+  }),
   spriteSmith,
   spriteSvg,
-  new ManifestPlugin(),
+  new ManifestPlugin({
+    writeToFileEmit: true,
+  }),
 ];
 
 /**
@@ -130,7 +136,13 @@ module.exports = {
       {
         test: utils.tests.styles,
         use: [
-          'style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../',
+              hmr: env.isHot,
+            },
+          },
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -149,7 +161,8 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: file => `images/[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+              name: file => `[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+              outputPath: 'images',
             },
           },
         ],
@@ -179,7 +192,8 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: file => `fonts/[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+              name: file => `[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+              outputPath: 'fonts',
             },
           },
         ],

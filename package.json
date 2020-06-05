@@ -27,15 +27,15 @@
     "last 3 versions"
   ],
   "dependencies": {
-    "airbnb-browser-shims": "^2.1.0",
-    "autoprefixer": "^8.4.1",
+    "airbnb-browser-shims": "^3.3.0",
+    "autoprefixer": "^9.8.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
     "chokidar": "^3.4.0",
     "clean-webpack-plugin": "^0.1.19",
-    "cross-env": "^5.1.4",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
     "imagemin-mozjpeg": "^8.0.0",
@@ -57,7 +57,7 @@
     "webpack-spritesmith": "^0.4.1"
   },
   "devDependencies": {
-    "archiver": "^3.0.0",
+    "archiver": "^4.0.1",
     "chalk": "^4.0.0",
     "change-case": "^4.1.1",
     "eslint": "^6.8.0",
