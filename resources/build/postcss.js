@@ -1,9 +1,7 @@
 /**
  * The internal dependencies.
  */
-/* @preset-begin(Tailwind CSS)
 const utils = require('./lib/utils');
-@preset-end(Tailwind CSS) */
 
 /**
  * Setup PostCSS plugins.
@@ -16,6 +14,14 @@ const plugins = [
   require('autoprefixer'),
   require('./lib/combine-media-queries'),
 ];
+
+if (utils.detectEnv().isProduction) {
+  plugins.push(
+    require('cssnano')({
+      preset: 'default',
+    })
+  );
+}
 
 /**
  * Prepare the configuration.
