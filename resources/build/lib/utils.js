@@ -113,4 +113,20 @@ module.exports.filehash = (file) => {
   return hash.digest('hex');
 };
 
-module.exports.filehashFilter = file => `[name].${module.exports.filehash(file).substr(0, 10)}.[ext]`;
+module.exports.filehasher = (relativeTo = null) => (file) => {
+  const resourcesDir = path.normalize(exports.srcPath()) + path.sep;
+  const isUserFile = path.normalize(file).substr(0, resourcesDir.length) === resourcesDir;
+  let filepath = 'vendor';
+
+  if (isUserFile) {
+    filepath = '';
+
+    if (relativeTo !== null) {
+      filepath = path.relative(relativeTo, path.dirname(file));
+    }
+  }
+
+  filepath += filepath ? '/' : '';
+
+  return `${filepath}[name].${module.exports.filehash(file).substr(0, 10)}.[ext]`;
+};

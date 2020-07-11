@@ -164,7 +164,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: utils.filehashFilter,
+              name: utils.filehasher(utils.srcImagesPath()),
               outputPath: 'images',
             },
           },
@@ -198,7 +198,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: utils.filehashFilter,
+              name: utils.filehasher(utils.srcFontsPath()),
               outputPath: 'fonts',
             },
           },
