@@ -157,11 +157,14 @@ module.exports = {
        */
       {
         test: utils.tests.images,
+        exclude: [
+          utils.srcImagesPath('sprite-svg'),
+        ],
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: file => `[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+              name: utils.filehashFilter,
               outputPath: 'images',
             },
           },
@@ -172,7 +175,10 @@ module.exports = {
        * Handle SVG sprites.
        */
       {
-        test: utils.tests.spriteSvgs,
+        test: utils.tests.svgs,
+        include: [
+          utils.srcImagesPath('sprite-svg'),
+        ],
         use: [
           {
             loader: 'svg-sprite-loader',
@@ -192,7 +198,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: file => `[name].${utils.filehash(file).substr(0, 10)}.[ext]`,
+              name: utils.filehashFilter,
               outputPath: 'fonts',
             },
           },
