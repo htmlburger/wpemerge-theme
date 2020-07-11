@@ -53,9 +53,9 @@ module.exports.distFontsPath = destPath =>
 module.exports.tests = {
   scripts: /\.(js|jsx)$/,
   styles: /\.(css|scss|sass)$/,
-  spriteSvgs: /(resources|dist|node_modules)[\\/]images[\\/]sprite-svg[\\/].*\.svg$/,
-  images: /(resources|dist|node_modules)[\\/](?!images[\\/]sprite-svg|fonts).*\.(ico|jpg|jpeg|png|svg|gif)$/,
-  fonts: /(resources|dist|node_modules)[\\/](?!images[\\/]sprite-svg).*\.(eot|svg|ttf|woff|woff2)$/,
+  svgs: /\.svg$/,
+  images: /\.(ico|jpg|jpeg|png|svg|gif)$/,
+  fonts: /\.(eot|ttf|woff|woff2)$/,
 };
 
 module.exports.detectEnv = () => {
@@ -112,3 +112,5 @@ module.exports.filehash = (file) => {
   hash.update(fs.readFileSync(file));
   return hash.digest('hex');
 };
+
+module.exports.filehashFilter = file => `[name].${module.exports.filehash(file).substr(0, 10)}.[ext]`;
