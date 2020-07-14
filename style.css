@@ -14,7 +14,7 @@ Domain Path: /languages
 
 /*
 Source SASS styles are located in resources/styles/.
-The compiled bundles are in dist/styles/{xyz}-bundle.css.
+The compiled bundles are in dist/styles/{xyz}.min.css.
 The README.md file contains instructions on
 how to get the build process up & running.
 

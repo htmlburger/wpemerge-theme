@@ -192,7 +192,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: utils.filehasher(utils.srcImagesPath()),
+              name: utils.assetFilename(utils.srcImagesPath()),
               outputPath: 'images',
             },
           },
@@ -227,7 +227,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: utils.filehasher(utils.srcFontsPath()),
+              name: utils.assetFilename(utils.srcFontsPath()),
               outputPath: 'fonts',
             },
           },

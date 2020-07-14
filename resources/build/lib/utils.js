@@ -3,7 +3,6 @@
  */
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto');
 const pick = require('lodash/pick');
 
 /**
@@ -107,13 +106,7 @@ module.exports.getUserConfig = (file, whitelisted = false) => {
   return userConfig;
 };
 
-module.exports.filehash = (file) => {
-  const hash = crypto.createHash('sha1');
-  hash.update(fs.readFileSync(file));
-  return hash.digest('hex');
-};
-
-module.exports.filehasher = (relativeTo = null) => (file) => {
+module.exports.assetFilename = (relativeTo = null) => (file) => {
   const resourcesDir = path.normalize(exports.srcPath()) + path.sep;
   const nodeModulesDir = path.normalize(path.join(exports.rootPath(), 'node_modules')) + path.sep;
   const isResourceFile = path.normalize(file).substr(0, resourcesDir.length) === resourcesDir;
@@ -129,5 +122,5 @@ module.exports.filehasher = (relativeTo = null) => (file) => {
     }
   }
 
-  return `${filepath}[name].${module.exports.filehash(file).substr(0, 10)}.[ext]`;
+  return `${filepath}[name].[contenthash:10].[ext]`;
 };
