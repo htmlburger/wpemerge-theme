@@ -108,7 +108,7 @@ class ThemeServiceProvider implements ServiceProviderInterface
 		 * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
 		 */
 		add_theme_support( 'editor-styles' );
-		add_editor_style( 'dist/styles/editor.css' );
+		add_editor_style( 'dist/styles/editor.min.css' );
 
 		/**
 		 * Support custom editor block color palette.
