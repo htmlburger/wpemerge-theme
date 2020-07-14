@@ -115,18 +115,19 @@ module.exports.filehash = (file) => {
 
 module.exports.filehasher = (relativeTo = null) => (file) => {
   const resourcesDir = path.normalize(exports.srcPath()) + path.sep;
-  const isUserFile = path.normalize(file).substr(0, resourcesDir.length) === resourcesDir;
-  let filepath = 'vendor';
+  const nodeModulesDir = path.normalize(path.join(exports.rootPath(), 'node_modules')) + path.sep;
+  const isResourceFile = path.normalize(file).substr(0, resourcesDir.length) === resourcesDir;
+  const isVendorFile = path.normalize(file).substr(0, nodeModulesDir.length) === nodeModulesDir;
+  let filepath = '';
 
-  if (isUserFile) {
-    filepath = '';
-
+  if (isVendorFile) {
+    filepath = 'vendor/';
+  } else if (isResourceFile) {
     if (relativeTo !== null) {
       filepath = path.relative(relativeTo, path.dirname(file));
+      filepath = filepath ? `${filepath}/` : '';
     }
   }
-
-  filepath += filepath ? '/' : '';
 
   return `${filepath}[name].${module.exports.filehash(file).substr(0, 10)}.[ext]`;
 };
