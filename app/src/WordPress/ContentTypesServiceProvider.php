@@ -7,8 +7,7 @@ use WPEmerge\ServiceProviders\ServiceProviderInterface;
 /**
  * Register widgets and sidebars.
  */
-class ContentTypesServiceProvider implements ServiceProviderInterface
-{
+class ContentTypesServiceProvider implements ServiceProviderInterface {
 	/**
 	 * {@inheritDoc}
 	 */

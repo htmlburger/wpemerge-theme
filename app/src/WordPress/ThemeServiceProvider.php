@@ -7,8 +7,7 @@ use WPEmerge\ServiceProviders\ServiceProviderInterface;
 /**
  * Register theme support options.
  */
-class ThemeServiceProvider implements ServiceProviderInterface
-{
+class ThemeServiceProvider implements ServiceProviderInterface {
 	/**
 	 * {@inheritDoc}
 	 */
@@ -44,13 +43,16 @@ class ThemeServiceProvider implements ServiceProviderInterface
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/custom-logo/
 		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 100,
-			'width'       => 400,
-			'flex-height' => true,
-			'flex-width'  => true,
-			'header-text' => array( 'site-title', 'site-description' ),
-		) );
+		add_theme_support(
+			'custom-logo',
+			[
+				'height'      => 100,
+				'width'       => 400,
+				'flex-height' => true,
+				'flex-width'  => true,
+				'header-text' => [ 'site-title', 'site-description' ],
+			]
+		);
 
 		/**
 		 * Support automatic feed links.
@@ -78,7 +80,7 @@ class ThemeServiceProvider implements ServiceProviderInterface
 		 *
 		 * @link https://codex.wordpress.org/Theme_Markup
 		 */
-		add_theme_support( 'html5', ['search-form', 'comment-form', 'comment-list', 'gallery', 'caption'] );
+		add_theme_support( 'html5', [ 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ] );
 
 		/**
 		 * Manually select Post Formats to be supported.
