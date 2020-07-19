@@ -37,8 +37,9 @@ if ( ! $load ) {
 }
 
 // Load composer dependencies.
-if ( file_exists( __DIR__ . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php' ) ) {
-	require_once __DIR__ . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+$autoload = locate_template( 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php' );
+if ( ! empty( $autoload ) ) {
+	require_once $autoload;
 }
 
 my_app_declare_loaded_wpemerge( $name, 'theme', __FILE__ );
