@@ -33,21 +33,8 @@ function emit(emitter) {
  */
 const validate = (destination) => {
   if (shell.test('-e', destination)) {
-    throw new Error(`Destination directory already exists: ${destination}`);
+    throw new Error(`Destination zip already exists: ${destination}`);
   }
-
-  if (shell.test('-e', `${destination}.zip`)) {
-    throw new Error(`Destination zip already exists: ${destination}.zip`);
-  }
-};
-
-/**
- * Create the release version directory.
- *
- * @param {string} destination
- */
-const createDirectory = (destination) => {
-  shell.mkdir('-p', destination);
 };
 
 /**
@@ -161,7 +148,6 @@ const zip = (source, destination) => {
 
 module.exports = {
   validate,
-  createDirectory,
   copyFiles,
   installComposerDependencies,
   zip,

@@ -4,6 +4,7 @@
 const process = require('process');
 const path = require('path');
 const EventEmitter = require('events');
+const tmp = require('tmp');
 const chalk = require('chalk');
 
 /**
@@ -19,9 +20,7 @@ if (chalk.level === 0) {
 }
 
 const { log, error: logError } = console;
-const name = process.argv[2] || 'wpemerge-release';
 const source = utils.rootPath();
-const destination = path.join(path.dirname(source), name);
 const emitter = new EventEmitter();
 
 emitter.on('file.copy', file => process.stdout.write(`Copying ${path.relative(source, file)} ...`));
@@ -29,15 +28,17 @@ emitter.on('file.copied', () => log(' done'));
 
 (new Promise(resolve => resolve()))
   .then(() => {
-    steps.validate(destination);
+    const zip = `${source}.zip`;
 
-    steps.createDirectory(destination);
+    steps.validate(zip);
+
+    const destination = tmp.dirSync().name;
 
     steps.copyFiles(config.release.include, source, destination, emitter);
 
     log('Installing production composer dependencies ...');
     steps.installComposerDependencies(source, destination);
 
-    return steps.zip(destination, `${destination}.zip`);
+    return steps.zip(destination, zip);
   })
   .catch(e => logError(chalk.red(e.message)));

@@ -43,7 +43,7 @@ const zip = (source, destination) => new Promise((resolve, reject) => {
 
   archive.pipe(output);
 
-  archive.directory(source, path.basename(source));
+  archive.directory(source, path.basename(destination).replace(/\.zip$/, ''));
 
   archive.finalize();
 });
