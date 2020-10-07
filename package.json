@@ -13,7 +13,7 @@
     "lint:wpcs": "./vendor/bin/phpcs --colors --standard=phpcs.xml ./",
     "lint:scripts": "eslint --color ./resources/scripts/**",
     "lint:styles": "stylelint --color ./resources/styles/**",
-    "lint-fix:wpcs": "./vendor/bin/phpcbf --colors --standard=wpcs.xml ./",
+    "lint-fix:wpcs": "./vendor/bin/phpcbf --colors --standard=phpcs.xml ./",
     "lint-fix:scripts": "eslint --color --fix ./resources/scripts/**",
     "lint-fix:styles": "stylelint --color --fix ./resources/styles/**",
     "i18n": "run-s -cl i18n:textdomain i18n:pot",
