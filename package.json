@@ -53,8 +53,8 @@
     "style-loader": "^1.2.1",
     "svg-sprite-loader": "^4.2.5",
     "webpack": "^4.26.1",
+    "webpack-assets-manifest": "^3.1.1",
     "webpack-cli": "^3.1.2",
-    "webpack-manifest-plugin": "^2.0.4",
     "webpack-spritesmith": "^0.4.1"
   },
   "devDependencies": {

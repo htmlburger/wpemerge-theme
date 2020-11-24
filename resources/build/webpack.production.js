@@ -5,7 +5,7 @@ const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
-const ManifestPlugin = require('webpack-manifest-plugin');
+const ManifestPlugin = require('webpack-assets-manifest');
 
 /**
  * The internal dependencies.
