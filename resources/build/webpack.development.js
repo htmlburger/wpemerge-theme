@@ -17,6 +17,7 @@ const configLoader = require('./config-loader');
 const spriteSmith = require('./spritesmith');
 const spriteSvg = require('./spritesvg');
 const postcss = require('./postcss');
+const DevelopmentModePlugin = require('./lib/development-mode-plugin');
 
 /**
  * Setup the environment.
@@ -67,6 +68,7 @@ const plugins = [
     writeToDisk: true,
     publicPath: env.isHot ? hotUrl : null,
   }),
+  new DevelopmentModePlugin({ hot: env.isHot }),
 ];
 
 /**

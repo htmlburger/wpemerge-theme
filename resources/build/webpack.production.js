@@ -90,7 +90,7 @@ const plugins = [
 ];
 
 // When doing a combined build, only clean up the first time.
-if (process.env.WPEMERGE_COMBINED_BUILD && env.isDebug) {
+if (env.isCombined && env.isDebug) {
   plugins.push(new CleanWebpackPlugin(utils.distPath(), {
     root: utils.rootPath(),
   }));
@@ -245,7 +245,7 @@ module.exports = {
    * Setup optimizations.
    */
   optimization: {
-    minimize: env.minify,
+    minimize: !env.isDebug,
   },
 
   /**
