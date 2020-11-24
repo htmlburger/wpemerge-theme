@@ -3,6 +3,8 @@
  */
 const utils = require('./lib/utils');
 
+const env = utils.detectEnv();
+
 /**
  * Setup PostCSS plugins.
  */
@@ -15,7 +17,7 @@ const plugins = [
   require('./lib/combine-media-queries'),
 ];
 
-if (utils.detectEnv().isProduction) {
+if (env.isProduction && !env.isDebug) {
   plugins.push(
     require('cssnano')({
       preset: 'default',

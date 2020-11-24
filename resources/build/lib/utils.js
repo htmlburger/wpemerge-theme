@@ -59,20 +59,21 @@ module.exports.tests = {
 };
 
 module.exports.detectEnv = () => {
-  const env = process.env.NODE_ENV || 'development';
-  const isDev = env === 'development';
-  const isHot = env === 'hot';
-  const isDebug = env === 'debug';
-  const isProduction = env === 'production';
+  const nodeEnv = process.env.NODE_ENV || 'development';
+  const wpemergeEnv = process.env.WPEMERGE_ENV || '';
+  const isCombined = !!process.env.WPEMERGE_COMBINED_BUILD;
+  const isDevelopment = nodeEnv === 'development';
+  const isHot = wpemergeEnv === 'hot';
+  const isProduction = nodeEnv === 'production';
+  const isDebug = wpemergeEnv === 'debug';
 
   return {
-    env,
-    isDev,
+    isCombined,
+    isDevelopment,
     isHot,
-    isDebug,
     isProduction,
-    minify: isProduction,
-    filenameSuffix: isDev || isProduction ? '.min' : '',
+    isDebug,
+    filenameSuffix: isProduction && !isDebug ? '.min' : '',
   };
 };
 
