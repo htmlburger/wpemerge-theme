@@ -5,7 +5,7 @@ const url = require('url');
 const { ProvidePlugin, WatchIgnorePlugin } = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
+const ManifestPlugin = require('webpack-assets-manifest');
 const chokidar = require('chokidar');
 const get = require('lodash/get');
 
@@ -25,6 +25,7 @@ const env = utils.detectEnv();
 const userConfig = utils.getUserConfig();
 const devPort = get(userConfig, 'development.port', 3000);
 const devHotUrl = url.parse(get(userConfig, 'development.hotUrl', 'http://localhost/').replace(/\/$/, ''));
+const hotUrl = `${devHotUrl.protocol}//${devHotUrl.host}:${devPort}/`;
 
 /**
  * Setup babel loader.
@@ -63,7 +64,8 @@ const plugins = [
   spriteSmith,
   spriteSvg,
   new ManifestPlugin({
-    writeToFileEmit: true,
+    writeToDisk: true,
+    publicPath: env.isHot ? hotUrl : null,
   }),
 ];
 
@@ -83,7 +85,7 @@ module.exports = {
     ...require('./webpack/output'),
     ...(env.isHot
       // Required to work around https://github.com/webpack/webpack-dev-server/issues/1385
-      ? { publicPath: `${devHotUrl.protocol}//${devHotUrl.host}:${devPort}/` }
+      ? { publicPath: hotUrl }
       : {}
     ),
   },
