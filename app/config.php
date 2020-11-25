@@ -9,6 +9,11 @@
 
 return [
 	/**
+	 * Default class namespace prefix.
+	 */
+	'namespace'           => 'MyApp\\',
+
+	/**
 	 * Array of service providers you wish to enable.
 	 */
 	'providers'           => [
@@ -40,29 +45,13 @@ return [
 	'routes'              => [
 		'web'   => [
 			'definitions' => __DIR__ . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'web.php',
-			'attributes'  => [
-				'namespace' => 'MyApp\\Controllers\\Web\\',
-			],
 		],
 		'admin' => [
 			'definitions' => __DIR__ . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'admin.php',
-			'attributes'  => [
-				'namespace' => 'MyApp\\Controllers\\Admin\\',
-			],
 		],
 		'ajax'  => [
 			'definitions' => __DIR__ . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'ajax.php',
-			'attributes'  => [
-				'namespace' => 'MyApp\\Controllers\\Ajax\\',
-			],
 		],
-	],
-
-	/**
-	 * View Composers settings.
-	 */
-	'view_composers'      => [
-		'namespace' => 'MyApp\\ViewComposers\\',
 	],
 
 	/**
