@@ -14,7 +14,8 @@ const plugins = [
   @preset-end(Tailwind CSS) */
   require('postcss-discard-comments'),
   require('autoprefixer'),
-  require('./lib/combine-media-queries'),
+  // Uncomment to enable combined media queries.
+  // require('./lib/combine-media-queries'),
 ];
 
 if (env.isProduction && !env.isDebug) {
