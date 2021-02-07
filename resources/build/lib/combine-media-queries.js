@@ -9,7 +9,7 @@ const postcss = require('postcss');
  * @param   {Object}   options
  * @returns {Function}
  */
-const plugin = (options) => {
+const plugin = () => {
   return (root) => {
     const rules = {};
 
@@ -23,12 +23,12 @@ const plugin = (options) => {
         });
       }
 
-      rule.nodes.forEach(node => rules[id].append(node.clone()));
+      rule.nodes.forEach((node) => rules[id].append(node.clone()));
 
       rule.remove();
     });
 
-    Object.keys(rules).forEach(id => root.append(rules[id]));
+    Object.keys(rules).forEach((id) => root.append(rules[id]));
   };
 };
 
