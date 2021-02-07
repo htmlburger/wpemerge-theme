@@ -1,6 +1,6 @@
 {
   "name": "htmlburger/wpemerge-theme",
-  "version": "0.16.1",
+  "version": "0.16.2",
   "description": "A modern WordPress starter theme which uses the WP Emerge framework",
   "type": "wordpress-theme",
   "keywords": ["wordpress", "theme", "starter theme", "wpemerge"],
