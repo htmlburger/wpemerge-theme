@@ -167,7 +167,9 @@ module.exports = {
           'css-loader',
           {
             loader: 'postcss-loader',
-            options: postcss,
+            options: {
+              postcssOptions: postcss,
+            },
           },
           {
             loader: 'sass-loader',
