@@ -1,0 +1,75 @@
+name: Tests
+
+on: push
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        php-versions: [ '7.4', '7.1', '7.0' ]
+        include:
+          - php-versions: '8.1'
+          - php-versions: '8.0'
+          - php-versions: '5.6'
+          - php-versions: '5.5'
+            build-assets: 1
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-${{ matrix.php-versions }}
+
+      - name: Install dependencies
+        run: composer update --prefer-dist --no-progress
+
+      - name: Install Test Environment
+        run: composer run install-test-env
+
+      - name: Validate PHP syntax Part 1
+        # The usage of bash + || exit 1 is to ensure xargs does not exit on first error.
+        run: find ./ -maxdepth 1 -name '*.php' | xargs -n1 bash -c 'php -lf $0 || exit 1'
+
+      - name: Validate PHP syntax Part 2
+        # The usage of bash + || exit 1 is to ensure xargs does not exit on first error.
+        run: find app/ views/ \( -name '*.php' \) | xargs -n1 bash -c 'php -lf $0 || exit 1'
+
+      - name: Install Node.js
+        if: ${{ matrix.build-assets }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.13
+
+      - name: Install Yarn
+        if: ${{ matrix.build-assets }}
+        run: npm install -g yarn
+
+      - name: Install Node dependencies
+        if: ${{ matrix.build-assets }}
+        run: yarn install
+
+      - name: Build assets
+        if: ${{ matrix.build-assets }}
+        run: yarn build
+
+      - name: Lint assets
+        if: ${{ matrix.build-assets }}
+        run: yarn lint
