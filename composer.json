@@ -1,6 +1,6 @@
 {
   "name": "htmlburger/wpemerge-theme",
-  "version": "0.16.2",
+  "version": "0.17.0",
   "description": "A modern WordPress starter theme which uses the WP Emerge framework",
   "type": "wordpress-theme",
   "keywords": ["wordpress", "theme", "starter theme", "wpemerge"],
@@ -23,12 +23,12 @@
   "require": {
     "php": ">=5.5",
     "composer/installers": "^1.4",
-    "htmlburger/wpemerge": "~0.16.0",
-    "htmlburger/wpemerge-app-core": "~0.16.1"
+    "htmlburger/wpemerge": "~0.17.0",
+    "htmlburger/wpemerge-app-core": "~0.17.0"
   },
   "require-dev": {
     "filp/whoops": "^2.2",
-    "htmlburger/wpemerge-cli": "~0.16.0",
+    "htmlburger/wpemerge-cli": "~0.17.0",
     "symfony/debug": "~3.0",
     "wp-coding-standards/wpcs": "^2.0",
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0"
